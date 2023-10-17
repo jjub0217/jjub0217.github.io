@@ -1,0 +1,55 @@
+// 1229 ~
+$maxDevice: 1229px;
+
+@mixin maxDevice {
+
+  // 1229 이상을 꾸미는거다. 
+  @media screen and (min-width: $maxDevice ) {
+    @content;
+  }
+}
+
+//  [992] ~ 1024
+$desktop: 1024px;
+
+@mixin desktop {
+
+  // 1024 이하를 꾸미는거다. 
+  @media screen and (max-width: $desktop ) {
+    @content;
+  }
+}
+
+// [769] ~ 991
+$tablet: 991px;
+
+@mixin tablet {
+
+  // 991 이하를 꾸미는거다. 
+  @media screen and (max-width: $tablet ) {
+    @content;
+  }
+}
+
+// ------------------------
+// [478] ~ 768
+$mobile: 768px;
+
+@mixin mobile {
+
+  // 768 이하을 꾸미는거다. 
+  @media screen and (max-width: $mobile ) {
+    @content;
+  }
+}
+
+// [320] ~ 479
+$minDevice: 479px;
+
+@mixin minDevice {
+
+  // 479 이하을 꾸미는거다. 
+  @media screen and (max-width: $minDevice ) {
+    @content;
+  }
+}

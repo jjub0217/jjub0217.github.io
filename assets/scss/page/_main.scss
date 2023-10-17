@@ -1,0 +1,624 @@
+body {
+  background: #000;
+}
+
+
+section {
+  padding-top: 70px;
+
+  @include tablet {
+    padding-top: 200px;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading-area {
+    position: relative;
+
+    .headline {
+      font-size: 120px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 0.9;
+
+      @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 15vw;
+      }
+
+    }
+
+    .badge {
+      z-index: 2;
+      position: absolute;
+      bottom: -50px;
+      right: 30%;
+      background-color: #f4c727;
+      border-radius: 36px;
+      padding: 24px 36px;
+      font-size: 20px;
+      transform: rotate(-10deg);
+
+      @include tablet {
+        right: 10%;
+      }
+
+      @include minDevice {
+        padding: 16px 24px;
+        font-size: 14px;
+      }
+    }
+
+  }
+}
+
+.section-works {
+  background: #fff;
+
+  .works-area {
+    display: grid;
+    grid-column-gap: 7vw;
+    grid-row-gap: 3vw;
+    grid-template-columns: repeat(5, 11vw);
+    grid-auto-rows: 8.7vw;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 3vw;
+      grid-column-gap: 0;
+      width: 100%;
+    }
+  }
+
+  .work {
+
+    .thumb-box {
+      position: relative;
+      padding-bottom: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        transition: opacity 0.3s;
+        opacity: 0;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .link-work {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #fff;
+      border-radius: 10px;
+      color: #fff;
+      padding: 10px;
+      z-index: 2;
+      opacity: 1;
+      transition: opacity 0.3s;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+
+        svg {
+          path {
+            fill: #000;
+            stroke: #000;
+          }
+        }
+      }
+    }
+
+
+    .text-box {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+      padding: 0.5vw 0;
+
+      h3 {
+        font-size: 2vw;
+        font-family: larken, sans-serif;
+        line-height: 1;
+
+
+      }
+
+      .desc {
+        font-size: 14.7px;
+        line-height: 1.4;
+
+        @include maxDevice {
+          font-size: 1vw;
+        }
+
+        @include ellipse(2)
+      }
+
+      .hash {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 0.5vw;
+
+        span {
+          border: 1px solid #000;
+          border-radius: 16px;
+          padding: 5px 8px;
+          font-size: 0.8vw;
+          // font-size: 13px;
+        }
+      }
+    }
+
+  }
+
+  .work1 {
+    grid-column: span 3;
+    grid-row: span 3;
+
+    .thumb-box {
+      padding-bottom: 50%;
+
+      @include desktop {
+        padding-bottom: 40%;
+      }
+    }
+
+  }
+
+  .work2 {
+    grid-row: span 3;
+    grid-column: 4;
+    border-radius: 20px;
+
+    .thumb-box {
+      padding-bottom: 100%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .work3 {
+    grid-column: 5;
+    grid-row: 2/6;
+
+    .thumb-box {
+      padding-bottom: 200%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+
+    }
+
+    img {
+
+      @include tablet {
+        width: 100%;
+        object-position: 0 -80px;
+      }
+    }
+  }
+
+  .work4 {
+    grid-column: 2/5;
+    grid-row: span 2;
+    border-radius: 20px;
+
+    .thumb-box {
+      grid-column: 1/4;
+      background-color: #167cff;
+      padding-bottom: 20%;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .text-box {
+      grid-column: 1/4;
+    }
+  }
+
+  .work5 {
+    grid-column: span 3;
+    grid-row: span 3;
+
+    .thumb-box {
+      padding-bottom: 50%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+
+      img {
+        transition: 0.8s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+  }
+
+  .work6 {
+    grid-column: 4/6;
+    grid-row: 6/9;
+    position: relative;
+
+    .thumb-box {
+      padding-bottom: 70%;
+
+      @include tablet {
+        height: 400px;
+        width: 100%;
+      }
+
+      @include mobile {
+        height: 280px;
+      }
+
+      img {
+
+        @include tablet {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+
+    }
+
+    .bg {
+      padding: 1.5vw;
+      display: grid;
+      grid-gap: 2vw;
+      grid-template-columns: repeat(7, 2vw);
+      grid-template-rows: repeat(6, 2vw);
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #cedbe4;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .e52524 {
+      background: #e52524;
+      border-radius: 50%;
+
+      &.blink {
+        animation: blink-effect 1s step-end infinite;
+      }
+
+    }
+
+    .a16466a {
+      background: #16466a;
+      border-radius: 50%;
+
+      &.blink {
+        animation: blink-effect 2s step-end infinite;
+      }
+    }
+
+  }
+
+  .work7 {
+    grid-column: 1 / 3;
+    grid-row: 9/13;
+
+    .thumb-box {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+
+  }
+
+  .work8 {
+    grid-column: 3/5;
+    grid-row: 9/11;
+
+    .thumb-box {
+      padding-bottom: 30%;
+    }
+
+  }
+
+  .work9 {
+
+    grid-column: 3/6;
+    grid-row: 11/14;
+
+    .thumb-box {
+      padding-bottom: 50%;
+    }
+
+    img {
+      @include tablet {
+        object-position: 0 -65px;
+      }
+    }
+
+  }
+
+  .work10 {
+    grid-column: 1 / 3;
+    // grid-row: 8 / 10;
+    position: relative;
+
+    .bg {
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+
+
+      img {
+        border-radius: 20px;
+        transform: scale(1.5);
+      }
+    }
+
+    .desc-effect {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      z-index: 9;
+      display: grid;
+      grid-template-columns: repeat(3, 2vw);
+      grid-template-rows: repeat(3, 2vw);
+
+      @include tablet {
+        grid-template-columns: repeat(3, 4vw);
+        grid-template-rows: repeat(3, 4vw);
+      }
+
+      .large {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+        animation: rotate 24s linear infinite;
+      }
+
+      .small1 {
+        grid-column: 2 / 3;
+        grid-row: 3;
+        animation: rotate 24s linear reverse infinite;
+      }
+
+      .small2 {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        animation: rotate 24s linear reverse infinite;
+        // transform: translateX(10px);
+      }
+    }
+
+  }
+
+  .work11 {
+    grid-column: 1 / 4;
+    grid-row: 10 / 12;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .work12 {
+    grid-column: 4 / 6;
+    grid-row: 9 / 12;
+
+    img {
+      object-fit: cover;
+      object-position: 0 10%;
+      height: 100%;
+      width: 100%;
+
+      @include tablet {
+        object-position: 0 20%;
+      }
+    }
+  }
+}
+
+.section-log {
+  padding-bottom: 100px;
+  padding-top: 0;
+
+  .heading-area {
+    padding-bottom: 50px;
+    padding-top: 70px;
+    background: #fff;
+  }
+
+  .inner {
+    align-items: normal;
+    padding-top: 30px;
+    padding-bottom: 300px;
+    background: #f4f4f2;
+    border-radius: 0 0 80px 80px;
+    position: relative;
+  }
+
+  .title {
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+  }
+
+  .log {
+    &-area {
+      padding-top: 30px;
+
+      display: flex;
+      gap: 20px;
+      font-weight: 300;
+
+
+      @include tablet {
+        flex-direction: column;
+        gap: 1vw;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+
+      @include tablet {
+        flex: 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      flex: calc((100% - 50px) / 3);
+      background-color: #222;
+      border: 1px solid #545454;
+      border-radius: 10px;
+      padding: 25px;
+      transition: .2s;
+      cursor: pointer;
+
+
+      .item-title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .hash {
+        padding: 5px 0px 20px;
+        color: #aaa;
+      }
+
+      .desc {
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1;
+        color: #fff;
+      }
+
+      &:hover {
+        background-color: #545454a0;
+
+        .item-title {
+          color: #222;
+          font-weight: 700;
+        }
+
+        .hash {
+          color: #000;
+          font-weight: 500;
+        }
+
+        .desc {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+
+  .more {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 196px;
+
+    img {
+      animation: rotate 24s linear infinite;
+
+    }
+
+    @include tablet {
+      width: 160px;
+    }
+  }
+}

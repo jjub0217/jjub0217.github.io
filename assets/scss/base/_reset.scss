@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+
+
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  // flex-shrink: 0;
+}
+
+
+html,
+body {
+  height: 100%;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+/* 세팅 */
+body {
+  // font-family: larken, sans-serif;
+  font-family: "pretandard", sans-serif;
+  letter-spacing: 0em;
+}
+
+fieldset {
+  border: 0;
+}
+
+@mixin ellipse($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if($line > 1) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+
+  @else {
+    white-space: nowrap;
+  }
+}
