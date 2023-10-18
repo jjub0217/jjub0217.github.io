@@ -1,6 +1,8 @@
 .header {
   width: 100%;
   background: #fff;
+  position: relative;
+  z-index: 1;
 
   .inner {
     font-family: larken, sans-serif;
@@ -345,9 +347,9 @@
   }
 
   .logo {
-    font-size: 10vw;
+    font-size: 7.5vw;
     font-weight: 400;
-    line-height: 85%;
+    line-height: 90%;
     flex: 1;
 
     @include tablet {
@@ -360,33 +362,48 @@
 
     span {
       display: block;
-    }
+      white-space: nowrap;
 
-    .top {
-      span:nth-child(2) {
-        font-size: 2vw;
-        line-height: 30%;
-        margin-bottom: 50px;
-
-        @include tablet {
-          font-size: 4vw;
-        }
-
-        @include mobile {
-          // font-size: 4vw;
-        }
+      &:first-child {
+        font-size: clamp(20px, 5vw, 40px);
+        line-height: 1.2;
       }
     }
 
-    .bottom {
-      display: flex;
-      letter-spacing: -4.5px;
-      font-size: 8vw;
 
-      @include tablet {
-        font-size: 14vw;
-      }
-    }
+    // .txt2 {
+    //   font-size: clamp(20px, 5vw, 70px);
+    // }
+
+    // .txt3 {
+    //   font-size: clamp(20px, 5vw, 40px);
+    // }
+
+    // .top {
+    //   span:nth-child(2) {
+    //     font-size: 2vw;
+    //     line-height: 30%;
+    //     margin-bottom: 50px;
+
+    //     @include tablet {
+    //       font-size: 4vw;
+    //     }
+
+    //     @include mobile {
+    //       // font-size: 4vw;
+    //     }
+    //   }
+    // }
+
+    // .bottom {
+    //   display: flex;
+    //   letter-spacing: -4.5px;
+    //   font-size: 8vw;
+
+    //   @include tablet {
+    //     font-size: 14vw;
+    //   }
+    // }
 
     .asterisk {
       width: 2vw;

@@ -10,18 +10,18 @@ $maxDevice: 1229px;
 }
 
 //  [992] ~ 1024
-$desktop: 1024px;
+$desktop: 1229px;
 
 @mixin desktop {
 
-  // 1024 이하를 꾸미는거다. 
+  // 1229 이하를 꾸미는거다. 
   @media screen and (max-width: $desktop ) {
     @content;
   }
 }
 
 // [769] ~ 991
-$tablet: 991px;
+$tablet: 1024px;
 
 @mixin tablet {
 
@@ -33,7 +33,7 @@ $tablet: 991px;
 
 // ------------------------
 // [478] ~ 768
-$mobile: 768px;
+$mobile: 991px;
 
 @mixin mobile {
 
@@ -44,7 +44,7 @@ $mobile: 768px;
 }
 
 // [320] ~ 479
-$minDevice: 479px;
+$minDevice: 768px;
 
 @mixin minDevice {
 
