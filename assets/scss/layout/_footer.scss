@@ -8,6 +8,7 @@
   background: #000;
   color: #fff;
 
+
   .inner {
     width: 100%;
     display: flex;
@@ -15,6 +16,7 @@
     grid-row-gap: 80px;
     justify-content: space-between;
     flex-wrap: wrap;
+    // padding-top: 100px;
   }
 
   .intro-heading {
