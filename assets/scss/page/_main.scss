@@ -93,17 +93,76 @@ section {
     position: absolute;
     top: 45vw;
     left: 20vw;
-    // right: -5vw;
     width: 30vw;
-    // transform: rotate(10deg);
   }
 
   .deco4 {
     position: absolute;
     top: 60vw;
     left: 3vw;
-    width: 15vw;
+    width: 20vw;
     transform: rotate(40deg);
+  }
+
+  .deco5 {
+    position: absolute;
+    top: 70vw;
+    right: -10vw;
+    width: 50vw;
+  }
+
+  .deco6 {
+    position: absolute;
+    top: 100vw;
+    left: -7vw;
+    width: 40vw;
+    transform: scaleX(-1);
+  }
+
+  .deco7 {
+    position: absolute;
+    top: 120vw;
+    left: 40vw;
+    width: 30vw;
+    transform: rotate(90deg);
+  }
+
+  .deco8 {
+    position: absolute;
+    top: 120vw;
+    right: 7vw;
+    width: 25vw;
+    transform: rotate(-90deg);
+  }
+
+  .deco9 {
+    position: absolute;
+    top: 160vw;
+    right: -10vw;
+    width: 50vw;
+  }
+
+  .deco10 {
+    position: absolute;
+    top: 170vw;
+    width: 45vw;
+    left: -5vw;
+    transform: scaleX(-1);
+  }
+
+  .deco11 {
+    position: absolute;
+    top: 160vw;
+    left: 2vw;
+    width: 30vw;
+    width: 30vw;
+  }
+
+  .deco12 {
+    position: absolute;
+    top: 190vw;
+    left: 20vw;
+    width: 30vw;
   }
 
   .works-area {
