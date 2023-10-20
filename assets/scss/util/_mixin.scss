@@ -9,47 +9,36 @@ $maxDevice: 1229px;
   }
 }
 
-//  [992] ~ 1024
-$desktop: 1229px;
 
-@mixin desktop {
-
-  // 1229 이하를 꾸미는거다. 
-  @media screen and (max-width: $desktop ) {
-    @content;
-  }
-}
-
-// [769] ~ 991
+// [991] ~ 1024
 $tablet: 1024px;
 
 @mixin tablet {
 
-  // 991 이하를 꾸미는거다. 
-  @media screen and (max-width: $tablet ) {
+  // 1024 이하를 꾸미는거다. 
+  @media screen and (max-width: $tablet) {
     @content;
   }
 }
 
-// ------------------------
-// [478] ~ 768
-$mobile: 991px;
+// [321] ~ 768
+$mobile: 768px;
 
 @mixin mobile {
 
   // 768 이하을 꾸미는거다. 
-  @media screen and (max-width: $mobile ) {
+  @media screen and (max-width: $mobile) {
     @content;
   }
 }
 
-// [320] ~ 479
-$minDevice: 768px;
+//  ~ 320
+$minDevice: 320px;
 
 @mixin minDevice {
 
-  // 479 이하을 꾸미는거다. 
-  @media screen and (max-width: $minDevice ) {
+  // 320 이하을 꾸미는거다. 
+  @media screen and (max-width: $minDevice) {
     @content;
   }
 }

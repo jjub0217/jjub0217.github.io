@@ -40,34 +40,34 @@
 
   $(window).on("load",function(e){
     console.log('load 이벤트 실행');
-    floatingObject('.work1',1,15)
-    floatingObject('.work2',.5,15)
-    floatingObject('.work3',1.5,20)
-    floatingObject('.work4',2,25)
-    floatingObject('.work5',1.5,20)
-    floatingObject('.work6',2.5,20)
-    floatingObject('.work7',3,20)
-    floatingObject('.work8',2.5,20)
-    floatingObject('.work9',3.5,20)
-    floatingObject('.work10',4,20)
-    floatingObject('.work11',3.5,20)
-    floatingObject('.work12',4.5,20)
+    // floatingObject('.work1',1,15)
+    // floatingObject('.work2',.5,15)
+    // floatingObject('.work3',1.5,20)
+    // floatingObject('.work4',2,25)
+    // floatingObject('.work5',1.5,20)
+    // floatingObject('.work6',2.5,20)
+    // floatingObject('.work7',3,20)
+    // floatingObject('.work8',2.5,20)
+    // floatingObject('.work9',3.5,20)
+    // floatingObject('.work10',4,20)
+    // floatingObject('.work11',3.5,20)
+    // floatingObject('.work12',4.5,20)
   }) 
 
 $(window).resize(function(){
     console.log('resize 이벤트 실행');
-    floatingObject('.work1',1,15)
-    floatingObject('.work2',.5,15)
-    floatingObject('.work3',1.5,20)
-    floatingObject('.work4',2,25)
-    floatingObject('.work5',1.5,20)
-    floatingObject('.work6',2.5,20)
-    floatingObject('.work7',3,20)
-    floatingObject('.work8',2.5,20)
-    floatingObject('.work9',3.5,20)
-    floatingObject('.work10',4,20)
-    floatingObject('.work11',3.5,20)
-    floatingObject('.work12',4.5,20)
+    // floatingObject('.work1',1,15)
+    // floatingObject('.work2',.5,15)
+    // floatingObject('.work3',1.5,20)
+    // floatingObject('.work4',2,25)
+    // floatingObject('.work5',1.5,20)
+    // floatingObject('.work6',2.5,20)
+    // floatingObject('.work7',3,20)
+    // floatingObject('.work8',2.5,20)
+    // floatingObject('.work9',3.5,20)
+    // floatingObject('.work10',4,20)
+    // floatingObject('.work11',3.5,20)
+    // floatingObject('.work12',4.5,20)
 }) 
 
 function random(min, max) {
@@ -75,9 +75,10 @@ function random(min, max) {
 }
 
 function floatingObject(selector,delay,size){
+  // console.log(window.matchMedia("(max-width: 1024px)").matches);
   if(
-    !window.matchMedia("(max-width: 1024px)").matches){
-      console.log('width 1024 아님');
+    window.matchMedia("(min-width: 1025px)").matches){
+      console.log('width 1024 초과임');
       // gsap.to(요소, 시간, 옵션)
       gsap.to(selector, random(1.5,2.5), {
         y: size,
