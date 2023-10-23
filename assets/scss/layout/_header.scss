@@ -1,22 +1,21 @@
 .header {
-  width: 100%;
   position: relative;
   z-index: 2;
+  width: 100%;
   padding-bottom: 100px;
 
 
   .inner {
-    font-family: larken, sans-serif;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
     gap: 20px;
+    font-family: larken, sans-serif;
     height: 100vh;
 
     @include minDevice {
-      padding: 0;
       display: flex;
       align-items: center;
+      padding: 0;
     }
   }
 
@@ -29,10 +28,10 @@
   }
 
   .logo {
+    flex: 1;
     font-size: 7.5vw;
     font-weight: 400;
     line-height: 90%;
-    flex: 1;
 
     @include tablet {
       font-size: 19vw;
@@ -48,49 +47,25 @@
       }
 
       @include minDevice {
+        white-space: pre-line;
+
         br {
           display: none;
         }
-
-        white-space: pre-line;
       }
     }
-
-    // .asterisk {
-    //   width: 2vw;
-
-    //   img {
-    //     max-width: 100%;
-    //     width: 100%;
-    //     animation: rotate 10s linear infinite;
-    //   }
-    // }
-
   }
 
   .gnb {
     width: 35%;
     font-family: "pretandard", sans-serif;
-
-    // @include tablet {
-    //   width: 20%;
-    // }
-
-    // position: relative;
   }
 
   .profile-image {
+    position: relative;
+    overflow: hidden;
     padding-bottom: 100%;
     border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-
-
-
-    @include tablet {
-      // top: 0;
-    }
-
 
     video {
       position: absolute;
@@ -110,7 +85,6 @@
     &-list {
       position: absolute;
       top: 0;
-      // left: -50%;
       left: 0%;
       width: 100%;
       height: 100%;
@@ -143,36 +117,25 @@
       &.home {
         top: 5vw;
         left: 50vw;
-        // top: -3vw;
-        // left: 10vw;
       }
 
       &.about {
         top: 14vw;
         left: 56vw;
-        // top: 6vw;
-        // left: 13vw;
       }
 
       &.dev {
         top: 24vw;
         left: 50vw;
-        // top: 15vw;
-        // left: 7vw;
       }
 
       &.works {
         top: 14vw;
         left: 37vw;
-        // top: 6vw;
-        // left: -6vw;
         width: 14vw;
       }
     }
   }
-
-
-
 
   .floating {
     &-box {
@@ -182,14 +145,13 @@
       z-index: 10;
       transform: translateY(-100%);
 
-
       &.isAct {
         .floating {
           &-heading {
+            position: absolute;
             width: 100%;
             padding-top: 30px;
             padding-bottom: 30px;
-            position: absolute;
             background: transparent;
           }
 
@@ -221,10 +183,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       font-size: 1.3vw;
       background-color: #fff;
       padding: 15px 80px;
-      position: relative;
 
       @include mobile {
         padding: 30px 20px;
@@ -242,10 +204,10 @@
     }
 
     &-logo {
-      height: 45px;
       position: absolute;
       top: 50%;
       left: 50%;
+      height: 45px;
       transform: translate(-50%, -50%);
       transition: 0.7s linear;
 
@@ -260,8 +222,6 @@
         height: 100%;
         animation: rotate 10s linear infinite;
       }
-
-
     }
 
     &-nav-list {
@@ -274,8 +234,6 @@
           sans-serif;
         font-size: 15px;
         font-weight: 500;
-
-
 
         @include tablet {
           display: none;
@@ -290,10 +248,9 @@
           font-size: 15px;
           font-weight: 500;
 
-
           .floating-nav-item {
-            height: 100%;
             position: relative;
+            height: 100%;
             height: 43px;
             overflow: hidden;
             min-width: 80px;
@@ -343,12 +300,8 @@
       border-radius: 16px;
       border: 1px solid #0a0b0c;
       padding: 12px 20px;
-
-
     }
-
   }
-
 }
 
 .mo_gnb {

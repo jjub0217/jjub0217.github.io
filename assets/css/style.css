@@ -183,23 +183,23 @@ fieldset {
   }
 }
 .header {
-  width: 100%;
   position: relative;
   z-index: 2;
+  width: 100%;
   padding-bottom: 100px;
 }
 .header .inner {
-  font-family: larken, sans-serif;
   display: flex;
   align-items: center;
   gap: 20px;
+  font-family: larken, sans-serif;
   height: 100vh;
 }
 @media screen and (max-width: 320px) {
   .header .inner {
-    padding: 0;
     display: flex;
     align-items: center;
+    padding: 0;
   }
 }
 .header .bigDeco {
@@ -210,10 +210,10 @@ fieldset {
   transform: translate(50%, -50%);
 }
 .header .logo {
+  flex: 1;
   font-size: 7.5vw;
   font-weight: 400;
   line-height: 90%;
-  flex: 1;
 }
 @media screen and (max-width: 1024px) {
   .header .logo {
@@ -241,10 +241,10 @@ fieldset {
   font-family: "pretandard", sans-serif;
 }
 .header .profile-image {
+  position: relative;
+  overflow: hidden;
   padding-bottom: 100%;
   border-radius: 50%;
-  overflow: hidden;
-  position: relative;
 }
 .header .profile-image video {
   position: absolute;
@@ -316,10 +316,10 @@ fieldset {
   transform: translateY(-100%);
 }
 .header .floating-box.isAct .floating-heading {
+  position: absolute;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  position: absolute;
   background: transparent;
 }
 .header .floating-box.isAct .floating-headline {
@@ -338,10 +338,10 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   font-size: 1.3vw;
   background-color: #fff;
   padding: 15px 80px;
-  position: relative;
 }
 @media screen and (max-width: 768px) {
   .header .floating-heading {
@@ -359,10 +359,10 @@ fieldset {
   }
 }
 .header .floating-logo {
-  height: 45px;
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 45px;
   transform: translate(-50%, -50%);
   transition: 0.7s linear;
 }
@@ -402,8 +402,8 @@ fieldset {
     font-weight: 500;
   }
   .header .floating-nav-list.mo .floating-nav-item {
-    height: 100%;
     position: relative;
+    height: 100%;
     height: 43px;
     overflow: hidden;
     min-width: 80px;
@@ -558,9 +558,9 @@ fieldset {
   }
 }
 .footer .heading {
-  margin-top: 120px;
   display: flex;
   align-items: center;
+  margin-top: 120px;
   overflow: hidden;
 }
 .footer .heading .heading-logo {
@@ -782,22 +782,23 @@ section .heading-area .badge {
      object-fit: cover;
 }
 .section-works .work .work-category {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
   width: 150px;
   height: 150px;
   overflow: hidden;
-  position: absolute;
-  z-index: 2;
-  top: 0px;
-  right: 0px;
 }
 .section-works .work .personal,
 .section-works .work .common {
+  position: absolute;
   left: -14px;
   top: 29px;
-  transform: rotate(45deg);
-  position: absolute;
-  display: block;
   width: 230px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   padding: 15px 0;
   color: #fff;
   text-transform: uppercase;
@@ -837,10 +838,10 @@ section .heading-area .badge {
   stroke: #000;
 }
 .section-works .work .text-box {
-  text-align: right;
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
+  text-align: right;
   padding: 0.5vw 0;
 }
 .section-works .work .text-box h3 {
@@ -1045,15 +1046,15 @@ section .heading-area .badge {
   }
 }
 .section-works .work10 .bg {
-  padding: 1.5vw;
   display: grid;
   grid-gap: 2vw;
   grid-template-columns: repeat(7, 2vw);
   grid-template-rows: repeat(5, 2vw);
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
+  padding: 1.5vw;
   background: #cedbe4;
 }
 @media screen and (max-width: 1024px) {
@@ -1104,12 +1105,12 @@ section .heading-area .badge {
   background: #fff;
 }
 .section-log .inner {
+  position: relative;
   align-items: normal;
   padding-top: 30px;
   padding-bottom: 300px;
   background: #f4f4f2;
   border-radius: 0 0 80px 80px;
-  position: relative;
 }
 .section-log .title {
   color: #000;
@@ -1119,9 +1120,9 @@ section .heading-area .badge {
   border-bottom: 1px solid;
 }
 .section-log .log-area {
-  padding-top: 30px;
   display: flex;
   gap: 20px;
+  padding-top: 30px;
   font-weight: 300;
 }
 @media screen and (max-width: 1024px) {
