@@ -1,14 +1,16 @@
 .header {
   width: 100%;
-  background: #fff;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding-bottom: 100px;
+
 
   .inner {
     font-family: larken, sans-serif;
     display: flex;
     align-items: center;
+    // justify-content: space-between;
+    gap: 20px;
     height: 100vh;
 
     @include minDevice {
@@ -22,7 +24,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 1000px;
+    width: 2100px;
     transform: translate(50%, -50%);
   }
 
@@ -67,7 +69,7 @@
   }
 
   .gnb {
-    width: 40%;
+    width: 35%;
     font-family: "pretandard", sans-serif;
 
     // @include tablet {
@@ -147,21 +149,21 @@
 
       &.about {
         top: 14vw;
-        left: 53vw;
+        left: 56vw;
         // top: 6vw;
         // left: 13vw;
       }
 
       &.dev {
-        top: 23vw;
-        left: 47vw;
+        top: 24vw;
+        left: 50vw;
         // top: 15vw;
         // left: 7vw;
       }
 
       &.works {
         top: 14vw;
-        left: 34vw;
+        left: 37vw;
         // top: 6vw;
         // left: -6vw;
         width: 14vw;

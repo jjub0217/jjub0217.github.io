@@ -1,16 +1,24 @@
-body {
-  background: #000;
-}
-
 .wrapper {
   padding-bottom: 100vh;
   overflow: hidden;
 }
 
-.container {
+.paper-bg {
   z-index: 1;
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/21.jpg") no-repeat;
+    background-size: cover;
+    transform: rotate(-180deg);
+  }
 }
+
+.container {}
 
 section {
   padding-top: 70px;
@@ -48,7 +56,6 @@ section {
     }
 
     .badge {
-      z-index: 2;
       position: absolute;
       bottom: -50px;
       right: 30%;
@@ -72,14 +79,13 @@ section {
 }
 
 .section-works {
-  background: #fff;
+  position: relative;
 
   .deco1 {
     position: absolute;
     top: 0;
     left: -5vw;
     width: 30vw;
-    z-index: 1;
   }
 
   .deco2 {
@@ -187,13 +193,14 @@ section {
 
   .work {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 
     .thumb-box {
       position: relative;
       padding-bottom: 100%;
       border-radius: 15px;
       overflow: hidden;
+
 
 
       &::before {
@@ -223,6 +230,40 @@ section {
         height: 100%;
         object-fit: cover;
       }
+    }
+
+    .work-category {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      position: absolute;
+      z-index: 2;
+      top: 0px;
+      right: 0px;
+    }
+
+    .personal,
+    .common {
+      left: -14px;
+      top: 29px;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      display: block;
+      width: 230px;
+      padding: 15px 0;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .personal {
+      background-color: #00aaa0;
+    }
+
+    .common {
+      background-color: #60aa00;
     }
 
     .link-work {
@@ -266,25 +307,23 @@ section {
       padding: 0.5vw 0;
 
       h3 {
+        font-size: 25px;
+        font-family: larken, sans-serif;
+        line-height: 1;
+
         @include maxDevice {
           font-size: 2vw;
         }
-
-        font-size: 1.5vw;
-        font-family: larken,
-        sans-serif;
-        line-height: 1;
       }
 
       .desc {
-        font-size: 14.7px;
+        font-size: 16px;
         line-height: 1.4;
+        @include ellipse(2);
 
         @include maxDevice {
           font-size: 1vw;
         }
-
-        @include ellipse(2)
       }
 
       .hash {
@@ -297,8 +336,11 @@ section {
           border: 1px solid #000;
           border-radius: 16px;
           padding: 5px 8px;
-          font-size: 0.8vw;
-          // font-size: 13px;
+          font-size: 14px;
+
+          @include maxDevice {
+            font-size: 0.9vw;
+          }
         }
       }
     }
@@ -312,9 +354,10 @@ section {
     .thumb-box {
       padding-bottom: 50%;
 
-
+      @include tablet {
+        padding-bottom: 50%;
+      }
     }
-
   }
 
   .work2 {
@@ -330,8 +373,6 @@ section {
         padding-bottom: 50%;
       }
     }
-
-
   }
 
   .work3 {
@@ -344,15 +385,6 @@ section {
       @include tablet {
         padding-bottom: 50%;
       }
-
-    }
-
-    img {
-
-      @include tablet {
-        width: 100%;
-        object-position: 0 -80px;
-      }
     }
   }
 
@@ -360,16 +392,15 @@ section {
     grid-column: 2/5;
     grid-row: span 2;
     border-radius: 20px;
-    // transform: translateX(-15%);
-
-    @include tablet {
-      transform: none;
-    }
 
     .thumb-box {
       grid-column: 1/4;
       background-color: #167cff;
       padding-bottom: 20%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
 
       img {
         object-fit: contain;
@@ -392,6 +423,7 @@ section {
         padding-bottom: 50%;
       }
 
+
       img {
         transition: 0.8s;
       }
@@ -413,25 +445,9 @@ section {
       padding-bottom: 70%;
 
       @include tablet {
-        height: 400px;
-        width: 100%;
+        padding-bottom: 50%;
       }
-
-      @include mobile {
-        height: 280px;
-      }
-
-      img {
-
-        @include tablet {
-          object-fit: contain;
-          width: 100%;
-        }
-      }
-
     }
-
-
   }
 
   .work7 {
@@ -440,6 +456,10 @@ section {
 
     .thumb-box {
       background: #cedbe4;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
     }
 
     video {
@@ -458,6 +478,10 @@ section {
 
     .thumb-box {
       padding-bottom: 30%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
     }
 
   }
@@ -468,6 +492,10 @@ section {
 
     .thumb-box {
       padding-bottom: 50%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
     }
 
     img {
@@ -483,9 +511,17 @@ section {
     grid-row: 13/16;
     transform: translateY(-10%);
 
+    @include tablet {
+      transform: none;
+    }
+
     .thumb-box {
       padding-bottom: 70%;
       background: #cedbe4;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
     }
 
     .bg {
@@ -532,6 +568,10 @@ section {
 
     .thumb-box {
       padding-bottom: 150%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
     }
 
     img {
@@ -547,11 +587,13 @@ section {
 .section-log {
   // padding-bottom: 100px;
   padding-top: 0;
+  background: #fff;
 
   .heading-area {
     padding-bottom: 50px;
     padding-top: 70px;
     background: #fff;
+    // background: #fff;
   }
 
   .inner {
