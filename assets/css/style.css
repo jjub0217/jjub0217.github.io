@@ -187,6 +187,8 @@ fieldset {
   z-index: 2;
   width: 100%;
   padding-bottom: 100px;
+  background: url("../images/21.jpg") no-repeat;
+  background-size: cover;
 }
 .header .inner {
   display: flex;
@@ -576,22 +578,7 @@ fieldset {
   overflow: hidden;
 }
 
-.paper-bg {
-  z-index: 1;
-  position: relative;
-}
-.paper-bg::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("../images/21.jpg") no-repeat;
-  background-size: cover;
-  transform: rotate(-180deg);
-}
-
 section {
-  padding-top: 70px;
   padding-bottom: 70px;
 }
 @media screen and (max-width: 1024px) {
@@ -648,6 +635,17 @@ section .heading-area .badge {
 
 .section-works {
   position: relative;
+  z-index: 1;
+  position: relative;
+}
+.section-works::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/21.jpg") no-repeat;
+  background-size: cover;
+  transform: rotate(-180deg);
 }
 .section-works .deco1 {
   position: absolute;
@@ -1097,7 +1095,9 @@ section .heading-area .badge {
 
 .section-log {
   padding-top: 0;
-  background: #fff;
+  background: transparent;
+  z-index: 1;
+  position: relative;
 }
 .section-log .heading-area {
   padding-bottom: 50px;
