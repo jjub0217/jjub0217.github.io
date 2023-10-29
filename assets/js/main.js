@@ -1,5 +1,8 @@
 
-
+  /**
+   * @floatingmenu나타나는기능
+   * 
+   */
   gsap.to(".container",{
     scrollTrigger: {
       start:"bottom top",
@@ -13,7 +16,7 @@
         })
       },
       onLeaveBack : () => {
-         gsap.to(".floating-box", {
+        gsap.to(".floating-box", {
           display: "none",
           transform: "translateY(-100%)",
         })
@@ -21,23 +24,11 @@
     }
   })
 
-  //   gsap.timeline({
-  //   scrollTrigger:{
-  //   trigger:$(".header .inner"), 
-  //   start:"100% 100%",
-  //   end:"50% 0%",
-  //   markers:true,
-  //   scrub:1,
-  //   },
-  //   })
-  //   // 왜이렇게 느리지?
-  // .to($('.header .inner .dev'), { y: -120})
-  // .to($('.section-shaping .pc-inner .left .image2'), {rotation:-40, xPercent: -140},{rotation:-15, xPercent: -30, },'a')
-  // .to($('.section-shaping .pc-inner .right .image1'), {rotation:40, xPercent: 140},{rotation:0, xPercent: 5, },'a')
-  // .to($('.section-shaping .pc-inner .right .image2'), {rotation:15, xPercent: 120},  {rotation:15, xPercent: 45, },'a')
 
-
-
+  /**
+   * @페이지가로딩되었을때의기능
+   * 
+   */
   $(window).on("load",function(e){
     console.log('load 이벤트 실행');
     floatingObject('.work1',1,15)
@@ -54,6 +45,12 @@
     floatingObject('.work12',4.5,20)
   }) 
 
+
+
+  /**
+   * @페이지의사이즈가변경되었을때의기능
+   * 
+   */
 $(window).resize(function(){
     console.log('resize 이벤트 실행');
     floatingObject('.work1',1,15)
@@ -70,12 +67,21 @@ $(window).resize(function(){
     floatingObject('.work12',4.5,20)
 }) 
 
+
+/**
+ * @페이지가로딩되었거나사이즈가변경되었을때포폴들이움직이는범위를랜덤으로잡아주는기능
+ * 
+ */
 function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min).toFixed(2))
 }
 
+
+/**
+ * @페이지가로딩되었거나사이즈가변경되었을때포폴들이움직이는기능을디바이스사이즈가1025보다작은경우에는작동하지않도록하는기능
+ * 
+ */
 function floatingObject(selector,delay,size){
-  // console.log(window.matchMedia("(max-width: 1024px)").matches);
   if(
     window.matchMedia("(min-width: 1025px)").matches){
       console.log('width 1024 초과임');
@@ -91,6 +97,10 @@ function floatingObject(selector,delay,size){
   return
 }
 
+/**
+ * @floatingmenu클릭했을때메뉴이동기능
+ * 
+ */
 $(".floating-gnb .floating-nav-list.mo").click(function (e){
   e.preventDefault()
   if( $(".floating-box").hasClass("isAct")){
@@ -103,4 +113,20 @@ $(".floating-gnb .floating-nav-list.mo").click(function (e){
     $(this).addClass("on")
   }
 
+})
+
+
+/**
+ * @footer로이동하는기능-
+ * 
+ */
+// 속도를 줄일순 없나?
+$(".nav-item.about").click(function(){
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  return false;
+})
+
+$(".floating-nav-item").find("a").click(function(){
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  return false;
 })
