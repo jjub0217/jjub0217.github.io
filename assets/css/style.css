@@ -846,6 +846,7 @@ section .heading-area .badge {
   font-size: 25px;
   font-family: larken, sans-serif;
   line-height: 1;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1229px) {
   .section-works .work .text-box h3 {
@@ -866,6 +867,19 @@ section .heading-area .badge {
     font-size: 1vw;
   }
 }
+.section-works .work .text-box .desc .link {
+  position: relative;
+  color: #7824e5;
+}
+.section-works .work .text-box .desc .link:hover:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #7824e5;
+}
 .section-works .work .text-box .hash {
   display: flex;
   justify-content: flex-end;
@@ -877,6 +891,7 @@ section .heading-area .badge {
   border-radius: 16px;
   padding: 5px 8px;
   font-size: 14px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1229px) {
   .section-works .work .text-box .hash span {
@@ -1170,9 +1185,14 @@ section .heading-area .badge {
 }
 .section-log .log-item .desc {
   font-size: 14px;
-  letter-spacing: 0;
-  line-height: 1;
+  width: 100%;
+  line-height: 1.4;
   color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .section-log .log-item:hover {
   background-color: rgba(84, 84, 84, 0.6274509804);
