@@ -317,25 +317,6 @@ fieldset {
   z-index: 10;
   transform: translateY(-100%);
 }
-.header .floating-box.isAct .floating-heading {
-  position: absolute;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background: transparent;
-}
-.header .floating-box.isAct .floating-headline {
-  display: none;
-}
-.header .floating-box.isAct .floating-logo svg path {
-  fill: #fff;
-}
-.header .floating-box.isAct .floating-gnb {
-  margin-left: auto;
-}
-.header .floating-box.isAct .floating-nav-item {
-  background: #fff;
-}
 .header .floating-heading {
   display: flex;
   justify-content: space-between;
@@ -435,10 +416,18 @@ fieldset {
     transform: translateY(-50%);
   }
 }
-.header .floating-nav-item {
-  border-radius: 16px;
-  border: 1px solid #0a0b0c;
+.header .floating-nav-item a {
   padding: 12px 20px;
+  display: block;
+  transition: 0.3s;
+  border: 1px solid #0a0b0c;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.header .floating-nav-item a:hover {
+  background: #9a9a9a;
+  border: 1px solid #9a9a9a;
+  color: #fff;
 }
 
 .mo_gnb {
@@ -723,7 +712,7 @@ section .heading-area .badge {
 .section-works .deco12 {
   position: absolute;
   top: 190vw;
-  left: 20vw;
+  left: 25vw;
   width: 30vw;
 }
 .section-works .works-area {
