@@ -104,6 +104,7 @@
       position: absolute;
       width: 10vw;
       color: #fff;
+      cursor: pointer;
 
       span {
         position: absolute;
@@ -113,6 +114,7 @@
         font-size: 18px;
         white-space: nowrap;
         font-family: 'Libre Baskerville', serif;
+        cursor: pointer;
 
         @include maxDevice {
           font-size: 1.2vw;
@@ -127,22 +129,27 @@
       &.home {
         top: 5vw;
         left: 50vw;
+        cursor: pointer;
       }
 
       &.about {
         top: 14vw;
         left: 56vw;
+        cursor: pointer;
       }
 
+      // 왜 커서포인터가 안먹을까?
       &.dev {
         top: 24vw;
         left: 50vw;
+        cursor: pointer;
       }
 
       &.works {
         top: 14vw;
         left: 37vw;
         width: 14vw;
+        cursor: pointer;
       }
     }
   }

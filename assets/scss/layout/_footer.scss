@@ -48,6 +48,14 @@
     height: fit-content;
     width: fit-content;
     margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+
+    }
   }
 
 

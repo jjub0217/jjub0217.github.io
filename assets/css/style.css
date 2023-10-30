@@ -273,6 +273,7 @@ fieldset {
   position: absolute;
   width: 10vw;
   color: #fff;
+  cursor: pointer;
 }
 .header .nav-item span {
   position: absolute;
@@ -282,6 +283,7 @@ fieldset {
   font-size: 18px;
   white-space: nowrap;
   font-family: "Libre Baskerville", serif;
+  cursor: pointer;
 }
 @media screen and (min-width: 1229px) {
   .header .nav-item span {
@@ -296,19 +298,23 @@ fieldset {
 .header .nav-item.home {
   top: 5vw;
   left: 50vw;
+  cursor: pointer;
 }
 .header .nav-item.about {
   top: 14vw;
   left: 56vw;
+  cursor: pointer;
 }
 .header .nav-item.dev {
   top: 24vw;
   left: 50vw;
+  cursor: pointer;
 }
 .header .nav-item.works {
   top: 14vw;
   left: 37vw;
   width: 14vw;
+  cursor: pointer;
 }
 .header .floating-box {
   display: none;
@@ -501,6 +507,12 @@ fieldset {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer .contact-btn:hover {
+  background: #fff;
+  color: #000;
 }
 .footer .text-box {
   display: flex;
