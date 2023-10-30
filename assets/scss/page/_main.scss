@@ -587,6 +587,14 @@ section {
       }
     }
 
+    .text-box {
+      .desc {
+        @include ellipse(4);
+      }
+    }
+
+
+
   }
 
   .work11 {

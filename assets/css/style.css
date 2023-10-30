@@ -1090,6 +1090,13 @@ section .heading-area .badge {
 .section-works .work10 .a16466a.blink {
   animation: blink-effect 2s step-end infinite;
 }
+.section-works .work10 .text-box .desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
 .section-works .work11 {
   grid-column: 4/6;
   grid-row: 14/19;
