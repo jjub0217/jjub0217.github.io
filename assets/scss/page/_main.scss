@@ -414,6 +414,13 @@ section {
         padding-bottom: 50%;
       }
     }
+
+    .text-box {
+      .desc {
+        @include ellipse(6);
+      }
+    }
+
   }
 
   .work4 {
@@ -433,10 +440,18 @@ section {
       img {
         object-fit: contain;
       }
+
+      .personal {
+        top: 23px;
+      }
     }
 
     .text-box {
       grid-column: 1/4;
+
+      .desc {
+        @include ellipse(3);
+      }
     }
   }
 
@@ -508,6 +523,10 @@ section {
 
       @include tablet {
         padding-bottom: 50%;
+      }
+
+      .common {
+        top: 18px;
       }
     }
 
@@ -589,7 +608,7 @@ section {
 
     .text-box {
       .desc {
-        @include ellipse(4);
+        @include ellipse(6);
       }
     }
 

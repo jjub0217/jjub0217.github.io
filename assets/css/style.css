@@ -937,6 +937,13 @@ section .heading-area .badge {
     padding-bottom: 50%;
   }
 }
+.section-works .work3 .text-box .desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
 .section-works .work4 {
   grid-column: 2/5;
   grid-row: span 2;
@@ -956,8 +963,18 @@ section .heading-area .badge {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.section-works .work4 .thumb-box .personal {
+  top: 23px;
+}
 .section-works .work4 .text-box {
   grid-column: 1/4;
+}
+.section-works .work4 .text-box .desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .section-works .work5 {
   grid-column: span 3;
@@ -1021,6 +1038,9 @@ section .heading-area .badge {
   .section-works .work8 .thumb-box {
     padding-bottom: 50%;
   }
+}
+.section-works .work8 .thumb-box .common {
+  top: 18px;
 }
 .section-works .work9 {
   grid-column: 3/6;
@@ -1095,7 +1115,7 @@ section .heading-area .badge {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
 }
 .section-works .work11 {
   grid-column: 4/6;
