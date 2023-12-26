@@ -7,7 +7,6 @@
   position: absolute;
 }
 
-
 #skip-header {
   position: absolute;
   top: 0;
@@ -36,11 +35,11 @@
   position: fixed;
   z-index: 99999;
   top: 0;
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  width: 100%;
   background-color: #1d1d1d;
 
   .top {
@@ -70,7 +69,6 @@
       line-height: .55;
     }
   }
-
 }
 
 

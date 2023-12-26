@@ -4,9 +4,19 @@
   flex-direction: column;
   justify-content: flex-end;
   position: fixed;
-  bottom: 0;
+  bottom: -80px;
+  // position: sticky;
+  // bottom: 0;
   background: #000;
   color: #fff;
+  height: 100vh;
+  // padding-top: 300px;
+
+  @include mobile {
+    position: relative;
+    padding-top: 50px;
+    height: auto;
+  }
 
   .inner {
     width: 100%;
@@ -37,28 +47,24 @@
     }
   }
 
-
   .contact-btn {
+    height: fit-content;
+    width: fit-content;
     border-radius: 16px;
     border: 1px solid #fff;
     padding: 20px 26px;
+    margin-top: 30px;
+    transition: 0.3s;
+    font-size: 18px;
     font-family: 'Montserrat',
       sans-serif;
-    font-size: 18px;
-    height: fit-content;
-    width: fit-content;
-    margin-top: 30px;
     cursor: pointer;
-    transition: 0.3s;
 
     &:hover {
       background: #fff;
       color: #000;
-
     }
   }
-
-
 
   .text-box {
     display: flex;
@@ -103,17 +109,16 @@
       @include mobile {
         font-size: 12px;
       }
-
     }
   }
 
   .heading {
     display: flex;
     align-items: center;
-    margin-top: 120px;
-    overflow: hidden;
+    // padding-top: 120px;
+    // overflow: hidden;
 
-    .heading-logo {
+    &-logo {
       width: 13%;
       transform: rotate(-50deg);
     }

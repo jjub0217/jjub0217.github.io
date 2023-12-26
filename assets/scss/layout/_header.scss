@@ -3,17 +3,9 @@
   z-index: 2;
   width: 100%;
   padding-bottom: 100px;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  background: url("../images/21.jpg") no-repeat;
+  background: #fff;
   background-size: cover;
-  // transform: rotate(-180deg);
-  // }
-
+  overflow: hidden;
 
   .inner {
     display: flex;
@@ -25,16 +17,32 @@
     @include minDevice {
       display: flex;
       align-items: center;
-      padding: 0;
+      width: 100%;
     }
   }
 
   .bigDeco {
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 0;
-    width: 2100px;
     transform: translate(50%, -50%);
+    z-index: -1;
+
+    @include tablet {
+      top: 20%;
+      right: 0;
+      transform: translate(34%, -50%);
+    }
+
+    @include mobile {
+      top: 30%;
+    }
+
+    @include minDevice {
+      top: 40%;
+    }
+
+    // width: 2100px;
   }
 
   .logo {
@@ -45,6 +53,7 @@
 
     @include tablet {
       font-size: 19vw;
+      padding-top: 50px;
     }
 
     span {
@@ -69,6 +78,10 @@
   .gnb {
     width: 35%;
     font-family: "pretandard", sans-serif;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .profile-image {
@@ -98,6 +111,16 @@
       left: 0%;
       width: 100%;
       height: 100%;
+
+      @include tablet {
+        display: flex;
+        gap: 20px;
+        top: 3%;
+        right: 3%;
+        left: auto;
+        width: auto;
+        height: auto;
+      }
     }
 
     &-item {
@@ -105,6 +128,10 @@
       width: 10vw;
       color: #fff;
       cursor: pointer;
+
+      @include tablet {
+        position: relative;
+      }
 
       span {
         position: absolute;
@@ -130,12 +157,25 @@
         top: 5vw;
         left: 50vw;
         cursor: pointer;
+
+        @include tablet {
+          top: auto;
+          left: auto;
+          height: fit-content;
+        }
+
       }
 
       &.about {
         top: 14vw;
         left: 56vw;
         cursor: pointer;
+
+        @include tablet {
+          top: auto;
+          left: auto;
+          height: fit-content;
+        }
       }
 
       // 왜 커서포인터가 안먹을까?
@@ -143,6 +183,12 @@
         top: 24vw;
         left: 50vw;
         cursor: pointer;
+
+        @include tablet {
+          top: auto;
+          left: auto;
+          height: fit-content;
+        }
       }
 
       &.works {
@@ -150,6 +196,14 @@
         left: 37vw;
         width: 14vw;
         cursor: pointer;
+        z-index: -1;
+
+        @include tablet {
+          top: auto;
+          left: auto;
+          width: 10vw;
+          height: fit-content;
+        }
       }
     }
   }
@@ -162,40 +216,12 @@
       z-index: 10;
       transform: translateY(-100%);
 
-      // &.isAct {
-      //   .floating {
-      //     &-heading {
-      //       position: absolute;
-      //       width: 100%;
-      //       padding-top: 30px;
-      //       padding-bottom: 30px;
-      //       background: transparent;
-      //     }
-
-      //     &-headline {
-      //       display: none;
-      //     }
-
-      //     &-logo {
-      //       svg {
-      //         path {
-      //           fill: #fff
-      //         }
-      //       }
-      //     }
-
-      //     &-gnb {
-      //       margin-left: auto;
-
-      //     }
-
-      //     &-nav-item {
-      //       background: #fff;
-
-      //     }
-
-      //   }
-      // }
+      @include tablet {
+        display: block;
+        transform: none;
+        position: fixed;
+        top: 0;
+      }
     }
 
     &-heading {
@@ -208,7 +234,7 @@
       padding: 15px 80px;
 
       @include mobile {
-        padding: 30px 20px;
+        padding: 15px 20px;
       }
     }
 
@@ -270,7 +296,7 @@
           .floating-nav-item {
             position: relative;
             height: 100%;
-            height: 43px;
+            height: 44px;
             overflow: hidden;
             min-width: 80px;
 

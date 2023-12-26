@@ -3,8 +3,6 @@
   margin: 0;
   padding: 0;
   color: inherit;
-
-
 }
 
 *,
@@ -18,7 +16,6 @@
 html,
 body {
   height: 100%;
-
 }
 
 img,
@@ -53,27 +50,11 @@ ul {
 
 /* 세팅 */
 body {
-  background: #000;
+  // background: #000;
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
-
 }
 
 fieldset {
   border: 0;
-}
-
-@mixin ellipse($line: 1) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  @if($line > 1) {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $line;
-  }
-
-  @else {
-    white-space: nowrap;
-  }
 }

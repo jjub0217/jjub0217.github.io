@@ -9,7 +9,6 @@ $maxDevice: 1229px;
   }
 }
 
-
 // [991] ~ 1024
 $tablet: 1024px;
 
@@ -40,5 +39,20 @@ $minDevice: 320px;
   // 320 이하을 꾸미는거다. 
   @media screen and (max-width: $minDevice) {
     @content;
+  }
+}
+
+@mixin ellipse($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if($line > 1) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+
+  @else {
+    white-space: nowrap;
   }
 }
