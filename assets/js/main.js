@@ -1,3 +1,5 @@
+  $(window).trigger("click")
+  
   /**
    * @floatingmenu나타나는기능
    * 
@@ -8,17 +10,40 @@
       end: "bottom top",
       markers:false,
       onEnter : (e) => {
-        gsap.to(".floating-box ", {
-          position: "fixed",
-          transform: "translateY(0)",
-          display: "block"
-        })
+        if(window.matchMedia("(min-width: 1025px)").matches){
+          gsap.to(".floating-box", 
+          {
+            position: "fixed",
+            transform: "translateY(0)",
+            display: "block"
+          })
+        }else{
+          gsap.to(".floating-box", 
+          {
+            position: "relative",
+            transform: "none",
+            position: "fixed",
+            display: "block",
+            top: 0
+          })
+        }
       },
       onLeaveBack : () => {
-        gsap.to(".floating-box", {
-          display: "none",
-          transform: "translateY(-100%)",
-        })
+        if(window.matchMedia("(min-width: 1025px)").matches){
+          gsap.to(".floating-box", {
+            display: "none",
+            transform: "translateY(-100%)",
+          })
+        }else{
+          gsap.to(".floating-box ", 
+          {
+            position: "relative",
+            transform: "none",
+            position: "fixed",
+            display: "block",
+            top: 0
+          })
+        } 
       }
     }
   })
@@ -32,12 +57,12 @@
     console.log('load 이벤트 실행');
     floatingObject('.work1',1,20)
     floatingObject('.work2',.5,15)
-    floatingObject('.work3',1.5,20)
+    floatingObject('.work3',2.5,5)
     floatingObject('.work4',2,20)
-    floatingObject('.work5',1.5,20)
+    floatingObject('.work5',1,20)
     floatingObject('.work6',2.5,20)
     floatingObject('.work7',3,20)
-    floatingObject('.work8',2.5,20)
+    floatingObject('.work8',2,0.1)
     floatingObject('.work9',3.5,20)
     floatingObject('.work10',4,20)
   }) 
@@ -49,17 +74,37 @@
    */
 $(window).resize(function(){
   console.log('resize 이벤트 실행');
-  floatingObject('.work1',1,20)
-  floatingObject('.work2',.5,15)
-  floatingObject('.work3',1.5,20)
-  floatingObject('.work4',2,20)
-  floatingObject('.work5',1.5,20)
-  floatingObject('.work6',2.5,20)
-  floatingObject('.work7',3,20)
-  floatingObject('.work8',2.5,20)
-  floatingObject('.work9',3.5,20)
-  floatingObject('.work10',4,20)
+  // floatingObject('.work1',1,20)
+  // floatingObject('.work2',.5,15)
+  // floatingObject('.work3',1.5,20)
+  // floatingObject('.work4',2,20)
+  // floatingObject('.work5',1.5,20)
+  // floatingObject('.work6',2.5,20)
+  // floatingObject('.work7',3,20)
+  // floatingObject('.work8',2.5,20)
+  // floatingObject('.work9',3.5,20)
+  // floatingObject('.work10',4,20)
 }) 
+
+
+  /** 
+   *  @이미지들이스크롤에의해커지는기능
+   * 
+  */
+  $("[data-scroll]").each(function(i, el) {
+  gsap.to(el, {
+    scrollTrigger: {
+      trigger: el,
+      start: "0% 70%",
+      end: "100% 0%",
+      markers: true,
+      scrub:1,
+      onToggle: function(){
+        $(el).toggleClass("on")
+      },
+    },
+  })
+})
 
 
 /**
@@ -90,22 +135,35 @@ function floatingObject(selector,delay,size){
   return
 }
 
+
 /**
- * @floatingmenu클릭했을때메뉴이동기능
+ * @mo-gnb_btn클릭했을때 mo-gnb 나타나는 기능
  * 
  */
-$(".floating-gnb .floating-nav-list.mo").click(function (e){
-  e.preventDefault()
-  if( $(".floating-box").hasClass("isAct")){
-    $(".floating-box").removeClass("isAct")
+$(".mo-gnb_btn").click(function (e){
+  e.preventDefault();
+  if($(this).hasClass("on")){
     $(".mo_gnb").stop().slideUp()
-    $(this).removeClass("on")
   }else{
-    $(".floating-box").addClass("isAct")
-    $(".mo_gnb").stop().slideDown()
-    $(this).addClass("on")
+  $(".mo_gnb").stop().slideDown(); 
   }
+  if ($(this).attr('aria-expanded') === 'false') {
+    $(this).attr('aria-expanded', 'true' )
+    $(this).addClass("on")
+  } else {
+    $(this).attr('aria-expanded', 'false' )
+    $(this).removeClass("on")
+  }
+})
 
+
+/**
+ * @mo-gnb의 a 클릭했을때 해당 페이지로 이동하는 기능
+ * 
+ */
+$(".mo_gnb-list a").click(function (e){
+  $(".mo_gnb").stop().slideUp()
+  $(".mo-gnb_btn").removeClass("on")
 })
 
 
@@ -113,13 +171,17 @@ $(".floating-gnb .floating-nav-list.mo").click(function (e){
  * @footer로이동하는기능-
  * 
  */
-// 속도를 줄일순 없나?
 $(".nav-item.about").click(function(){
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   return false;
 })
 
-$(".floating-nav-item").find("a").click(function(){
+$(".floating-nav-item.about").click(function(){
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  return false;
+})
+
+$(".mo_gnb-list .about").click(function(){
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   return false;
 })

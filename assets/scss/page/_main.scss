@@ -75,14 +75,12 @@ section {
 .section-works {
   position: relative;
   z-index: 1;
-  // background: #fff;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    // background: #fff;
     background-size: cover;
     transform: rotate(-180deg);
   }
@@ -92,6 +90,14 @@ section {
     top: 0;
     left: -5vw;
     width: 30vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco2 {
@@ -100,6 +106,14 @@ section {
     right: -5vw;
     width: 40vw;
     transform: rotate(10deg);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco3 {
@@ -107,6 +121,14 @@ section {
     top: 45vw;
     left: 20vw;
     width: 30vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco4 {
@@ -115,6 +137,14 @@ section {
     left: 3vw;
     width: 20vw;
     transform: rotate(40deg);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco5 {
@@ -122,6 +152,14 @@ section {
     top: 70vw;
     right: -10vw;
     width: 50vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco6 {
@@ -130,6 +168,14 @@ section {
     left: -7vw;
     width: 40vw;
     transform: scaleX(-1);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco7 {
@@ -138,6 +184,14 @@ section {
     left: 40vw;
     width: 30vw;
     transform: rotate(90deg);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco8 {
@@ -146,6 +200,14 @@ section {
     right: 7vw;
     width: 25vw;
     transform: rotate(-90deg);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco9 {
@@ -153,6 +215,14 @@ section {
     top: 160vw;
     right: -10vw;
     width: 50vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco10 {
@@ -160,7 +230,14 @@ section {
     top: 170vw;
     width: 45vw;
     left: -5vw;
-    transform: scaleX(-1);
+    opacity: 0;
+    transform: scale(-1.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scaleX(-1);
+    }
   }
 
   .deco11 {
@@ -169,6 +246,14 @@ section {
     left: 2vw;
     width: 30vw;
     width: 30vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .deco12 {
@@ -176,6 +261,14 @@ section {
     top: 190vw;
     left: 25vw;
     width: 30vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .works-area {
@@ -210,6 +303,7 @@ section {
   .work {
     position: relative;
     z-index: 1;
+    // border: 1px solid;
 
     .thumb-box {
       position: relative;
@@ -391,7 +485,8 @@ section {
 
   .work1 {
     grid-column: span 3;
-    grid-row: span 3;
+    // grid-row: span 3;
+    grid-row: 1/5;
 
     @include mobile {
       display: flex;
@@ -416,6 +511,7 @@ section {
 
 
     grid-row: span 4;
+    // grid-row: 1/5;
     grid-column: 4/6;
     transform: translateY(4vw);
 
@@ -439,8 +535,15 @@ section {
     // grid-column: 5;
     // grid-row: 2/6;
 
-    grid-column: span 2;
-    grid-row: 4/8;
+    grid-column: 1/3;
+    grid-row: 5/10;
+    transform: translateY(-9vw);
+
+    // grid-column: span 2;
+    // grid-row: 4/8;
+    @include tablet {
+      transform: none;
+    }
 
     .thumb-box {
       // padding-bottom: 200%;
@@ -452,6 +555,7 @@ section {
     }
 
     .text-box {
+
       .desc {
         @include ellipse(6);
       }
@@ -466,6 +570,11 @@ section {
 
     grid-column: 3/6;
     grid-row: 5/8;
+    transform: translateY(5vw);
+
+    @include tablet {
+      transform: none;
+    }
 
     .thumb-box {
       grid-column: 1/4;
@@ -500,9 +609,12 @@ section {
     // grid-column: span 3;
     // grid-row: span 3;
 
-    transform: translateX(6vw);
-    grid-column: span 4;
-    grid-row: span 3;
+    // transform: translateX(6vw);
+    transform: translate(6vw, -7vw);
+    grid-column: 1/5;
+    grid-row: 9/13;
+    // grid-column: span 4;
+    // grid-row: span 3;
 
     @include tablet {
       transform: none;
@@ -533,7 +645,9 @@ section {
     // grid-row: 6/9;
 
     grid-column: 3/6;
-    grid-row: 11/14;
+    // grid-row: 11/14;
+    grid-row: 12/16;
+    // transform: translateY(-3vw);
 
     .thumb-box {
       padding-bottom: 70%;
@@ -550,8 +664,12 @@ section {
     // grid-row: 9/13;
 
     grid-column: 1/2;
-    grid-row: 13/16;
-    transform: translateY(-9vw);
+    // grid-row: 13/16;
+    // grid-row: 16/19;
+    // transform: translateY(-9vw);
+
+    grid-row: 15/19;
+    transform: translateY(-17vw);
 
     @include tablet {
       transform: none;
@@ -583,8 +701,10 @@ section {
     // grid-row: 9/11;
 
     grid-column: 1/3;
-    grid-row: 11/13;
-    transform: translateY(-4vw);
+    // grid-row: 13/15;
+    // grid-row: 11/13;
+    grid-row: 12/14;
+    transform: translateY(-6vw);
 
     @include tablet {
       transform: none;
@@ -608,8 +728,11 @@ section {
     // grid-row: 11/14;
     // transform: translateY(-9vw);
 
-    grid-column: 2/4;
-    grid-row: 14/16;
+    // grid-column: 2/4;
+    // grid-row: 14/16;
+    grid-column: 4/6;
+    // grid-row: 15/18;
+    grid-row: 16/19;
 
     .thumb-box {
       padding-bottom: 50%;
@@ -631,9 +754,12 @@ section {
     // grid-row: 13/16;
     // transform: translateY(-10%);
 
-    grid-column: 4/6;
-    grid-row: 15/18;
-    transform: translateY(-4vw);
+    // grid-column: 4/6;
+    // grid-row: 15/18;
+    // transform: translateY(-4vw);
+    grid-column: 2/4;
+    // grid-row: 14/16;
+    grid-row: 15/16;
 
     @include tablet {
       transform: none;

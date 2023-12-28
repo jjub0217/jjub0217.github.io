@@ -83,6 +83,14 @@
   }
 }
 
+.scrollTop {
+  position: fixed;
+  right: 12px;
+  bottom: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);

@@ -16,6 +16,7 @@
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -50,7 +51,7 @@ ul {
 
 /* 세팅 */
 body {
-  // background: #000;
+  background: #000;
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
 }

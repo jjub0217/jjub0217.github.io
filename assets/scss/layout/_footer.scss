@@ -2,15 +2,13 @@
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   position: fixed;
-  bottom: -80px;
-  // position: sticky;
-  // bottom: 0;
+  bottom: 0;
   background: #000;
   color: #fff;
   height: 100vh;
-  // padding-top: 300px;
+  padding-top: 90px;
+  justify-content: space-between;
 
   @include mobile {
     position: relative;
@@ -22,15 +20,18 @@
     width: 100%;
     display: flex;
     grid-column-gap: 80px;
-    grid-row-gap: 80px;
+    grid-row-gap: 40px;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .intro-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
     .headline {
-      font-size: 65px;
+      font-size: 60px;
       font-weight: 500;
 
       @include tablet {
@@ -52,8 +53,7 @@
     width: fit-content;
     border-radius: 16px;
     border: 1px solid #fff;
-    padding: 20px 26px;
-    margin-top: 30px;
+    padding: 15px;
     transition: 0.3s;
     font-size: 18px;
     font-family: 'Montserrat',
@@ -115,12 +115,11 @@
   .heading {
     display: flex;
     align-items: center;
-    // padding-top: 120px;
-    // overflow: hidden;
 
     &-logo {
       width: 13%;
-      transform: rotate(-50deg);
+      height: 100%;
+      transform: rotate(-50deg) translate(0vw, 1vw);
     }
 
     .text {
