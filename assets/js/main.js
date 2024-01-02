@@ -1,7 +1,11 @@
+  /**
+   * @clicktrigger
+   * 
+   */
   $(window).trigger("click")
   
   /**
-   * @floatingmenu나타나는기능
+   * @floatingbox나타나는기능
    * 
    */
   gsap.to(".container",{
@@ -72,19 +76,19 @@
    * @페이지의사이즈가변경되었을때의기능
    * 
    */
-$(window).resize(function(){
-  console.log('resize 이벤트 실행');
-  // floatingObject('.work1',1,20)
-  // floatingObject('.work2',.5,15)
-  // floatingObject('.work3',1.5,20)
-  // floatingObject('.work4',2,20)
-  // floatingObject('.work5',1.5,20)
-  // floatingObject('.work6',2.5,20)
-  // floatingObject('.work7',3,20)
-  // floatingObject('.work8',2.5,20)
-  // floatingObject('.work9',3.5,20)
-  // floatingObject('.work10',4,20)
-}) 
+  $(window).resize(function(){
+    console.log('resize 이벤트 실행');
+    floatingObject('.work1',1,20)
+    floatingObject('.work2',.5,15)
+    floatingObject('.work3',1.5,20)
+    floatingObject('.work4',2,20)
+    floatingObject('.work5',1.5,20)
+    floatingObject('.work6',2.5,20)
+    floatingObject('.work7',3,20)
+    floatingObject('.work8',2.5,20)
+    floatingObject('.work9',3.5,20)
+    floatingObject('.work10',4,20)
+  }) 
 
 
   /** 
@@ -168,7 +172,7 @@ $(".mo_gnb-list a").click(function (e){
 
 
 /**
- * @footer로이동하는기능-
+ * @footer로이동하는기능
  * 
  */
 $(".nav-item.about").click(function(){
