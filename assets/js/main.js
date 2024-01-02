@@ -101,7 +101,7 @@
       trigger: el,
       start: "0% 70%",
       end: "100% 0%",
-      markers: true,
+      markers: false,
       scrub:1,
       onToggle: function(){
         $(el).toggleClass("on")
