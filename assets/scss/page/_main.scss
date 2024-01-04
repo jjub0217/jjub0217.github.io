@@ -178,6 +178,10 @@ section {
       opacity: 1;
       transform: scale(1);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .deco7 {
@@ -193,6 +197,10 @@ section {
     &.on {
       opacity: 1;
       transform: scale(1);
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -210,6 +218,10 @@ section {
       opacity: 1;
       transform: scale(1);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .deco9 {
@@ -225,6 +237,10 @@ section {
       opacity: 1;
       transform: scale(1);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .deco10 {
@@ -239,6 +255,10 @@ section {
     &.on {
       opacity: 1;
       transform: scaleX(-1);
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -256,6 +276,10 @@ section {
       opacity: 1;
       transform: scale(1);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .deco12 {
@@ -270,6 +294,10 @@ section {
     &.on {
       opacity: 1;
       transform: scale(1);
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -291,7 +319,6 @@ section {
   .deco14 {
     position: absolute;
     top: 210vw;
-    // left: 25vw;
     right: -10vw;
     width: 50vw;
     opacity: 0;
@@ -302,13 +329,16 @@ section {
       opacity: 1;
       transform: scale(1);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .deco15 {
     position: absolute;
     top: 220vw;
     left: -2vw;
-    // right: -20vw;
     width: 40vw;
     opacity: 0;
     transform: scale(0.5) rotate(90deg);
@@ -318,6 +348,10 @@ section {
       opacity: 1;
       transform: scale(1) rotate(90deg);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
 
@@ -325,16 +359,11 @@ section {
   .works-area {
     display: grid;
     grid-column-gap: 7vw;
-    // grid-row-gap: 3vw;
     grid-template-columns: repeat(5, 11vw);
     grid-auto-rows: 8.7vw;
-
-
     margin-top: 250px;
     padding-bottom: 100px;
     justify-content: center;
-
-
     grid-row-gap: 4vw;
 
     @include tablet {
@@ -347,14 +376,13 @@ section {
 
     @include mobile {
       gap: 15px;
-
+      margin-top: 200px;
     }
   }
 
   .work {
     position: relative;
     z-index: 1;
-    // border: 1px solid;
 
     .thumb-box {
       position: relative;

@@ -546,7 +546,7 @@ fieldset {
   background: url("../images/menu2_new.png") no-repeat;
   background-position: center;
   background-size: 300%;
-  padding: 14px 37px 100px 37px;
+  padding: 20px 37px 50px 37px;
 }
 .mo_gnb .gnb-logo {
   display: flex;
@@ -571,7 +571,7 @@ fieldset {
 }
 .mo_gnb-list {
   color: #fff;
-  margin-top: 73px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 26px;
@@ -877,6 +877,11 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
+@media screen and (max-width: 768px) {
+  .section-works .deco6 {
+    display: none;
+  }
+}
 .section-works .deco7 {
   position: absolute;
   top: 120vw;
@@ -890,6 +895,11 @@ section .heading-area .badge {
 .section-works .deco7.on {
   opacity: 1;
   transform: scale(1);
+}
+@media screen and (max-width: 768px) {
+  .section-works .deco7 {
+    display: none;
+  }
 }
 .section-works .deco8 {
   position: absolute;
@@ -905,6 +915,11 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
+@media screen and (max-width: 768px) {
+  .section-works .deco8 {
+    display: none;
+  }
+}
 .section-works .deco9 {
   position: absolute;
   top: 160vw;
@@ -918,6 +933,11 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
+@media screen and (max-width: 768px) {
+  .section-works .deco9 {
+    display: none;
+  }
+}
 .section-works .deco10 {
   position: absolute;
   top: 170vw;
@@ -930,6 +950,11 @@ section .heading-area .badge {
 .section-works .deco10.on {
   opacity: 1;
   transform: scaleX(-1);
+}
+@media screen and (max-width: 768px) {
+  .section-works .deco10 {
+    display: none;
+  }
 }
 .section-works .deco11 {
   position: absolute;
@@ -945,6 +970,11 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
+@media screen and (max-width: 768px) {
+  .section-works .deco11 {
+    display: none;
+  }
+}
 .section-works .deco12 {
   position: absolute;
   top: 190vw;
@@ -957,6 +987,11 @@ section .heading-area .badge {
 .section-works .deco12.on {
   opacity: 1;
   transform: scale(1);
+}
+@media screen and (max-width: 768px) {
+  .section-works .deco12 {
+    display: none;
+  }
 }
 .section-works .deco13 {
   position: absolute;
@@ -984,6 +1019,11 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
+@media screen and (max-width: 768px) {
+  .section-works .deco14 {
+    display: none;
+  }
+}
 .section-works .deco15 {
   position: absolute;
   top: 220vw;
@@ -996,6 +1036,11 @@ section .heading-area .badge {
 .section-works .deco15.on {
   opacity: 1;
   transform: scale(1) rotate(90deg);
+}
+@media screen and (max-width: 768px) {
+  .section-works .deco15 {
+    display: none;
+  }
 }
 .section-works .works-area {
   display: grid;
@@ -1019,6 +1064,7 @@ section .heading-area .badge {
 @media screen and (max-width: 768px) {
   .section-works .works-area {
     gap: 15px;
+    margin-top: 200px;
   }
 }
 .section-works .work {
