@@ -4,6 +4,8 @@
    */
   $(window).trigger("click")
   
+
+
   /**
    * @floatingbox나타나는기능
    * 
@@ -69,6 +71,11 @@
     floatingObject('.work8',2,0.1)
     floatingObject('.work9',3.5,20)
     floatingObject('.work10',4,20)
+      let currentMode = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
+      console.log(currentMode);
+      if(currentMode === "mobile"){
+        $(".profile-image").css("display", "none")
+      }
   }) 
 
 
@@ -169,6 +176,7 @@ $(".mo_gnb-list a").click(function (e){
   $(".mo_gnb").stop().slideUp()
   $(".mo-gnb_btn").removeClass("on")
 })
+
 
 
 /**
