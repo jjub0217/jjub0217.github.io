@@ -825,7 +825,7 @@ section .heading-area .badge {
 }
 .section-works .deco3 {
   position: absolute;
-  top: 45vw;
+  top: 28vw;
   left: 20vw;
   width: 30vw;
   opacity: 0;
@@ -838,7 +838,7 @@ section .heading-area .badge {
 }
 .section-works .deco4 {
   position: absolute;
-  top: 60vw;
+  top: 42vw;
   left: 3vw;
   width: 20vw;
   transform: rotate(40deg);
@@ -957,6 +957,45 @@ section .heading-area .badge {
 .section-works .deco12.on {
   opacity: 1;
   transform: scale(1);
+}
+.section-works .deco13 {
+  position: absolute;
+  top: 60vw;
+  left: -5vw;
+  width: 50vw;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.section-works .deco13.on {
+  opacity: 1;
+  transform: scale(1);
+}
+.section-works .deco14 {
+  position: absolute;
+  top: 210vw;
+  right: -10vw;
+  width: 50vw;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.section-works .deco14.on {
+  opacity: 1;
+  transform: scale(1);
+}
+.section-works .deco15 {
+  position: absolute;
+  top: 220vw;
+  left: -2vw;
+  width: 40vw;
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+  transition: 0.5s;
+}
+.section-works .deco15.on {
+  opacity: 1;
+  transform: scale(1) rotate(90deg);
 }
 .section-works .works-area {
   display: grid;
