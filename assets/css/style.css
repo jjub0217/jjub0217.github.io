@@ -1071,6 +1071,13 @@ section .heading-area .badge {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 768px) {
+  .section-works .work {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .section-works .work .thumb-box {
   position: relative;
   padding-bottom: 100%;
@@ -1236,13 +1243,6 @@ section .heading-area .badge {
 .section-works .work1 {
   grid-column: span 3;
   grid-row: 1/5;
-}
-@media screen and (max-width: 768px) {
-  .section-works .work1 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 .section-works .work1 .thumb-box {
   padding-bottom: 50%;

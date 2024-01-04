@@ -384,6 +384,12 @@ section {
     position: relative;
     z-index: 1;
 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .thumb-box {
       position: relative;
       padding-bottom: 100%;
@@ -567,11 +573,7 @@ section {
     // grid-row: span 3;
     grid-row: 1/5;
 
-    @include mobile {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+
 
     .thumb-box {
       padding-bottom: 50%;
