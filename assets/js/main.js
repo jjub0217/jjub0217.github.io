@@ -71,11 +71,10 @@
     floatingObject('.work8',2,0.1)
     floatingObject('.work9',3.5,20)
     floatingObject('.work10',4,20)
-      let currentMode = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
-      console.log(currentMode);
-      if(currentMode === "mobile"){
-        $(".profile-image").css("display", "none")
-      }
+    let currentMode = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
+    if(currentMode === "mobile"){
+      $(".profile-image").css("display", "none")
+    }
   }) 
 
 
