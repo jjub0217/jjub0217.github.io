@@ -186,7 +186,6 @@
         }
       }
 
-      // 왜 커서포인터가 안먹을까?
       &.dev {
         top: 24vw;
         left: 50vw;
@@ -204,7 +203,6 @@
         left: 37vw;
         width: 14vw;
         cursor: pointer;
-        z-index: -1;
 
         @include tablet {
           top: auto;

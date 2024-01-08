@@ -402,7 +402,6 @@ fieldset {
   left: 37vw;
   width: 14vw;
   cursor: pointer;
-  z-index: -1;
 }
 @media screen and (max-width: 1024px) {
   .header .nav-item.works {
