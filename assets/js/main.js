@@ -61,16 +61,16 @@
    */
   $(window).on("load",function(e){
     console.log('load 이벤트 실행');
-    floatingObject('.work1',1,20)
-    floatingObject('.work2',.5,15)
-    floatingObject('.work3',2.5,5)
-    floatingObject('.work4',2,20)
-    floatingObject('.work5',1,20)
-    floatingObject('.work6',2.5,20)
-    floatingObject('.work7',3,20)
-    floatingObject('.work8',2,0.1)
-    floatingObject('.work9',3.5,20)
-    floatingObject('.work10',4,20)
+    // floatingObject('.work1',1,20)
+    // floatingObject('.work2',.5,15)
+    // floatingObject('.work3',2.5,5)
+    // floatingObject('.work4',2,20)
+    // floatingObject('.work5',1,20)
+    // floatingObject('.work6',2.5,20)
+    // floatingObject('.work7',3,20)
+    // floatingObject('.work8',2,0.1)
+    // floatingObject('.work9',3.5,20)
+    // floatingObject('.work10',4,20)
     let currentMode = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
     if(currentMode === "mobile"){
       $(".profile-image").css("display", "none")
@@ -84,16 +84,16 @@
    */
   $(window).resize(function(){
     console.log('resize 이벤트 실행');
-    floatingObject('.work1',1,20)
-    floatingObject('.work2',.5,15)
-    floatingObject('.work3',1.5,20)
-    floatingObject('.work4',2,20)
-    floatingObject('.work5',1.5,20)
-    floatingObject('.work6',2.5,20)
-    floatingObject('.work7',3,20)
-    floatingObject('.work8',2.5,20)
-    floatingObject('.work9',3.5,20)
-    floatingObject('.work10',4,20)
+    // floatingObject('.work1',1,20)
+    // floatingObject('.work2',.5,15)
+    // floatingObject('.work3',1.5,20)
+    // floatingObject('.work4',2,20)
+    // floatingObject('.work5',1.5,20)
+    // floatingObject('.work6',2.5,20)
+    // floatingObject('.work7',3,20)
+    // floatingObject('.work8',2.5,20)
+    // floatingObject('.work9',3.5,20)
+    // floatingObject('.work10',4,20)
   }) 
 
 
