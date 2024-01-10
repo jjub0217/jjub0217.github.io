@@ -90,6 +90,18 @@
     padding-bottom: 100%;
     border-radius: 50%;
 
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    @include minDevice {
+      display: none;
+    }
+
     video {
       position: absolute;
       top: 0;

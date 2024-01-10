@@ -285,6 +285,21 @@ fieldset {
   padding-bottom: 100%;
   border-radius: 50%;
 }
+@media screen and (max-width: 1024px) {
+  .header .profile-image {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .profile-image {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header .profile-image {
+    display: none;
+  }
+}
 .header .profile-image video {
   position: absolute;
   top: 0;
