@@ -61,17 +61,6 @@
    */
   $(window).on("load",function(e){
     console.log('load 이벤트 실행');
-    // floatingObject('.work1',1,20)
-    // floatingObject('.work2',.5,15)
-    // floatingObject('.work3',2.5,5)
-    // floatingObject('.work4',2,20)
-    // floatingObject('.work5',1,20)
-    // floatingObject('.work6',2.5,20)
-    // floatingObject('.work7',3,20)
-    // floatingObject('.work8',2,0.1)
-    // floatingObject('.work9',3.5,20)
-    // floatingObject('.work10',4,20)
-  
   }) 
 
 
@@ -90,16 +79,6 @@
    */
   $(window).resize(function(){
     // console.log('resize 이벤트 실행');
-    // floatingObject('.work1',1,20)
-    // floatingObject('.work2',.5,15)
-    // floatingObject('.work3',1.5,20)
-    // floatingObject('.work4',2,20)
-    // floatingObject('.work5',1.5,20)
-    // floatingObject('.work6',2.5,20)
-    // floatingObject('.work7',3,20)
-    // floatingObject('.work8',2.5,20)
-    // floatingObject('.work9',3.5,20)
-    // floatingObject('.work10',4,20)
   }) 
 
 
@@ -121,63 +100,6 @@
     },
   })
 })
-
-
-/**
- * @페이지가로딩되었거나사이즈가변경되었을때포폴들이움직이는범위를랜덤으로잡아주는기능
- * 
- */
-// function random(min, max) {
-//   return parseFloat((Math.random() * (max - min) + min).toFixed(2))
-// }
-
-
-/**
- * @페이지가로딩되었거나사이즈가변경되었을때포폴들이움직이는기능을디바이스사이즈가1025보다작은경우에는작동하지않도록하는기능
- * 
- */
- $("[data-y]").each(function(i, el) {
-  if(window.matchMedia("(min-width: 1025px)").matches){
-    console.log(el);
-    console.log($(this));
-    console.log($(this).data("y"));
-      gsap.to(el, {
-      scrollTrigger:{
-        trigger:$(this),
-        start:"0% 100%",
-        end:"100% 0%",
-        scrub:0,
-        markers: true,
-      },
-      y:$(this).data("y"),
-        // repeat: -1, // -1 무`한반복
-        // yoyo: true, // 애니메이션 되돌아오기(설정안할 시 끈킴)
-        //  ease: "power1.inOut", // 타이밍함수
-    })
-  }
-  return
-})
-
-
-
-
-
-
-
-// function floatingObject(selector,delay,size){
-//   if(window.matchMedia("(min-width: 1025px)").matches){
-//       console.log('width 1024 초과임');
-//       // gsap.to(요소, 시간, 옵션)
-//       gsap.to(selector, random(1.5,2.5), {
-//         y: size,
-//         repeat: -1, // -1 무한반복
-//         yoyo: true, // 애니메이션 되돌아오기(설정안할 시 끈킴)
-//         ease: Power1.easeInOut, // 타이밍함수
-//         delay: random(0,delay) // 지연시간
-//       })
-//   }
-//   return
-// }
 
 
 /**

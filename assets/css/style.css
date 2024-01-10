@@ -285,21 +285,6 @@ fieldset {
   padding-bottom: 100%;
   border-radius: 50%;
 }
-@media screen and (max-width: 1024px) {
-  .header .profile-image {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header .profile-image {
-    display: none;
-  }
-}
-@media screen and (max-width: 320px) {
-  .header .profile-image {
-    display: none;
-  }
-}
 .header .profile-image video {
   position: absolute;
   top: 0;
@@ -308,6 +293,21 @@ fieldset {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  .header .profile-image video {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .profile-image video {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header .profile-image video {
+    display: none;
+  }
 }
 .header .nav-list {
   position: absolute;
@@ -1129,7 +1129,7 @@ section .heading-area .badge {
 .section-works .work .common {
   position: absolute;
   left: -14px;
-  top: 29px;
+  top: 35px;
   width: 230px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -1178,16 +1178,15 @@ section .heading-area .badge {
   padding: 0.5vw 0;
   margin-top: 10px;
 }
+@media screen and (max-width: 1024px) {
+  .section-works .work .text-box {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .section-works .work .text-box {
     gap: 10px;
   }
-}
-.section-works .work .text-box small {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 16px;
 }
 .section-works .work .text-box h3 {
   font-size: 25px;
@@ -1200,7 +1199,7 @@ section .heading-area .badge {
     font-size: 2vw;
   }
 }
-.section-works .work .text-box .desc {
+.section-works .work .text-box .title {
   font-size: 16px;
   line-height: 1.4;
   overflow: hidden;
@@ -1208,15 +1207,13 @@ section .heading-area .badge {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
+  font-weight: 500;
 }
-.section-works .work .text-box .desc small {
-  font-size: 15px;
-}
-.section-works .work .text-box .desc .link {
+.section-works .work .text-box .title .link {
   position: relative;
   color: #7824e5;
 }
-.section-works .work .text-box .desc .link:hover:after {
+.section-works .work .text-box .title .link:hover:after {
   content: "";
   width: 100%;
   height: 1px;
@@ -1224,6 +1221,12 @@ section .heading-area .badge {
   bottom: 0;
   left: 0;
   background: #7824e5;
+}
+.section-works .work .text-box .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
 }
 .section-works .work .text-box .hash {
   display: flex;
@@ -1238,7 +1241,7 @@ section .heading-area .badge {
 }
 .section-works .work .text-box .hash span {
   border: 1px solid #000;
-  border-radius: 16px;
+  border-radius: 10px;
   padding: 5px 8px;
   font-size: 14px;
   text-transform: uppercase;
@@ -1256,7 +1259,12 @@ section .heading-area .badge {
 .section-works .work1 {
   grid-column: 1/4;
   grid-row: 5/8;
-  transform: translateY(3vw);
+  transform: translateY(4vw);
+}
+@media screen and (max-width: 1024px) {
+  .section-works .work1 {
+    transform: none;
+  }
 }
 .section-works .work1 .thumb-box {
   padding-bottom: 80%;
@@ -1270,14 +1278,11 @@ section .heading-area .badge {
   justify-content: start;
   flex-direction: column;
 }
-.section-works .work1 .text-box small {
-  padding-top: 10px;
-}
 .section-works .work2 {
   border-radius: 20px;
   grid-column: 4/7;
   grid-row: 5/10;
-  transform: translateY(3vw);
+  transform: translateY(4vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work2 {
@@ -1297,13 +1302,10 @@ section .heading-area .badge {
   justify-content: start;
   flex-direction: column;
 }
-.section-works .work2 .text-box small {
-  padding-top: 10px;
-}
 .section-works .work3 {
   grid-column: 1/3;
   grid-row: 10/15;
-  transform: translateY(3vw);
+  transform: translateY(7vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work3 {
@@ -1327,7 +1329,7 @@ section .heading-area .badge {
 }
 .section-works .work4 {
   border-radius: 20px;
-  transform: translateY(3vw);
+  transform: translateY(7vw);
   display: flex;
   grid-column: 3/7;
   grid-row: 10/13;
@@ -1336,6 +1338,7 @@ section .heading-area .badge {
 @media screen and (max-width: 1024px) {
   .section-works .work4 {
     transform: none;
+    display: flex;
   }
 }
 .section-works .work4 .thumb-box {
@@ -1348,18 +1351,23 @@ section .heading-area .badge {
 @media screen and (max-width: 1024px) {
   .section-works .work4 .thumb-box {
     padding-bottom: 50%;
+    width: 100%;
+    height: 100%;
   }
 }
 .section-works .work4 .thumb-box img {
+  width: 50%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-.section-works .work4 .thumb-box .personal {
-  top: 23px;
 }
 .section-works .work4 .text-box {
   justify-content: flex-end;
   transform: translateY(-3vw);
+}
+@media screen and (max-width: 1024px) {
+  .section-works .work4 .text-box {
+    transform: none;
+  }
 }
 .section-works .work4 .text-box .desc {
   overflow: hidden;
@@ -1379,7 +1387,6 @@ section .heading-area .badge {
 }
 .section-works .work5 .thumb-box {
   padding-bottom: 40%;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work5 .thumb-box {
@@ -1390,9 +1397,34 @@ section .heading-area .badge {
   flex-direction: row;
   justify-content: space-between;
 }
+.section-works .work5 .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .section-works .work5 .desc.pc {
+    display: none;
+  }
+}
+.section-works .work5 .desc.mo {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .section-works .work5 .desc.mo {
+    display: flex;
+    font-size: 15px;
+  }
+}
 .section-works .work6 {
   grid-row: 13/17;
   grid-column: 3/7;
+  transform: translateY(7vw);
+}
+@media screen and (max-width: 1024px) {
+  .section-works .work6 {
+    transform: none;
+  }
 }
 .section-works .work6 .thumb-box {
   padding-bottom: 70%;
@@ -1405,6 +1437,7 @@ section .heading-area .badge {
 .section-works .work7 {
   grid-column: 5/7;
   grid-row: 18/22;
+  transform: translateY(7vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work7 {
@@ -1432,6 +1465,7 @@ section .heading-area .badge {
 .section-works .work8 {
   grid-column: 3/5;
   grid-row: 18/20;
+  transform: translateY(7vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work8 {
@@ -1452,7 +1486,12 @@ section .heading-area .badge {
 .section-works .work9 {
   grid-column: 1/3;
   grid-row: 15/18;
-  transform: translateY(3vw);
+  transform: translateY(7vw);
+}
+@media screen and (max-width: 1024px) {
+  .section-works .work9 {
+    transform: none;
+  }
 }
 .section-works .work9 .thumb-box {
   padding-bottom: 50%;
@@ -1469,10 +1508,9 @@ section .heading-area .badge {
   }
 }
 .section-works .work10 {
-  grid-column: 2/4;
-  grid-row: 15/16;
   grid-column: 1/3;
   grid-row: 18/20;
+  transform: translateY(7vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work10 {
@@ -1526,7 +1564,6 @@ section .heading-area .badge {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
-  font-size: 1.1vw;
 }
 .section-works .work11 {
   grid-column: 4/6;
