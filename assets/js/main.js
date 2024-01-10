@@ -60,7 +60,7 @@
    * 
    */
   $(window).on("load",function(e){
-    console.log('load 이벤트 실행');
+    // console.log('load 이벤트 실행');
     // floatingObject('.work1',1,20)
     // floatingObject('.work2',.5,15)
     // floatingObject('.work3',2.5,5)
@@ -83,7 +83,7 @@
    * 
    */
   $(window).resize(function(){
-    console.log('resize 이벤트 실행');
+    // console.log('resize 이벤트 실행');
     // floatingObject('.work1',1,20)
     // floatingObject('.work2',.5,15)
     // floatingObject('.work3',1.5,20)
