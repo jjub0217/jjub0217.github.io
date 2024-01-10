@@ -139,14 +139,23 @@
  $("[data-y]").each(function(i, el) {
   if(window.matchMedia("(min-width: 1025px)").matches){
     console.log(el);
-    gsap.to(el, {
-      y: 10,
-      repeat: -1, // -1 무한반복
-      yoyo: true, // 애니메이션 되돌아오기(설정안할 시 끈킴)
-      ease: "power1.inOut", // 타이밍함수
-      delay: Number(el.getAttribute("data-delay")) // 지연시간
+    console.log($(this));
+    console.log($(this).data("y"));
+      gsap.to(el, {
+      scrollTrigger:{
+        trigger:$(this),
+        start:"0% 100%",
+        end:"100% 0%",
+        scrub:0,
+        markers: true,
+      },
+      y:$(this).data("y"),
+        // repeat: -1, // -1 무`한반복
+        // yoyo: true, // 애니메이션 되돌아오기(설정안할 시 끈킴)
+        //  ease: "power1.inOut", // 타이밍함수
     })
   }
+  return
 })
 
 

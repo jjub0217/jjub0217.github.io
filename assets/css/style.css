@@ -1043,9 +1043,10 @@ section .heading-area .badge {
 }
 .section-works .works-area {
   display: grid;
-  grid-column-gap: 7vw;
-  grid-template-columns: repeat(5, 11vw);
   grid-auto-rows: 8.7vw;
+  grid-column-gap: 3.5vw;
+  grid-template-columns: repeat(6, 12vw);
+  grid-auto-rows: 7.7vw;
   margin-top: 250px;
   padding-bottom: 100px;
   justify-content: center;
@@ -1082,6 +1083,7 @@ section .heading-area .badge {
   padding-bottom: 100%;
   border-radius: 15px;
   overflow: hidden;
+  transition: 0.3s;
 }
 .section-works .work .thumb-box::before {
   content: "";
@@ -1098,6 +1100,12 @@ section .heading-area .badge {
 .section-works .work .thumb-box:hover::before {
   opacity: 1;
 }
+.section-works .work .thumb-box:hover img {
+  transform: scale(1.1);
+}
+.section-works .work .thumb-box:hover {
+  border-radius: 140px;
+}
 .section-works .work .thumb-box img {
   position: absolute;
   top: 0;
@@ -1106,6 +1114,7 @@ section .heading-area .badge {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.8s;
 }
 .section-works .work .work-category {
   position: absolute;
@@ -1152,8 +1161,7 @@ section .heading-area .badge {
   color: #fff;
   padding: 10px;
   z-index: 2;
-  opacity: 1;
-  transition: opacity 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 .section-works .work .link-work:hover {
   background: #fff;
@@ -1167,13 +1175,19 @@ section .heading-area .badge {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  text-align: right;
   padding: 0.5vw 0;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box {
     gap: 10px;
   }
+}
+.section-works .work .text-box small {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
 }
 .section-works .work .text-box h3 {
   font-size: 25px;
@@ -1213,9 +1227,9 @@ section .heading-area .badge {
 }
 .section-works .work .text-box .hash {
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.5vw;
+  padding-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box .hash {
@@ -1240,22 +1254,30 @@ section .heading-area .badge {
   }
 }
 .section-works .work1 {
-  grid-column: span 3;
-  grid-row: 1/5;
+  grid-column: 1/4;
+  grid-row: 5/8;
+  transform: translateY(3vw);
 }
 .section-works .work1 .thumb-box {
-  padding-bottom: 50%;
+  padding-bottom: 80%;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work1 .thumb-box {
     padding-bottom: 50%;
   }
 }
+.section-works .work1 .text-box {
+  justify-content: start;
+  flex-direction: column;
+}
+.section-works .work1 .text-box small {
+  padding-top: 10px;
+}
 .section-works .work2 {
   border-radius: 20px;
-  grid-row: span 4;
-  grid-column: 4/6;
-  transform: translateY(4vw);
+  grid-column: 4/7;
+  grid-row: 5/10;
+  transform: translateY(3vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work2 {
@@ -1264,17 +1286,24 @@ section .heading-area .badge {
 }
 .section-works .work2 .thumb-box {
   background: rgb(96, 95, 95);
-  padding-bottom: 120%;
+  padding-bottom: 100%;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work2 .thumb-box {
     padding-bottom: 50%;
   }
 }
+.section-works .work2 .text-box {
+  justify-content: start;
+  flex-direction: column;
+}
+.section-works .work2 .text-box small {
+  padding-top: 10px;
+}
 .section-works .work3 {
   grid-column: 1/3;
-  grid-row: 5/10;
-  transform: translateY(-9vw);
+  grid-row: 10/15;
+  transform: translateY(3vw);
 }
 @media screen and (max-width: 1024px) {
   .section-works .work3 {
@@ -1282,7 +1311,7 @@ section .heading-area .badge {
   }
 }
 .section-works .work3 .thumb-box {
-  padding-bottom: 120%;
+  padding-bottom: 140%;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work3 .thumb-box {
@@ -1298,9 +1327,11 @@ section .heading-area .badge {
 }
 .section-works .work4 {
   border-radius: 20px;
-  grid-column: 3/6;
-  grid-row: 5/8;
-  transform: translateY(5vw);
+  transform: translateY(3vw);
+  display: flex;
+  grid-column: 3/7;
+  grid-row: 10/13;
+  gap: 20px;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work4 {
@@ -1310,7 +1341,9 @@ section .heading-area .badge {
 .section-works .work4 .thumb-box {
   grid-column: 1/4;
   background-color: #167cff;
-  padding-bottom: 50%;
+  width: 60%;
+  height: 50%;
+  padding-bottom: 48%;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work4 .thumb-box {
@@ -1325,7 +1358,8 @@ section .heading-area .badge {
   top: 23px;
 }
 .section-works .work4 .text-box {
-  grid-column: 1/4;
+  justify-content: flex-end;
+  transform: translateY(-3vw);
 }
 .section-works .work4 .text-box .desc {
   overflow: hidden;
@@ -1335,9 +1369,8 @@ section .heading-area .badge {
   -webkit-line-clamp: 3;
 }
 .section-works .work5 {
-  transform: translate(6vw, -7vw);
-  grid-column: 1/5;
-  grid-row: 9/13;
+  grid-column: 1/7;
+  grid-row: 1/5;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work5 {
@@ -1346,21 +1379,20 @@ section .heading-area .badge {
 }
 .section-works .work5 .thumb-box {
   padding-bottom: 40%;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work5 .thumb-box {
     padding-bottom: 50%;
   }
 }
-.section-works .work5 .thumb-box img {
-  transition: 0.8s;
-}
-.section-works .work5 .thumb-box:hover img {
-  transform: scale(1.1);
+.section-works .work5 .text-box {
+  flex-direction: row;
+  justify-content: space-between;
 }
 .section-works .work6 {
-  grid-column: 3/6;
-  grid-row: 12/16;
+  grid-row: 13/17;
+  grid-column: 3/7;
 }
 .section-works .work6 .thumb-box {
   padding-bottom: 70%;
@@ -1371,9 +1403,8 @@ section .heading-area .badge {
   }
 }
 .section-works .work7 {
-  grid-column: 1/2;
-  grid-row: 15/19;
-  transform: translateY(-17vw);
+  grid-column: 5/7;
+  grid-row: 18/22;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work7 {
@@ -1399,9 +1430,8 @@ section .heading-area .badge {
      object-fit: cover;
 }
 .section-works .work8 {
-  grid-column: 1/3;
-  grid-row: 12/14;
-  transform: translateY(-6vw);
+  grid-column: 3/5;
+  grid-row: 18/20;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work8 {
@@ -1420,8 +1450,9 @@ section .heading-area .badge {
   top: 18px;
 }
 .section-works .work9 {
-  grid-column: 4/6;
-  grid-row: 16/19;
+  grid-column: 1/3;
+  grid-row: 15/18;
+  transform: translateY(3vw);
 }
 .section-works .work9 .thumb-box {
   padding-bottom: 50%;
@@ -1440,6 +1471,8 @@ section .heading-area .badge {
 .section-works .work10 {
   grid-column: 2/4;
   grid-row: 15/16;
+  grid-column: 1/3;
+  grid-row: 18/20;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work10 {
