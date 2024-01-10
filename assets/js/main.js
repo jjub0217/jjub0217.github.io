@@ -60,7 +60,7 @@
    * 
    */
   $(window).on("load",function(e){
-    // console.log('load 이벤트 실행');
+    console.log('load 이벤트 실행');
     // floatingObject('.work1',1,20)
     // floatingObject('.work2',.5,15)
     // floatingObject('.work3',2.5,5)
@@ -71,11 +71,17 @@
     // floatingObject('.work8',2,0.1)
     // floatingObject('.work9',3.5,20)
     // floatingObject('.work10',4,20)
-    let currentMode = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
-    if(currentMode === "mobile"){
-      $(".profile-image").css("display", "none")
-    }
+  
   }) 
+
+
+
+
+
+
+
+
+
 
 
   /**
@@ -130,6 +136,25 @@
  * @페이지가로딩되었거나사이즈가변경되었을때포폴들이움직이는기능을디바이스사이즈가1025보다작은경우에는작동하지않도록하는기능
  * 
  */
+ $("[data-y]").each(function(i, el) {
+  if(window.matchMedia("(min-width: 1025px)").matches){
+    console.log(el);
+    gsap.to(el, {
+      y: 10,
+      repeat: -1, // -1 무한반복
+      yoyo: true, // 애니메이션 되돌아오기(설정안할 시 끈킴)
+      ease: "power1.inOut", // 타이밍함수
+      delay: Number(el.getAttribute("data-delay")) // 지연시간
+    })
+  }
+})
+
+
+
+
+
+
+
 // function floatingObject(selector,delay,size){
 //   if(window.matchMedia("(min-width: 1025px)").matches){
 //       console.log('width 1024 초과임');
