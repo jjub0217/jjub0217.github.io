@@ -1,10 +1,12 @@
 .wrapper {
   padding-bottom: 100vh;
   position: relative;
-
+  min-width: 1229px;
 
   @include mobile {
     padding-bottom: 0;
+    min-width: 320px;
+    // min-width: none;
   }
 }
 
