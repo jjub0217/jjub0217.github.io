@@ -1190,13 +1190,7 @@ section .heading-area .badge {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  padding: 0.5vw 0;
-  margin-top: 10px;
-}
-@media screen and (max-width: 1024px) {
-  .section-works .work .text-box {
-    margin-top: 0;
-  }
+  margin-top: 15px;
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box {

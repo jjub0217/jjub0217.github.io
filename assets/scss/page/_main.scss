@@ -506,11 +506,11 @@ section {
       display: flex;
       flex-direction: column;
       gap: 0.5vw;
-      padding: 0.5vw 0;
-      margin-top: 10px;
+      // padding: 0.5vw 0;
+      margin-top: 15px;
 
       @include tablet {
-        margin-top: 0;
+        // margin-top: 0;
       }
 
       @include mobile {
