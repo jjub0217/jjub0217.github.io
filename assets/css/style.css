@@ -373,14 +373,12 @@ fieldset {
   width: 14vw;
   cursor: pointer;
 }
-@media (min-width: 1025px) {
-  .header .floating-box {
-    display: none;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    transform: translateY(-100%);
-  }
+.header .floating-box {
+  display: none;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  transform: translateY(-100%);
 }
 .header .floating-heading {
   display: flex;

@@ -258,13 +258,13 @@
       // }
 
       // 1229 이상
-      @media (min-width: 1025px) {
-        display: none;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-        transform: translateY(-100%);
-      }
+      // @media (min-width: 1025px) {
+      display: none;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      transform: translateY(-100%);
+      // }
 
       // 768px 이하 (이게 적용되고 있다)
       @include mobile {
