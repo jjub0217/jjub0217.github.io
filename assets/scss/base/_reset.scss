@@ -55,13 +55,6 @@ body {
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
 
-  @include tablet {
-    min-width: 320px;
-  }
-
-  @include mobile {
-    min-width: 320px;
-  }
 
 }
 
