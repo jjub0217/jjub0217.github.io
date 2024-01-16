@@ -245,13 +245,7 @@
       //   z-index: 10;
       //   transform: translateY(-100%);
       // }
-      @media (min-width: 1025px) {
-        display: none;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-        transform: translateY(-100%);
-      }
+
 
       // 1024 이하
       @include tablet {
@@ -261,6 +255,15 @@
         top: 0;
         left: 0;
         right: 0;
+      }
+
+      // 1229 이상
+      @media (min-width: 1025px) {
+        display: none;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        transform: translateY(-100%);
       }
 
       // 768px 이하 (이게 적용되고 있다)

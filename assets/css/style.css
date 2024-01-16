@@ -373,15 +373,6 @@ fieldset {
   width: 14vw;
   cursor: pointer;
 }
-@media (min-width: 1025px) {
-  .header .floating-box {
-    display: none;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    transform: translateY(-100%);
-  }
-}
 @media screen and (max-width: 1024px) {
   .header .floating-box {
     display: block;
@@ -390,6 +381,15 @@ fieldset {
     top: 0;
     left: 0;
     right: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .header .floating-box {
+    display: none;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transform: translateY(-100%);
   }
 }
 .header .floating-heading {
