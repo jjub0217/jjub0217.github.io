@@ -3,8 +3,8 @@ $desktop: 1229px;
 
 @mixin desktop {
 
-  // 1229 이상을 꾸미는거다. 
-  @media screen and (min-width: $desktop ) {
+  // 1229 이하을 꾸미는거다. 
+  @media screen and (max-width: $desktop ) {
     @content;
   }
 }
