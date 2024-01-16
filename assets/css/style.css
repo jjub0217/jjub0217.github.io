@@ -248,7 +248,7 @@ fieldset {
   font-weight: 400;
   line-height: 90%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .logo {
     font-size: 19vw;
     padding-top: 50px;
@@ -362,11 +362,6 @@ fieldset {
   white-space: nowrap;
   font-family: "Libre Baskerville", serif;
   cursor: pointer;
-}
-@media screen and (min-width: 1229px) {
-  .header .nav-item span {
-    font-size: 1.2vw;
-  }
 }
 @media screen and (max-width: 768px) {
   .header .nav-item span {
@@ -1205,11 +1200,6 @@ section .heading-area .badge {
   line-height: 1;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1229px) {
-  .section-works .work .text-box h3 {
-    font-size: 2vw;
-  }
-}
 .section-works .work .text-box .title {
   font-size: 16px;
   line-height: 1.4;
@@ -1256,11 +1246,6 @@ section .heading-area .badge {
   padding: 5px 8px;
   font-size: 14px;
   text-transform: uppercase;
-}
-@media screen and (min-width: 1229px) {
-  .section-works .work .text-box .hash span {
-    font-size: 0.9vw;
-  }
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box .hash span {

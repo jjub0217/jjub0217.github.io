@@ -51,10 +51,15 @@
     font-weight: 400;
     line-height: 90%;
 
-    @include tablet {
+    @include desktop {
       font-size: 19vw;
       padding-top: 50px;
     }
+
+    // @include tablet {
+    //   font-size: 19vw;
+    //   padding-top: 50px;
+    // }
 
     span {
       display: block;
@@ -163,9 +168,9 @@
         font-family: 'Libre Baskerville', serif;
         cursor: pointer;
 
-        @include maxDevice {
-          font-size: 1.2vw;
-        }
+        // @include maxDevice {
+        //   font-size: 1.2vw;
+        // }
 
         @include mobile {
           font-size: 2vw

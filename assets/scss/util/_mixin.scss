@@ -1,10 +1,10 @@
 // 1229 ~
-$maxDevice: 1229px;
+$desktop: 1229px;
 
-@mixin maxDevice {
+@mixin desktop {
 
   // 1229 이상을 꾸미는거다. 
-  @media screen and (min-width: $maxDevice ) {
+  @media screen and (max-width: $desktop ) {
     @content;
   }
 }

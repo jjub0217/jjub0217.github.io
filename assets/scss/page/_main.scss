@@ -7,7 +7,6 @@
     padding-bottom: 0;
     min-width: 320px;
   }
-
 }
 
 .container {
@@ -525,9 +524,9 @@ section {
         line-height: 1;
         text-transform: uppercase;
 
-        @include maxDevice {
-          font-size: 2vw;
-        }
+        // @include maxDevice {
+        //   font-size: 2vw;
+        // }
       }
 
       .title {
@@ -578,9 +577,9 @@ section {
           font-size: 14px;
           text-transform: uppercase;
 
-          @include maxDevice {
-            font-size: 0.9vw;
-          }
+          // @include maxDevice {
+          //   font-size: 0.9vw;
+          // }
 
           @include mobile {
             font-size: 12px;
