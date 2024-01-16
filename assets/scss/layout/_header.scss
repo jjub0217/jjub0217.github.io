@@ -242,7 +242,7 @@
       z-index: 10;
       transform: translateY(-100%);
 
-      // 1229 이상
+      // 1024 이하
       @include tablet {
         display: block;
         transform: none;
@@ -250,12 +250,12 @@
         top: 0;
       }
 
-      // 768px 이하
+      // 768px 이하 (이게 적용되고 있다)
       @include mobile {
-        display: block;
-        transform: none;
-        position: fixed;
-        top: 0;
+        // display: block;
+        // transform: none;
+        // position: fixed;
+        // top: 0;
       }
     }
 

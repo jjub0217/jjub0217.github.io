@@ -388,14 +388,6 @@ fieldset {
     top: 0;
   }
 }
-@media screen and (max-width: 768px) {
-  .header .floating-box {
-    display: block;
-    transform: none;
-    position: fixed;
-    top: 0;
-  }
-}
 .header .floating-heading {
   display: flex;
   justify-content: space-between;
