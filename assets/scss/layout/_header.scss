@@ -237,7 +237,14 @@
   .floating {
     &-box {
 
-      // 1025 이상부터
+      // 1229 이상부터
+      // @media (min-width: 1229px) {
+      //   display: none;
+      //   top: 0;
+      //   width: 100%;
+      //   z-index: 10;
+      //   transform: translateY(-100%);
+      // }
       @media (min-width: 1025px) {
         display: none;
         top: 0;
