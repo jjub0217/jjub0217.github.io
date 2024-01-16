@@ -91,6 +91,11 @@ body {
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
 }
+@media screen and (max-width: 768px) {
+  body {
+    min-width: 320px;
+  }
+}
 
 fieldset {
   border: 0;
@@ -727,12 +732,10 @@ fieldset {
 .wrapper {
   padding-bottom: 100vh;
   position: relative;
-  min-width: 1229px;
 }
 @media screen and (max-width: 768px) {
   .wrapper {
     padding-bottom: 0;
-    min-width: 320px;
   }
 }
 
