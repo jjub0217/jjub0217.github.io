@@ -51,7 +51,10 @@
     font-weight: 400;
     line-height: 90%;
 
-    @include desktop {
+    // 1229 이상
+    @include desktop {}
+
+    @include tablet {
       font-size: 19vw;
       padding-top: 50px;
     }
@@ -239,7 +242,16 @@
       z-index: 10;
       transform: translateY(-100%);
 
+      // 1229 이상
       @include desktop {
+        // display: block;
+        // transform: none;
+        // position: fixed;
+        // top: 0;
+      }
+
+      // 1024px 이하
+      @include tablet {
         display: block;
         transform: none;
         position: fixed;
