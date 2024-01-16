@@ -236,11 +236,15 @@
 
   .floating {
     &-box {
-      display: none;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      transform: translateY(-100%);
+
+      // 1025 이상부터
+      @media (min-width: 1025px) {
+        display: none;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        transform: translateY(-100%);
+      }
 
       // 1024 이하
       @include tablet {

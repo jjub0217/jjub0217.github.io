@@ -30,7 +30,7 @@
   //   }
   //     )
 let matchMedia = gsap.matchMedia();
-  matchMedia.add("(min-width: 1024px)", ()=>{
+  matchMedia.add("(min-width: 1025px)", ()=>{
     gsap.timeline({
       scrollTrigger: {
       trigger: $(".header .inner"),
