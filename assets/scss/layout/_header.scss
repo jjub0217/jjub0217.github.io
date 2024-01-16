@@ -248,14 +248,14 @@
 
 
       // 1024 이하
-      @include tablet {
-        display: block;
-        transform: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
+      // @include tablet {
+      //   display: block;
+      //   transform: none;
+      //   position: fixed;
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      // }
 
       // 1229 이상
       @media (min-width: 1025px) {
