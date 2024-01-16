@@ -274,7 +274,7 @@ fieldset {
   width: 35%;
   font-family: "pretandard", sans-serif;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .gnb {
     display: none;
   }
@@ -331,7 +331,7 @@ fieldset {
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .nav-list {
     display: flex;
     gap: 20px;
@@ -373,7 +373,7 @@ fieldset {
   left: 50vw;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .nav-item.home {
     top: auto;
     left: auto;
@@ -386,7 +386,7 @@ fieldset {
   left: 56vw;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .nav-item.about {
     top: auto;
     left: auto;
@@ -399,7 +399,7 @@ fieldset {
   left: 50vw;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .nav-item.dev {
     top: auto;
     left: auto;
@@ -413,7 +413,7 @@ fieldset {
   width: 14vw;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .nav-item.works {
     top: auto;
     left: auto;
@@ -429,7 +429,7 @@ fieldset {
   z-index: 10;
   transform: translateY(-100%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1229px) {
   .header .floating-box {
     display: block;
     transform: none;

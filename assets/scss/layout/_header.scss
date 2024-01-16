@@ -84,7 +84,7 @@
     width: 35%;
     font-family: "pretandard", sans-serif;
 
-    @include tablet {
+    @include desktop {
       display: none;
     }
   }
@@ -137,7 +137,7 @@
       width: 100%;
       height: 100%;
 
-      @include tablet {
+      @include desktop {
         display: flex;
         gap: 20px;
         top: 3%;
@@ -183,7 +183,7 @@
         left: 50vw;
         cursor: pointer;
 
-        @include tablet {
+        @include desktop {
           top: auto;
           left: auto;
           height: fit-content;
@@ -196,7 +196,7 @@
         left: 56vw;
         cursor: pointer;
 
-        @include tablet {
+        @include desktop {
           top: auto;
           left: auto;
           height: fit-content;
@@ -208,7 +208,7 @@
         left: 50vw;
         cursor: pointer;
 
-        @include tablet {
+        @include desktop {
           top: auto;
           left: auto;
           height: fit-content;
@@ -221,7 +221,7 @@
         width: 14vw;
         cursor: pointer;
 
-        @include tablet {
+        @include desktop {
           top: auto;
           left: auto;
           width: 10vw;
@@ -239,7 +239,7 @@
       z-index: 10;
       transform: translateY(-100%);
 
-      @include tablet {
+      @include desktop {
         display: block;
         transform: none;
         position: fixed;
