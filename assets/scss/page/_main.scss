@@ -6,6 +6,10 @@
     padding-bottom: 0;
     min-width: 320px;
   }
+
+  @include tablet {
+    min-width: 320px;
+  }
 }
 
 .container {
