@@ -45,10 +45,10 @@ let matchMedia = gsap.matchMedia();
       transform: "translateY(0)",
       display: "block"})
     // }
-     return () => { // optional
-    // custom cleanup code here (runs when it STOPS matching)
-    console.log("min-width: 1025px 가 아니다");
-  };
+  //    return () => { // optional
+  //   // custom cleanup code here (runs when it STOPS matching)
+  //   console.log("min-width: 1025px 가 아니다");
+  // };
   })
 // })
   // ScrollTrigger.matchMedia({
