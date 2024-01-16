@@ -243,11 +243,11 @@
       transform: translateY(-100%);
 
       // 1229 이상
-      @include desktop {
-        // display: block;
-        // transform: none;
-        // position: fixed;
-        // top: 0;
+      @include tablet {
+        display: block;
+        transform: none;
+        position: fixed;
+        top: 0;
       }
 
       // 768px 이하
