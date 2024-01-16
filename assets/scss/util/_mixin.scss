@@ -1,15 +1,15 @@
-// 1229 ~
-$desktop: 1229px;
+//  1025 ~ 1228
+$desktop: 1228px;
 
 @mixin desktop {
 
-  // 1229 이하을 꾸미는거다. 
+  // 1228 이하을 꾸미는거다. 
   @media screen and (max-width: $desktop ) {
     @content;
   }
 }
 
-// [991] ~ 1024
+// [769] ~ 1024
 $tablet: 1024px;
 
 @mixin tablet {

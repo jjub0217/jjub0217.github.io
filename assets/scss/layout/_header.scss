@@ -250,12 +250,12 @@
         // top: 0;
       }
 
-      // 1024px 이하
-      @include tablet {
-        // display: block;
-        // transform: none;
-        // position: fixed;
-        // top: 0;
+      // 768px 이하
+      @include mobile {
+        display: block;
+        transform: none;
+        position: fixed;
+        top: 0;
       }
     }
 
