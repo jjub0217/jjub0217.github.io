@@ -17,7 +17,7 @@ matchMedia.add("(min-width: 1025px)", ()=>{
     trigger: $(".header .inner"),
     start:"100% 0%",
     end: "100% 0%",
-    markers:true,
+    markers:false,
     scrub:0,
     }
   })
