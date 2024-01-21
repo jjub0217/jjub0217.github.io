@@ -10,155 +10,28 @@
    * @floatingbox나타나는기능
    * 
    */
-  //   ScrollTrigger.matchMedia({
-  //     "(max-width: 1024px)":function(){
-  //     gsap.to($(".floating-box"),{
-  //       scrollTrigger: {
-  //       trigger: $(".header .inner"),
-  //       start:"100% 0%",
-  //       end: "100% 0%",
-  //       markers:true,
-  //     })
-
-  //   }
-  // }).to($(".floating-box"),{
-  //   position: "fixed",
-  //   transform: "translateY(0)",
-  //   display: "block"
-  // })
-  //     }
-  //   }
-  //     )
 let matchMedia = gsap.matchMedia();
-  matchMedia.add("(min-width: 1025px)", ()=>{
-    gsap.timeline({
-      scrollTrigger: {
-      trigger: $(".header .inner"),
-      start:"100% 0%",
-      end: "100% 0%",
-      markers:true,
-      scrub:0,
-      }
-    })
-    .to($(".floating-box"),{
-      position: "fixed",
-      transform: "translateY(0)",
-      display: "block"})
-    // }
-  //    return () => { // optional
-  //   // custom cleanup code here (runs when it STOPS matching)
-  //   console.log("min-width: 1025px 가 아니다");
-  // };
+matchMedia.add("(min-width: 1025px)", ()=>{
+  gsap.timeline({
+    scrollTrigger: {
+    trigger: $(".header .inner"),
+    start:"100% 0%",
+    end: "100% 0%",
+    markers:true,
+    scrub:0,
+    }
   })
-// })
-  // ScrollTrigger.matchMedia({
-  // "(min-width: 1024px)":function(){
-  //   gsap.timeline({
-  //     scrollTrigger: {
-  //     trigger: $(".header .inner"),
-  //     start:"100% 0%",
-  //     end: "100% 0%",
-  //     markers:true,
-  //     scrub:0,
-  //     }
-  //   })
-  //   .to($(".floating-box"),{
-  //     position: "fixed",
-  //     transform: "translateY(0)",
-  //     display: "block"})
-  //   }
-  // })
-
-  // gsap.to(".floating-box",{
-  //   scrollTrigger: {
-  //     trigger: $(".header .inner"),
-  //     start:"100% 100%",
-  //     end: "100% 0%",
-  //     markers:true,
-  //     // scrub: 1,
-  //     // onEnter : (e) => {
-  //     //   if(window.matchMedia("(min-width: 1025px)").matches){
-  //         // gsap.to(".floating-box", 
-  //         // {
-  //           position: "fixed",
-  //           transform: "translateY(0)",
-  //           display: "block"
-  //         // })
-  //       // }else{
-  //       //   gsap.to(".floating-box", 
-  //       //   {
-  //       //     position: "relative",
-  //       //     transform: "none",
-  //       //     position: "fixed",
-  //       //     display: "block",
-  //       //     top: 0
-  //       //   })
-  //       // }
-  //     // },
-  //     // onLeaveBack : () => {
-  //     //   if(window.matchMedia("(min-width: 1025px)").matches){
-  //     //     gsap.to(".floating-box", {
-  //     //       display: "none",
-  //     //       transform: "translateY(-100%)",
-  //     //     })
-  //     //   }else{
-  //     //     gsap.to(".floating-box ", 
-  //     //     {
-  //     //       position: "relative",
-  //     //       transform: "none",
-  //     //       position: "fixed",
-  //     //       display: "block",
-  //     //       top: 0
-  //     //     })
-  //     //   } 
-  //     // }
-  //   }
-  // })
-  // gsap.to(".container",{
-  //   scrollTrigger: {
-  //     start:"bottom top",
-  //     end: "bottom top",
-  //     markers:true,
-  //     scrub: 1,
-  //     onEnter : (e) => {
-  //       if(window.matchMedia("(min-width: 1025px)").matches){
-  //         gsap.to(".floating-box", 
-  //         {
-  //           position: "fixed",
-  //           transform: "translateY(0)",
-  //           display: "block"
-  //         })
-  //       }else{
-  //         gsap.to(".floating-box", 
-  //         {
-  //           position: "relative",
-  //           transform: "none",
-  //           position: "fixed",
-  //           display: "block",
-  //           top: 0
-  //         })
-  //       }
-  //     },
-  //     onLeaveBack : () => {
-  //       if(window.matchMedia("(min-width: 1025px)").matches){
-  //         gsap.to(".floating-box", {
-  //           display: "none",
-  //           transform: "translateY(-100%)",
-  //         })
-  //       }else{
-  //         gsap.to(".floating-box ", 
-  //         {
-  //           position: "relative",
-  //           transform: "none",
-  //           position: "fixed",
-  //           display: "block",
-  //           top: 0
-  //         })
-  //       } 
-  //     }
-  //   }
-  // })
-
+  .fromTo($(".floating-box"),  {
+    transform: "translate(0, -100%)",
+    transition: "0.5s"
+  },
+  {
+    position: "fixed",
+    top: 0,
+    transform: "translate(0, 0)",
+    zIndex: 10,
+  })
+  })
 
   /**
    * @페이지가로딩되었을때의기능

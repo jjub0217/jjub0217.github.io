@@ -42,7 +42,6 @@
       top: 40%;
     }
 
-    // width: 2100px;
   }
 
   .logo {
@@ -51,18 +50,10 @@
     font-weight: 400;
     line-height: 90%;
 
-    // 1229 이상
-    @include desktop {}
-
     @include tablet {
       font-size: 19vw;
       padding-top: 50px;
     }
-
-    // @include tablet {
-    //   font-size: 19vw;
-    //   padding-top: 50px;
-    // }
 
     span {
       display: block;
@@ -87,9 +78,9 @@
     width: 35%;
     font-family: "pretandard", sans-serif;
 
-    // @include desktop {
-    //   display: none;
-    // }
+    @include tablet {
+      display: none;
+    }
   }
 
   .profile-image {
@@ -140,15 +131,15 @@
       width: 100%;
       height: 100%;
 
-      // @include desktop {
-      //   display: flex;
-      //   gap: 20px;
-      //   top: 3%;
-      //   right: 3%;
-      //   left: auto;
-      //   width: auto;
-      //   height: auto;
-      // }
+      @include tablet {
+        display: flex;
+        gap: 20px;
+        top: 3%;
+        right: 3%;
+        left: auto;
+        width: auto;
+        height: auto;
+      }
     }
 
     &-item {
@@ -171,9 +162,9 @@
         font-family: 'Libre Baskerville', serif;
         cursor: pointer;
 
-        // @include maxDevice {
-        //   font-size: 1.2vw;
-        // }
+        @include maxDevice {
+          font-size: 1.2vw;
+        }
 
         @include mobile {
           font-size: 2vw
@@ -186,11 +177,11 @@
         left: 50vw;
         cursor: pointer;
 
-        // @include desktop {
-        //   top: auto;
-        //   left: auto;
-        //   height: fit-content;
-        // }
+        @include tablet {
+          top: auto;
+          left: auto;
+          height: fit-content;
+        }
 
       }
 
@@ -199,11 +190,11 @@
         left: 56vw;
         cursor: pointer;
 
-        // @include desktop {
-        //   top: auto;
-        //   left: auto;
-        //   height: fit-content;
-        // }
+        @include tablet {
+          top: auto;
+          left: auto;
+          height: fit-content;
+        }
       }
 
       &.dev {
@@ -211,11 +202,11 @@
         left: 50vw;
         cursor: pointer;
 
-        // @include desktop {
-        //   top: auto;
-        //   left: auto;
-        //   height: fit-content;
-        // }
+        @include tablet {
+          top: auto;
+          left: auto;
+          height: fit-content;
+        }
       }
 
       &.works {
@@ -224,21 +215,34 @@
         width: 14vw;
         cursor: pointer;
 
-        // @include desktop {
-        //   top: auto;
-        //   left: auto;
-        //   width: 10vw;
-        //   height: fit-content;
-        // }
+        @include tablet {
+          top: auto;
+          left: auto;
+          width: 10vw;
+          height: fit-content;
+        }
       }
     }
   }
 
   .floating {
     &-box {
+      width: 100%;
+      // transform: translate(0, -100%);
+      // transition: 0.5s;
 
-      // 1229 이상부터
-      // @media (min-width: 1229px) {
+      // 1024 이하
+      @include tablet {
+        display: block;
+        transform: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      // 1229 이상
+      // @media (min-width: 1025px) {
       //   display: none;
       //   top: 0;
       //   width: 100%;
@@ -246,34 +250,14 @@
       //   transform: translateY(-100%);
       // }
 
-
-      // 1024 이하
-      // @include tablet {
-      //   display: block;
-      //   transform: none;
-      //   position: fixed;
-      //   top: 0;
-      //   left: 0;
-      //   right: 0;
-      // }
-
-      // 1229 이상
-      @media (min-width: 1025px) {
-        display: none;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-        transform: translateY(-100%);
-      }
-
       // 768px 이하 (이게 적용되고 있다)
       // @include mobile {
-      display: block;
-      transform: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      // display: block;
+      // transform: none;
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      // right: 0;
       // }
     }
 

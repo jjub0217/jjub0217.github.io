@@ -274,6 +274,11 @@ fieldset {
   width: 35%;
   font-family: "pretandard", sans-serif;
 }
+@media screen and (max-width: 1024px) {
+  .header .gnb {
+    display: none;
+  }
+}
 .header .profile-image {
   position: relative;
   overflow: hidden;
@@ -326,6 +331,17 @@ fieldset {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .header .nav-list {
+    display: flex;
+    gap: 20px;
+    top: 3%;
+    right: 3%;
+    left: auto;
+    width: auto;
+    height: auto;
+  }
+}
 .header .nav-item {
   position: absolute;
   width: 10vw;
@@ -347,6 +363,11 @@ fieldset {
   font-family: "Libre Baskerville", serif;
   cursor: pointer;
 }
+@media screen and (min-width: 1229px) {
+  .header .nav-item span {
+    font-size: 1.2vw;
+  }
+}
 @media screen and (max-width: 768px) {
   .header .nav-item span {
     font-size: 2vw;
@@ -357,15 +378,39 @@ fieldset {
   left: 50vw;
   cursor: pointer;
 }
+@media screen and (max-width: 1024px) {
+  .header .nav-item.home {
+    top: auto;
+    left: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .header .nav-item.about {
   top: 14vw;
   left: 56vw;
   cursor: pointer;
 }
+@media screen and (max-width: 1024px) {
+  .header .nav-item.about {
+    top: auto;
+    left: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .header .nav-item.dev {
   top: 24vw;
   left: 50vw;
   cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .header .nav-item.dev {
+    top: auto;
+    left: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .header .nav-item.works {
   top: 14vw;
@@ -373,21 +418,26 @@ fieldset {
   width: 14vw;
   cursor: pointer;
 }
-.header .floating-box {
-  display: block;
-  transform: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+@media screen and (max-width: 1024px) {
+  .header .nav-item.works {
+    top: auto;
+    left: auto;
+    width: 10vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
-@media (min-width: 1025px) {
+.header .floating-box {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
   .header .floating-box {
-    display: none;
+    display: block;
+    transform: none;
+    position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 10;
-    transform: translateY(-100%);
+    left: 0;
+    right: 0;
   }
 }
 .header .floating-heading {
@@ -675,9 +725,8 @@ fieldset {
 .wrapper {
   padding-bottom: 100vh;
   position: relative;
-  min-width: 1229px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     padding-bottom: 0;
     min-width: 320px;
@@ -1110,22 +1159,28 @@ section .heading-area .badge {
 .section-works .work .common {
   background-color: #60aa00;
 }
+.section-works .work .project-link-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 .section-works .work .link-work {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
   padding: 10px;
-  z-index: 2;
   transition: background 0.3s, color 0.3s;
 }
 .section-works .work .link-work:hover {
@@ -1152,6 +1207,11 @@ section .heading-area .badge {
   font-family: larken, sans-serif;
   line-height: 1;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1229px) {
+  .section-works .work .text-box h3 {
+    font-size: 2vw;
+  }
 }
 .section-works .work .text-box .title {
   font-size: 16px;
@@ -1199,6 +1259,11 @@ section .heading-area .badge {
   padding: 5px 8px;
   font-size: 14px;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1229px) {
+  .section-works .work .text-box .hash span {
+    font-size: 0.9vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box .hash span {
@@ -1422,7 +1487,7 @@ section .heading-area .badge {
   }
 }
 .section-works .work8 .thumb-box {
-  padding-bottom: 30%;
+  padding-bottom: 40%;
 }
 @media screen and (max-width: 1024px) {
   .section-works .work8 .thumb-box {
