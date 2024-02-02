@@ -318,25 +318,6 @@ section {
 
   .deco14 {
     position: absolute;
-    top: 210vw;
-    right: -10vw;
-    width: 50vw;
-    opacity: 0;
-    transform: scale(0.5);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  .deco15 {
-    position: absolute;
     top: 220vw;
     left: -2vw;
     width: 40vw;
@@ -354,7 +335,83 @@ section {
     }
   }
 
+  .deco15 {
+    position: absolute;
+    top: 186vw;
+    right: -10vw;
+    width: 50vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
 
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+
+
+  .deco16 {
+    position: absolute;
+    top: 230vw;
+    right: -10vw;
+    width: 50vw;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .deco17 {
+    position: absolute;
+    top: 273vw;
+    right: 12vw;
+    width: 70vw;
+    opacity: 0;
+    transform: rotate(30deg) scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: rotate(30deg) scale(1);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .deco18 {
+    position: absolute;
+    top: 282vw;
+    left: -10vw;
+    width: 30vw;
+    opacity: 0;
+    transform: rotate(143deg) scale(0.5);
+    transition: 0.5s;
+
+    &.on {
+      opacity: 1;
+      transform: rotate(143deg)scale(1);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
 
   .works-area {
     display: grid;
