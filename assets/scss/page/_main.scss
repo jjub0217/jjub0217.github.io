@@ -510,7 +510,7 @@ section {
     .text-box {
       display: flex;
       flex-direction: column;
-      gap: 0.5vw;
+      // gap: 0.5vw;
       margin-top: 15px;
 
 
@@ -519,21 +519,24 @@ section {
       }
 
       h3 {
-        font-size: 25px;
+        font-size: 50px;
+        // font-size: 25px;
         font-family: larken, sans-serif;
         line-height: 1;
         text-transform: uppercase;
 
         @include maxDevice {
-          font-size: 2vw;
+          font-size: 4vw;
+          // font-size: 2vw;
         }
       }
 
       .title {
-        font-size: 16px;
+        font-size: 20px;
+        // font-size: 16px;
         line-height: 1.4;
         @include ellipse(6);
-        font-weight: 500;
+        // font-weight: 500;
 
         .link {
           position: relative;
@@ -557,14 +560,15 @@ section {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        font-size: 15px;
+        font-size: 17px;
+        padding-top: 20px;
       }
 
       .hash {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5vw;
-        padding-top: 10px;
+        padding-top: 20px;
 
         @include mobile {
           gap: 5px;
@@ -576,14 +580,6 @@ section {
           padding: 5px 8px;
           font-size: 14px;
           text-transform: uppercase;
-
-          @include maxDevice {
-            font-size: 0.9vw;
-          }
-
-          @include mobile {
-            font-size: 12px;
-          }
         }
       }
     }
@@ -591,8 +587,12 @@ section {
 
   .work1 {
     grid-column: 1/4;
-    grid-row: 5/8;
-    transform: translateY(4vw);
+    grid-row: 6/11;
+    transform: translateY(-2vw);
+
+    @include maxDevice {
+      transform: translateY(-7vw);
+    }
 
     @include tablet {
       transform: none;
@@ -616,8 +616,12 @@ section {
   .work2 {
     border-radius: 20px;
     grid-column: 4/7;
-    grid-row: 5/10;
-    transform: translateY(4vw);
+    grid-row: 6/11;
+    transform: translateY(-2vw);
+
+    @include maxDevice {
+      transform: translateY(-7vw);
+    }
 
     @include tablet {
       transform: none;
@@ -644,8 +648,14 @@ section {
 
   .work3 {
     grid-column: 1/3;
-    grid-row: 10/15;
-    transform: translateY(7vw);
+    grid-row: 12/17;
+    transform: translateY(0vw);
+
+    @include maxDevice {
+      grid-column: 1/3;
+      grid-row: 11/17;
+      transform: translateY(4vw);
+    }
 
     @include tablet {
       transform: none;
@@ -671,15 +681,20 @@ section {
 
   .work4 {
     border-radius: 20px;
-    transform: translateY(7vw);
+    transform: translateY(0vw);
     display: flex;
     grid-column: 3/7;
-    grid-row: 10/13;
+    grid-row: 12/15;
     gap: 20px;
+
+    @include maxDevice {
+      grid-row: 11/14;
+      transform: translateY(4vw);
+    }
 
     @include tablet {
       transform: none;
-      display: flex;
+      display: block;
     }
 
     .thumb-box {
@@ -722,7 +737,7 @@ section {
 
   .work5 {
     grid-column: 1/7;
-    grid-row: 1/5;
+    grid-row: 1/6;
 
     @include tablet {
       transform: none;
@@ -744,11 +759,16 @@ section {
     .left {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      // gap: 10px;
     }
 
     .desc {
+      font-size: 17px;
+
       &.pc {
+        padding-top: 0;
+
+
         @include tablet {
           display: none;
         }
@@ -759,7 +779,6 @@ section {
 
         @include tablet {
           display: flex;
-          font-size: 15px;
         }
       }
     }
@@ -767,7 +786,7 @@ section {
   }
 
   .work6 {
-    grid-row: 13/17;
+    grid-row: 14/17;
     grid-column: 3/7;
     transform: translateY(7vw);
 
@@ -787,8 +806,13 @@ section {
 
   .work7 {
     grid-column: 5/7;
-    grid-row: 18/22;
-    transform: translateY(7vw);
+    grid-row: 22/27;
+    transform: translateY(2vw);
+
+    @include maxDevice {
+      grid-row: 20/25;
+      transform: translateY(1vw);
+    }
 
     @include tablet {
       transform: none;
@@ -817,8 +841,13 @@ section {
 
   .work8 {
     grid-column: 3/5;
-    grid-row: 18/20;
-    transform: translateY(7vw);
+    grid-row: 22/26;
+    transform: translateY(2vw);
+
+    @include maxDevice {
+      grid-row: 20/24;
+      transform: translateY(1vw);
+    }
 
     @include tablet {
       transform: none;
@@ -839,8 +868,13 @@ section {
 
   .work9 {
     grid-column: 1/3;
-    grid-row: 15/18;
-    transform: translateY(7vw);
+    grid-row: 18/23;
+    transform: translateY(4vw);
+
+    @include maxDevice {
+      grid-row: 17/20;
+      transform: translateY(0vw);
+    }
 
     @include tablet {
       transform: none;
@@ -863,8 +897,13 @@ section {
 
   .work10 {
     grid-column: 1/3;
-    grid-row: 18/20;
-    transform: translateY(7vw);
+    grid-row: 22/26;
+    transform: translateY(2vw);
+
+    @include maxDevice {
+      grid-row: 20/24;
+      transform: translateY(1vw);
+    }
 
     @include tablet {
       transform: none;
