@@ -1,8 +1,11 @@
 # Desveloper Joo's landing page 
 
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/410968a0-5785-4f22-ae90-99b3d342768d#gh-light-mode-only" width=80>
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/1ba8dc95-8ca5-4d99-b4d1-cb749a6c25e5##gh-dark-mode-only" width=80>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/1ba8dc95-8ca5-4d99-b4d1-cb749a6c25e5##gh-dark-mode-only">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/410968a0-5785-4f22-ae90-99b3d342768d#gh-light-mode-only">
+  <img alt="logo" src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/1ba8dc95-8ca5-4d99-b4d1-cb749a6c25e5" width=80>
+</picture>
 
 ----
 이 프로젝트는 저의 포트폴리오들을 소개하는 landing page입니다. <br>
