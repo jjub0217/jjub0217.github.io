@@ -1,11 +1,13 @@
 # Desveloper Joo's landing page 
 
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/843d80b7-1660-4779-a187-513361b0abd1" width=80>
+<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/410968a0-5785-4f22-ae90-99b3d342768d#gh-light-mode-only" width=80>
+<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/1ba8dc95-8ca5-4d99-b4d1-cb749a6c25e5##gh-dark-mode-only" width=80>
 
 
 ----
-이 프로젝트는 저의 포트폴리오들을 소개하는 landing page입니다.
-저의 각 포트폴리오들의 링크와 해당 포트폴리오의 코드를 볼 수 있는 github 링크로 넘어갈수 있습니다. 
+이 프로젝트는 저의 포트폴리오들을 소개하는 landing page입니다. <br>
+2023.11 ~ 2023. 12 두달간 landing page 를 제작, 수정 및 배포하였습니다. <br>
+저의 각 포트폴리오들의 링크와 해당 포트폴리오의 코드를 볼 수 있는 github 링크로 넘어갈수 있습니다. <br>
 각 포트폴리오의 특징들을 짤막하게 기재한것을 볼 수 있습니다.
 
 HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, gsap, aria-, json data fetch 등을 사용하여 구현하였습니다.
