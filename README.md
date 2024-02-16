@@ -2,12 +2,29 @@
 
 <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/843d80b7-1660-4779-a187-513361b0abd1" width=80>
 
+
 ----
 이 프로젝트는 저의 포트폴리오들을 소개하는 landing page입니다.
 저의 각 포트폴리오들의 링크와 해당 포트폴리오의 코드를 볼 수 있는 github 링크로 넘어갈수 있습니다. 
 각 포트폴리오의 특징들을 짤막하게 기재한것을 볼 수 있습니다.
 
 HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, gsap, aria-, json data fetch 등을 사용하여 구현하였습니다.
+
+## 프로젝트 설명
+프로젝트 내에 소개하고 있는 각 포트폴리오들의 이름 및 링크를 보여드립니다.
+| 썸네일                                                                                                                   | 프로젝트 이름                  | 프로젝트 종류 | 프로젝트 링크                                         |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ------------- | ----------------------------------------------------- |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/79bea3ad-8107-402b-993e-fb5be8e67ae5" width=80> | 설화수 웹 사이트               | 제작          | https://jjub0217.github.io/beautiful.github.io/       |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/09553f1e-afa3-4803-b6e6-fae3dedcd412" width=80> | 네이버 비즈니스 스쿨 웹 사이트 | 클론코딩      | https://jjub0217.github.io/naver-business_github.io/  |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/045be4b1-62f2-48a8-94a0-f1640f57198a" width=80> | 해외 사이트 audio-pro          | 클론코딩      | https://jjub0217.github.io/audio-pro_github.io/       |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/e4190bfa-5891-4d1f-a72b-fb03a0c4b96d" width=80> | music-island 웹 사이트         | 클론코딩      | https://jjub0217.github.io/music-tree.github.io/      |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/126f37de-d510-435f-afd6-534551057032" width=80> | samsung card 웹 사이트         | 클론코딩      | https://jjub0217.github.io/samsung-card_github.io/    |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/bbd0a28c-19b6-43ee-9c39-da0d890876e2" width=80> | 해외 사이트 clixr-ecommerce    | 클론코딩      | https://jjub0217.github.io/clixr_github.io/           |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/acdf1c84-11d9-46a9-8409-62725f906fe8" width=80> | andar 웹 사이트                | 클론코딩      | https://jjub0217.github.io/andar_github.io/           |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/6d323a05-b1bf-411f-8ab0-ca8a555d4290" width=80> | 서울시청 웹 사이트             | 클론코딩      | https://jjub0217.github.io/seoul-city-hall_github.io/ |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/424dbd37-2e93-4dc0-a697-3ffb77bbaa4c" width=80> | 우리은행 웹 사이트             | 클론코딩      | https://jjub0217.github.io/woori-bank_github.io/      |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/2c0abdf5-b1ca-4750-981f-de3039618821" width=80> | 네이버 커리어 웹 사이트        | 클론코딩      | https://jjub0217.github.io/naver-career_github.io/    |
+
 
 
 ## 기술 스택
@@ -29,7 +46,8 @@ HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, g
 | Lenis     | MIT License                      | 2022 studio-freight                       |
 | SPLITTYPE | MIT License                      | 2020 lukePeavey                           |
 
-## 기능
+
+
 
 ## 연락처
 프로젝트에 관한 문의나 버그 리포트는 아래 이메일로 연락주세요.
