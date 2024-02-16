@@ -35,7 +35,10 @@ HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, g
 <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/167854a8-8a98-4739-9ca4-d918d4db712a" width=500> <br>
 속성 aria-label은 현재 요소에 레이블을 지정하는 문자열을 정의하는 데 사용되는 속성입니다. <br> 화면에 텍스트 라벨이 보이지 않는 경우에 사용되는데,  W3C 유효성 검사기는 오용 가능성에 대해 경고하기 때문에 나온 웹표준 검사 결과입니다.
 
-
+## 프로젝트 웹접근성
+- Open-WAX 결과 : error 0
+<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/8849947b-acfd-4f3a-97cd-3992ca87731a" width=500> <br>
+- 
 
 
 

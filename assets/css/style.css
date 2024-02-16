@@ -242,31 +242,31 @@ fieldset {
     top: 40%;
   }
 }
-.header .logo {
+.header .logo-desc {
   flex: 1;
   font-size: 7.5vw;
   font-weight: 400;
   line-height: 90%;
 }
 @media screen and (max-width: 1024px) {
-  .header .logo {
+  .header .logo-desc {
     font-size: 19vw;
     padding-top: 50px;
   }
 }
-.header .logo span {
+.header .logo-desc span {
   display: block;
   white-space: nowrap;
 }
-.header .logo span:first-child {
+.header .logo-desc span:first-child {
   font-size: clamp(20px, 5vw, 40px);
   line-height: 1.2;
 }
 @media screen and (max-width: 320px) {
-  .header .logo span {
+  .header .logo-desc span {
     white-space: pre-line;
   }
-  .header .logo span br {
+  .header .logo-desc span br {
     display: none;
   }
 }
