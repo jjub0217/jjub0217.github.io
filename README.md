@@ -38,9 +38,8 @@ HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, g
 ## 프로젝트 웹접근성
 - Open-WAX 결과 : error 0
 <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/8849947b-acfd-4f3a-97cd-3992ca87731a" width=500> <br>
-- 
-
-
+- WAVE 결과: error 0
+<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/84606cf8-20e9-4c7d-bdee-d118031b68db" width=500>
 
 ## 기술 스택
 ![HTML5](https://img.shields.io/badge/HTML5-FE642E?style=flat-square&logo=HTML5&logoColor=white)
