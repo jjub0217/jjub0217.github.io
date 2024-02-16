@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="퍼블리셔에 지원하는 강주현입니다.">
   <meta property="og:type" content="portfolio">
-  <meta property="og:image" content="/assets/images/meta.png" />
+  <meta property="og:image" content="/assets/images/meta.png">
   <meta property="og:url" content="https://jjub0217.github.io/">
   <meta property="og:description" content="프론트엔드 경력이 있는 퍼블리셔 강주현입니다.">
   <title>joo`s web site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -32,13 +32,13 @@
 <body>
   <div class="wrapper">
 
-    <header class="header">
+    <header class="header" id="header">
       <img src="./assets/images/24-1.png" alt class="bigDeco">
       <div class="floating-box">
         <div class="floating-heading">
-          <p class="floating-headline"><a href="#">Desveloper</a></p>
+          <p class="floating-headline"><a href="#header">Desveloper</a></p>
           <div class="floating-logo">
-            <a href="#">
+            <a href="#header">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 736 736"
                 enable-background="new 0 0 736 736" xml:space="preserve">
@@ -203,15 +203,14 @@
             </ul>
             <button class="mo-gnb_btn" aria-expanded="false" aria-haspopup="menu">
               <span class="textBtn">menu</span>
-              <span class="icon" aria-label="메뉴닫기 버튼"></span>
+              <span class="icon" aria-label="메뉴닫기"></span>
             </button>
           </nav>
         </div>
         <div class="mo_gnb">
           <div class="gnb-logo">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 736 736"
-              enable-background="new 0 0 736 736" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" width="100%" viewBox="0 0 736 736" enable-background="new 0 0 736 736" xml:space="preserve">
               <path fill="#000000" opacity="1.000000" stroke="none" d="
                           M239.191620,693.069580
                           C218.239182,682.811340 198.135727,671.785706 179.596298,658.226929
@@ -357,11 +356,11 @@
                           C396.813263,419.420959 396.551514,405.465912 396.662537,390.999939
                           z" />
             </svg>
-            <img src="./assets/images/footer-logo.png" alt="">
+            <img src="./assets/images/footer-logo.png" alt="logo">
           </div>
           <ul class="mo_gnb-list">
             <li class="mo_gnb-item">
-              <a href="#">intro</a>
+              <a href="#header">intro</a>
             </li>
             <li class="mo_gnb-item">
               <a href="#works">Project</a>
@@ -383,32 +382,32 @@
         <nav class="gnb">
           <div class="profile-image">
             <video id="video_profile" autoplay loop muted playsinline>
-              <source src="./assets/images/profile.mp4" type="video/mp4" />
+              <source src="./assets/images/profile.mp4" type="video/mp4">
             </video>
             <span class="blind">랜딩페이지 로고</span>
           </div>
           <ul class="nav-list">
             <li class="nav-item home">
-              <a href="#">
-                <img src="./assets/images/menu1_new.png" alt="">
+              <a href="#header">
+                <img src="./assets/images/menu1_new.png" alt>
                 <span>Intro</span>
               </a>
             </li>
             <li class="nav-item about">
               <a href="#about">
-                <img src="./assets/images/menu2_new.png" alt="">
+                <img src="./assets/images/menu2_new.png" alt>
                 <span>About</span>
               </a>
             </li>
             <li class="nav-item dev">
               <a href="#log">
-                <img src="./assets/images/menu3_new.png" alt="">
+                <img src="./assets/images/menu3_new.png" alt>
                 <span>Dev-log</span>
               </a>
             </li>
             <li class="nav-item works">
               <a href="#works">
-                <img src="./assets/images/menu4_new.png" alt="">
+                <img src="./assets/images/menu4_new.png" alt>
                 <span>Project</span>
               </a>
             </li>
@@ -738,7 +737,7 @@
                   <span class="common">common</span>
                 </p>
                 <video src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" autoplay playsinline loop muted
-                  playsinline class="board-the-navership">
+                  class="board-the-navership">
                 </video>
                 <div class="project-link-box">
                   <a href="https://jjub0217.github.io/naver-career_github.io/" class="link-work" target="_blank">
@@ -1156,7 +1155,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="about">
       <div class="inner">
         <div class="intro-heading">
           <h2 class="headline">Let me introduce myself!</h2>
@@ -1211,6 +1210,7 @@
         </div>
       </div>
       <h2 class="heading">
+        <span class="blind">푸터 로고</span>
         <span class="heading-logo">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" width="100%" viewBox="0 0 736 736" enable-background="new 0 0 736 736" xml:space="preserve">
@@ -1363,7 +1363,7 @@
       </h2>
     </footer>
     <div class="scrollTop">
-      <a href="#" aria-label="scroll-top">
+      <a href="#header" aria-label="scroll-top">
         <img src="./assets/images/scroll-top.svg" alt="">
       </a>
     </div>

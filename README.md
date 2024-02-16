@@ -15,7 +15,7 @@
 
 HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, gsap, aria-, json data fetch 등을 사용하여 구현하였습니다.
 
-## 프로젝트 설명
+## 프로젝트 소개
 프로젝트 내에 소개하고 있는 각 포트폴리오들의 이름 및 링크를 보여드립니다.
 | 썸네일                                                                                                                   | 프로젝트 이름                  | 프로젝트 종류 | 프로젝트 링크                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ------------- | ----------------------------------------------------- |
@@ -24,11 +24,18 @@ HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, g
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/045be4b1-62f2-48a8-94a0-f1640f57198a" width=80> | 해외 사이트 audio-pro          | 클론코딩      | https://jjub0217.github.io/audio-pro_github.io/       |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/e4190bfa-5891-4d1f-a72b-fb03a0c4b96d" width=80> | music-island 웹 사이트         | 클론코딩      | https://jjub0217.github.io/music-tree.github.io/      |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/126f37de-d510-435f-afd6-534551057032" width=80> | samsung card 웹 사이트         | 클론코딩      | https://jjub0217.github.io/samsung-card_github.io/    |
-| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/bbd0a28c-19b6-43ee-9c39-da0d890876e2" width=80> | 해외 사이트 clixr-ecommerce    | 클론코딩      | https://jjub0217.github.io/clixr_github.io/           |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/bbd0a28c-19b6-43ee-9c39-da0d890876e2" width=80> | 해외 사이트 clixr-ecommerce    | 클론코딩      | https://jjub0217.gitub.io/clixr_github.io/            |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/acdf1c84-11d9-46a9-8409-62725f906fe8" width=80> | andar 웹 사이트                | 클론코딩      | https://jjub0217.github.io/andar_github.io/           |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/6d323a05-b1bf-411f-8ab0-ca8a555d4290" width=80> | 서울시청 웹 사이트             | 클론코딩      | https://jjub0217.github.io/seoul-city-hall_github.io/ |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/424dbd37-2e93-4dc0-a697-3ffb77bbaa4c" width=80> | 우리은행 웹 사이트             | 클론코딩      | https://jjub0217.github.io/woori-bank_github.io/      |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/2c0abdf5-b1ca-4750-981f-de3039618821" width=80> | 네이버 커리어 웹 사이트        | 클론코딩      | https://jjub0217.github.io/naver-career_github.io/    |
+
+## 프로젝트 웹표준(W3C의 Markup Validation Service)
+결과 : Warning 1개 <br>
+<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/167854a8-8a98-4739-9ca4-d918d4db712a" width=500> <br>
+속성 aria-label은 현재 요소에 레이블을 지정하는 문자열을 정의하는 데 사용되는 속성입니다. <br> 화면에 텍스트 라벨이 보이지 않는 경우에 사용되는데,  W3C 유효성 검사기는 오용 가능성에 대해 경고하기 때문에 나온 웹표준 검사 결과입니다.
+
+
 
 
 

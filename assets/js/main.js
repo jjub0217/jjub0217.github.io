@@ -107,7 +107,8 @@ $(".mo_gnb-list a").click(function (e){
  * @footer로이동하는기능
  * 
  */
-$(".nav-item.about").click(function(){
+$(".nav-item.about").click(function(e){
+  e.preventDefault()
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   return false;
 })
