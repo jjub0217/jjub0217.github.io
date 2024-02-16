@@ -385,10 +385,11 @@
           <div class="profile-image">
             <video id="video_profile" autoplay loop muted playsinline>
               <source src="./assets/images/profile.mp4" type="video/mp4">
-              <track kind="descriptions" label="Korean Descriptions" src="./assets/vtt/descriptions.vtt" srclang="en"
-                default>
+              <!-- <track kind="descriptions" label="Korean Descriptions" src="./assets/vtt/descriptions.vtt" srclang="en"
+                default> -->
+              <track label="Korean chapters" kind="chapters" srclang="ko" src="./assets/vtt/descriptions.vtt" default>
             </video>
-            <span class="blind">랜딩페이지 로고</span>
+            <span class="blind">프로필 이미지 영상</span>
           </div>
           <ul class="nav-list">
             <li class="nav-item home">
