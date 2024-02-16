@@ -60,8 +60,8 @@ HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, g
 | Lenis     | MIT License                      | 2022 studio-freight                       |
 | SPLITTYPE | MIT License                      | 2020 lukePeavey                           |
 
-
-
+## 개선점
+- 웹접근성을 더욱 지키기 위해 텍스트와 배경간의 명도 대비, 고대비 점수를 높이기
 
 ## 연락처
 프로젝트에 관한 문의나 버그 리포트는 아래 이메일로 연락주세요.
