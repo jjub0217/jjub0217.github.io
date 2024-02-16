@@ -384,10 +384,8 @@
           <div class="profile-image">
             <video id="video_profile" autoplay loop muted playsinline>
               <source src="./assets/images/profile.mp4" type="video/mp4">
-              <track kind="descriptions" label="Korean Descriptions" src="./assets/vtt/descriptions.vtt" srclang="ko"
+              <track kind="descriptions" label="Korean Descriptions" src="./assets/vtt/profile.ko.vtt" srclang="ko"
                 default>
-              Your browser does not support the video tag.
-
             </video>
             <span class="blind">랜딩페이지 로고</span>
           </div>
@@ -742,8 +740,10 @@
                 <p class="work-category">
                   <span class="common">common</span>
                 </p>
-                <video src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" autoplay playsinline loop muted
-                  class="board-the-navership">
+                <video class="board-the-navership" autoplay playsinline loop muted>
+                  <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
+                  <track kind="descriptions" label="Korean Descriptions" src="./assets/vtt/naver_careers.ko.vtt"
+                    srclang="ko" default>
                 </video>
                 <div class="project-link-box">
                   <a href="https://jjub0217.github.io/naver-career_github.io/" class="link-work" target="_blank">
@@ -1174,7 +1174,7 @@
         <div class="content-box">
           <div class="text-box">
             <div class="box">
-              <p class="title">Profile</p>
+              <h3 class="title">Profile</h3>
               <p class="paragraph">
                 <span class="cate">Name</span>
                 <span class="content">강주현</span>
@@ -1185,7 +1185,7 @@
               </p>
             </div>
             <div class="box">
-              <p class="title">Career</p>
+              <h3 class="title">Career</h3>
               <p class="paragraph">
                 <span class="cate">Frontend</span>
                 <span class="content">2021 11 - 2023 02</span>
@@ -1196,7 +1196,7 @@
               </p>
             </div>
             <div class="box">
-              <p class="title">Education</p>
+              <h3 class="title">Education</h3>
               <p class="paragraph">
                 <span class="cate">Publisher Allround Friend </span>
                 <span class="content">2023 06 - 2023 11</span>
