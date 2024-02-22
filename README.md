@@ -19,7 +19,7 @@ HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, g
 프로젝트 내에 소개하고 있는 각 포트폴리오들의 이름 및 링크를 보여드립니다.
 | 썸네일                                                                                                                   | 프로젝트 이름                  | 프로젝트 종류 | 프로젝트 링크                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ------------- | ----------------------------------------------------- |
-| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/79bea3ad-8107-402b-993e-fb5be8e67ae5" width=80> | 설화수 웹 사이트               | 제작          | https://jjub0217.github.io/beautiful.github.io/       |
+| <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/79bea3ad-8107-402b-993e-fb5be8e67ae5" width=80> | 샤넬 웹 사이트                 | 제작          | https://jjub0217.github.io/beautiful.github.io/       |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/09553f1e-afa3-4803-b6e6-fae3dedcd412" width=80> | 네이버 비즈니스 스쿨 웹 사이트 | 클론코딩      | https://jjub0217.github.io/naver-business_github.io/  |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/045be4b1-62f2-48a8-94a0-f1640f57198a" width=80> | 해외 사이트 audio-pro          | 클론코딩      | https://jjub0217.github.io/audio-pro_github.io/       |
 | <img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/e4190bfa-5891-4d1f-a72b-fb03a0c4b96d" width=80> | music-island 웹 사이트         | 클론코딩      | https://jjub0217.github.io/music-tree.github.io/      |
