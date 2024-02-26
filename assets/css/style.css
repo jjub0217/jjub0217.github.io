@@ -110,8 +110,8 @@ fieldset {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 3;
 }
-
 #skip-header a {
   position: absolute;
   top: 0;
@@ -123,6 +123,9 @@ fieldset {
   align-items: center;
   transform: translateY(-100%);
   background: #ccc;
+}
+#skip-header a:focus, #skip-header a:active {
+  transform: translateY(0);
 }
 
 .scroll-hide {

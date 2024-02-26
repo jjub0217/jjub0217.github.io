@@ -12,6 +12,9 @@
 2023.11 ~ 2023. 12 두달간 landing page 를 제작, 수정 및 배포하였습니다. <br>
 저의 각 포트폴리오들의 링크와 해당 포트폴리오의 코드를 볼 수 있는 github 링크로 넘어갈수 있습니다. <br>
 각 포트폴리오의 특징들을 짤막하게 기재한것을 볼 수 있습니다.
+<br>
+헤더를 건너뛰고 바로 본문으로 넘어갈수 있게끔 tab 키 기능을 추가하였습니다.
+<br><br>
 
 HTML5와 CSS 의 전처리기인 Sass와 Jquery, ES6의 Javascript, Swiper.js, gsap, aria-, json data fetch 등을 사용하여 구현하였습니다.
 
