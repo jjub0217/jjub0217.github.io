@@ -225,7 +225,7 @@ fieldset {
   position: absolute;
   top: 80px;
   right: 0;
-  transform: translate(50%, -50%);
+  transform: translate(48%, -24%);
   z-index: -1;
 }
 @media screen and (max-width: 1024px) {
@@ -365,6 +365,7 @@ fieldset {
   white-space: nowrap;
   font-family: "Libre Baskerville", serif;
   cursor: pointer;
+  font-weight: bold;
 }
 @media screen and (min-width: 1229px) {
   .header .nav-item span {
@@ -416,9 +417,9 @@ fieldset {
   }
 }
 .header .nav-item.works {
-  top: 14vw;
+  top: 12vw;
   left: 37vw;
-  width: 14vw;
+  width: 15vw;
   cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
@@ -558,7 +559,7 @@ fieldset {
   top: 0;
   z-index: 2;
   width: 100%;
-  background: url("../images/menu2_new.png") no-repeat;
+  background: url("../images/menu2.png") no-repeat;
   background-position: center;
   background-size: 300%;
   padding: 20px 37px 50px 37px;
@@ -868,7 +869,7 @@ section .heading-area .badge {
 }
 .section-works .deco5 {
   position: absolute;
-  top: 70vw;
+  top: 61vw;
   right: -10vw;
   width: 50vw;
   opacity: 0;
@@ -881,10 +882,9 @@ section .heading-area .badge {
 }
 .section-works .deco6 {
   position: absolute;
-  top: 100vw;
+  top: 106vw;
   left: -7vw;
-  width: 40vw;
-  transform: scaleX(-1);
+  width: 66vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
@@ -901,9 +901,8 @@ section .heading-area .badge {
 .section-works .deco7 {
   position: absolute;
   top: 120vw;
-  left: 40vw;
-  width: 30vw;
-  transform: rotate(90deg);
+  right: -5vw;
+  width: 33vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
@@ -919,10 +918,9 @@ section .heading-area .badge {
 }
 .section-works .deco8 {
   position: absolute;
-  top: 120vw;
-  right: 7vw;
+  top: 136vw;
+  right: 31vw;
   width: 25vw;
-  transform: rotate(-90deg);
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
@@ -956,16 +954,16 @@ section .heading-area .badge {
 }
 .section-works .deco10 {
   position: absolute;
-  top: 170vw;
-  width: 45vw;
-  left: -5vw;
+  top: 155vw;
+  width: 51vw;
+  left: 0vw;
   opacity: 0;
   transform: scale(-1.5);
   transition: 0.5s;
 }
 .section-works .deco10.on {
   opacity: 1;
-  transform: scaleX(-1);
+  transform: scaleX(1);
 }
 @media screen and (max-width: 768px) {
   .section-works .deco10 {
@@ -993,8 +991,8 @@ section .heading-area .badge {
 }
 .section-works .deco12 {
   position: absolute;
-  top: 190vw;
-  left: 25vw;
+  top: 185vw;
+  right: 23vw;
   width: 30vw;
   opacity: 0;
   transform: scale(0.5);
@@ -1011,9 +1009,9 @@ section .heading-area .badge {
 }
 .section-works .deco13 {
   position: absolute;
-  top: 60vw;
-  left: -5vw;
-  width: 50vw;
+  top: 65vw;
+  left: 14vw;
+  width: 30vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
@@ -1024,9 +1022,9 @@ section .heading-area .badge {
 }
 .section-works .deco14 {
   position: absolute;
-  top: 220vw;
-  left: -2vw;
-  width: 40vw;
+  top: 205vw;
+  left: 6vw;
+  width: 29vw;
   opacity: 0;
   transform: scale(0.5) rotate(90deg);
   transition: 0.5s;
@@ -1042,9 +1040,9 @@ section .heading-area .badge {
 }
 .section-works .deco15 {
   position: absolute;
-  top: 186vw;
-  right: -10vw;
-  width: 50vw;
+  top: 216vw;
+  right: 0vw;
+  width: 33vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
@@ -1080,7 +1078,7 @@ section .heading-area .badge {
   position: absolute;
   top: 273vw;
   right: 12vw;
-  width: 70vw;
+  width: 50vw;
   opacity: 0;
   transform: rotate(30deg) scale(0.5);
   transition: 0.5s;
@@ -1096,16 +1094,16 @@ section .heading-area .badge {
 }
 .section-works .deco18 {
   position: absolute;
-  top: 282vw;
-  left: -10vw;
+  top: 287vw;
+  left: -1vw;
   width: 30vw;
   opacity: 0;
-  transform: rotate(143deg) scale(0.5);
+  transform: rotate(-123deg) scale(0.5);
   transition: 0.5s;
 }
 .section-works .deco18.on {
   opacity: 1;
-  transform: rotate(143deg) scale(1);
+  transform: rotate(-123deg) scale(1);
 }
 @media screen and (max-width: 768px) {
   .section-works .deco18 {

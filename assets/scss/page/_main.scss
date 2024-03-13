@@ -151,7 +151,7 @@ section {
 
   .deco5 {
     position: absolute;
-    top: 70vw;
+    top: 61vw;
     right: -10vw;
     width: 50vw;
     opacity: 0;
@@ -166,10 +166,9 @@ section {
 
   .deco6 {
     position: absolute;
-    top: 100vw;
+    top: 106vw;
     left: -7vw;
-    width: 40vw;
-    transform: scaleX(-1);
+    width: 66vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -187,9 +186,9 @@ section {
   .deco7 {
     position: absolute;
     top: 120vw;
-    left: 40vw;
-    width: 30vw;
-    transform: rotate(90deg);
+    // left: 40vw;
+    right: -5vw;
+    width: 33vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -206,10 +205,9 @@ section {
 
   .deco8 {
     position: absolute;
-    top: 120vw;
-    right: 7vw;
+    top: 136vw;
+    right: 31vw;
     width: 25vw;
-    transform: rotate(-90deg);
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -245,16 +243,16 @@ section {
 
   .deco10 {
     position: absolute;
-    top: 170vw;
-    width: 45vw;
-    left: -5vw;
+    top: 155vw;
+    width: 51vw;
+    left: 0vw;
     opacity: 0;
     transform: scale(-1.5);
     transition: 0.5s;
 
     &.on {
       opacity: 1;
-      transform: scaleX(-1);
+      transform: scaleX(1);
     }
 
     @include mobile {
@@ -284,8 +282,8 @@ section {
 
   .deco12 {
     position: absolute;
-    top: 190vw;
-    left: 25vw;
+    top: 185vw;
+    right: 23vw;
     width: 30vw;
     opacity: 0;
     transform: scale(0.5);
@@ -303,9 +301,9 @@ section {
 
   .deco13 {
     position: absolute;
-    top: 60vw;
-    left: -5vw;
-    width: 50vw;
+    top: 65vw;
+    left: 14vw;
+    width: 30vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -318,9 +316,9 @@ section {
 
   .deco14 {
     position: absolute;
-    top: 220vw;
-    left: -2vw;
-    width: 40vw;
+    top: 205vw;
+    left: 6vw;
+    width: 29vw;
     opacity: 0;
     transform: scale(0.5) rotate(90deg);
     transition: 0.5s;
@@ -337,9 +335,9 @@ section {
 
   .deco15 {
     position: absolute;
-    top: 186vw;
-    right: -10vw;
-    width: 50vw;
+    top: 216vw;
+    right: 0vw;
+    width: 33vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -379,7 +377,7 @@ section {
     position: absolute;
     top: 273vw;
     right: 12vw;
-    width: 70vw;
+    width: 50vw;
     opacity: 0;
     transform: rotate(30deg) scale(0.5);
     transition: 0.5s;
@@ -396,16 +394,16 @@ section {
 
   .deco18 {
     position: absolute;
-    top: 282vw;
-    left: -10vw;
+    top: 287vw;
+    left: -1vw;
     width: 30vw;
     opacity: 0;
-    transform: rotate(143deg) scale(0.5);
+    transform: rotate(-123deg) scale(0.5);
     transition: 0.5s;
 
     &.on {
       opacity: 1;
-      transform: rotate(143deg)scale(1);
+      transform: rotate(-123deg)scale(1);
     }
 
     @include mobile {

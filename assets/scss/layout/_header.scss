@@ -25,7 +25,8 @@
     position: absolute;
     top: 80px;
     right: 0;
-    transform: translate(50%, -50%);
+    // transform: translate(50%, -50%);
+    transform: translate(48%, -24%);
     z-index: -1;
 
     @include tablet {
@@ -161,6 +162,7 @@
         white-space: nowrap;
         font-family: 'Libre Baskerville', serif;
         cursor: pointer;
+        font-weight: bold;
 
         @include maxDevice {
           font-size: 1.2vw;
@@ -210,9 +212,9 @@
       }
 
       &.works {
-        top: 14vw;
+        top: 12vw;
         left: 37vw;
-        width: 14vw;
+        width: 15vw;
         cursor: pointer;
 
         @include tablet {
@@ -389,7 +391,7 @@
   top: 0;
   z-index: 2;
   width: 100%;
-  background: url("../images/menu2_new.png") no-repeat;
+  background: url("../images/menu2.png") no-repeat;
   background-position: center;
   background-size: 300%;
   padding: 20px 37px 50px 37px;

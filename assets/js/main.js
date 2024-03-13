@@ -61,7 +61,7 @@ matchMedia.add("(min-width: 1025px)", ()=>{
       trigger: el,
       start: "0% 70%",
       end: "100% 0%",
-      markers: false,
+      markers: true,
       scrub:1,
       onToggle: function(){
         $(el).toggleClass("on")
