@@ -64,7 +64,7 @@ matchMedia.add("(min-width: 1025px)", ()=>{
       markers: false,
       scrub:1,
       onToggle: function(){
-        $(el).toggleClass("on")
+        // $(el).toggleClass("on")
       },
     },
   })
