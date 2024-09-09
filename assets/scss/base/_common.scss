@@ -26,7 +26,6 @@
     transform: translateY(-100%);
     background: #ccc;
 
-
     &:focus,
     &:active {
       transform: translateY(0);
@@ -73,11 +72,10 @@
     .count {
       font-size: 326px;
       font-weight: 500;
-      line-height: .55;
+      line-height: 0.55;
     }
   }
 }
-
 
 .inner {
   margin: 0 auto;
@@ -87,6 +85,16 @@
   @include mobile {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+.hash {
+  span {
+    transition: 0.3s all;
+  }
+  span:hover {
+    color: #fff;
+    background-color: #000;
   }
 }
 

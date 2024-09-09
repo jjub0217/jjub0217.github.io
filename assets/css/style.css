@@ -180,6 +180,14 @@ fieldset {
   }
 }
 
+.hash span {
+  transition: 0.3s all;
+}
+.hash span:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 .scrollTop {
   position: fixed;
   right: 12px;
