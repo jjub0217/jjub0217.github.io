@@ -1021,9 +1021,9 @@ section .heading-area .badge {
 }
 .section-works .deco17 {
   position: absolute;
-  top: 273vw;
+  top: 279vw;
   right: 12vw;
-  width: 50vw;
+  width: 25vw;
   opacity: 0;
   transform: rotate(30deg) scale(0.5);
   transition: 0.5s;
