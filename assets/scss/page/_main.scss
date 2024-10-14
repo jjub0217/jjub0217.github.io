@@ -104,40 +104,8 @@ section {
     position: absolute;
     top: 10vw;
     right: -5vw;
-    width: 40vw;
-    transform: rotate(10deg);
-    opacity: 0;
-    transform: scale(0.5);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .deco3 {
-    position: absolute;
-    top: 28vw;
-    left: 20vw;
-    width: 30vw;
-    opacity: 0;
-    transform: scale(0.5);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .deco4 {
-    position: absolute;
-    top: 42vw;
-    // top: 60vw;
-    left: 3vw;
     width: 20vw;
-    transform: rotate(40deg);
+    transform: rotate(10deg);
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -150,9 +118,9 @@ section {
 
   .deco5 {
     position: absolute;
-    top: 61vw;
     right: -10vw;
-    width: 50vw;
+    width: 38vw;
+    top: 55vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -160,37 +128,17 @@ section {
     &.on {
       opacity: 1;
       transform: scale(1);
-    }
-  }
-
-  .deco6 {
-    position: absolute;
-    top: 106vw;
-    left: -7vw;
-    width: 66vw;
-    opacity: 0;
-    transform: scale(0.5);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    @include mobile {
-      display: none;
     }
   }
 
   .deco7 {
     position: absolute;
     top: 120vw;
-    // left: 40vw;
-    right: -5vw;
-    width: 33vw;
     opacity: 0;
-    transform: scale(0.5);
     transition: 0.5s;
+    transform: scale(1) rotate(45deg);
+    width: 25vw;
+    right: 0vw;
 
     &.on {
       opacity: 1;
@@ -204,28 +152,9 @@ section {
 
   .deco8 {
     position: absolute;
-    top: 136vw;
+    top: 117vw;
     right: 31vw;
     width: 25vw;
-    opacity: 0;
-    transform: scale(0.5);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  .deco9 {
-    position: absolute;
-    top: 160vw;
-    right: -10vw;
-    width: 50vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
@@ -243,11 +172,11 @@ section {
   .deco10 {
     position: absolute;
     top: 155vw;
-    width: 51vw;
-    left: 0vw;
     opacity: 0;
     transform: scale(-1.5);
     transition: 0.5s;
+    width: 42vw;
+    left: -6vw;
 
     &.on {
       opacity: 1;
@@ -281,12 +210,12 @@ section {
 
   .deco12 {
     position: absolute;
-    top: 185vw;
-    right: 23vw;
-    width: 30vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
+    top: 170vw;
+    right: 42vw;
+    width: 18vw;
 
     &.on {
       opacity: 1;
@@ -300,12 +229,12 @@ section {
 
   .deco13 {
     position: absolute;
-    top: 65vw;
-    left: 14vw;
-    width: 30vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
+    width: 16vw;
+    left: 53vw;
+    top: 61vw;
 
     &.on {
       opacity: 1;
@@ -315,12 +244,12 @@ section {
 
   .deco14 {
     position: absolute;
-    top: 205vw;
-    left: 6vw;
-    width: 29vw;
     opacity: 0;
     transform: scale(0.5) rotate(90deg);
     transition: 0.5s;
+    top: 184vw;
+    left: 77vw;
+    width: 22vw;
 
     &.on {
       opacity: 1;
@@ -334,12 +263,12 @@ section {
 
   .deco15 {
     position: absolute;
-    top: 216vw;
-    right: 0vw;
-    width: 33vw;
     opacity: 0;
-    transform: scale(0.5);
     transition: 0.5s;
+    right: 64vw;
+    top: 230vw;
+    width: 29vw;
+    transform: scale(0.5) rotate(45deg);
 
     &.on {
       opacity: 1;
@@ -353,12 +282,12 @@ section {
 
   .deco16 {
     position: absolute;
-    top: 230vw;
-    right: -10vw;
-    width: 50vw;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.5s;
+    width: 25vw;
+    right: -7vw;
+    top: 277vw;
 
     &.on {
       opacity: 1;
@@ -391,12 +320,12 @@ section {
 
   .deco18 {
     position: absolute;
-    top: 287vw;
-    left: -1vw;
-    width: 30vw;
     opacity: 0;
     transform: rotate(-123deg) scale(0.5);
     transition: 0.5s;
+    top: 308vw;
+    left: 33vw;
+    width: 20vw;
 
     &.on {
       opacity: 1;
