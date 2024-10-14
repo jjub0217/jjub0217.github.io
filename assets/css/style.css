@@ -1340,13 +1340,6 @@ section .heading-area .badge {
     padding-bottom: 50%;
   }
 }
-.section-works .work3 .text-box .desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-}
 .section-works .work4 {
   border-radius: 20px;
   transform: translateY(0vw);
@@ -1394,13 +1387,6 @@ section .heading-area .badge {
   .section-works .work4 .text-box {
     transform: none;
   }
-}
-.section-works .work4 .text-box .desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 }
 .section-works .work5 {
   grid-column: 1/7;
@@ -1528,7 +1514,7 @@ section .heading-area .badge {
 .section-works .work9 {
   grid-column: 1/3;
   grid-row: 23/27;
-  transform: translateY(4vw);
+  transform: translateY(12vw);
 }
 @media screen and (min-width: 1229px) {
   .section-works .work9 {
@@ -1558,7 +1544,7 @@ section .heading-area .badge {
 .section-works .work10 {
   grid-column: 1/3;
   grid-row: 27/33;
-  transform: translateY(2vw);
+  transform: translateY(12vw);
 }
 @media screen and (min-width: 1229px) {
   .section-works .work10 {
@@ -1613,11 +1599,6 @@ section .heading-area .badge {
 }
 .section-works .work10 .text-box .desc {
   word-break: keep-all;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
 }
 .section-works .work11 {
   grid-column: 1/7;
