@@ -838,7 +838,7 @@ section .heading-area .badge {
   position: absolute;
   top: 10vw;
   right: -5vw;
-  width: 40vw;
+  width: 20vw;
   transform: rotate(10deg);
   opacity: 0;
   transform: scale(0.5);
@@ -848,38 +848,11 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
-.section-works .deco3 {
-  position: absolute;
-  top: 28vw;
-  left: 20vw;
-  width: 30vw;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.section-works .deco3.on {
-  opacity: 1;
-  transform: scale(1);
-}
-.section-works .deco4 {
-  position: absolute;
-  top: 42vw;
-  left: 3vw;
-  width: 20vw;
-  transform: rotate(40deg);
-  opacity: 0;
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.section-works .deco4.on {
-  opacity: 1;
-  transform: scale(1);
-}
 .section-works .deco5 {
   position: absolute;
-  top: 61vw;
   right: -10vw;
-  width: 50vw;
+  width: 38vw;
+  top: 55vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
@@ -888,32 +861,14 @@ section .heading-area .badge {
   opacity: 1;
   transform: scale(1);
 }
-.section-works .deco6 {
-  position: absolute;
-  top: 106vw;
-  left: -7vw;
-  width: 66vw;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.section-works .deco6.on {
-  opacity: 1;
-  transform: scale(1);
-}
-@media screen and (max-width: 768px) {
-  .section-works .deco6 {
-    display: none;
-  }
-}
 .section-works .deco7 {
   position: absolute;
   top: 120vw;
-  right: -5vw;
-  width: 33vw;
   opacity: 0;
-  transform: scale(0.5);
   transition: 0.5s;
+  transform: scale(1) rotate(45deg);
+  width: 25vw;
+  right: 0vw;
 }
 .section-works .deco7.on {
   opacity: 1;
@@ -926,7 +881,7 @@ section .heading-area .badge {
 }
 .section-works .deco8 {
   position: absolute;
-  top: 136vw;
+  top: 117vw;
   right: 31vw;
   width: 25vw;
   opacity: 0;
@@ -942,32 +897,14 @@ section .heading-area .badge {
     display: none;
   }
 }
-.section-works .deco9 {
-  position: absolute;
-  top: 160vw;
-  right: -10vw;
-  width: 50vw;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.section-works .deco9.on {
-  opacity: 1;
-  transform: scale(1);
-}
-@media screen and (max-width: 768px) {
-  .section-works .deco9 {
-    display: none;
-  }
-}
 .section-works .deco10 {
   position: absolute;
   top: 155vw;
-  width: 51vw;
-  left: 0vw;
   opacity: 0;
   transform: scale(-1.5);
   transition: 0.5s;
+  width: 42vw;
+  left: -6vw;
 }
 .section-works .deco10.on {
   opacity: 1;
@@ -999,12 +936,12 @@ section .heading-area .badge {
 }
 .section-works .deco12 {
   position: absolute;
-  top: 185vw;
-  right: 23vw;
-  width: 30vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
+  top: 170vw;
+  right: 42vw;
+  width: 18vw;
 }
 .section-works .deco12.on {
   opacity: 1;
@@ -1017,12 +954,12 @@ section .heading-area .badge {
 }
 .section-works .deco13 {
   position: absolute;
-  top: 65vw;
-  left: 14vw;
-  width: 30vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
+  width: 16vw;
+  left: 53vw;
+  top: 61vw;
 }
 .section-works .deco13.on {
   opacity: 1;
@@ -1030,12 +967,12 @@ section .heading-area .badge {
 }
 .section-works .deco14 {
   position: absolute;
-  top: 205vw;
-  left: 6vw;
-  width: 29vw;
   opacity: 0;
   transform: scale(0.5) rotate(90deg);
   transition: 0.5s;
+  top: 184vw;
+  left: 77vw;
+  width: 22vw;
 }
 .section-works .deco14.on {
   opacity: 1;
@@ -1048,12 +985,12 @@ section .heading-area .badge {
 }
 .section-works .deco15 {
   position: absolute;
-  top: 216vw;
-  right: 0vw;
-  width: 33vw;
   opacity: 0;
-  transform: scale(0.5);
   transition: 0.5s;
+  right: 64vw;
+  top: 230vw;
+  width: 29vw;
+  transform: scale(0.5) rotate(45deg);
 }
 .section-works .deco15.on {
   opacity: 1;
@@ -1066,12 +1003,12 @@ section .heading-area .badge {
 }
 .section-works .deco16 {
   position: absolute;
-  top: 230vw;
-  right: -10vw;
-  width: 50vw;
   opacity: 0;
   transform: scale(0.5);
   transition: 0.5s;
+  width: 25vw;
+  right: -7vw;
+  top: 277vw;
 }
 .section-works .deco16.on {
   opacity: 1;
@@ -1102,12 +1039,12 @@ section .heading-area .badge {
 }
 .section-works .deco18 {
   position: absolute;
-  top: 287vw;
-  left: -1vw;
-  width: 30vw;
   opacity: 0;
   transform: rotate(-123deg) scale(0.5);
   transition: 0.5s;
+  top: 308vw;
+  left: 33vw;
+  width: 20vw;
 }
 .section-works .deco18.on {
   opacity: 1;
