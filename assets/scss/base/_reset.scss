@@ -12,7 +12,6 @@
   // flex-shrink: 0;
 }
 
-
 html,
 body {
   height: 100%;
@@ -35,25 +34,35 @@ button {
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0
+  border-spacing: 0;
 }
 
 ul {
   list-style: none;
 }
 
-
-
 /* 세팅 */
 body {
-  background: #000;
+  // background: #000;
+
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
+  &::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 10;
+    pointer-events: none;
+    background: url("../../images/05.jpg") no-repeat;
+  }
 }
 
 fieldset {

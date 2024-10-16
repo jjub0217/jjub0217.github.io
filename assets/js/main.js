@@ -59,7 +59,7 @@ matchMedia.add("(min-width: 1025px)", ()=>{
   gsap.to(el, {
     scrollTrigger: {
       trigger: el,
-      start: "0% 70%",
+      start: "0% 100%",
       end: "100% 0%",
       markers: false,
       scrub:1,
