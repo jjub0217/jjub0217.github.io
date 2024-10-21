@@ -55,7 +55,7 @@
     border: 1px solid #fff;
     padding: 15px;
     transition: 0.3s;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
 
@@ -71,7 +71,7 @@
     gap: 4vw;
 
     .title {
-      font-size: 25px;
+      font-size: 40px;
       letter-spacing: -0.25px;
       font-family: larken, sans-serif;
       padding-bottom: 1vw;
@@ -85,7 +85,7 @@
 
     .cate {
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: 20px;
 
       @include tablet {
         font-size: 14px;
@@ -94,6 +94,9 @@
       @include mobile {
         font-size: 12px;
       }
+    }
+    .content {
+      font-size: 18px;
     }
 
     .paragraph {

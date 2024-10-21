@@ -2,8 +2,14 @@
    * @clicktrigger
    * 
    */
-  $(window).trigger("click")
-  
+  // $(window).trigger("click")
+  $(window).trigger("scroll");
+  const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 
   /**

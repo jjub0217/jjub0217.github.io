@@ -86,7 +86,6 @@
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 img,
@@ -119,7 +118,6 @@ ul {
 
 /* 세팅 */
 body {
-  background: #000;
   padding-bottom: 100vh;
   height: auto;
   font-family: "pretandard", sans-serif;
@@ -685,7 +683,7 @@ fieldset {
   border: 1px solid #fff;
   padding: 15px;
   transition: 0.3s;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
@@ -699,7 +697,7 @@ fieldset {
   gap: 4vw;
 }
 .footer .text-box .title {
-  font-size: 25px;
+  font-size: 40px;
   letter-spacing: -0.25px;
   font-family: larken, sans-serif;
   padding-bottom: 1vw;
@@ -713,7 +711,7 @@ fieldset {
 }
 .footer .text-box .cate {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
 }
 @media screen and (max-width: 1024px) {
   .footer .text-box .cate {
@@ -724,6 +722,9 @@ fieldset {
   .footer .text-box .cate {
     font-size: 12px;
   }
+}
+.footer .text-box .content {
+  font-size: 18px;
 }
 .footer .text-box .paragraph {
   font-size: 16px;
@@ -1180,6 +1181,7 @@ section .heading-area .badge {
   color: #fff;
   padding: 10px;
   transition: background 0.3s, color 0.3s;
+  font-size: 18px;
 }
 .section-works .work .link-work:hover {
   background: #fff;
