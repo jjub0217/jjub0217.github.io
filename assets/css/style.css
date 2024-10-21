@@ -119,19 +119,16 @@ ul {
 
 /* 세팅 */
 body {
+  background: #000;
+  padding-bottom: 100vh;
+  height: auto;
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
 }
-body::after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  z-index: 10;
-  pointer-events: none;
-  background: url("../../images/05.jpg") no-repeat;
+@media screen and (max-width: 1024px) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 fieldset {
@@ -252,14 +249,15 @@ fieldset {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-bottom: 100px;
-  background-size: cover;
   overflow: hidden;
+  background: url("../images/adobe_5.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
 }
 .header .inner {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  position: relative;
   font-family: larken, sans-serif;
   height: 100vh;
 }
@@ -268,6 +266,11 @@ fieldset {
     display: flex;
     align-items: center;
     width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header .inner .gnb {
+    display: none;
   }
 }
 .header .bigDeco {
@@ -296,9 +299,9 @@ fieldset {
 }
 .header .logo-desc {
   flex: 1;
-  font-size: 7.5vw;
-  font-weight: 400;
-  line-height: 90%;
+  font-size: 7vw;
+  font-weight: 900;
+  line-height: 1;
 }
 @media screen and (max-width: 1024px) {
   .header .logo-desc {
@@ -310,10 +313,6 @@ fieldset {
   display: block;
   white-space: nowrap;
 }
-.header .logo-desc span:first-child {
-  font-size: clamp(20px, 5vw, 40px);
-  line-height: 1.2;
-}
 @media screen and (max-width: 320px) {
   .header .logo-desc span {
     white-space: pre-line;
@@ -323,18 +322,22 @@ fieldset {
   }
 }
 .header .gnb {
-  width: 35%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
   font-family: "pretandard", sans-serif;
 }
 @media screen and (max-width: 1024px) {
   .header .gnb {
-    display: none;
+    height: 3vw;
   }
 }
 .header .profile-image {
-  position: relative;
+  width: 35%;
+  position: absolute;
+  right: 80px;
   overflow: hidden;
-  padding-bottom: 100%;
   border-radius: 50%;
 }
 @media screen and (max-width: 1024px) {
@@ -352,7 +355,11 @@ fieldset {
     display: none;
   }
 }
-.header .profile-image video {
+.header .profile-image .profile {
+  position: relative;
+  padding-bottom: 100%;
+}
+.header .profile-image .profile video {
   position: absolute;
   top: 0;
   left: 0;
@@ -362,24 +369,24 @@ fieldset {
      object-fit: cover;
 }
 @media screen and (max-width: 1024px) {
-  .header .profile-image video {
+  .header .profile-image .profile video {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .header .profile-image video {
+  .header .profile-image .profile video {
     display: none;
   }
 }
 @media screen and (max-width: 320px) {
-  .header .profile-image video {
+  .header .profile-image .profile video {
     display: none;
   }
 }
 .header .nav-list {
   position: absolute;
-  top: 0;
-  left: 0%;
+  top: -5%;
+  left: 5%;
   width: 100%;
   height: 100%;
 }
@@ -482,6 +489,11 @@ fieldset {
 }
 .header .floating-box {
   width: 100%;
+  padding: 15px 80px;
+  display: flex;
+  background: url("../images/adobe_3.png") no-repeat;
+  background-size: 100% 100%;
+  height: 7vw;
 }
 @media screen and (max-width: 1024px) {
   .header .floating-box {
@@ -491,44 +503,36 @@ fieldset {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 3;
   }
 }
-.header .floating-heading {
+.header .floating-box .gnb {
+  height: 3vw;
+}
+.header .floating-box .gnb .nav-list {
+  position: static;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.header .floating-box .gnb .nav-list .nav-item {
+  position: static;
+  width: 4vw;
+  height: 100%;
+}
+.header .floating-box .gnb .nav-list .nav-item a {
   position: relative;
-  font-size: 1.3vw;
-  background: #f5f4f4;
-  padding: 15px 80px;
 }
-@media screen and (max-width: 768px) {
-  .header .floating-heading {
-    padding: 15px 20px;
-  }
-}
-.header .floating-headline {
-  font-family: bagerich, sans-serif;
-  font-size: 36px;
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-  .header .floating-headline {
-    display: none;
-  }
+.header .floating-box .gnb .nav-list .nav-item span {
+  font-size: 16px;
 }
 .header .floating-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 45px;
-  transform: translate(-50%, -50%);
+  height: 100px;
   transition: 0.7s linear;
 }
 @media screen and (max-width: 768px) {
   .header .floating-logo {
-    position: static;
-    z-index: 2;
     transform: translateY(0);
     height: 60px;
   }
@@ -536,33 +540,6 @@ fieldset {
 .header .floating-logo svg {
   height: 100%;
   animation: rotate 10s linear infinite;
-}
-.header .floating-nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1vw;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
-@media screen and (max-width: 1024px) {
-  .header .floating-nav-list {
-    display: none;
-  }
-}
-.header .floating-nav-item a {
-  padding: 12px 20px;
-  display: block;
-  transition: 0.3s;
-  border: 1px solid #0a0b0c;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.header .floating-nav-item a:hover {
-  background: #9a9a9a;
-  border: 1px solid #9a9a9a;
-  color: #fff;
 }
 
 .mo-gnb_btn {
@@ -654,11 +631,11 @@ fieldset {
   flex-direction: column;
   position: fixed;
   bottom: 0;
-  background: #000;
-  color: #fff;
+  color: #000;
   height: 100vh;
-  padding-top: 90px;
+  padding-top: 300px;
   justify-content: space-between;
+  background: url("../images/white_paper11.jpg");
 }
 @media screen and (max-width: 768px) {
   .footer {
@@ -775,9 +752,28 @@ fieldset {
   width: 87%;
 }
 
-.wrapper {
-  padding-bottom: 100vh;
+.main {
   position: relative;
+}
+.main:after {
+  content: "";
+  position: absolute;
+  height: 550px;
+  width: 100%;
+  left: 0;
+  background: url("../images/adobe_8.png") no-repeat;
+  bottom: -218px;
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  -webkit-clip-path: polygon(0% 0%, 0% 98.9%, 3.3% 98.7%, 7% 98.9%, 7% 98.9%, 9% 98.9%, 10% 98.7%, 13% 98.3%, 24% 98%, 34.85% 99%, 40.85% 99%, 46.85% 97.9%, 52.85% 97.6%, 67% 99%, 61% 98%, 58% 99%, 66% 99%, 67% 100%, 81% 100%, 88% 98.9%, 94% 99%, 100% 99.7%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 98.9%, 3.3% 98.7%, 7% 98.9%, 7% 98.9%, 9% 98.9%, 10% 98.7%, 13% 98.3%, 24% 98%, 34.85% 99%, 40.85% 99%, 46.85% 97.9%, 52.85% 97.6%, 67% 99%, 61% 98%, 58% 99%, 66% 99%, 67% 100%, 81% 100%, 88% 98.9%, 94% 99%, 100% 99.7%, 100% 0%);
+  z-index: 1;
+  background: url("../images/adobe_5.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
 }
 @media screen and (max-width: 1024px) {
   .wrapper {
@@ -787,11 +783,8 @@ fieldset {
 }
 
 .container {
-  position: relative;
-  background: #fff;
-  z-index: 1;
-  border-radius: 0 0 80px 80px;
-  overflow: hidden;
+  padding-top: 500px;
+  padding-bottom: 300px;
 }
 
 section {
@@ -1057,42 +1050,6 @@ section .heading-area .badge {
 }
 @media screen and (max-width: 768px) {
   .section-works .deco16 {
-    display: none;
-  }
-}
-.section-works .deco17 {
-  position: absolute;
-  top: 279vw;
-  right: 12vw;
-  width: 25vw;
-  opacity: 0;
-  transform: rotate(30deg) scale(0.5);
-  transition: 0.5s;
-}
-.section-works .deco17.on {
-  opacity: 1;
-  transform: rotate(30deg) scale(1);
-}
-@media screen and (max-width: 768px) {
-  .section-works .deco17 {
-    display: none;
-  }
-}
-.section-works .deco18 {
-  position: absolute;
-  opacity: 0;
-  transform: rotate(-123deg) scale(0.5);
-  transition: 0.5s;
-  top: 308vw;
-  left: 33vw;
-  width: 20vw;
-}
-.section-works .deco18.on {
-  opacity: 1;
-  transform: rotate(-123deg) scale(1);
-}
-@media screen and (max-width: 768px) {
-  .section-works .deco18 {
     display: none;
   }
 }
@@ -1554,6 +1511,13 @@ section .heading-area .badge {
   padding-top: 0;
   padding-bottom: 0;
 }
+.section-log::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+}
 .section-log .heading-area {
   padding-bottom: 50px;
   padding-top: 70px;
@@ -1563,8 +1527,6 @@ section .heading-area .badge {
   align-items: normal;
   padding-top: 30px;
   padding-bottom: 300px;
-  background: #f4f4f2;
-  border-radius: 0 0 80px 80px;
 }
 @media screen and (max-width: 768px) {
   .section-log .inner {

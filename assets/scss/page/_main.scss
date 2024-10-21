@@ -1,20 +1,47 @@
-// body::after {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: url("../../images/05.jpg") no-repeat;
-//   background-size: cover;
-//   content: "";
-//   z-index: 10;
-//   pointer-events: none;
-//   opacity: 0.08;
-// }
-.wrapper {
-  padding-bottom: 100vh;
+.main {
   position: relative;
-
+  &:after {
+    content: "";
+    position: absolute;
+    height: 550px;
+    width: 100%;
+    left: 0;
+    background: url("../images/adobe_8.png") no-repeat;
+    bottom: -218px;
+    z-index: 1;
+  }
+}
+.wrapper {
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    0% 98.9%,
+    3.3% 98.7%,
+    7% 98.9%,
+    7% 98.9%,
+    9% 98.9%,
+    10% 98.7%,
+    13% 98.3%,
+    24% 98%,
+    34.85% 99%,
+    40.85% 99%,
+    46.85% 97.9%,
+    52.85% 97.6%,
+    67% 99%,
+    61% 98%,
+    58% 99%,
+    66% 99%,
+    67% 100%,
+    81% 100%,
+    88% 98.9%,
+    94% 99%,
+    100% 99.7%,
+    100% 0%
+  );
+  z-index: 1;
+  background: url("../images/adobe_5.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
   @include tablet {
     padding-bottom: 0;
     min-width: 320px;
@@ -22,11 +49,8 @@
 }
 
 .container {
-  position: relative;
-  background: #fff;
-  z-index: 1;
-  border-radius: 0 0 80px 80px;
-  overflow: hidden;
+  padding-top: 500px;
+  padding-bottom: 300px;
 }
 
 section {
@@ -305,44 +329,6 @@ section {
     &.on {
       opacity: 1;
       transform: scale(1);
-    }
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  .deco17 {
-    position: absolute;
-    top: 279vw;
-    right: 12vw;
-    width: 25vw;
-    opacity: 0;
-    transform: rotate(30deg) scale(0.5);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: rotate(30deg) scale(1);
-    }
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  .deco18 {
-    position: absolute;
-    opacity: 0;
-    transform: rotate(-123deg) scale(0.5);
-    transition: 0.5s;
-    top: 308vw;
-    left: 33vw;
-    width: 20vw;
-
-    &.on {
-      opacity: 1;
-      transform: rotate(-123deg) scale(1);
     }
 
     @include mobile {
@@ -848,6 +834,15 @@ section {
   padding-top: 0;
   padding-bottom: 0;
 
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    // -webkit-clip-path: polygon(1% 0, )
+  }
+
   .heading-area {
     padding-bottom: 50px;
     padding-top: 70px;
@@ -859,8 +854,8 @@ section {
     align-items: normal;
     padding-top: 30px;
     padding-bottom: 300px;
-    background: #f4f4f2;
-    border-radius: 0 0 80px 80px;
+    // background: #f4f4f2;
+    // border-radius: 0 0 80px 80px;
 
     @include mobile {
       border-radius: 0;

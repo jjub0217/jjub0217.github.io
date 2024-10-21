@@ -4,11 +4,11 @@
   flex-direction: column;
   position: fixed;
   bottom: 0;
-  background: #000;
-  color: #fff;
+  color: #000;
   height: 100vh;
-  padding-top: 90px;
+  padding-top: 300px;
   justify-content: space-between;
+  background: url("../images/white_paper11.jpg");
 
   @include mobile {
     position: relative;
