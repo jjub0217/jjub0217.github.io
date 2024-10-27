@@ -1,43 +1,5 @@
-.main {
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    height: 550px;
-    width: 100%;
-    left: 0;
-    background: url("../images/adobe_8.png") no-repeat;
-    bottom: -218px;
-    z-index: 1;
-  }
-}
 .wrapper {
   position: relative;
-  clip-path: polygon(
-    0% 0%,
-    0% 98.9%,
-    3.3% 98.7%,
-    7% 98.9%,
-    7% 98.9%,
-    9% 98.9%,
-    10% 98.7%,
-    13% 98.3%,
-    24% 98%,
-    34.85% 99%,
-    40.85% 99%,
-    46.85% 97.9%,
-    52.85% 97.6%,
-    67% 99%,
-    61% 98%,
-    58% 99%,
-    66% 99%,
-    67% 100%,
-    81% 100%,
-    88% 98.9%,
-    94% 99%,
-    100% 99.7%,
-    100% 0%
-  );
   z-index: 1;
   background: url("../images/adobe_4.jpg");
   background-size: 100%;
@@ -543,7 +505,6 @@ section {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5vw;
-        padding-top: 20px;
 
         @include mobile {
           gap: 5px;
@@ -551,8 +512,8 @@ section {
 
         span {
           border: 1px solid #000;
-          border-radius: 10px;
-          padding: 5px 8px;
+          border-radius: 20px;
+          padding: 5px 12px;
           font-size: 1.25rem;
           text-transform: uppercase;
         }
@@ -560,81 +521,9 @@ section {
     }
   }
 
+  // .work5 였음
   .work1 {
-    grid-column: 3 / 7;
-    grid-row: 7 / 11;
-
-    .thumb-box {
-      padding-bottom: 70%;
-
-      @include tablet {
-        padding-bottom: 50%;
-      }
-    }
-
-    .text-box {
-      justify-content: start;
-      flex-direction: column;
-    }
-  }
-
-  .work2 {
-    border-radius: 20px;
-    grid-column: 1 / 3;
-    grid-row: 6 / 10;
-
-    .thumb-box {
-      background: rgb(96, 95, 95);
-      padding-bottom: 130%;
-
-      @include tablet {
-        padding-bottom: 50%;
-      }
-    }
-
-    .text-box {
-      justify-content: start;
-      flex-direction: column;
-    }
-  }
-
-  .work3 {
-    grid-row: 16 / 21;
-    grid-column: 3 / 5;
-
-    .thumb-box {
-      padding-bottom: 140%;
-
-      @include tablet {
-        padding-bottom: 50%;
-      }
-    }
-  }
-
-  .work4 {
-    border-radius: 20px;
-    grid-column: 2 / 4;
-    grid-row: 12 / 15;
-
-    .thumb-box {
-      background-color: #167cff;
-      padding-bottom: 50%;
-
-      @include tablet {
-        padding-bottom: 50%;
-        width: 100%;
-        height: 100%;
-      }
-
-      img {
-        width: 50%;
-        object-fit: contain;
-      }
-    }
-  }
-
-  .work5 {
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
     grid-column: 3 / 6;
 
     .thumb-box {
@@ -643,16 +532,6 @@ section {
       @include tablet {
         padding-bottom: 50%;
       }
-    }
-
-    .text-box {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .left {
-      display: flex;
-      flex-direction: column;
     }
 
     .desc {
@@ -676,6 +555,104 @@ section {
     }
   }
 
+  .work2 {
+    grid-column: 6 / 8;
+    grid-row: 3 / 6;
+
+    .thumb-box {
+      padding-bottom: 80%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+    }
+
+    .text-box {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .desc {
+      font-size: 17px;
+
+      &.pc {
+        padding-top: 0;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &.mo {
+        display: none;
+
+        @include tablet {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .work3 {
+    border-radius: 20px;
+    grid-column: 1 / 3;
+    grid-row: 6 / 10;
+
+    .thumb-box {
+      background: rgb(96, 95, 95);
+      padding-bottom: 130%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+    }
+
+    .text-box {
+      justify-content: start;
+      flex-direction: column;
+    }
+  }
+
+  .work4 {
+    grid-column: 3 / 7;
+    grid-row: 7 / 11;
+
+    .thumb-box {
+      padding-bottom: 70%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+    }
+
+    .text-box {
+      justify-content: start;
+      flex-direction: column;
+    }
+  }
+
+  .work5 {
+    border-radius: 20px;
+    grid-column: 2 / 4;
+    grid-row: 12 / 15;
+
+    .thumb-box {
+      background-color: #167cff;
+      padding-bottom: 50%;
+
+      @include tablet {
+        padding-bottom: 50%;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        width: 50%;
+        object-fit: contain;
+      }
+    }
+  }
+
   .work6 {
     grid-column: 4 / 7;
     grid-row: 12 / 15;
@@ -689,46 +666,19 @@ section {
   }
 
   .work7 {
-    grid-row: 21 / 25;
-    grid-column: 6 / 8;
+    grid-row: 16 / 21;
+    grid-column: 3 / 5;
 
     .thumb-box {
-      background: #cedbe4;
-      padding-bottom: 100%;
+      padding-bottom: 140%;
 
       @include tablet {
         padding-bottom: 50%;
       }
-    }
-
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 
   .work8 {
-    grid-row: 23 / 26;
-    grid-column: 4 / 6;
-
-    .thumb-box {
-      padding-bottom: 40%;
-
-      @include tablet {
-        padding-bottom: 50%;
-      }
-
-      .common {
-        top: 18px;
-      }
-    }
-  }
-
-  .work9 {
     grid-row: 18 / 21;
     grid-column: 5 / 7;
 
@@ -747,7 +697,7 @@ section {
     }
   }
 
-  .work10 {
+  .work9 {
     grid-row: 22 / 26;
     grid-column: 1 / 4;
 
@@ -785,46 +735,43 @@ section {
     }
   }
 
-  .work11 {
-    grid-column: 6 / 8;
-    grid-row: 3 / 5;
+  .work10 {
+    grid-row: 23 / 26;
+    grid-column: 4 / 6;
 
     .thumb-box {
-      padding-bottom: 80%;
+      padding-bottom: 40%;
+
+      @include tablet {
+        padding-bottom: 50%;
+      }
+
+      .common {
+        top: 18px;
+      }
+    }
+  }
+
+  .work11 {
+    grid-row: 21 / 25;
+    grid-column: 6 / 8;
+
+    .thumb-box {
+      background: #cedbe4;
+      padding-bottom: 100%;
 
       @include tablet {
         padding-bottom: 50%;
       }
     }
 
-    .text-box {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .left {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .desc {
-      font-size: 17px;
-
-      &.pc {
-        padding-top: 0;
-
-        @include tablet {
-          display: none;
-        }
-      }
-
-      &.mo {
-        display: none;
-
-        @include tablet {
-          display: flex;
-        }
-      }
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

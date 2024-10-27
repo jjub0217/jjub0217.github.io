@@ -27,13 +27,13 @@
 
   .intro-heading {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
 
     .headline {
-      font-size: 60px;
-      font-weight: 500;
-
+      font-size: 1vw;
+      font-weight: 300;
+      font-family: "Libre Baskerville";
       @include tablet {
         font-size: 5.5vw;
       }
@@ -45,6 +45,41 @@
       @include minDevice {
         font-size: 12vw;
       }
+    }
+  }
+  .contact {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background-color: rgba($color: #000, $alpha: 0.1);
+    text-align: center;
+    line-height: 6vw;
+    font-size: 0.7vw;
+    font-family: "Libre Baskerville";
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+    transition: 0.5s ease;
+    &:after {
+      content: "";
+      display: block;
+      background: url("../images/next.png") no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      transform: translateX(0);
+      transition: 0.5s ease;
+    }
+    &:hover {
+      &::after {
+        transform: translateX(10px);
+        display: block;
+        background: url("../images/next-1.png") no-repeat;
+        background-size: cover;
+      }
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
     }
   }
 

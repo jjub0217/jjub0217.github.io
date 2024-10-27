@@ -1,43 +1,77 @@
-  /**
-   * @clicktrigger
-   * 
-   */
-  // $(window).trigger("click")
-  $(window).trigger("scroll");
-  const lenis = new Lenis();
+// $(function () {
+
+const lenis = new Lenis();
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+//  ScrollTrigger.matchMedia({
+  //  "(min-width: 1024px)": function () {
+  // gsap
+  //   .timeline({
+  //     scrollTrigger: {
+  //       trigger: $(".header"),
+  //       start: "90% 0%",
+  //       end: "100% 0%",
+  //       markers: true,
+  //       scrub: 0,
+  //     },
+  //   })
+  //   .to($(".floating-box"), {
+  //     className: "floating-box on",
+  //   });
+    // .to(
+    //   $(".floating-box"),
+    //   {
+    //     transform: "translate(0, -100%)",
+    //     transition: "0.5s",
+    //   },
+    //   {
+    //     position: "fixed",
+    //     top: 0,
+    //     transform: "translate(0, 0)",
+    //     zIndex: 10,
+    //     height: "7vw"
+    //   }
+    // );
+
+
+  //  },
+//  });
+
+   
+
+// });÷
+
 
 
   /**
    * @floatingbox나타나는기능
    * 
    */
-let matchMedia = gsap.matchMedia();
-matchMedia.add("(min-width: 1025px)", ()=>{
-  gsap.timeline({
-    scrollTrigger: {
-    trigger: $(".header .inner"),
-    start:"100% 0%",
-    end: "100% 0%",
-    markers:false,
-    scrub:0,
-    }
-  })
-  .fromTo($(".floating-box"),  {
-    transform: "translate(0, -100%)",
-    transition: "0.5s"
-  },
-  {
-    position: "fixed",
-    top: 0,
-    transform: "translate(0, 0)",
-    zIndex: 10,
-  })
-  })
+// let matchMedia = gsap.matchMedia();
+// matchMedia.add("(min-width: 1024px)", ()=>{
+//   gsap.timeline({
+//     scrollTrigger: {
+//     trigger: $(".header .inner"),
+//     start:"100% 0%",
+//     end: "100% 0%",
+//     markers:false,
+//     scrub:0,
+//     }
+//   })
+//   .fromTo($(".floating-box"),  {
+//     transform: "translate(0, -100%)",
+//     transition: "0.5s"
+//   },
+//   {
+//     position: "fixed",
+//     top: 0,
+//     transform: "translate(0, 0)",
+//     zIndex: 10,
+//   })
+//   })
 
   /**
    * @페이지가로딩되었을때의기능
@@ -45,6 +79,18 @@ matchMedia.add("(min-width: 1025px)", ()=>{
    */
   $(window).on("load",function(e){
     console.log('load 이벤트 실행');
+    const header = document.querySelector(".header");
+    const floatingBox = document.querySelector(".floating-box");
+    window.addEventListener("scroll", function () {
+      console.log(header.scrollHeight);
+      let curr = this.scrollY;
+      console.log(curr);
+      if (curr >= header.scrollHeight) {
+        floatingBox.classList.add("on");
+      } else {
+        floatingBox.classList.remove("on");
+      }
+    });
   }) 
 
 
@@ -128,3 +174,44 @@ $(".mo_gnb-list .about").click(function(){
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   return false;
 })
+
+
+
+
+$("body").mousemove(function (e) {
+  xVal = e.clientX;
+  yVal = e.clientY;
+  gsap.to(".cursor", {
+    x: xVal,
+    y: yVal,
+    duration: 0.3,
+  });
+});
+
+const videoElement = document.querySelector("#video_intro");
+// 동영상 재생이 끝났을 때 실행되는 이벤트 리스너
+videoElement.addEventListener("ended", function () {
+  // 동영상이 끝나면 loadingAni 실행
+  setTimeout(function () {
+    // console.log(videoElement);
+    loadingAni.play(); // GSAP 애니메이션 실행
+  }, 1200); // 3000 밀리초 = 3초
+  // loadingAni.play();
+});
+
+
+const loadingAni = gsap.timeline({
+  paused: true, // 처음에는 멈춘 상태
+});
+
+loadingAni.to(".intro", { yPercent: -100, display: "none" });
+
+
+$(".works-area .thumb-box").mouseover(function () {
+  gsap.to(".cursor", { scale: 2 });
+  gsap.to(".cursor span", { visibility: "visible", opacity: 1 });
+});
+$(".works-area .thumb-box").mouseleave(function () {
+  gsap.to(".cursor", { scale: 1 });
+  gsap.to(".cursor span", { visibility: "hidden", opacity: 0 });
+});
