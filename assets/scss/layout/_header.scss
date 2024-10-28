@@ -166,7 +166,7 @@
       background: url("../images/adobe_3.png") no-repeat;
       background-size: 100% 100%;
       transition: 0.5s;
-      padding: 15px 80px;
+      padding: 2vw;
       // height: 7vw;
 
       &.on {
@@ -178,7 +178,6 @@
       }
 
       @include tablet {
-        display: block;
         transform: none;
         position: fixed;
         top: 0;
@@ -211,8 +210,9 @@
     }
 
     &-logo {
-      height: 100px;
       transition: 0.7s linear;
+      width: 4%;
+      height: 4%;
 
       @include mobile {
         transform: translateY(0);

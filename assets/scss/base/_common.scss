@@ -50,9 +50,9 @@
   #video_intro {
     height: 100%;
     width: 100%;
-    @media screen and (min-width: 2360px) {
-      object-fit: cover;
-    }
+    // @media screen and (min-width: 2360px) {
+    object-fit: fill;
+    // }
   }
 }
 

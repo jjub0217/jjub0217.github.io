@@ -199,12 +199,8 @@ fieldset {
 .intro #video_intro {
   height: 100%;
   width: 100%;
-}
-@media screen and (min-width: 2360px) {
-  .intro #video_intro {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .inner {
@@ -438,14 +434,13 @@ fieldset {
   background: url("../images/adobe_3.png") no-repeat;
   background-size: 100% 100%;
   transition: 0.5s;
-  padding: 15px 80px;
+  padding: 2vw;
 }
 .header .floating-box.on {
   transform: translateY(0%);
 }
 @media screen and (max-width: 1024px) {
   .header .floating-box {
-    display: block;
     transform: none;
     position: fixed;
     top: 0;
@@ -476,8 +471,9 @@ fieldset {
   font-size: 16px;
 }
 .header .floating-logo {
-  height: 100px;
   transition: 0.7s linear;
+  width: 4%;
+  height: 4%;
 }
 @media screen and (max-width: 768px) {
   .header .floating-logo {
@@ -769,7 +765,7 @@ section .heading-area {
   position: relative;
 }
 section .heading-area .headline {
-  font-size: 120px;
+  font-size: 5vw;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -781,7 +777,7 @@ section .heading-area .headline {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    font-size: 12vw;
+    font-size: 7vw;
   }
 }
 @media screen and (max-width: 320px) {
@@ -1055,7 +1051,6 @@ section .heading-area .badge {
   .section-works .work {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 }
 .section-works .work .thumb-box {
@@ -1162,6 +1157,7 @@ section .heading-area .badge {
   display: flex;
   flex-direction: column;
   font-family: Helvetica Now Display, sans-serif;
+  padding-top: 20px;
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box {
@@ -1169,15 +1165,10 @@ section .heading-area .badge {
   }
 }
 .section-works .work .text-box h3 {
-  font-size: 50px;
+  font-size: 4vw;
   font-family: larken, sans-serif;
   line-height: 1;
   text-transform: uppercase;
-}
-@media screen and (min-width: 1229px) {
-  .section-works .work .text-box h3 {
-    font-size: 4vw;
-  }
 }
 @media screen and (max-width: 320px) {
   .section-works .work .text-box h3 {
@@ -1216,7 +1207,8 @@ section .heading-area .badge {
 .section-works .work .text-box .hash {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5vw;
+  -moz-column-gap: 0.5vw;
+       column-gap: 0.5vw;
 }
 @media screen and (max-width: 320px) {
   .section-works .work .text-box .hash {
@@ -1224,16 +1216,7 @@ section .heading-area .badge {
   }
 }
 .section-works .work .text-box .hash span {
-  border: 1px solid #000;
-  border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 320px) {
-  .section-works .work .text-box .hash span {
-    font-size: 14px;
-  }
+  font-size: 1vw;
 }
 .section-works .work1 {
   grid-row: 1/5;
