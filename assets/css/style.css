@@ -729,8 +729,8 @@ fieldset {
 .wrapper {
   position: relative;
   z-index: 1;
-  background: url("../images/adobe_4.jpg");
-  background-size: 100%;
+  background: url("../images/adobe_4.jpg") no-repeat;
+  background-size: 100% 100%;
   background-attachment: fixed;
   min-width: 1229px;
   overflow: hidden;
