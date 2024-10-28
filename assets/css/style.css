@@ -1219,6 +1219,11 @@ section .heading-area .badge {
 .section-works .work .text-box .hash span {
   font-size: 1vw;
 }
+@media screen and (max-width: 1024px) {
+  .section-works .work .text-box .hash span {
+    font-size: 3vw;
+  }
+}
 .section-works .work1 {
   grid-row: 1/5;
   grid-column: 3/6;

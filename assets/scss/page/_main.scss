@@ -516,6 +516,9 @@ section {
 
         span {
           font-size: 1vw;
+          @include tablet {
+            font-size: 3vw;
+          }
         }
       }
     }
