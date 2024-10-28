@@ -1181,7 +1181,7 @@ section .heading-area .badge {
 }
 @media screen and (max-width: 768px) {
   .section-works .work .text-box {
-    gap: 10px;
+    gap: 5px;
   }
 }
 .section-works .work .text-box h3 {
