@@ -745,6 +745,11 @@ fieldset {
   padding-top: 500px;
   padding-bottom: 300px;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 0;
+  }
+}
 
 section {
   padding-bottom: 400px;
