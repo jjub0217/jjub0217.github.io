@@ -805,7 +805,7 @@ section .heading-area .badge {
     right: 10%;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   section .heading-area .badge {
     padding: 16px 24px;
     font-size: 14px;

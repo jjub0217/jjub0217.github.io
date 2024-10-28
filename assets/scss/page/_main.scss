@@ -71,7 +71,7 @@ section {
         right: 10%;
       }
 
-      @include minDevice {
+      @include mobile {
         padding: 16px 24px;
         font-size: 14px;
       }
