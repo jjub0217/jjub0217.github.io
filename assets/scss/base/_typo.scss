@@ -83,3 +83,26 @@
   font-family: "NeueMontreal";
   src: url("../fonts/PPNeueMontreal-Regular.woff") format("woff");
 }
+@font-face {
+  font-family: "AribauGroteskBlackItalic";
+  src: url("../fonts/AribauGroteskBlackItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "AribauGroteskBlack";
+  src: url("../fonts/AribauGroteskBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "AribauGrotesklighter";
+  src: url("../fonts/AribauGroteskExtraLight.woff2") format("woff2");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "AribauGrotesklight";
+  src: url("../fonts/AribauGroteskLight.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AribauGrotesk";
+  src: url("../fonts/AribauGroteskRegular.woff2") format("woff2");
+  font-weight: normal;
+}

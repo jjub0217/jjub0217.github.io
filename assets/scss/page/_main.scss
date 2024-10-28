@@ -512,7 +512,9 @@ section {
         }
 
         span {
+          font-family: "AribauGrotesklight", sans-serif;
           font-size: 1vw;
+          font-weight: 300;
           @include tablet {
             font-size: 4vw;
           }
