@@ -193,6 +193,18 @@ fieldset {
   left: 0;
   right: 0;
   z-index: 4;
+  height: 100%;
+  width: 100%;
+}
+.intro #video_intro {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 2360px) {
+  .intro #video_intro {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .inner {
@@ -262,9 +274,6 @@ fieldset {
   z-index: 2;
   width: 100%;
   overflow: hidden;
-  background: url("../images/adobe_5.jpg");
-  background-size: 100%;
-  background-attachment: fixed;
 }
 .header .inner {
   display: flex;
@@ -290,8 +299,7 @@ fieldset {
   position: absolute;
   top: 80px;
   right: 0;
-  transform: translate(48%, -24%);
-  z-index: -1;
+  transform: translate(20%, -24%);
 }
 @media screen and (max-width: 1024px) {
   .header .bigDeco {
@@ -300,38 +308,14 @@ fieldset {
     transform: translate(34%, -50%);
   }
 }
-@media screen and (max-width: 768px) {
-  .header .bigDeco {
-    top: 30%;
-  }
-}
-@media screen and (max-width: 320px) {
-  .header .bigDeco {
-    top: 40%;
-  }
-}
 .header .logo-desc {
-  flex: 1;
   font-size: 7vw;
   font-weight: 900;
   line-height: 1;
 }
-@media screen and (max-width: 1024px) {
-  .header .logo-desc {
-    font-size: 19vw;
-    padding-top: 50px;
-  }
-}
-.header .logo-desc span {
-  display: block;
-  white-space: nowrap;
-}
 @media screen and (max-width: 320px) {
-  .header .logo-desc span {
-    white-space: pre-line;
-  }
-  .header .logo-desc span br {
-    display: none;
+  .header .logo-desc {
+    font-size: 36px;
   }
 }
 .header .gnb {
@@ -343,7 +327,6 @@ fieldset {
 }
 .header .nav-list {
   position: absolute;
-  top: -5%;
   left: 5%;
   width: 100%;
   height: 100%;
@@ -627,19 +610,9 @@ fieldset {
   font-weight: 300;
   font-family: "Libre Baskerville";
 }
-@media screen and (max-width: 1024px) {
-  .footer .intro-heading .headline {
-    font-size: 5.5vw;
-  }
-}
 @media screen and (max-width: 768px) {
   .footer .intro-heading .headline {
-    font-size: 9vw;
-  }
-}
-@media screen and (max-width: 320px) {
-  .footer .intro-heading .headline {
-    font-size: 12vw;
+    font-size: 14px;
   }
 }
 .footer .contact {
@@ -762,6 +735,8 @@ fieldset {
   background: url("../images/adobe_4.jpg");
   background-size: 100%;
   background-attachment: fixed;
+  min-width: 1229px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .wrapper {
@@ -806,7 +781,12 @@ section .heading-area .headline {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    font-size: 15vw;
+    font-size: 12vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  section .heading-area .headline {
+    font-size: 28px;
   }
 }
 section .heading-area .badge {
@@ -1199,6 +1179,11 @@ section .heading-area .badge {
     font-size: 4vw;
   }
 }
+@media screen and (max-width: 320px) {
+  .section-works .work .text-box h3 {
+    font-size: 25px;
+  }
+}
 .section-works .work .text-box .title {
   font-size: 2rem;
   line-height: 1.4;
@@ -1233,7 +1218,7 @@ section .heading-area .badge {
   flex-wrap: wrap;
   gap: 0.5vw;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .section-works .work .text-box .hash {
     gap: 5px;
   }
@@ -1242,8 +1227,13 @@ section .heading-area .badge {
   border: 1px solid #000;
   border-radius: 20px;
   padding: 5px 12px;
-  font-size: 1.25rem;
+  font-size: 20px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 320px) {
+  .section-works .work .text-box .hash span {
+    font-size: 14px;
+  }
 }
 .section-works .work1 {
   grid-row: 1/5;
@@ -1287,10 +1277,6 @@ section .heading-area .badge {
   .section-works .work2 .thumb-box {
     padding-bottom: 50%;
   }
-}
-.section-works .work2 .text-box {
-  flex-direction: row;
-  justify-content: space-between;
 }
 .section-works .work2 .desc {
   font-size: 17px;
@@ -1402,12 +1388,6 @@ section .heading-area .badge {
     padding-bottom: 50%;
   }
 }
-@media screen and (max-width: 1024px) {
-  .section-works .work8 img {
-    -o-object-position: 0 -65px;
-       object-position: 0 -65px;
-  }
-}
 .section-works .work9 {
   grid-row: 22/26;
   grid-column: 1/4;
@@ -1434,11 +1414,6 @@ section .heading-area .badge {
   overflow: hidden;
   padding: 1.5vw;
   background: #cedbe4;
-}
-@media screen and (max-width: 1024px) {
-  .section-works .work9 .bg {
-    display: none;
-  }
 }
 .section-works .work9 .text-box .desc {
   word-break: keep-all;

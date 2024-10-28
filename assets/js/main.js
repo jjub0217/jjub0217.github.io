@@ -6,43 +6,33 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
-//  ScrollTrigger.matchMedia({
-  //  "(min-width: 1024px)": function () {
-  // gsap
-  //   .timeline({
-  //     scrollTrigger: {
-  //       trigger: $(".header"),
-  //       start: "90% 0%",
-  //       end: "100% 0%",
-  //       markers: true,
-  //       scrub: 0,
-  //     },
-  //   })
-  //   .to($(".floating-box"), {
-  //     className: "floating-box on",
-  //   });
-    // .to(
-    //   $(".floating-box"),
-    //   {
-    //     transform: "translate(0, -100%)",
-    //     transition: "0.5s",
-    //   },
-    //   {
-    //     position: "fixed",
-    //     top: 0,
-    //     transform: "translate(0, 0)",
-    //     zIndex: 10,
-    //     height: "7vw"
-    //   }
-    // );
+ ScrollTrigger.matchMedia({
+   "(min-width: 1024px)": function () {
+     /**
+      *  @이미지들이스크롤에의해커지는기능
+      *
+      */
+     $("[data-scroll]").each(function (i, el) {
+       gsap.to(el, {
+         scrollTrigger: {
+           trigger: el,
+           start: "0% 100%",
+           end: "100% 0%",
+           markers: false,
+           scrub: 1,
+           onToggle: function () {
+             $(el).toggleClass("on");
+           },
+         },
+       });
+     });
 
-
-  //  },
-//  });
+   }
+ })
 
    
 
-// });÷
+// });
 
 
 
@@ -103,24 +93,6 @@ requestAnimationFrame(raf);
   }) 
 
 
-  /** 
-   *  @이미지들이스크롤에의해커지는기능
-   * 
-  */
-  $("[data-scroll]").each(function(i, el) {
-  gsap.to(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "0% 100%",
-      end: "100% 0%",
-      markers: false,
-      scrub:1,
-      onToggle: function(){
-        $(el).toggleClass("on")
-      },
-    },
-  })
-})
 
 
 /**

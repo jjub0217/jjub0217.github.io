@@ -44,6 +44,16 @@
   left: 0;
   right: 0;
   z-index: 4;
+  height: 100%;
+  width: 100%;
+
+  #video_intro {
+    height: 100%;
+    width: 100%;
+    @media screen and (min-width: 2360px) {
+      object-fit: cover;
+    }
+  }
 }
 
 .inner {
