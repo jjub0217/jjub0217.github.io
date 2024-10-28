@@ -1242,7 +1242,7 @@ section .heading-area .badge {
 }
 @media screen and (max-width: 1024px) {
   .section-works .work .text-box .hash span {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 }
 .section-works .work1 {
