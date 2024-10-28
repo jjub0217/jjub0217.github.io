@@ -466,8 +466,8 @@ section {
         line-height: 1;
         text-transform: uppercase;
 
-        @include minDevice {
-          font-size: 25px;
+        @include tablet {
+          font-size: 4vw;
         }
       }
 
