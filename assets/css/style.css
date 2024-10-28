@@ -1524,8 +1524,13 @@ section .heading-area .badge {
 }
 .section-log .log-item .item-title {
   color: #fff;
-  font-size: 4vw;
+  font-size: 20px;
   font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .section-log .log-item .item-title {
+    font-size: 4vw;
+  }
 }
 .section-log .log-item .hash {
   padding: 5px 0px 20px;
