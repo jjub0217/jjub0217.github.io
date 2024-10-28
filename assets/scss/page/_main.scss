@@ -850,7 +850,7 @@ section {
 
       .item-title {
         color: #fff;
-        font-size: 20px;
+        font-size: 4vw;
         font-weight: 500;
       }
 
@@ -859,8 +859,8 @@ section {
         color: #aaa;
         font-size: 14px;
 
-        @include mobile {
-          font-size: 13px;
+        @include tablet {
+          font-size: 3vw;
         }
       }
 
@@ -870,6 +870,9 @@ section {
         line-height: 1.4;
         color: #fff;
         @include ellipse(2);
+        @include tablet {
+          font-size: 3vw;
+        }
       }
 
       &:hover {

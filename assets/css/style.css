@@ -1524,7 +1524,7 @@ section .heading-area .badge {
 }
 .section-log .log-item .item-title {
   color: #fff;
-  font-size: 20px;
+  font-size: 4vw;
   font-weight: 500;
 }
 .section-log .log-item .hash {
@@ -1532,9 +1532,9 @@ section .heading-area .badge {
   color: #aaa;
   font-size: 14px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .section-log .log-item .hash {
-    font-size: 13px;
+    font-size: 3vw;
   }
 }
 .section-log .log-item .desc {
@@ -1547,6 +1547,11 @@ section .heading-area .badge {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+@media screen and (max-width: 1024px) {
+  .section-log .log-item .desc {
+    font-size: 3vw;
+  }
 }
 .section-log .log-item:hover {
   background-color: rgba(84, 84, 84, 0.6274509804);
