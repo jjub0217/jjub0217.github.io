@@ -97,7 +97,10 @@
             display: flex;
             align-items: center;
             color: #000;
-            font-size: 4vw;
+            font-size: 3vw;
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 5px;
           }
         }
       }
@@ -130,6 +133,7 @@
       right: 0;
       z-index: 3;
       align-items: center;
+      padding: 20px 8vw 40px;
     }
   }
   .floating-logo {
