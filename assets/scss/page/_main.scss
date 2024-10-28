@@ -69,9 +69,6 @@ section {
 
       @include tablet {
         right: 10%;
-      }
-
-      @include mobile {
         padding: 16px 24px;
         font-size: 14px;
       }
