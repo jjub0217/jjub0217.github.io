@@ -218,6 +218,8 @@ fieldset {
   z-index: 4;
   height: 100%;
   width: 100%;
+  font-size: 10vw;
+  background-color: red;
 }
 .intro #video_intro {
   height: 100%;

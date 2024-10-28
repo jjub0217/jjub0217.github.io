@@ -30,7 +30,6 @@ requestAnimationFrame(raf);
    }
  })
 
-   
 
 // });
 
@@ -160,23 +159,6 @@ $("body").mousemove(function (e) {
   });
 });
 
-const videoElement = document.querySelector("#video_intro");
-// 동영상 재생이 끝났을 때 실행되는 이벤트 리스너
-videoElement.addEventListener("ended", function () {
-  // 동영상이 끝나면 loadingAni 실행
-  setTimeout(function () {
-    // console.log(videoElement);
-    loadingAni.play(); // GSAP 애니메이션 실행
-  }, 1200); // 3000 밀리초 = 3초
-  // loadingAni.play();
-});
-
-
-const loadingAni = gsap.timeline({
-  paused: true, // 처음에는 멈춘 상태
-});
-
-loadingAni.to(".intro", { yPercent: -100, display: "none" });
 
 
 $(".works-area .thumb-box").mouseover(function () {
@@ -187,3 +169,79 @@ $(".works-area .thumb-box").mouseleave(function () {
   gsap.to(".cursor", { scale: 1 });
   gsap.to(".cursor span", { visibility: "hidden", opacity: 0 });
 });
+
+
+
+// const videoElement = document.querySelector("#video_intro");
+// 동영상 재생이 끝났을 때 실행되는 이벤트 리스너
+// videoElement.addEventListener("ended", function () {
+//   // 동영상이 끝나면 loadingAni 실행
+//   setTimeout(function () {
+//     // console.log(videoElement);
+//     loadingAni.play(); // GSAP 애니메이션 실행
+//   }, 1200); // 3000 밀리초 = 3초
+//   // loadingAni.play();
+// });
+
+const loadingAni = gsap.timeline({
+  paused: true, // 처음에는 멈춘 상태
+});
+
+loadingAni.to(".intro", { yPercent: -100, display: "none" });
+
+
+//  const flowerAnimation = document.getElementById("flowerAnimation");
+//  const totalFrames = 10; // 스프라이트에 있는 총 프레임 수
+//  const frameWidth = 100; // 각 프레임의 너비
+//  let currentFrame = 0;
+
+ // HTML과 CSS 파일의 로드 상태를 추적하는 함수
+ function updateProgress() {
+   //  const progress =
+   //    document.readyState === "complete"
+   //      ? 1
+   //      : document.readyState === "interactive"
+   //      ? 0.5
+   //      : 0;
+
+   //  // progress 값을 프레임 수에 매핑하여 현재 프레임 결정
+   //  currentFrame = Math.floor(progress * totalFrames);
+
+   //  // 스프라이트 이미지의 위치 업데이트
+   //  flowerAnimation.style.backgroundPosition = `-${
+   //    currentFrame * frameWidth
+   //  }px 0`;
+
+   //  // 로딩이 완료되었으면 더 이상 업데이트하지 않음
+   //  if (progress === 1) {
+   //    clearInterval(progressInterval);
+   //  }
+   // 개발자 도구에 텍스트 "ㅁ" 출력
+  //  console.log("ㅁ");
+
+  //  // 모든 리소스가 로드되면 더 이상 출력하지 않음
+  //  if (progress === 1) {
+  //    clearInterval(progressInterval);
+  //  }
+   const progress =
+     document.readyState === "complete"
+       ? 1
+       : document.readyState === "interactive"
+       ? 0.5
+       : 0;
+
+        if (progress === 1) {
+          clearInterval(progressInterval);
+        }
+  //    setTimeout(function () {
+  //   // console.log(videoElement);
+  //   loadingAni.play(); // GSAP 애니메이션 실행
+  // }, 1200); 
+ }
+
+ // 일정 시간 간격으로 로드 상태를 업데이트
+ const progressInterval = setInterval(function () {
+   // console.log(videoElement);
+   loadingAni.play(); // GSAP 애니메이션 실행
+ }, 1200);
+   
