@@ -478,7 +478,8 @@ fieldset {
 @media screen and (max-width: 768px) {
   .header .floating-logo {
     transform: translateY(0);
-    height: 60px;
+    width: 10%;
+    height: 10%;
   }
 }
 .header .floating-logo svg {

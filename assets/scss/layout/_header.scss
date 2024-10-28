@@ -216,7 +216,8 @@
 
       @include mobile {
         transform: translateY(0);
-        height: 60px;
+        width: 10%;
+        height: 10%;
       }
 
       svg {
