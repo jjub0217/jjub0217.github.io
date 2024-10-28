@@ -344,107 +344,54 @@ fieldset {
   z-index: 1;
   font-family: "pretandard", sans-serif;
 }
-.header .nav-list {
-  position: absolute;
-  left: 5%;
+.header .gnb .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 1024px) {
-  .header .nav-list {
-    display: flex;
-    gap: 20px;
-    top: 3%;
-    right: 3%;
-    left: auto;
-    width: auto;
-    height: auto;
-  }
-}
-.header .nav-item {
-  position: absolute;
-  width: 10vw;
+.header .gnb .nav-list .nav-item {
+  width: 6em;
+  height: 100%;
   color: #fff;
+  cursor: pointer;
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+  white-space: nowrap;
+  font-weight: bold;
   cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
-  .header .nav-item {
-    position: relative;
+  .header .gnb .nav-list .nav-item {
+    display: none;
   }
 }
-.header .nav-item span {
+.header .gnb .nav-list .nav-item a {
+  position: relative;
+}
+.header .gnb .nav-list .nav-item.home span, .header .gnb .nav-list .nav-item.works span, .header .gnb .nav-list .nav-item.dev span, .header .gnb .nav-list .nav-item.about span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 18px;
-  white-space: nowrap;
-  font-family: "Libre Baskerville", serif;
-  cursor: pointer;
-  font-weight: bold;
-}
-@media screen and (min-width: 1229px) {
-  .header .nav-item span {
-    font-size: 1.2vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header .nav-item span {
-    font-size: 2vw;
-  }
-}
-.header .nav-item.home {
-  top: 5vw;
-  left: 50vw;
-  cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
-  .header .nav-item.home {
-    top: auto;
-    left: auto;
-    height: -moz-fit-content;
-    height: fit-content;
+  .header .gnb .nav-list .nav-item.home, .header .gnb .nav-list .nav-item.works, .header .gnb .nav-list .nav-item.dev, .header .gnb .nav-list .nav-item.about {
+    display: none;
   }
 }
-.header .nav-item.about {
-  top: 14vw;
-  left: 56vw;
-  cursor: pointer;
+.header .gnb .nav-list .nav-item.contact {
+  display: none;
 }
 @media screen and (max-width: 1024px) {
-  .header .nav-item.about {
-    top: auto;
-    left: auto;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-.header .nav-item.dev {
-  top: 24vw;
-  left: 50vw;
-  cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .header .nav-item.dev {
-    top: auto;
-    left: auto;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-.header .nav-item.works {
-  top: 12vw;
-  left: 37vw;
-  width: 15vw;
-  cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .header .nav-item.works {
-    top: auto;
-    left: auto;
-    width: 10vw;
-    height: -moz-fit-content;
-    height: fit-content;
+  .header .gnb .nav-list .nav-item.contact {
+    width: auto;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 4vw;
   }
 }
 .header .floating-box {
@@ -457,7 +404,7 @@ fieldset {
   background: url("../images/adobe_3.png") no-repeat;
   background-size: 100% 100%;
   transition: 0.5s;
-  padding: 2vw;
+  padding: 30px 2vw;
 }
 .header .floating-box.on {
   transform: translateY(0%);
@@ -470,28 +417,8 @@ fieldset {
     left: 0;
     right: 0;
     z-index: 3;
+    align-items: center;
   }
-}
-.header .floating-box .gnb {
-  padding-bottom: 30px;
-}
-.header .floating-box .gnb .nav-list {
-  position: static;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 20px;
-}
-.header .floating-box .gnb .nav-list .nav-item {
-  position: static;
-  width: 4vw;
-  height: 100%;
-}
-.header .floating-box .gnb .nav-list .nav-item a {
-  position: relative;
-}
-.header .floating-box .gnb .nav-list .nav-item span {
-  font-size: 16px;
 }
 .header .floating-logo {
   transition: 0.7s linear;
@@ -1199,15 +1126,10 @@ section .heading-area .badge {
   }
 }
 .section-works .work .text-box h3 {
-  font-size: 6vw;
+  font-size: 4vw;
   font-family: larken, sans-serif;
   line-height: 1;
   text-transform: uppercase;
-}
-@media screen and (max-width: 1024px) {
-  .section-works .work .text-box h3 {
-    font-size: 4vw;
-  }
 }
 .section-works .work .text-box .title {
   font-size: 2rem;

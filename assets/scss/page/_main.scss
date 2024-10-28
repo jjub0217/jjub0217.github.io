@@ -461,14 +461,10 @@ section {
       }
 
       h3 {
-        font-size: 6vw;
+        font-size: 4vw;
         font-family: larken, sans-serif;
         line-height: 1;
         text-transform: uppercase;
-
-        @include tablet {
-          font-size: 4vw;
-        }
       }
 
       .title {
