@@ -309,9 +309,9 @@ fieldset {
   font-weight: 900;
   line-height: 1;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1024px) {
   .header .logo-desc {
-    font-size: 36px;
+    font-size: 13vw;
   }
 }
 .header .gnb {
@@ -783,12 +783,7 @@ section .heading-area .headline {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    font-size: 7vw;
-  }
-}
-@media screen and (max-width: 320px) {
-  section .heading-area .headline {
-    font-size: 28px;
+    font-size: 10vw;
   }
 }
 section .heading-area .badge {

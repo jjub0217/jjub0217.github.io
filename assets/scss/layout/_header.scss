@@ -41,8 +41,8 @@
     font-weight: 900;
     line-height: 1;
 
-    @include minDevice {
-      font-size: 36px;
+    @include tablet {
+      font-size: 13vw;
     }
   }
 
