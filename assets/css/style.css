@@ -265,6 +265,11 @@ fieldset {
   font-weight: 500;
   line-height: 1;
 }
+@media screen and (max-width: 1024px) {
+  .intro .char {
+    font-size: 9vw;
+  }
+}
 .intro #flowerAnimation {
   width: 600px;
   height: 601px;

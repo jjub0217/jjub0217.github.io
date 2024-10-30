@@ -203,7 +203,7 @@ const loadingAni = gsap.timeline({
 loadingAni.to(".intro", { 
   yPercent: -100, 
   display: "none", 
-  delay: 0.5
+  delay: 0.6
 });
 
 
@@ -262,7 +262,7 @@ const frameInterval = setInterval(() => {
   if (repeatCount >= maxRepeats) {
     clearInterval(frameInterval);
     if(progress === 1){
-   loadingAni.play();
+  //  loadingAni.play();
     }
   }
 }, 100); // 100ms마다 프레임 업데이트

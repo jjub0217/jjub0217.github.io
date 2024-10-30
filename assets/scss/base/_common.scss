@@ -62,6 +62,10 @@
     font-size: 5vw;
     font-weight: 500;
     line-height: 1;
+
+    @include tablet {
+      font-size: 9vw;
+    }
   }
   #flowerAnimation {
     width: 600px;
