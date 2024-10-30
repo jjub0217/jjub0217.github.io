@@ -257,6 +257,11 @@ fieldset {
   text-align: center;
   margin-bottom: 300px;
 }
+@media screen and (max-width: 1024px) {
+  .intro p {
+    margin-bottom: 400px;
+  }
+}
 .intro .char {
   opacity: 0;
   transform: scale(0);

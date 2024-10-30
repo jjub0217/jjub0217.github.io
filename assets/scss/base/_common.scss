@@ -54,6 +54,10 @@
   p {
     text-align: center;
     margin-bottom: 300px;
+
+    @include tablet {
+      margin-bottom: 400px;
+    }
   }
   .char {
     opacity: 0;
