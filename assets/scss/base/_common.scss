@@ -43,16 +43,37 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 4;
-  height: 100%;
+  z-index: 1001;
+  height: 100vh;
   width: 100%;
-  font-size: 10vw;
-  background-color: red;
-  #video_intro {
-    height: 100%;
-    width: 100%;
+  background-color: #d3bcce;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+    margin-bottom: 300px;
+  }
+  .char {
+    opacity: 0;
+    transform: scale(0);
+    font-family: cinzel;
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1;
+  }
+  #flowerAnimation {
+    width: 600px;
+    height: 601px;
     // @media screen and (min-width: 2360px) {
-    object-fit: fill;
+    background-image: url("../images/v2.png"); /* 스프라이트 이미지 경로 */
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     // }
   }
 }

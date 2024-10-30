@@ -6,6 +6,19 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+
+
+  const loadingText = new SplitType(".intro p", { types: "words, chars" });
+  
+
+gsap.to($(".intro .char"), {
+  opacity: 1,
+  stagger: 0.2,
+  scale: 1,
+  duration: 0.7,
+  ease: "bounce.out", // 튀는 효과
+});
+
  ScrollTrigger.matchMedia({
    "(min-width: 1024px)": function () {
      /**
@@ -187,61 +200,67 @@ const loadingAni = gsap.timeline({
   paused: true, // 처음에는 멈춘 상태
 });
 
-loadingAni.to(".intro", { yPercent: -100, display: "none" });
+loadingAni.to(".intro", { 
+  yPercent: -100, 
+  display: "none", 
+  delay: 0.5
+});
 
 
-//  const flowerAnimation = document.getElementById("flowerAnimation");
-//  const totalFrames = 10; // 스프라이트에 있는 총 프레임 수
-//  const frameWidth = 100; // 각 프레임의 너비
-//  let currentFrame = 0;
+const flowerAnimation = document.getElementById("flowerAnimation");
+const totalFrames = 25; // 스프라이트에 있는 총 프레임 수
+const frameWidth = 600; // 각 프레임의 너비
+let currentFrame = 0;
+let repeatCount = 0; // 프레임 업데이트 횟수 카운트
+const maxRepeats = 25; // 원하는 반복 횟수
 
  // HTML과 CSS 파일의 로드 상태를 추적하는 함수
- function updateProgress() {
-   //  const progress =
-   //    document.readyState === "complete"
-   //      ? 1
-   //      : document.readyState === "interactive"
-   //      ? 0.5
-   //      : 0;
+// function updateProgress() {
+//   const progress =
+//     document.readyState === "complete"
+//     ? 1
+//     : document.readyState === "interactive"
+//     ? 0.5
+//     : 0;
 
-   //  // progress 값을 프레임 수에 매핑하여 현재 프레임 결정
-   //  currentFrame = Math.floor(progress * totalFrames);
+//   // progress 값을 프레임 수에 매핑하여 현재 프레임 결정
+//   currentFrame = Math.floor(progress * totalFrames);
 
-   //  // 스프라이트 이미지의 위치 업데이트
-   //  flowerAnimation.style.backgroundPosition = `-${
-   //    currentFrame * frameWidth
-   //  }px 0`;
+//     // 스프라이트 이미지의 위치 업데이트
+//   flowerAnimation.style.backgroundPosition = `-${
+//     currentFrame * frameWidth
+//   }px 0`;
 
-   //  // 로딩이 완료되었으면 더 이상 업데이트하지 않음
-   //  if (progress === 1) {
-   //    clearInterval(progressInterval);
-   //  }
-   // 개발자 도구에 텍스트 "ㅁ" 출력
-  //  console.log("ㅁ");
+//   if (progress === 1) {
+//     // loadingAni.play();
+//     clearInterval(progressInterval);
+//   }
+// }
 
-  //  // 모든 리소스가 로드되면 더 이상 출력하지 않음
-  //  if (progress === 1) {
-  //    clearInterval(progressInterval);
-  //  }
-   const progress =
-     document.readyState === "complete"
-       ? 1
-       : document.readyState === "interactive"
-       ? 0.5
-       : 0;
+//  // 일정 시간 간격으로 로드 상태를 업데이트
+//   const progressInterval = setInterval(updateProgress, 1200);
+const frameInterval = setInterval(() => {
+  const progress =
+    document.readyState === "complete"
+    ? 1
+    : document.readyState === "interactive"
+    ? 0.5
+    : 0;
 
-        if (progress === 1) {
-          clearInterval(progressInterval);
-        }
-  //    setTimeout(function () {
-  //   // console.log(videoElement);
-  //   loadingAni.play(); // GSAP 애니메이션 실행
-  // }, 1200); 
- }
+  // 현재 프레임에 따라 background-position을 이동
+  flowerAnimation.style.backgroundPosition = `-${
+    currentFrame * frameWidth
+  }px 0`;
 
- // 일정 시간 간격으로 로드 상태를 업데이트
- const progressInterval = setInterval(function () {
-   // console.log(videoElement);
-   loadingAni.play(); // GSAP 애니메이션 실행
- }, 1200);
-   
+  // 프레임을 증가시키고, 마지막 프레임 이후 처음으로 돌아감
+  // currentFrame = (currentFrame + 1) % totalFrames;
+
+  // 프레임을 증가시키고, 마지막 프레임 이후 처음으로 돌아감
+  currentFrame = (currentFrame + 1) % totalFrames;
+  repeatCount++;
+
+  if (repeatCount >= maxRepeats && progress === 1) {
+    clearInterval(frameInterval);
+    loadingAni.play();
+  }
+}, 100); // 100ms마다 프레임 업데이트

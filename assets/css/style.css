@@ -110,6 +110,36 @@
   src: url("../fonts/AribauGroteskRegular.woff2") format("woff2");
   font-weight: normal;
 }
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/Cinzel-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/Cinzel-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/Cinzel-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/Cinzel-Bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/Cinzel-ExtraBold.woff") format("woff");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/Cinzel-Black.woff") format("woff");
+  font-weight: 900;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -215,17 +245,36 @@ fieldset {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 4;
-  height: 100%;
+  z-index: 1001;
+  height: 100vh;
   width: 100%;
-  font-size: 10vw;
-  background-color: red;
+  background-color: #d3bcce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.intro #video_intro {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+.intro p {
+  text-align: center;
+  margin-bottom: 300px;
+}
+.intro .char {
+  opacity: 0;
+  transform: scale(0);
+  font-family: cinzel;
+  font-size: 5vw;
+  font-weight: 500;
+  line-height: 1;
+}
+.intro #flowerAnimation {
+  width: 600px;
+  height: 601px;
+  background-image: url("../images/v2.png"); /* 스프라이트 이미지 경로 */
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .inner {
