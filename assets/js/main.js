@@ -259,8 +259,10 @@ const frameInterval = setInterval(() => {
   currentFrame = (currentFrame + 1) % totalFrames;
   repeatCount++;
 
-  if (repeatCount >= maxRepeats && progress === 1) {
+  if (repeatCount >= maxRepeats) {
     clearInterval(frameInterval);
-    loadingAni.play();
+    if(progress === 1){
+   loadingAni.play();
+    }
   }
 }, 100); // 100ms마다 프레임 업데이트
