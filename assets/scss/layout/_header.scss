@@ -96,9 +96,8 @@
             width: auto;
             display: flex;
             align-items: center;
-            color: #000;
             font-size: 3vw;
-            border: 1px solid #000;
+            border: 1px solid #fff;
             border-radius: 20px;
             padding: 5px;
           }
@@ -133,6 +132,8 @@
       z-index: 3;
       align-items: center;
       padding: 20px 8vw 40px;
+      background: none;
+      mix-blend-mode: difference;
     }
   }
   .floating-logo {
@@ -149,6 +150,9 @@
     svg {
       height: 100%;
       animation: rotate 10s linear infinite;
+      @include tablet {
+        fill: #fff;
+      }
     }
   }
 }
