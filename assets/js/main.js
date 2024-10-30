@@ -203,7 +203,7 @@ const loadingAni = gsap.timeline({
 loadingAni.to(".intro", { 
   yPercent: -100, 
   display: "none", 
-  delay: 0.6
+  delay: 1
 });
 
 
