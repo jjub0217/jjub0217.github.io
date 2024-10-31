@@ -10,14 +10,35 @@ requestAnimationFrame(raf);
 
   const loadingText = new SplitType(".intro p", { types: "words, chars" });
   
+  // gsap.to($(".intro .char"), {
+  //   opacity: 1,
+  //   stagger: 0.2,
+  //   scale: 1,
+  //   duration: 0.5,
+  //   ease: "bounce.out", // 튀는 효과
+  // });
 
-gsap.to($(".intro .char"), {
-  opacity: 1,
-  stagger: 0.2,
-  scale: 1,
-  duration: 0.5,
-  ease: "bounce.out", // 튀는 효과
-});
+  const loadingTl = gsap.timeline({
+    // stagger: 0.2,
+    // scale: 1,
+    duration: 0.5,
+   
+    // loadingTl 이 완료된 후에 실행될 콜백함수
+    onComplete: function () {
+      loadingAni.play();
+    },
+  });
+  loadingTl.to($(".intro .char"), {
+    opacity: 1,
+    scale: 1,
+    stagger: 0.2,
+    ease: "bounce.out", // 튀는 효과
+    // stagger: 0.2,
+    // scale: 1,
+    // duration: 0.5,
+    // ease: "bounce.out", // 튀는 효과
+  });
+
 
  ScrollTrigger.matchMedia({
    "(min-width: 1024px)": function () {
@@ -236,10 +257,10 @@ const frameInterval = setInterval(() => {
   currentFrame = (currentFrame + 1) % totalFrames;
   repeatCount++;
 
-  if (repeatCount >= maxRepeats) {
-    clearInterval(frameInterval);
-    if(progress === 1){
-      loadingAni.play();
-    }
-  }
+  // if (repeatCount >= maxRepeats) {
+  //   clearInterval(frameInterval);
+  //   if(progress === 1){
+      // loadingAni.play();
+    // }
+  // }
 }, 100); // 100ms마다 프레임 업데이트
