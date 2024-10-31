@@ -209,36 +209,16 @@ loadingAni.to(".intro", {
 
 const flowerAnimation = document.getElementById("flowerAnimation");
 const totalFrames = 25; // 스프라이트에 있는 총 프레임 수
-const frameWidth = 600; // 각 프레임의 너비
 let currentFrame = 0;
 let repeatCount = 0; // 프레임 업데이트 횟수 카운트
 const maxRepeats = 25; // 원하는 반복 횟수
 
- // HTML과 CSS 파일의 로드 상태를 추적하는 함수
-// function updateProgress() {
-//   const progress =
-//     document.readyState === "complete"
-//     ? 1
-//     : document.readyState === "interactive"
-//     ? 0.5
-//     : 0;
 
-//   // progress 값을 프레임 수에 매핑하여 현재 프레임 결정
-//   currentFrame = Math.floor(progress * totalFrames);
+// 각 프레임의 너비
+// const frameWidth = 600; 
+// 디바이스의 너비에 따른 프레임 너비 설정
+let frameWidth = window.innerWidth <= 768 ? 320 : 600; // 768px 이하에서는 200px, 그 이상은 600px
 
-//     // 스프라이트 이미지의 위치 업데이트
-//   flowerAnimation.style.backgroundPosition = `-${
-//     currentFrame * frameWidth
-//   }px 0`;
-
-//   if (progress === 1) {
-//     // loadingAni.play();
-//     clearInterval(progressInterval);
-//   }
-// }
-
-//  // 일정 시간 간격으로 로드 상태를 업데이트
-//   const progressInterval = setInterval(updateProgress, 1200);
 const frameInterval = setInterval(() => {
   const progress =
     document.readyState === "complete"
@@ -253,16 +233,13 @@ const frameInterval = setInterval(() => {
   }px 0`;
 
   // 프레임을 증가시키고, 마지막 프레임 이후 처음으로 돌아감
-  // currentFrame = (currentFrame + 1) % totalFrames;
-
-  // 프레임을 증가시키고, 마지막 프레임 이후 처음으로 돌아감
   currentFrame = (currentFrame + 1) % totalFrames;
   repeatCount++;
 
   if (repeatCount >= maxRepeats) {
     clearInterval(frameInterval);
     if(progress === 1){
-   loadingAni.play();
+      loadingAni.play();
     }
   }
 }, 100); // 100ms마다 프레임 업데이트

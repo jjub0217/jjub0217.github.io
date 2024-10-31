@@ -54,10 +54,6 @@
   p {
     text-align: center;
     margin-bottom: 300px;
-
-    @include tablet {
-      margin-bottom: 400px;
-    }
   }
   .char {
     opacity: 0;
@@ -75,13 +71,19 @@
     width: 600px;
     height: 601px;
     // @media screen and (min-width: 2360px) {
-    background-image: url("../images/v2.png"); /* 스프라이트 이미지 경로 */
+    background-image: url("../images/v2-2.png"); /* 스프라이트 이미지 경로 */
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../images/v2_1.png");
+      width: 320px;
+      height: 400px;
+    }
     // }
   }
 }

@@ -328,7 +328,7 @@ section {
   .work {
     position: relative;
     z-index: 1;
-
+    border-radius: 15px;
     @include mobile {
       display: flex;
       flex-direction: column;
