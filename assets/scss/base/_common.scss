@@ -58,6 +58,7 @@
   .char {
     opacity: 0;
     transform: scale(0);
+    display: none;
     font-family: cinzel;
     font-size: 5vw;
     font-weight: 500;
@@ -82,7 +83,7 @@
     @include tablet {
       background-image: url("../images/v2_1.png");
       width: 320px;
-      height: 0px;
+      height: 400px;
     }
     // }
   }
