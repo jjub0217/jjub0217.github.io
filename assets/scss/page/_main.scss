@@ -1,9 +1,10 @@
 .wrapper {
   position: relative;
   z-index: 1;
-  background: url("../images/adobe_6.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #d3bcce;
+  // background: url("../images/adobe_6.jpg") no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
   min-width: 1229px;
   overflow: hidden;
   @include tablet {
