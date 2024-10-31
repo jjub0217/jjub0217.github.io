@@ -15,7 +15,7 @@ gsap.to($(".intro .char"), {
   opacity: 1,
   stagger: 0.2,
   scale: 1,
-  duration: 0.7,
+  duration: 0.5,
   ease: "bounce.out", // 튀는 효과
 });
 
