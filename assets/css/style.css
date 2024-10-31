@@ -472,7 +472,7 @@ fieldset {
   transform: translateY(-150%);
   top: 0;
   z-index: 3;
-  background: url("../images/adobe_3.png") no-repeat;
+  background: url("../images/adobe_3.webp") no-repeat;
   background-size: 100% 100%;
   transition: 0.5s;
   padding: 30px 2vw;
@@ -773,7 +773,7 @@ fieldset {
   position: relative;
   z-index: 1;
   background-color: #d3bcce;
-  background: url("../images/adobe_6.jpg") no-repeat;
+  background: url("../images/adobe_6_1.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-width: 1229px;
