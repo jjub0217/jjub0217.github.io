@@ -132,6 +132,10 @@
     transform: translate(-50%, -50%);
     font-size: 0.6vw;
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .scrollTop {

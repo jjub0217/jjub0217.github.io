@@ -333,6 +333,11 @@ fieldset {
   transform: translate(-50%, -50%);
   font-size: 0.6vw;
 }
+@media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}
 
 .scrollTop {
   position: fixed;
