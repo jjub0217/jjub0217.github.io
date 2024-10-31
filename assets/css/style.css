@@ -285,7 +285,7 @@ fieldset {
   .intro #flowerAnimation {
     background-image: url("../images/v2_1.png");
     width: 320px;
-    height: 400px;
+    height: 0px;
   }
 }
 
@@ -772,7 +772,7 @@ fieldset {
   position: relative;
   z-index: 1;
   background-color: #d3bcce;
-  background: url("../images/adobe_6.jpg") no-repeat;
+  background: url("../images/adobe_61.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-width: 1229px;
