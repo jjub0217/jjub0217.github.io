@@ -1,3 +1,32 @@
+.cursor_box {
+  mix-blend-mode: difference;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #a3d5f4, #c8a2c8, #f4b4b4);
+  z-index: 10;
+  position: fixed;
+  transform: translate(-50%, -50%);
+
+  @include tablet {
+    display: none;
+  }
+
+  .cursor_text {
+    visibility: hidden;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.6vw;
+  }
+}
+
 .blind {
   width: 1px;
   height: 1px;
@@ -37,6 +66,59 @@
   overflow: hidden;
 }
 
+.intro {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  height: 100vh;
+  width: 100%;
+  background-color: #d3bcce;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .intro_title {
+    text-align: center;
+    margin-bottom: 300px;
+  }
+
+  .char {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+    font-family: cinzel;
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1;
+
+    @include tablet {
+      font-size: 9vw;
+    }
+  }
+
+  #flower_animation {
+    width: 600px;
+    height: 601px;
+    background-image: url("../images/sp_intro_flower_mo.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../images/sp_intro_flower_pc.png");
+      width: 320px;
+      height: 400px;
+    }
+  }
+}
+
 .inner {
   margin: 0 auto;
   padding-left: 80px;
@@ -45,35 +127,6 @@
   @include mobile {
     padding-left: 20px;
     padding-right: 20px;
-  }
-}
-
-.cursor_box {
-  mix-blend-mode: difference;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(to bottom, #a3d5f4, #c8a2c8, #f4b4b4);
-  z-index: 10;
-  position: fixed;
-  transform: translate(-50%, -50%);
-
-  @include tablet {
-    display: none;
-  }
-
-  .cursor_text {
-    visibility: hidden;
-    color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.6vw;
   }
 }
 

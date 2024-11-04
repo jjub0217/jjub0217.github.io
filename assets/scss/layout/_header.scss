@@ -51,17 +51,24 @@
     height: 100%;
     display: block;
     z-index: 1;
+    padding-bottom: 20px;
 
-    .nav-list {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 20px;
-      width: 100%;
-      height: 100%;
-      .nav-item {
-        width: 6em;
+    @include mobile {
+      padding-bottom: 0;
+    }
+
+    .nav {
+      &_list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        width: 100%;
         height: 100%;
+      }
+      &_item {
+        width: 6em;
+        height: 6em;
         color: #fff;
         cursor: pointer;
         font-family: "Libre Baskerville", serif;
@@ -73,35 +80,51 @@
         @include tablet {
           display: none;
         }
-        a {
-          position: relative;
-        }
-        &.home,
-        &.works,
-        &.dev,
-        &.about {
-          span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-          @include tablet {
-            display: none;
-          }
-        }
-        &.contact {
-          display: none;
-          @include tablet {
-            width: auto;
-            display: flex;
-            align-items: center;
-            font-size: 3vw;
-            border: 1px solid #fff;
-            border-radius: 20px;
-            padding: 5px;
-          }
-        }
+      }
+      &_link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 6em;
+        text-align: center;
+      }
+    }
+
+    .home {
+      background: url("../images/img_nav_item1.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .works {
+      background: url("../images/img_nav_item2.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .dev {
+      background: url("../images/img_nav_item3.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .about {
+      background: url("../images/img_nav_item4.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .home,
+    .works,
+    .dev,
+    .about {
+      @include tablet {
+        display: none;
+      }
+    }
+    .contact {
+      display: none;
+      @include tablet {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        font-size: 3vw;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 5px;
       }
     }
   }

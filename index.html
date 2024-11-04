@@ -24,7 +24,7 @@
 <body>
   <div class="intro">
     <p class="intro_title">Joo's <br>Portfolio</p>
-    <div class="image_box" id="flower_animation" aria-hidden="true" aria-label="움직이는 꽃">
+    <div class="image_box" id="flower_animation" aria-hidden="true">
     </div>
   </div>
   <div id="skip_header">
@@ -186,32 +186,28 @@
         </a>
       </h1>
       <nav class="gnb">
-        <ul class="nav-list">
-          <li class="nav-item home">
-            <a href="#header">
-              <img src="./assets/images/img_nav_item1.png" alt>
-              <span>Home</span>
+        <ul class="nav_list">
+          <li class="nav_item home">
+            <a href="#header" class="nav_link">
+              Home
             </a>
           </li>
-          <li class="nav-item works">
-            <a href="#works">
-              <img src="./assets/images/img_nav_item2.png" alt>
-              <span>Project</span>
+          <li class="nav_item works">
+            <a href="#works" class="nav_link">
+              Project
             </a>
           </li>
-          <li class="nav-item dev">
-            <a href="#log">
-              <img src="./assets/images/img_nav_item3.png" alt>
-              <span>Dev-log</span>
+          <li class="nav_item dev">
+            <a href="#log" class="nav_link">
+              Dev-log
             </a>
           </li>
-          <li class="nav-item about">
-            <a href="#about">
-              <img src="./assets/images/img_nav_item4.png" alt>
-              <span>About</span>
+          <li class="nav_item about">
+            <a href="#about" class="nav_link">
+              About
             </a>
           </li>
-          <li class="nav-item contact">
+          <li class="nav_item contact">
             <a href="mailto:devel.jjub@gmail.com?body=안녕하세요.강주현입니다." target="_blank">
               <span>CONTACT</span>
             </a>
@@ -220,38 +216,32 @@
       </nav>
     </header>
     <main class="container" id="main">
-       <section class="section_visual">
-         <div class="inner">
-           <img src="./assets/images/img_deco_item1.png" alt="유화 느낌의 핑크와 노란색 꽃 페인트 터치 이미지" class="visual_deco" aria-hidden="true">
-          <h2 class="headline">
-            <span class="txt2">I<br>BUILD<br>INTUITIVE WEBSITES<br>WITH LASTING PERSPECTIVES</span>
-          </h2>
-               </div>
-       </section> 
-      <section class="section-works" id="works">
-        <img src="./assets/images/img_deco_item2.png" alt class="deco1" data-scroll="">
-        <img src="./assets/images/img_deco_item3.png" alt class="deco2" data-scroll="">
-        <img src="./assets/images/img_deco_item4.png" alt class="deco5" data-scroll="">
-        <img src="./assets/images/img_deco_item5.png" alt class="deco7" data-scroll="" >
-        <img src="./assets/images/img_deco_item6.png" alt class="deco8" data-scroll="" >
-        <img src="./assets/images/img_deco_item7.png" alt class="deco12" data-scroll="" >
-        <img src="./assets/images/img_deco_item8.png" alt class="deco10" data-scroll="" >
-        <img src="./assets/images/img_deco_item9.png" alt class="deco13" data-scroll="" >
-        <img src="./assets/images/img_deco_item10.png" alt class="deco14" data-scroll="" >
-        <img src="./assets/images/img_deco_item11.png" alt class="deco15" data-scroll="" >
+      <section class="section_visual">
         <div class="inner">
-          <div class="heading-area">
+          <h2 class="headline">I<br>BUILD<br>INTUITIVE WEBSITES<br>WITH LASTING PERSPECTIVES
+          </h2>
+        </div>
+      </section> 
+      <section class="section_works" id="works">
+        <img src="./assets/images/img_deco_item2.png" alt="" class="deco1" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item3.png" alt="" class="deco2" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item4.png" alt="" class="deco5" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item5.png" alt="" class="deco7" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item6.png" alt="" class="deco8" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item7.png" alt="" class="deco12" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item8.png" alt="" class="deco10" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item9.png" alt="" class="deco13" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item10.png" alt="" class="deco14" data-scroll="" aria-hidden="true">
+        <img src="./assets/images/img_deco_item11.png" alt="" class="deco15" data-scroll="" aria-hidden="true">
+        <div class="inner">
+          <div class="heading_area">
             <h2 class="headline">digital Archive<br> :My PROJECTS</h2>
-            <div class="badge">Gotta see 'm all</div>
+            <span class="badge">Got see Projects</span>
           </div>
-          <div class="works-area">
-
-            <a href="https://jjub0217.github.io/beautiful.github.io/" target="_blank" class="work work1" data-y="" data-delay="1.5">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item1.jpg" alt="">
-              </div>
-              <div class="text-box">
-                <h3>CHANEL</h3>
+          <div class="works_area">
+            <a href="https://jjub0217.github.io/beautiful.github.io/" target="_blank" class="work work1">
+              <div class="text_box">
+                <h3 class="title">CHANEL</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># renewal</span>
                   <span class="hash_tag"># response</span>
@@ -262,14 +252,13 @@
                   <span class="hash_tag"># SplitType</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/wavve_github.io/" class="work work2" target="_blank" data-y="" data-delay="1">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item2.png" alt="" >
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item1.jpg" alt="샤넬 리뉴얼 프로젝트 썸네일">
               </div>
-              <div class="text-box">
-                <h3>OTT Wavve</h3>
+            </a>
+            <a href="https://jjub0217.github.io/wavve_github.io/" class="work work2" target="_blank">
+              <div class="text_box">
+                <h3 class="title">OTT Wavve</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># renewal</span>
                   <span class="hash_tag"># response</span>
@@ -279,14 +268,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/audio-pro_github.io/" target="_blank" class="work work3" data-y="" data-delay="0.5">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item3.png" alt="" loading="lazy">
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item2.png" alt="웨이브 리뉴얼 프로젝트 썸네일">
               </div>
-              <div class="text-box">
-                <h3>audio pro</h3>
+            </a>
+            <a href="https://jjub0217.github.io/audio-pro_github.io/" target="_blank" class="work work3">
+              <div class="text_box">
+                <h3 class="title">audio pro</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
                   <span class="hash_tag"># GSAP</span>
@@ -296,14 +284,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/naver-business_github.io/" target="_blank" class="work work4" data-y="" data-delay="1">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item4.jpg" alt="" loading="lazy">
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item3.png" alt="오디오프로 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3>NAVER business school</h3>
+            </a>
+            <a href="https://jjub0217.github.io/naver-business_github.io/" target="_blank" class="work work4">
+              <div class="text_box">
+                <h3 class="title">NAVER business school</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
                   <span class="hash_tag"># GSAP</span>
@@ -314,14 +301,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/samsung-card_github.io/"  target="_blank" class="work work5" data-y="" data-delay="2">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item5.webp" alt="" loading="lazy">
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item4.jpg" alt="네이버비즈니스스쿨 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3>samsung card</h3>
+            </a>
+            <a href="https://jjub0217.github.io/samsung-card_github.io/"  target="_blank" class="work work5">
+              <div class="text_box">
+                <h3 class="title">samsung card</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># Vanilla JS</span>
                   <span class="hash_tag"># GSAP</span>
@@ -330,14 +316,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-      
-            <a href="https://jjub0217.github.io/clixr_github.io/" target="_blank" class="work work6" data-y="" data-delay="2.5">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item6.jpg" alt="" loading="lazy">
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item5.webp" alt="삼성카드 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3>clixr</h3>
+            </a>
+            <a href="https://jjub0217.github.io/clixr_github.io/" target="_blank" class="work work6">
+              <div class="text_box">
+                <h3 class="title">clixr</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
                   <span class="hash_tag"># GSAP</span>
@@ -347,14 +332,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-                
-            <a href="" class="work work7" data-y="" data-delay="1.5">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item7.jpg" alt="" loading="lazy"> 
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item6.jpg" alt="clixr 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3>music island</h3>
+            </a>
+            <a href="" class="work work7">
+              <div class="text_box">
+                <h3 class="title">music island</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># Vanilla JS</span>
                   <span class="hash_tag"># response</span>
@@ -363,14 +347,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/andar_github.io/" target="_blank" class="work work8" data-y="" data-delay="4">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item8.jpg" alt="" loading="lazy">
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item7.jpg" alt="뮤직아일랜드 클론코딩 프로젝트 썸네일" loading="lazy"> 
               </div>
-              <div class="text-box">
-                <h3>andar</h3>
+            </a>
+            <a href="https://jjub0217.github.io/andar_github.io/" target="_blank" class="work work8">
+              <div class="text_box">
+                <h3 class="title">andar</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
                   <span class="hash_tag"># jquery</span>
@@ -379,17 +362,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/seoul-city-hall_github.io/" target="_blank" class="work work9" data-y="">
-              <div class="thumb-box">
-                <div class="bg">
-                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy">
-                </div>
-                <img src="./assets/images/img_work_item9.png" alt="" loading="lazy">
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item8.jpg" alt="안다르 모바일 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3> seoul city hall
+            </a>
+            <a href="https://jjub0217.github.io/seoul-city-hall_github.io/" target="_blank" class="work work9" >
+              <div class="text_box">
+                <h3 class="title">seoul city hall
                 </h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># Swiper</span>
@@ -398,14 +377,16 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/woori-bank_github.io/" target="_blank" class="work work10" data-y="" data-delay="2">
-              <div class="thumb-box">
-                <img src="./assets/images/img_work_item10.jpg" alt="" loading="lazy">
+              <div class="thumb_box">
+                <div class="bg">
+                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy">
+                </div>
+                <img src="./assets/images/img_work_item9.png" alt="서울시청 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3>woori bank</h3>
+            </a>
+            <a href="https://jjub0217.github.io/woori-bank_github.io/" target="_blank" class="work work10">
+              <div class="text_box">
+                <h3 class="title">woori bank</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># Swiper</span>
                   <span class="hash_tag"># jquery</span>
@@ -413,16 +394,13 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
-            </a>
-
-            <a href="https://jjub0217.github.io/naver-career_github.io/" target="_blank" class="work work11" data-y="" data-delay="2.5">
-              <div class="thumb-box">
-                <video class="board-the-navership" autoplay playsinline loop muted>
-                  <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
-                </video>
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item10.jpg" alt="우리은행 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
-              <div class="text-box">
-                <h3>NAVER CAREER</h3>
+            </a>
+            <a href="https://jjub0217.github.io/naver-career_github.io/" target="_blank" class="work work11">
+              <div class="text_box">
+                <h3 class="title">NAVER CAREER</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
                   <span class="hash_tag"># Swiper</span>
@@ -432,94 +410,97 @@
                   <span class="hash_tag"># scss</span>
                 </div>
               </div>
+              <div class="thumb_box">
+                <video class="board-the-navership" autoplay playsinline loop muted>
+                  <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
+                </video>
+              </div>
             </a>
-
           </div>
         </div>
       </section>
-      <section class="section-log" id="log">
-        <div class="heading-area">
-          <h2 class="headline">digital Archive<br> :Dev log</h2>
-        </div>
+      <section class="section_log" id="log">
+        <h2 class="headline">digital Archive<br>:Dev log</h2>
         <div class="inner">
-          <div class="log-area">
-            <ul class="log-list">
-              <!-- 랜딩페이지 github  -->
-              <li class="log-item">
-                <a href="https://github.com/jjub0217/jjub0217.github.io">
-                  <h3 class="item-title">Desveloper Joo's landing page
+          <div class="log_area">
+            <ul class="log_list">
+              <li class="log_item">
+                <a href="https://github.com/jjub0217/jjub0217.github.io" class="log_link">
+                  <h3 class="item_title">Desveloper Joo's landing page
                   </h3>
-                  <p class="hash">
-                    <span>#HTML5</span>
-                    <span>#CSS3</span>
-                    <span>#Sass</span>
-                    <span>#Javascript</span>
-                    <span>#jQuery</span>
-                    <span>#jQuery</span>
-                    <span>#gsap</span>
-                    <span>#Swiper</span>
+                  <p class="hash_box">
+                    <span class="hash">#HTML5</span>
+                    <span class="hash">#CSS3</span>
+                    <span class="hash">#Sass</span>
+                    <span class="hash">#Javascript</span>
+                    <span class="hash">#jQuery</span>
+                    <span class="hash">#jQuery</span>
+                    <span class="hash">#gsap</span>
+                    <span class="hash">#Swiper</span>
                   </p>
                   <p class="desc">
                     joo 의 포트폴리오들을 소개하는 랜딩페이지의 github Repository입니다.
                   </p>
                 </a>
               </li>
-              <!-- 웹접근성이 대체 뭐시간데... -->
-              <li class="log-item">
+              <li class="log_item">
                 <a
-                  href="https://velog.io/@jjub0217/%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4-%EB%8C%80%EC%B2%B4-%EB%AD%90%EC%8B%9C%EA%B0%84%EB%8D%B0">
-                  <h3 class="item-title">웹접근성이
+                  href="https://velog.io/@jjub0217/%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4-%EB%8C%80%EC%B2%B4-%EB%AD%90%EC%8B%9C%EA%B0%84%EB%8D%B0" class="log_link">
+                  <h3 class="item_title">웹접근성이
                     대체 뭐시간데...
                   </h3>
-                  <p class="hash">
-                    <span>#web-accessibility</span>
-                    <span>#HTML5</span>
-                    <span>#markup</span>
+                  <p class="hash_box">
+                    <span class="hash">#web-accessibility</span>
+                    <span class="hash">#HTML5</span>
+                    <span class="hash">#markup</span>
                   </p>
                   <p class="desc">
                     이 프론트엔드 업계에 발을 들이기 위해 부트캠프에서도 공부하고, 독학도 해서 드디어 취업!!!
                     그런데 이 업계에서의 첫 취업한 직장은 스타트업이었기 때문에 당장 웹접근성을 신경쓸 겨를이 없었다.
-                    하지만 굉장히 개발문화가 좋았던 곳이었어서 주마다 발표데이가 있었는데
-                  </p>
+                    하지만 굉장히 개발문화가 좋았던 곳이었어서 주마다 발표데이가 있었는데 그때마다 웹접근성에 대해서 딥하게 조사하고 공부해서 발표해보길 원했지만,
+                    지금 당장은 웹접근성에 공부할 필요가 없다는 CTO 의 말이 있어서 매번 웹접근성에 딥하게 조사해보는걸 놓쳤었다.
+
+                    요상하게 실무관련 공부를 하면서 웹접근성에 대해 관심이 많이 가고 신경이 많이 쓰였다.
+                    그런데 (핑계겠지만) 매번 기회가 없었다.
+                    드디어 "웹접근성" 이란 단어를 나만의 개발로그에 언급할수 있게 되서 너무 좋다.
+                    </p>
                 </a>
               </li>
-              <!--시각적인 웹 접근성을 높이려면?  -->
-              <li class="log-item">
+              <li class="log_item">
                 <a
-                  href="https://velog.io/@jjub0217/%EC%8B%9C%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4">
-                  <h3 class="item-title">시각적인 웹 접근성을 높이려면?
+                  href="https://velog.io/@jjub0217/%EC%8B%9C%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link">
+                  <h3 class="item_title">시각적인 웹 접근성을 높이려면?
                   </h3>
-                  <p class="hash">
-                    <span>#W3C</span>
-                    <span>#센스리더</span>
-                    <span>#JAWS</span>
-                    <span>#VoiceOver</span>
-                    <span>#ARIA</span>
-                    <span>#WAI-ARIA</span>
-                    <span>#웹접근성</span>
+                  <p class="hash_box">
+                    <span class="hash">#W3C</span>
+                    <span class="hash">#센스리더</span>
+                    <span class="hash">#JAWS</span>
+                    <span class="hash">#VoiceOver</span>
+                    <span class="hash">#ARIA</span>
+                    <span class="hash">#WAI-ARIA</span>
+                    <span class="hash">#웹접근성</span>
                   </p>
                   <p class="desc">시각적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
                     이때 내가 구현한 화면이 시각적인 웹접근성을 높이고 있는지 진단할수 있는 방법들을 소개하겠다.
                   </p>
                 </a>
               </li>
-              <!-- 신체적인 웹접근성을 높이려면?-->
-              <li class="log-item">
+              <li class="log_item">
                 <a
-                  href="https://velog.io/@jjub0217/%EC%8B%A0%EC%B2%B4%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4">
-                  <h3 class="item-title">신체적인 웹접근성을 높이려면?
+                  href="https://velog.io/@jjub0217/%EC%8B%A0%EC%B2%B4%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link">
+                  <h3 class="item_title">신체적인 웹접근성을 높이려면?
                   </h3>
-                  <p class="hash">
-                    <span>#HTML5</span>
-                    <span>#포커스이동</span>
-                    <span>#flex</span>
-                    <span>#W3C</span>
-                    <span>#키보드로이동</span>
-                    <span>#skip-header</span>
-                    <span>#웹접근성</span>
-                    <span>#신체장애웹접근성</span>
-                    <span>#KWCAG</span>
-                    <span>#KWCAG a11y inspector</span>
+                  <p class="hash_box">
+                    <span class="hash">#HTML5</span>
+                    <span class="hash">#포커스이동</span>
+                    <span class="hash">#flex</span>
+                    <span class="hash">#W3C</span>
+                    <span class="hash">#키보드로이동</span>
+                    <span class="hash">#skip-header</span>
+                    <span class="hash">#웹접근성</span>
+                    <span class="hash">#신체장애웹접근성</span>
+                    <span class="hash">#KWCAG</span>
+                    <span class="hash">#KWCAG a11y inspector</span>
                   </p>
                   <p class="desc">
                     신체적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
@@ -527,17 +508,16 @@
                   </p>
                 </a>
               </li>
-              <!-- 청각적인 웹접근성을 높이려면? -->
-              <li class="log-item">
+              <li class="log_item">
                 <a
-                  href="https://velog.io/@jjub0217/%EC%B2%AD%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4">
-                  <h3 class="item-title">청각적인 웹접근성을 높이려면?
+                  href="https://velog.io/@jjub0217/%EC%B2%AD%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link">
+                  <h3 class="item_title">청각적인 웹접근성을 높이려면?
                   </h3>
-                  <p class="hash">
-                    <span>#HTML5</span>
-                    <span>#W3C</span>
-                    <span>#웹접근성</span>
-                    <span>#청각장애웹접근성</span>
+                  <p class="hash_box">
+                    <span class="hash">#HTML5</span>
+                    <span class="hash">#W3C</span>
+                    <span class="hash">#웹접근성</span>
+                    <span class="hash">#청각장애웹접근성</span>
                   </p>
                   <p class="desc">
                     청각적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
@@ -545,14 +525,13 @@
                   </p>
                 </a>
               </li>
-              <!-- React 의 State -->
-              <li class="log-item">
-                <a href="https://velog.io/@jjub0217/React-%EC%9D%98-State">
-                  <h3 class="item-title">React 의 State
+              <li class="log_item">
+                <a href="https://velog.io/@jjub0217/React-%EC%9D%98-State" class="log_link">
+                  <h3 class="item_title">React 의 State
                   </h3>
-                  <p class="hash">
-                    <span>#React</span>
-                    <span>#state</span>
+                  <p class="hash_box">
+                    <span class="hash">#React</span>
+                    <span class="hash">#state</span>
                   </p>
                   <p class="desc">
                     State
@@ -561,26 +540,21 @@
                   </p>
                 </a>
               </li>
-              <!-- validator 에러 -->
-              <li class="log-item">
+              <li class="log_item">
                 <a
-                  href="https://velog.io/@jjub0217/Text-run-is-not-in-Unicode-Normalization-Form-C.-%EB%9D%BC%EB%8A%94-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%AD%90%EC%A7%80">
-                  <h3 class="item-title">Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?
+                  href="https://velog.io/@jjub0217/Text-run-is-not-in-Unicode-Normalization-Form-C.-%EB%9D%BC%EB%8A%94-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%AD%90%EC%A7%80" class="log_link">
+                  <h3 class="item_title">Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?
                   </h3>
-                  <p class="hash">
-                    <span>#HTML5</span>
-                    <span>#W3C</span>
-                    <span>#웹문서 유효성 검사</span>
-                    <span>#웹문서 유효성</span>
-                    <span>#validator</span>
-                    <span>#validation</span>
-                    <span>#markup</span>
+                  <p class="hash_box">
+                    <span class="hash">#HTML5</span>
+                    <span class="hash">#W3C</span>
+                    <span class="hash">#웹문서 유효성 검사</span>
+                    <span class="hash">#웹문서 유효성</span>
+                    <span class="hash">#validator</span>
+                    <span class="hash">#validation</span>
+                    <span class="hash">#markup</span>
                   </p>
                   <p class="desc">
-                    <!-- *필자는 javascript 가 아닌, 제이쿼리를 사용하였다.
-                    html 문서 head 부분에 아래 코드를 넣어야 한다.여기서 팁 하나는, swiper의 css 와 script 가 아닌, 본인 커스텀 css 파일와 script 파일도 넣어야
-                    한다면, 아래처럼 swiper의 css 파일보다 아래, swiper 의 script 파일보다
-                    아래에 위치해주어야 한다. -->
                     Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?
                     서울시청 클론코딩 프로젝트를 만들면서 항상 W3의 웹문서 유효성 검사를 하는데,
                     이번에 처음 만나게 된 에러가 있었다.이게 대체 무슨 말이지..............? 해석을 해보니,
@@ -590,33 +564,35 @@
                   </p>
                 </a>
               </li>
-              <!-- 배열 -->
-              <li class="log-item">
-                <a href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EB%B0%B0%EC%97%B4.md">
-                  <h3 class="item-title">배열
+              <li class="log_item">
+                <a href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EB%B0%B0%EC%97%B4.md" class="log_link">
+                  <h3 class="item_title">배열
                   </h3>
-                  <p class="hash">
-                    <span>#Javascript</span>
-                    <span>#Array</span>
+                  <p class="hash_box">
+                    <span class="hash">#Javascript</span>
+                    <span class="hash">#Array</span>
                   </p>
                   <p class="desc">
                     들어가기에 앞서...
                     배열 : 여러개의 값을 순차적으로 나열한 자료구조
                     Javascript 에서의 배열과 일반 컴퓨터 언어에서의 배열은 다르다.
                     일반 자료구조에서 말하는 일반적인 배열 동일한 크기의 메모리 공간이 빈틈없이 연속적으로 밀집하여 나열된 자료구조
-                    하나의 데이터 타입으로 통일되어있다.
+                    하나의 데이터 타입으로 통일되어있다. 장점
+                    산술식 연산으로 한번에 요소에 빠르게 접근할수 있다.( 효율적으로 요소에 접근할수 있다)
+                    인덱스가 0 인, 요소의 메모리 주소 : 1000 + 0 (인덱스) * 8(요소의 바이트) = 1000
+                    인덱스가 1인, 요소의 메모리 주소 : 1000 + 1 (인덱스) * 8(요소의 바이트) = 1008
+                    인덱스가 2인, 요소의 메모리 주소 : 1000 + 2 (인덱스) * 8(요소의 바이트) = 1016
                   </p>
                 </a>
               </li>
-              <!-- 객체 -->
-              <li class="log-item">
+              <li class="log_item">
                 <a
                   href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EA%B0%9D%EC%B2%B4%20%EB%A6%AC%ED%84%B0%EB%9F%B4.md">
-                  <h3 class="item-title">객체
+                  <h3 class="item_title" class="log_link">객체
                   </h3>
-                  <p class="hash">
-                    <span>#Javascript</span>
-                    <span>#Object</span>
+                  <p class="hash_box">
+                    <span class="hash">#Javascript</span>
+                    <span class="hash">#Object</span>
                   </p>
                   <p class="desc">
                     들어가기에 앞서...
@@ -636,9 +612,9 @@
               </li>
             </ul>
           </div>
-          <div class="more">
+          <a href="https://velog.io/@jjub0217/posts" class="more">
             <img src="./assets/images/btn_more.png" alt="">
-          </div>
+          </a>
         </div>
       </section>
     </main>
@@ -646,9 +622,7 @@
   <footer class="footer" id="about">
     <div class="inner">
       <div class="intro-heading">
-        <h2 class="headline">
-       Let me working with you.
-        </h2>
+        <h2 class="headline">Let me working with you.</h2>
         <a href="mailto:devel.jjub@gmail.com?body=안녕하세요.강주현입니다." target="_blank" class="contact">
           mail to me
         </a>
