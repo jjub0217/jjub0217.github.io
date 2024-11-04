@@ -62,18 +62,24 @@ ScrollTrigger.matchMedia({
  * 
  */
 const header = document.querySelector(".header");
-const floatingBox = document.querySelector(".floating-box");
+const sectionVisual = document.querySelector(".section_visual");
 
-window.addEventListener("scroll", function () {
-  console.log(header.scrollHeight);
-  let curr = this.scrollY;
-  console.log(curr);
-  if (curr >= header.scrollHeight) {
-    floatingBox.classList.add("on");
-  } else {
-    floatingBox.classList.remove("on");
-  }
-});
+gsap.to($(".header"), {
+    scrollTrigger: {
+      trigger: $(".section_visual"),
+      start: "bottom top",
+      end: "100% 0%",
+      markers: false,
+      onEnter: () => {
+        document.querySelector(".header").classList.add("on");
+      },
+      onLeaveBack: () => {
+        document.querySelector(".header").classList.remove("on");
+      },
+    },
+  });
+
+
 
 
 
@@ -85,7 +91,7 @@ window.addEventListener("scroll", function () {
 $("body").mousemove(function (e) {
   xVal = e.clientX;
   yVal = e.clientY;
-  gsap.to(".cursor", {
+  gsap.to(".cursor_box", {
     x: xVal,
     y: yVal,
     duration: 0.3,
@@ -93,12 +99,12 @@ $("body").mousemove(function (e) {
 });
 
 $(".works-area .thumb-box").mouseover(function () {
-  gsap.to(".cursor", { scale: 2 });
-  gsap.to(".cursor span", { visibility: "visible", opacity: 1 });
+  gsap.to(".cursor_box", { scale: 2 });
+  gsap.to(".cursor_box .cursor_text", { visibility: "visible", opacity: 1 });
 });
 $(".works-area .thumb-box").mouseleave(function () {
-  gsap.to(".cursor", { scale: 1 });
-  gsap.to(".cursor span", { visibility: "hidden", opacity: 0 });
+  gsap.to(".cursor_box", { scale: 1 });
+  gsap.to(".cursor_box .cursor_text", { visibility: "hidden", opacity: 0 });
 });
 
 
@@ -119,7 +125,7 @@ loadingAni.to(".intro", {
 });
 
 
-const flowerAnimation = document.getElementById("flowerAnimation");
+const flowerAnimation = document.getElementById("flower_animation");
 const totalFrames = 25; // 스프라이트에 있는 총 프레임 수
 let currentFrame = 0;
 let repeatCount = 0; // 프레임 업데이트 횟수 카운트

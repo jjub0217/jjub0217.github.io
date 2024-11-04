@@ -7,7 +7,7 @@
   position: absolute;
 }
 
-#skip-header {
+#skip_header {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,58 +37,6 @@
   overflow: hidden;
 }
 
-.intro {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
-  height: 100vh;
-  width: 100%;
-  background-color: #d3bcce;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  p {
-    text-align: center;
-    margin-bottom: 300px;
-  }
-  .char {
-    opacity: 0;
-    transform: scale(0);
-    display: none;
-    font-family: cinzel;
-    font-size: 5vw;
-    font-weight: 500;
-    line-height: 1;
-
-    @include tablet {
-      font-size: 9vw;
-    }
-  }
-  #flowerAnimation {
-    width: 600px;
-    height: 601px;
-    // @media screen and (min-width: 2360px) {
-    background-image: url("../images/v2-2.png"); /* 스프라이트 이미지 경로 */
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @include tablet {
-      background-image: url("../images/v2_1.png");
-      width: 320px;
-      height: 400px;
-    }
-    // }
-  }
-}
-
 .inner {
   margin: 0 auto;
   padding-left: 80px;
@@ -100,17 +48,7 @@
   }
 }
 
-.hash {
-  span {
-    transition: 0.3s all;
-  }
-  span:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
-.cursor {
+.cursor_box {
   mix-blend-mode: difference;
   pointer-events: none;
   position: fixed;
@@ -123,7 +61,12 @@
   z-index: 10;
   position: fixed;
   transform: translate(-50%, -50%);
-  span {
+
+  @include tablet {
+    display: none;
+  }
+
+  .cursor_text {
     visibility: hidden;
     color: #000;
     position: absolute;
@@ -131,10 +74,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 0.6vw;
-  }
-
-  @include tablet {
-    display: none;
   }
 }
 

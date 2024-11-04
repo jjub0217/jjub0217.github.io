@@ -1,8 +1,65 @@
+.intro {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  height: 100vh;
+  width: 100%;
+  background-color: #d3bcce;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .intro_title {
+    text-align: center;
+    margin-bottom: 300px;
+  }
+
+  .char {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+    font-family: cinzel;
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1;
+
+    @include tablet {
+      font-size: 9vw;
+    }
+  }
+
+  #flower_animation {
+    width: 600px;
+    height: 601px;
+    background-image: url("../images/sp_intro_flower_mo.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../images/sp_intro_flower_pc.png");
+      width: 320px;
+      height: 400px;
+    }
+  }
+}
+
+.container {
+  padding-bottom: 300px;
+}
+
 .wrapper {
   position: relative;
   z-index: 1;
   background-color: #d3bcce;
-  background: url("../images/adobe_6_1.jpg") no-repeat;
+  background: url("../images/img_background.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-width: 1229px;
@@ -13,22 +70,7 @@
   }
 }
 
-.container {
-  padding-top: 500px;
-  padding-bottom: 300px;
-  @include mobile {
-    padding-top: 0;
-  }
-}
-
 section {
-  padding-bottom: 400px;
-  padding-top: 100px;
-
-  @include mobile {
-    padding-bottom: 0;
-  }
-
   .inner {
     display: flex;
     flex-direction: column;
@@ -73,10 +115,58 @@ section {
     }
   }
 }
+.section_visual {
+  padding-bottom: 500px;
+
+  @include mobile {
+    padding-bottom: 0;
+  }
+  .inner {
+    position: relative;
+    font-family: larken, sans-serif;
+    height: 100vh;
+
+    @include minDevice {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  .visual_deco {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    transform: translate(20%, -24%);
+
+    @include tablet {
+      top: 20%;
+      right: 0;
+      transform: translate(34%, -50%);
+    }
+  }
+  .headline {
+    font-size: 7vw;
+    font-weight: 900;
+    line-height: 1;
+
+    @include tablet {
+      font-size: 13vw;
+    }
+    @include mobile {
+      font-size: 10vw;
+    }
+  }
+}
 
 .section-works {
   position: relative;
   z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 400px;
+
+  @include mobile {
+    padding-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -500,28 +590,31 @@ section {
         font-size: 1.25rem;
       }
 
-      .hash {
+      .hash_tag_box {
         display: flex;
         flex-wrap: wrap;
         column-gap: 0.5vw;
-
+        font-family: "cinzel", sans-serif;
+        font-size: 1vw;
+        font-weight: 400;
         @include minDevice {
           gap: 5px;
         }
 
-        span {
-          font-family: "cinzel", sans-serif;
-          font-size: 1vw;
-          font-weight: 300;
-          @include tablet {
-            font-size: 3vw;
-          }
+        @include tablet {
+          font-size: 3vw;
+        }
+        .hash_tag {
+          transition: 0.3s all;
+        }
+        .hash_tag:hover {
+          color: #fff;
+          background-color: #000;
         }
       }
     }
   }
 
-  // .work5 였음
   .work1 {
     grid-row: 1 / 5;
     grid-column: 3 / 6;
