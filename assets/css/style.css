@@ -911,7 +911,7 @@ section .badge {
   }
 }
 .section_works .work .text_box .title {
-  font-size: 4vw;
+  font-size: 3.5vw;
   font-family: larken, sans-serif;
   line-height: 1;
   text-transform: uppercase;
@@ -927,7 +927,7 @@ section .badge {
 }
 @media screen and (max-width: 1024px) {
   .section_works .work .text_box .hash_tag_box {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 .section_works .work .text_box .hash_tag_box .hash_tag {
@@ -1195,9 +1195,9 @@ section .badge {
   font-size: 20px;
   font-weight: 500;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .section_log .log_area .item_title {
-    font-size: 3vw;
+    font-size: 2.3vw;
   }
 }
 .section_log .log_area .hash_box {
@@ -1210,9 +1210,9 @@ section .badge {
   color: #aaa;
   font-size: 14px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .section_log .log_area .hash {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
 }
 .section_log .log_area .desc {
@@ -1227,7 +1227,7 @@ section .badge {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .section_log .log_area .desc {
     font-size: 2vw;
   }

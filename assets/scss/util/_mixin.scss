@@ -12,17 +12,17 @@ $maxDevice: 1229px;
 
 // [769] ~ 1024
 // 1024부터 아래로
-$tablet: 1024px; // desktop 으로 고치기
+// $tablet: 1024px; // desktop 으로 고치기
 
-@mixin tablet {
-  // 1024 이하를 꾸미는거다.
-  @media screen and (max-width: $tablet) {
-    @content;
-  }
-}
+// @mixin tablet {
+//   // 1024 이하를 꾸미는거다.
+//   @media screen and (max-width: $tablet) {
+//     @content;
+//   }
+// }
 
 // [321] ~ 768
-$mobile: 768px; // 태블릿으로 고치기
+$tablet: 768px; //
 
 @mixin mobile {
   // 768 이하을 꾸미는거다.
@@ -32,7 +32,7 @@ $mobile: 768px; // 태블릿으로 고치기
 }
 
 //  ~ 320
-$minDevice: 320px; // 모바일로 고치기 (280 아래가 minDevice 임))
+$mobile: 320px; // 모바일로 고치기 (280 아래가 minDevice 임))
 
 @mixin minDevice {
   // 320 이하을 꾸미는거다.
