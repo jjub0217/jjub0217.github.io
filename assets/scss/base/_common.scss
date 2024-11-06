@@ -1,16 +1,15 @@
 .cursor_box {
-  mix-blend-mode: difference;
-  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 4;
+  transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: linear-gradient(to bottom, #a3d5f4, #c8a2c8, #f4b4b4);
-  z-index: 10;
-  position: fixed;
-  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
 
   @include tablet {
     display: none;
@@ -18,42 +17,42 @@
 
   .cursor_text {
     visibility: hidden;
-    color: #000;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    color: #000;
     font-size: 0.6vw;
+    transform: translate(-50%, -50%);
   }
 }
 
 .blind {
+  overflow: hidden;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
-  overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  position: absolute;
 }
 
-#skip_header {
+#skip {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 3;
+  width: 100%;
 
   a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-100%);
+    width: 100%;
     background: #ccc;
+    color: #000;
+    transform: translateY(-100%);
 
     &:focus,
     &:active {
@@ -62,37 +61,32 @@
   }
 }
 
-.scroll-hide {
-  overflow: hidden;
-}
-
 .intro {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1001;
-  height: 100vh;
-  width: 100%;
-  background-color: #d3bcce;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  background-color: #d3bcce;
 
   .intro_title {
-    text-align: center;
     margin-bottom: 300px;
+    text-align: center;
   }
 
   .char {
+    display: none;
     opacity: 0;
     transform: scale(0);
-    display: none;
-    font-family: cinzel;
-    font-size: 5vw;
     font-weight: 500;
+    font-size: 5vw;
+    font-family: cinzel;
     line-height: 1;
 
     @include tablet {
@@ -101,51 +95,34 @@
   }
 
   #flower_animation {
-    width: 600px;
-    height: 601px;
-    background-image: url("../images/sp_intro_flower_mo.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 600px;
+    height: 601px;
+    background: url("../images/sp_intro_flower_mo.png") no-repeat 0 0;
 
     @include tablet {
-      background-image: url("../images/sp_intro_flower_pc.png");
       width: 320px;
       height: 400px;
+      background-image: url("../images/sp_intro_flower_pc.png");
     }
   }
 }
 
 .inner {
   margin: 0 auto;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: 0 80px 0 80px;
 
   @include tablet {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px 0 20px;
   }
 }
 
-.scrollTop {
+.scroll_top {
   position: fixed;
   right: 12px;
   bottom: 20px;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes blink-effect {
-  50% {
-    opacity: 0;
-  }
+  z-index: 2;
 }

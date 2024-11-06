@@ -1,19 +1,18 @@
-/* footer */
 .footer {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   bottom: 0;
-  gap: 300px;
-  color: #000;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  gap: 300px;
+  height: 100vh;
+  color: #000;
   background: url("../images/img_footer_bg.jpg");
   font-family: "Libre Baskerville";
   @include tablet {
     position: relative;
-    height: auto;
     gap: 0;
+    height: auto;
   }
 
   .inner {
@@ -24,73 +23,76 @@
     }
   }
 
-  .intro-heading {
+  .heading_area {
     display: flex;
     flex-direction: column;
     gap: 10px;
 
     .headline {
-      font-size: 1vw;
       font-weight: 400;
+      font-size: 30px;
 
       @include tablet {
-        font-size: 5vw;
+        font-size: 3vw;
       }
     }
   }
+
   .contact {
-    width: 6vw;
-    height: 6vw;
-    border-radius: 50%;
-    background-color: rgba($color: #000, $alpha: 0.1);
-    text-align: center;
-    font-size: 0.7vw;
     display: flex;
     align-items: center;
-    padding-left: 15px;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgba($color: #000, $alpha: 0.1);
+    font-size: 20px;
+    text-align: center;
     transition: 0.5s ease;
 
     @include tablet {
       width: 100px;
       height: 100px;
-      font-size: 3vw;
       margin-bottom: 20px;
-      padding-left: 10px;
+      font-size: 2vw;
     }
 
     &:after {
-      content: "";
       display: block;
-      background: url("../images/ico_black_arrow.png") no-repeat;
-      background-size: cover;
       width: 20px;
       height: 20px;
-      transform: translateX(0);
-      transition: 0.5s ease;
       margin-left: 5px;
+      transform: translateX(0);
+      background: url("../images/ico_black_arrow.png") no-repeat;
+      background-size: cover;
+      transition: 0.5s ease;
+      content: "";
 
       @include tablet {
-        width: 10px;
-        height: 10px;
+        display: none;
       }
     }
+
     &:hover {
-      background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
       &::after {
-        transform: translateX(10px);
         display: block;
+        transform: translateX(10px);
         background: url("../images/ico_white_arrow.png") no-repeat;
         background-size: cover;
       }
     }
+    .contact_text {
+      width: 70%;
+    }
   }
 
-  .heading {
+  .footer_logo_area {
     display: flex;
     align-items: center;
 
-    &-logo {
+    .footer_logo {
       width: 13%;
       height: 100%;
       transform: rotate(-50deg) translate(0vw, 1vw);

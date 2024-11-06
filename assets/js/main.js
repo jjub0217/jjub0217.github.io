@@ -46,7 +46,7 @@ ScrollTrigger.matchMedia({
           markers: false,
           scrub: 1,
           onToggle: function () {
-            $(el).toggleClass("on");
+            $(el).toggleClass("js_show");
           },
         },
       });
@@ -62,22 +62,22 @@ ScrollTrigger.matchMedia({
  * 
  */
 const header = document.querySelector(".header");
-const sectionVisual = document.querySelector(".section_visual");
+const visualArea = document.querySelector(".visual_area");
 
 gsap.to($(".header"), {
-    scrollTrigger: {
-      trigger: $(".section_visual"),
-      start: "bottom top",
-      end: "100% 0%",
-      markers: false,
-      onEnter: () => {
-        document.querySelector(".header").classList.add("on");
-      },
-      onLeaveBack: () => {
-        document.querySelector(".header").classList.remove("on");
-      },
+  scrollTrigger: {
+    trigger: $(".visual_area"),
+    start: "bottom top",
+    end: "100% 0%",
+    markers: false,
+    onEnter: () => {
+      document.querySelector(".header").classList.remove("js_hidden");
     },
-  });
+    onLeaveBack: () => {
+      document.querySelector(".header").classList.add("js_hidden");
+    },
+  },
+});
 
 
 
@@ -125,6 +125,8 @@ loadingAni.to(".intro", {
 });
 
 
+const bodyElement = document.body;
+
 const flowerAnimation = document.getElementById("flower_animation");
 const totalFrames = 25; // 스프라이트에 있는 총 프레임 수
 let currentFrame = 0;
@@ -134,7 +136,7 @@ const maxRepeats = 25; // 원하는 반복 횟수
 let frameWidth = window.innerWidth <= 768 ? 320 : 600; // 768px 이하에서는 200px, 그 이상은 600px
 
 const frameInterval = setInterval(() => {
-  const progress =
+  const progress = 
     document.readyState === "complete"
     ? 1
     : document.readyState === "interactive"
@@ -160,11 +162,3 @@ const frameInterval = setInterval(() => {
 
 
 
-
-/**
- * @페이지의사이즈가변경되었을때의기능
- * 
- */
-$(window).resize(function(){
-  // console.log('resize 이벤트 실행');
-}) 

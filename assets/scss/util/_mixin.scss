@@ -1,43 +1,24 @@
-//  1025 ~ 1228
-$maxDevice: 1229px;
+$tablet: 768px;
 
-@mixin maxDevice {
-  // 1229 이상을 꾸미는거다.
-  @media screen and (min-width: $maxDevice) {
+@mixin tablet {
+  // 768 이하을 꾸미는거다.
+  @media screen and (max-width: $tablet) {
     @content;
   }
 }
 
-// 1229 ~ 1024 : 보통
-
-// [769] ~ 1024
-// 1024부터 아래로
-// $tablet: 1024px; // desktop 으로 고치기
-
-// @mixin tablet {
-//   // 1024 이하를 꾸미는거다.
-//   @media screen and (max-width: $tablet) {
-//     @content;
-//   }
-// }
-
-// [321] ~ 768
-$tablet: 768px; //
+$mobile: 425px; // 모바일로 고치기 (280 아래가 minDevice 임))
 
 @mixin mobile {
-  // 768 이하을 꾸미는거다.
+  // 320 이하을 꾸미는거다.
   @media screen and (max-width: $mobile) {
     @content;
   }
 }
 
-//  ~ 320
-$mobile: 320px; // 모바일로 고치기 (280 아래가 minDevice 임))
-
-@mixin minDevice {
-  // 320 이하을 꾸미는거다.
-  @media screen and (max-width: $minDevice) {
-    @content;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -51,24 +32,5 @@ $mobile: 320px; // 모바일로 고치기 (280 아래가 minDevice 임))
     -webkit-line-clamp: $line;
   } @else {
     white-space: nowrap;
-  }
-}
-
-@keyframes slide_up {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 7vw;
-    z-index: 10;
-  }
-}
-
-@keyframes letterC {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 -2450px;
   }
 }

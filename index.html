@@ -24,20 +24,20 @@
 <body>
   <div class="intro">
     <p class="intro_title">Joo's <br>Portfolio</p>
-    <div class="image_box" id="flower_animation" aria-hidden="true">
+    <div id="flower_animation" class="image_box" aria-hidden="true">
     </div>
   </div>
-  <div id="skip_header">
+  <div id="skip">
     <a href="#main">본문내용</a>
   </div>
   <div class="wrapper">
     <div class="cursor_box">
       <span class="cursor_text">VIEW</span>
     </div>
-    <header class="header" id="header">
-      <h1 class="logo">
-        <a href="#header">
-          <span class="blind">메인</span>
+    <!-- [D] 스크롤 시 .header 에 .js_hidden 클래스이름을 추가 및 삭제 -->
+    <header id="header" class="header is_hidden">
+      <h2 class="logo">
+        <a href="#header" aria-label="메인">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 736 736"
             enable-background="new 0 0 736 736" xml:space="preserve">
@@ -184,62 +184,71 @@
             z" />
           </svg>
         </a>
-      </h1>
+      </h2>
       <nav class="gnb">
         <ul class="nav_list">
           <li class="nav_item home">
-            <a href="#header" class="nav_link">
-              Home
-            </a>
+            <a href="#header" class="nav_link">Home</a>
           </li>
           <li class="nav_item works">
-            <a href="#works" class="nav_link">
-              Project
-            </a>
+            <a href="#works" class="nav_link">Project</a>
           </li>
           <li class="nav_item dev">
-            <a href="#log" class="nav_link">
-              Dev-log
-            </a>
+            <a href="#log" class="nav_link">Dev-log</a>
           </li>
           <li class="nav_item about">
-            <a href="#about" class="nav_link">
-              About
-            </a>
+            <a href="#about" class="nav_link">About</a>
           </li>
           <li class="nav_item contact">
-            <a href="mailto:devel.jjub@gmail.com?body=안녕하세요.강주현입니다." target="_blank">
-              <span>CONTACT</span>
-            </a>
+            <a href="mailto:devel.jjub@gmail.com?body=안녕하세요.강주현입니다." target="_blank">CONTACT</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="container" id="main">
-      <section class="section_visual">
-        <div class="inner">
-          <h2 class="headline">I<br>BUILD<br>INTUITIVE WEBSITES<br>WITH LASTING PERSPECTIVES
-          </h2>
+    <main id="main" class="container" >
+      <div class="visual_area">
+        <span class="headline">I<br>BUILD<br>INTUITIVE WEBSITES<br>WITH LASTING PERSPECTIVES
+        </span>
+      </div> 
+      <section id="works" class="section_works" >
+        <!-- [D] 스크롤 시 .deco 에 .js_show 클래스이름을 추가 및 삭제 -->
+        <div class="deco deco1" data-scroll="">
+          <img src="./assets/images/img_deco_item2.png" alt="" aria-hidden="true">
         </div>
-      </section> 
-      <section class="section_works" id="works">
-        <img src="./assets/images/img_deco_item2.png" alt="" class="deco1" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item3.png" alt="" class="deco2" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item4.png" alt="" class="deco5" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item5.png" alt="" class="deco7" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item6.png" alt="" class="deco8" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item7.png" alt="" class="deco12" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item8.png" alt="" class="deco10" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item9.png" alt="" class="deco13" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item10.png" alt="" class="deco14" data-scroll="" aria-hidden="true">
-        <img src="./assets/images/img_deco_item11.png" alt="" class="deco15" data-scroll="" aria-hidden="true">
+        <div class="deco deco2" data-scroll="">
+          <img src="./assets/images/img_deco_item3.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco3" data-scroll="">
+          <img src="./assets/images/img_deco_item4.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco4" data-scroll="" >
+          <img src="./assets/images/img_deco_item5.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco5" data-scroll="">
+          <img src="./assets/images/img_deco_item6.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco6" data-scroll="">
+          <img src="./assets/images/img_deco_item7.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco7" data-scroll="">
+          <img src="./assets/images/img_deco_item8.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco8" data-scroll="">
+          <img src="./assets/images/img_deco_item9.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco9" data-scroll="">
+          <img src="./assets/images/img_deco_item10.png" alt="" aria-hidden="true">
+        </div>
+        <div class="deco deco10" data-scroll="">
+          <img src="./assets/images/img_deco_item11.png" alt="" aria-hidden="true">
+        </div>
         <div class="inner">
           <div class="heading_area">
-            <h2 class="headline">digital Archive<br> :My PROJECTS</h2>
+            <h2 class="headline">digital Archive<br>:My PROJECTS</h2>
             <span class="badge">Got see Projects</span>
           </div>
           <div class="works_area">
-            <a href="https://jjub0217.github.io/beautiful.github.io/" target="_blank" class="work work1">
+            <a href="https://jjub0217.github.io/beautiful.github.io/" class="work work1" target="_blank">
               <div class="text_box">
                 <h3 class="title">CHANEL</h3>
                 <div class="hash_tag_box">
@@ -272,7 +281,7 @@
                 <img src="./assets/images/img_work_item2.png" alt="웨이브 리뉴얼 프로젝트 썸네일">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/audio-pro_github.io/" target="_blank" class="work work3">
+            <a href="https://jjub0217.github.io/audio-pro_github.io/" class="work work3" target="_blank" >
               <div class="text_box">
                 <h3 class="title">audio pro</h3>
                 <div class="hash_tag_box">
@@ -288,7 +297,7 @@
                 <img src="./assets/images/img_work_item3.png" alt="오디오프로 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/naver-business_github.io/" target="_blank" class="work work4">
+            <a href="https://jjub0217.github.io/naver-business_github.io/" class="work work4" target="_blank">
               <div class="text_box">
                 <h3 class="title">NAVER business school</h3>
                 <div class="hash_tag_box">
@@ -305,7 +314,7 @@
                 <img src="./assets/images/img_work_item4.jpg" alt="네이버비즈니스스쿨 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/samsung-card_github.io/"  target="_blank" class="work work5">
+            <a href="https://jjub0217.github.io/samsung-card_github.io/" class="work work5" target="_blank">
               <div class="text_box">
                 <h3 class="title">samsung card</h3>
                 <div class="hash_tag_box">
@@ -320,7 +329,7 @@
                 <img src="./assets/images/img_work_item5.webp" alt="삼성카드 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/clixr_github.io/" target="_blank" class="work work6">
+            <a href="https://jjub0217.github.io/clixr_github.io/"class="work work6" target="_blank">
               <div class="text_box">
                 <h3 class="title">clixr</h3>
                 <div class="hash_tag_box">
@@ -336,7 +345,7 @@
                 <img src="./assets/images/img_work_item6.jpg" alt="clixr 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="" class="work work7">
+            <a href="https://jjub0217.github.io/music-tree.github.io/" class="work work7" target="_blank">
               <div class="text_box">
                 <h3 class="title">music island</h3>
                 <div class="hash_tag_box">
@@ -351,7 +360,7 @@
                 <img src="./assets/images/img_work_item7.jpg" alt="뮤직아일랜드 클론코딩 프로젝트 썸네일" loading="lazy"> 
               </div>
             </a>
-            <a href="https://jjub0217.github.io/andar_github.io/" target="_blank" class="work work8">
+            <a href="https://jjub0217.github.io/andar_github.io/" class="work work8" target="_blank">
               <div class="text_box">
                 <h3 class="title">andar</h3>
                 <div class="hash_tag_box">
@@ -366,7 +375,7 @@
                 <img src="./assets/images/img_work_item8.jpg" alt="안다르 모바일 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/seoul-city-hall_github.io/" target="_blank" class="work work9" >
+            <a href="https://jjub0217.github.io/seoul-city-hall_github.io/" class="work work9" target="_blank">
               <div class="text_box">
                 <h3 class="title">seoul city hall
                 </h3>
@@ -379,12 +388,12 @@
               </div>
               <div class="thumb_box">
                 <div class="bg">
-                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy">
+                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy" aria-hidden="true">
                 </div>
                 <img src="./assets/images/img_work_item9.png" alt="서울시청 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/woori-bank_github.io/" target="_blank" class="work work10">
+            <a href="https://jjub0217.github.io/woori-bank_github.io/" class="work work10" target="_blank">
               <div class="text_box">
                 <h3 class="title">woori bank</h3>
                 <div class="hash_tag_box">
@@ -398,7 +407,7 @@
                 <img src="./assets/images/img_work_item10.jpg" alt="우리은행 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </a>
-            <a href="https://jjub0217.github.io/naver-career_github.io/" target="_blank" class="work work11">
+            <a href="https://jjub0217.github.io/naver-career_github.io/" class="work work11" target="_blank">
               <div class="text_box">
                 <h3 class="title">NAVER CAREER</h3>
                 <div class="hash_tag_box">
@@ -411,7 +420,7 @@
                 </div>
               </div>
               <div class="thumb_box">
-                <video class="board-the-navership" autoplay playsinline loop muted>
+                <video class="board-the-navership" autoplay playsinline loop muted aria-hidden="true">
                   <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
                 </video>
               </div>
@@ -419,201 +428,188 @@
           </div>
         </div>
       </section>
-      <section class="section_log" id="log">
+      <section id="log" class="section_log" >
         <h2 class="headline">digital Archive<br>:Dev log</h2>
         <div class="inner">
           <div class="log_area">
-            <ul class="log_list">
-              <li class="log_item">
-                <a href="https://github.com/jjub0217/jjub0217.github.io" class="log_link">
-                  <h3 class="item_title">Desveloper Joo's landing page
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#HTML5</span>
-                    <span class="hash">#CSS3</span>
-                    <span class="hash">#Sass</span>
-                    <span class="hash">#Javascript</span>
-                    <span class="hash">#jQuery</span>
-                    <span class="hash">#jQuery</span>
-                    <span class="hash">#gsap</span>
-                    <span class="hash">#Swiper</span>
-                  </p>
-                  <p class="desc">
-                    joo 의 포트폴리오들을 소개하는 랜딩페이지의 github Repository입니다.
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a
-                  href="https://velog.io/@jjub0217/%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4-%EB%8C%80%EC%B2%B4-%EB%AD%90%EC%8B%9C%EA%B0%84%EB%8D%B0" class="log_link">
-                  <h3 class="item_title">웹접근성이
-                    대체 뭐시간데...
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#web-accessibility</span>
-                    <span class="hash">#HTML5</span>
-                    <span class="hash">#markup</span>
-                  </p>
-                  <p class="desc">
-                    이 프론트엔드 업계에 발을 들이기 위해 부트캠프에서도 공부하고, 독학도 해서 드디어 취업!!!
-                    그런데 이 업계에서의 첫 취업한 직장은 스타트업이었기 때문에 당장 웹접근성을 신경쓸 겨를이 없었다.
-                    하지만 굉장히 개발문화가 좋았던 곳이었어서 주마다 발표데이가 있었는데 그때마다 웹접근성에 대해서 딥하게 조사하고 공부해서 발표해보길 원했지만,
-                    지금 당장은 웹접근성에 공부할 필요가 없다는 CTO 의 말이 있어서 매번 웹접근성에 딥하게 조사해보는걸 놓쳤었다.
-
-                    요상하게 실무관련 공부를 하면서 웹접근성에 대해 관심이 많이 가고 신경이 많이 쓰였다.
-                    그런데 (핑계겠지만) 매번 기회가 없었다.
-                    드디어 "웹접근성" 이란 단어를 나만의 개발로그에 언급할수 있게 되서 너무 좋다.
-                    </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a
-                  href="https://velog.io/@jjub0217/%EC%8B%9C%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link">
-                  <h3 class="item_title">시각적인 웹 접근성을 높이려면?
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#W3C</span>
-                    <span class="hash">#센스리더</span>
-                    <span class="hash">#JAWS</span>
-                    <span class="hash">#VoiceOver</span>
-                    <span class="hash">#ARIA</span>
-                    <span class="hash">#WAI-ARIA</span>
-                    <span class="hash">#웹접근성</span>
-                  </p>
-                  <p class="desc">시각적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
-                    이때 내가 구현한 화면이 시각적인 웹접근성을 높이고 있는지 진단할수 있는 방법들을 소개하겠다.
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a
-                  href="https://velog.io/@jjub0217/%EC%8B%A0%EC%B2%B4%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link">
-                  <h3 class="item_title">신체적인 웹접근성을 높이려면?
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#HTML5</span>
-                    <span class="hash">#포커스이동</span>
-                    <span class="hash">#flex</span>
-                    <span class="hash">#W3C</span>
-                    <span class="hash">#키보드로이동</span>
-                    <span class="hash">#skip-header</span>
-                    <span class="hash">#웹접근성</span>
-                    <span class="hash">#신체장애웹접근성</span>
-                    <span class="hash">#KWCAG</span>
-                    <span class="hash">#KWCAG a11y inspector</span>
-                  </p>
-                  <p class="desc">
-                    신체적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
-                    이때 내가 구현한 화면이 신체적인 웹접근성을 높이는 방법들을 소개하겠다.
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a
-                  href="https://velog.io/@jjub0217/%EC%B2%AD%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link">
-                  <h3 class="item_title">청각적인 웹접근성을 높이려면?
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#HTML5</span>
-                    <span class="hash">#W3C</span>
-                    <span class="hash">#웹접근성</span>
-                    <span class="hash">#청각장애웹접근성</span>
-                  </p>
-                  <p class="desc">
-                    청각적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
-                    이때 내가 구현한 화면이 청각적인 웹접근성을 높이는 방법들을 소개하겠다.
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a href="https://velog.io/@jjub0217/React-%EC%9D%98-State" class="log_link">
-                  <h3 class="item_title">React 의 State
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#React</span>
-                    <span class="hash">#state</span>
-                  </p>
-                  <p class="desc">
-                    State
-                    ▶ 현재 상태의 값. 즉 현재 데이터라는 State의, 값(데이터 값)을 저장시키는 객체( Object )이다.
-                    ▶ 컴포넌트의 UI를 위한 데이터를 보관하는 객체 ( Object ) 인 State 가 업데이트(변경) 가 되면 자동적으로, render 함수가 호출되어,
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a
-                  href="https://velog.io/@jjub0217/Text-run-is-not-in-Unicode-Normalization-Form-C.-%EB%9D%BC%EB%8A%94-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%AD%90%EC%A7%80" class="log_link">
-                  <h3 class="item_title">Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#HTML5</span>
-                    <span class="hash">#W3C</span>
-                    <span class="hash">#웹문서 유효성 검사</span>
-                    <span class="hash">#웹문서 유효성</span>
-                    <span class="hash">#validator</span>
-                    <span class="hash">#validation</span>
-                    <span class="hash">#markup</span>
-                  </p>
-                  <p class="desc">
-                    Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?
-                    서울시청 클론코딩 프로젝트를 만들면서 항상 W3의 웹문서 유효성 검사를 하는데,
-                    이번에 처음 만나게 된 에러가 있었다.이게 대체 무슨 말이지..............? 해석을 해보니,
-                    "주어진 텍스트가 Unicode 정규화 형식 C에 맞지 않음을 나타냅니다." 라는 뜻이라고 한다.
-                    이게 뭔소리래..... 나는 정규화식을 사용하지도 않았고, 더군다나 C언어는 더욱더 다루는 방법조차 모른다고...
-                    텍스트의 정규화(Normalization)과 관련된 문제로 발생한다는데.. 뭐지..?
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EB%B0%B0%EC%97%B4.md" class="log_link">
-                  <h3 class="item_title">배열
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#Javascript</span>
-                    <span class="hash">#Array</span>
-                  </p>
-                  <p class="desc">
-                    들어가기에 앞서...
-                    배열 : 여러개의 값을 순차적으로 나열한 자료구조
-                    Javascript 에서의 배열과 일반 컴퓨터 언어에서의 배열은 다르다.
-                    일반 자료구조에서 말하는 일반적인 배열 동일한 크기의 메모리 공간이 빈틈없이 연속적으로 밀집하여 나열된 자료구조
-                    하나의 데이터 타입으로 통일되어있다. 장점
-                    산술식 연산으로 한번에 요소에 빠르게 접근할수 있다.( 효율적으로 요소에 접근할수 있다)
-                    인덱스가 0 인, 요소의 메모리 주소 : 1000 + 0 (인덱스) * 8(요소의 바이트) = 1000
-                    인덱스가 1인, 요소의 메모리 주소 : 1000 + 1 (인덱스) * 8(요소의 바이트) = 1008
-                    인덱스가 2인, 요소의 메모리 주소 : 1000 + 2 (인덱스) * 8(요소의 바이트) = 1016
-                  </p>
-                </a>
-              </li>
-              <li class="log_item">
-                <a
-                  href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EA%B0%9D%EC%B2%B4%20%EB%A6%AC%ED%84%B0%EB%9F%B4.md">
-                  <h3 class="item_title" class="log_link">객체
-                  </h3>
-                  <p class="hash_box">
-                    <span class="hash">#Javascript</span>
-                    <span class="hash">#Object</span>
-                  </p>
-                  <p class="desc">
-                    들어가기에 앞서...
-                    원시값
-                    단 하나의 값만 취급할 수 있다.
-                    변경 불가능한 값(immutable)
-                    number
-                    string
-                    boolean
-                    undefine
-                    null
-                    Symbol 객체타입 (mutable)
-                    다양한 타입의 값(원시값 또는 객체)들을 하나의 단위로 구성한 복합것인 자료구조
-                    변경가능한 값
-                  </p>
-                </a>
-              </li>
-            </ul>
+            <article class="log_article">
+              <a href="https://github.com/jjub0217/jjub0217.github.io" target="_blank" class="log_link">
+                <h3 class="item_title">Desveloper Joo's landing page</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#HTML5</span>
+                  <span class="hash_tag">#CSS3</span>
+                  <span class="hash_tag">#Sass</span>
+                  <span class="hash_tag">#Javascript</span>
+                  <span class="hash_tag">#jQuery</span>
+                  <span class="hash_tag">#jQuery</span>
+                  <span class="hash_tag">#gsap</span>
+                  <span class="hash_tag">#Swiper</span>
+                </div>
+                <p class="desc">
+                  joo 의 포트폴리오들을 소개하는 랜딩페이지의 github Repository입니다.
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a
+                href="https://velog.io/@jjub0217/%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4-%EB%8C%80%EC%B2%B4-%EB%AD%90%EC%8B%9C%EA%B0%84%EB%8D%B0" class="log_link" target="_blank" >
+                <h3 class="item_title">웹접근성이 대체 뭐시간데...</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#web-accessibility</span>
+                  <span class="hash_tag">#HTML5</span>
+                  <span class="hash_tag">#markup</span>
+                </div>
+                <p class="desc">
+                  이 프론트엔드 업계에 발을 들이기 위해 부트캠프에서도 공부하고, 독학도 해서 드디어 취업!!!
+                  그런데 이 업계에서의 첫 취업한 직장은 스타트업이었기 때문에 당장 웹접근성을 신경쓸 겨를이 없었다.
+                  하지만 굉장히 개발문화가 좋았던 곳이었어서 주마다 발표데이가 있었는데 그때마다 웹접근성에 대해서 딥하게 조사하고 공부해서 발표해보길 원했지만,
+                  지금 당장은 웹접근성에 공부할 필요가 없다는 CTO 의 말이 있어서 매번 웹접근성에 딥하게 조사해보는걸 놓쳤었다.
+                  요상하게 실무관련 공부를 하면서 웹접근성에 대해 관심이 많이 가고 신경이 많이 쓰였다.
+                  그런데 (핑계겠지만) 매번 기회가 없었다.
+                  드디어 "웹접근성" 이란 단어를 나만의 개발로그에 언급할수 있게 되서 너무 좋다.
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a
+                href="https://velog.io/@jjub0217/%EC%8B%9C%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link" target="_blank">
+                <h3 class="item_title">시각적인 웹 접근성을 높이려면?</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#W3C</span>
+                  <span class="hash_tag">#센스리더</span>
+                  <span class="hash_tag">#JAWS</span>
+                  <span class="hash_tag">#VoiceOver</span>
+                  <span class="hash_tag">#ARIA</span>
+                  <span class="hash_tag">#WAI-ARIA</span>
+                  <span class="hash_tag">#웹접근성</span>
+                </div>
+                <p class="desc">시각적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
+                  이때 내가 구현한 화면이 시각적인 웹접근성을 높이고 있는지 진단할수 있는 방법들을 소개하겠다.
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a
+                href="https://velog.io/@jjub0217/%EC%8B%A0%EC%B2%B4%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link" target="_blank">
+                <h3 class="item_title">신체적인 웹접근성을 높이려면?</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#HTML5</span>
+                  <span class="hash_tag">#포커스이동</span>
+                  <span class="hash_tag">#flex</span>
+                  <span class="hash_tag">#W3C</span>
+                  <span class="hash_tag">#키보드로이동</span>
+                  <span class="hash_tag">#skip-header</span>
+                  <span class="hash_tag">#웹접근성</span>
+                  <span class="hash_tag">#신체장애웹접근성</span>
+                  <span class="hash_tag">#KWCAG</span>
+                  <span class="hash_tag">#KWCAG a11y inspector</span>
+                </div>
+                <p class="desc">
+                  신체적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
+                  이때 내가 구현한 화면이 신체적인 웹접근성을 높이는 방법들을 소개하겠다.
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a
+                href="https://velog.io/@jjub0217/%EC%B2%AD%EA%B0%81%EC%A0%81%EC%9D%B8-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%A0%A4%EB%A9%B4" class="log_link" target="_blank">
+                <h3 class="item_title">청각적인 웹접근성을 높이려면?</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#HTML5</span>
+                  <span class="hash_tag">#W3C</span>
+                  <span class="hash_tag">#웹접근성</span>
+                  <span class="hash_tag">#청각장애웹접근성</span>
+                </div>
+                <p class="desc">
+                  청각적으로 장애를 가지고 있던지, 가지고 없던지 관계없이 모두 동등하게 사용자들을 웹서비스를 사용할수 있어야 한다.
+                  이때 내가 구현한 화면이 청각적인 웹접근성을 높이는 방법들을 소개하겠다.
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a href="https://velog.io/@jjub0217/React-%EC%9D%98-State" class="log_link" target="_blank">
+                <h3 class="item_title">React 의 State</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#React</span>
+                  <span class="hash_tag">#state</span>
+                </div>
+                <p class="desc">
+                  State
+                  ▶ 현재 상태의 값. 즉 현재 데이터라는 State의, 값(데이터 값)을 저장시키는 객체( Object )이다.
+                  ▶ 컴포넌트의 UI를 위한 데이터를 보관하는 객체 ( Object ) 인 State 가 업데이트(변경) 가 되면 자동적으로, render 함수가 호출되어,
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a
+                href="https://velog.io/@jjub0217/Text-run-is-not-in-Unicode-Normalization-Form-C.-%EB%9D%BC%EB%8A%94-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%AD%90%EC%A7%80" class="log_link" target="_blank">
+                <h3 class="item_title">Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#HTML5</span>
+                  <span class="hash_tag">#W3C</span>
+                  <span class="hash_tag">#웹문서 유효성 검사</span>
+                  <span class="hash_tag">#웹문서 유효성</span>
+                  <span class="hash_tag">#validator</span>
+                  <span class="hash_tag">#validation</span>
+                  <span class="hash_tag">#markup</span>
+                </div>
+                <p class="desc">
+                  Text run is not in Unicode Normalization Form C. 라는 에러가 뭐지..?
+                  서울시청 클론코딩 프로젝트를 만들면서 항상 W3의 웹문서 유효성 검사를 하는데,
+                  이번에 처음 만나게 된 에러가 있었다.이게 대체 무슨 말이지..............? 해석을 해보니,
+                  "주어진 텍스트가 Unicode 정규화 형식 C에 맞지 않음을 나타냅니다." 라는 뜻이라고 한다.
+                  이게 뭔소리래..... 나는 정규화식을 사용하지도 않았고, 더군다나 C언어는 더욱더 다루는 방법조차 모른다고...
+                  텍스트의 정규화(Normalization)과 관련된 문제로 발생한다는데.. 뭐지..?
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EB%B0%B0%EC%97%B4.md" class="log_link" target="_blank" >
+                <h3 class="item_title">배열</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#Javascript</span>
+                  <span class="hash_tag">#Array</span>
+                </div>
+                <p class="desc">
+                  들어가기에 앞서...
+                  배열 : 여러개의 값을 순차적으로 나열한 자료구조
+                  Javascript 에서의 배열과 일반 컴퓨터 언어에서의 배열은 다르다.
+                  일반 자료구조에서 말하는 일반적인 배열 동일한 크기의 메모리 공간이 빈틈없이 연속적으로 밀집하여 나열된 자료구조
+                  하나의 데이터 타입으로 통일되어있다. 장점
+                  산술식 연산으로 한번에 요소에 빠르게 접근할수 있다.( 효율적으로 요소에 접근할수 있다)
+                  인덱스가 0 인, 요소의 메모리 주소 : 1000 + 0 (인덱스) * 8(요소의 바이트) = 1000
+                  인덱스가 1인, 요소의 메모리 주소 : 1000 + 1 (인덱스) * 8(요소의 바이트) = 1008
+                  인덱스가 2인, 요소의 메모리 주소 : 1000 + 2 (인덱스) * 8(요소의 바이트) = 1016
+                </p>
+              </a>
+            </article>
+            <article class="log_article">
+              <a
+                href="https://github.com/jjub0217/Dev-Log/blob/master/JAVA_Script/FDS_17/%EA%B0%9D%EC%B2%B4%20%EB%A6%AC%ED%84%B0%EB%9F%B4.md" class="log_link" target="_blank">
+                <h3 class="item_title">객체</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag">#Javascript</span>
+                  <span class="hash_tag">#Object</span>
+                </div>
+                <p class="desc">
+                  들어가기에 앞서...
+                  원시값
+                  단 하나의 값만 취급할 수 있다.
+                  변경 불가능한 값(immutable)
+                  number
+                  string
+                  boolean
+                  undefine
+                  null
+                  Symbol 객체타입 (mutable)
+                  다양한 타입의 값(원시값 또는 객체)들을 하나의 단위로 구성한 복합것인 자료구조
+                  변경가능한 값
+                </p>
+              </a>
+            </article>
           </div>
-          <a href="https://velog.io/@jjub0217/posts" class="more">
-            <img src="./assets/images/btn_more.png" alt="">
+          <a href="https://velog.io/@jjub0217/posts" class="more_link">
+            <img src="./assets/images/btn_more.png" alt="더보기">
           </a>
         </div>
       </section>
@@ -621,16 +617,15 @@
   </div>
   <footer class="footer" id="about">
     <div class="inner">
-      <div class="intro-heading">
+      <div class="heading_area">
         <h2 class="headline">Let me working with you.</h2>
-        <a href="mailto:devel.jjub@gmail.com?body=안녕하세요.강주현입니다." target="_blank" class="contact">
-          mail to me
+        <a href="mailto:devel.jjub@gmail.com?body=안녕하세요.강주현입니다." class="contact" target="_blank">
+          <span class="contact_text">mail to me</span>
         </a>
       </div>
     </div>
-    <h2 class="heading">
-      <span class="blind">푸터 로고</span>
-      <span class="heading-logo">
+    <div class="footer_logo_area">
+      <span class="footer_logo" aria-hidden="true">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
           y="0px" width="100%" viewBox="0 0 736 736" enable-background="new 0 0 736 736" xml:space="preserve">
           <path fill="rgba(0,0,0,0.1)" opacity="1.000000" stroke="none" d="M239.191620,693.069580 
@@ -777,20 +772,20 @@
         </svg>
       </span>
       <span class="text">
-        <img src="./assets/images/img_footer_logo.png" alt="">
+        <img src="./assets/images/img_footer_logo.png" alt="" aria-hidden="true">
       </span>
-    </h2>
+    </div>
   </footer>
-  <div class="scrollTop">
-    <a href="#header" aria-label="scroll-top">
+  <div class="scroll_top">
+    <a href="#header">
       <span class="blind">페이지 위로 버튼</span>
-      <img src="./assets/images/ico_white_arrow_top.svg" alt>
+      <img src="./assets/images/ico_white_arrow_top.svg" alt="">
     </a>
   </div>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
