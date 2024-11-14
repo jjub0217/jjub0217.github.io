@@ -154,10 +154,15 @@ const frameInterval = setInterval(() => {
 
   if (repeatCount >= maxRepeats) {
     clearInterval(frameInterval);
+    console.log('여기1');
     if(progress === 1){
+      console.log('여기2');
       loadingAni.play();
+      console.log('여기3');
     }
+    console.log('여기4');
   }
+  console.log('여기5');
 }, 100); // 100ms마다 프레임 업데이트
 
 
