@@ -18,15 +18,23 @@
 
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="icon" href="./assets/images/ico_favicon_black.png" type="image/x-icon" sizes="16x16">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://use.fontawesome.com/af4740a3a5.js" defer></script>
+  <script src="./assets/js/split.min.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
 
 </head>
 
 <body>
-  <div class="intro">
+  <!-- <div class="intro">
     <p class="intro_title">Joo's <br>Portfolio</p>
     <div id="flower_animation" class="image_box" aria-hidden="true">
     </div>
-  </div>
+  </div> -->
   <div id="skip">
     <a href="#main">본문내용</a>
   </div>
@@ -35,7 +43,7 @@
       <span class="cursor_text">VIEW</span>
     </div>
     <!-- [D] 스크롤 시 .header 에 .js_hidden 클래스이름을 추가 및 삭제 -->
-    <header id="header" class="header is_hidden">
+    <!-- <header id="header" class="header is_hidden">
       <h2 class="logo">
         <a href="#header" aria-label="메인">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +192,7 @@
             z" />
           </svg>
         </a>
-      </h2>
+      </h2> 
       <nav class="gnb">
         <ul class="nav_list">
           <li class="nav_item home">
@@ -204,15 +212,41 @@
           </li>
         </ul>
       </nav>
-    </header>
-    <main id="main" class="container" >
+    </header> -->
+    <main id="main" class="container">
       <div class="visual_area">
+        <!-- <div class="inner">
+          <span class="headline">Web<br>Publisher<br>With<br>Intuitive
+          </span>
+          <div class="mast-left">
+            <div class="div-block-63">
+              <div href="#" class="hey w-inline-block">
+                <div class="button-no-dots">
+                  <a href="" class="hey-text">Hey i'm Ngan</a>
+                </div>
+                <a href="#about" class="dots dost1 w-inline-block">
+                  <div  class="dot-2"></div>
+                  <div class="dot-2 dot-2-1"></div>
+                  <div class="dot-2 dot-2-3"></div>
+                  <div  class="dot-2  dot-2-4"></div>
+                </a>
+              </div>
+            <img src="./assets/images/profile1.gif" loading="lazy" alt="" class="avatar hide-desktop" > 
+            </div>
+            <div class="buttonmasthover div-button-about">
+              <a href="#" class="button-about-2 w-button">About me</a>
+            </div>
+            <a href="#contact" class="buttonmasthover button-contact w-button" >Get in touch</a>
+            <a  href="https://www.linkedin.com/in/nnguyen-designer/" target="_blank" class="buttonmasthover button-linkedin w-button" >in</a>
+            <a href="#work"  class="buttonmasthover button-work w-button" >See <br>my work here!</a>
+          </div>
+        </div> -->
         <span class="headline">I<br>BUILD<br>INTUITIVE WEBSITES<br>WITH LASTING PERSPECTIVES
         </span>
       </div> 
       <section id="works" class="section_works" >
         <!-- [D] 스크롤 시 .deco 에 .js_show 클래스이름을 추가 및 삭제 -->
-        <div class="deco deco1" data-scroll="">
+        <!-- <div class="deco deco1" data-scroll="">
           <img src="./assets/images/img_deco_item2.png" alt="" aria-hidden="true">
         </div>
         <div class="deco deco2" data-scroll="">
@@ -241,7 +275,7 @@
         </div>
         <div class="deco deco10" data-scroll="">
           <img src="./assets/images/img_deco_item11.png" alt="" aria-hidden="true">
-        </div>
+        </div> -->
         <div class="inner">
           <div class="heading_area">
             <h2 class="headline">digital Archive<br>:My PROJECTS</h2>
@@ -252,7 +286,23 @@
             <div class="work work1">
               <a href="https://jjub0217.github.io/beautiful.github.io/" class="link_work" target="_blank" aria-label="샤넬 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">CHANEL</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># renewal</span>
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                  <span class="hash_tag"># SplitType</span>
+                </div>
+                <a href="https://github.com/jjub0217/beautiful.github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item1.jpg" alt="샤넬 리뉴얼 프로젝트 썸네일">
+                <div class="text_box">
                 <h3 class="title">CHANEL</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># renewal</span>
@@ -266,8 +316,6 @@
                 <a href="https://github.com/jjub0217/beautiful.github.io" class="link_code_review">code review</a>
               </div>
 
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item1.jpg" alt="샤넬 리뉴얼 프로젝트 썸네일">
               </div>
 
             </div>
@@ -275,7 +323,7 @@
             <div class="work work2">
               <a href="https://jjub0217.github.io/wavve_github.io/" class="link_work" target="_blank" aria-label="OTT Wavve 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
                 <h3 class="title">OTT Wavve</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># renewal</span>
@@ -287,15 +335,43 @@
                 </div>
                 <a href="https://github.com/jjub0217/wavve_github.io" class="link_code_review">code review</a>
               </div>
-              
+               -->
               <div class="thumb_box">
-                <img src="./assets/images/img_work_item2.png" alt="웨이브 리뉴얼 프로젝트 썸네일">
+                     <img src="./assets/images/img_work_item8.jpg" alt="clixr 클론코딩 프로젝트 썸네일" loading="lazy">
+                <!-- <img src="./assets/images/img_work_item2.png" alt="웨이브 리뉴얼 프로젝트 썸네일"> -->
+                  <div class="text_box">
+                <h3 class="title">OTT Wavve</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># renewal</span>
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># Javascript</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/wavve_github.io" class="link_code_review">code review</a>
+              </div>
               </div>
 
             </div>
 
             <div class="work work3">
               <a href="https://jjub0217.github.io/andar_github.io/" class="link_work" target="_blank" aria-label="모바일 안다르 리액트 프로젝트"></a>
+
+              <!-- <div class="text_box">
+                <h3 class="title">mobile andar</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># react</span>
+                  <span class="hash_tag"># function Components</span>
+                  <span class="hash_tag"># swiper</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/m__andar" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item6.jpg" alt="안다르 모바일 클론코딩 프로젝트 썸네일" loading="lazy">
+
 
               <div class="text_box">
                 <h3 class="title">mobile andar</h3>
@@ -307,16 +383,30 @@
                 </div>
                 <a href="https://github.com/jjub0217/m__andar" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item6.jpg" alt="안다르 모바일 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
             </div>
 
             <div class="work work4">
               <a href="https://jjub0217.github.io/naver-business_github.io/" class="link_work" target="_blank" aria-label="네이버 비즈니스스쿨 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">NAVER business school</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># GSAP</span>
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># json fetch</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/naver-business_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <!-- <img src="./assets/images/img_work_item4.jpg" alt="네이버비즈니스스쿨 클론코딩 프로젝트 썸네일" loading="lazy"> -->
+                   <img src="./assets/images/img_work_item2.png" alt="웨이브 리뉴얼 프로젝트 썸네일">
+                 <div class="text_box">
                 <h3 class="title">NAVER business school</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
@@ -329,9 +419,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/naver-business_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item4.jpg" alt="네이버비즈니스스쿨 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
@@ -339,7 +426,22 @@
             <div class="work work5">
               <a href="https://jjub0217.github.io/samsung-card_github.io/" class="link_work" target="_blank" aria-label="삼성카드 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">samsung card</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># Vanilla JS</span>
+                  <span class="hash_tag"># GSAP</span>
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/samsung-card_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <!-- <img src="./assets/images/img_work_item5.webp" alt="삼성카드 클론코딩 프로젝트 썸네일" loading="lazy"> -->
+ <img src="./assets/images/img_work_item4.jpg" alt="네이버비즈니스스쿨 클론코딩 프로젝트 썸네일" loading="lazy">
+                 <div class="text_box">
                 <h3 class="title">samsung card</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># Vanilla JS</span>
@@ -350,9 +452,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/samsung-card_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item5.webp" alt="삼성카드 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
@@ -361,7 +460,23 @@
             <div class="work work6">
               <a href="https://jjub0217.github.io/audio-pro_github.io/" class="link_work" target="_blank" aria-label="오디오프로 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">audio pro</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># GSAP</span>
+                  <span class="hash_tag"># lenis</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/audio-pro_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item3.png" alt="오디오프로 클론코딩 프로젝트 썸네일" loading="lazy">
+
+                  <div class="text_box">
                 <h3 class="title">audio pro</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
@@ -373,9 +488,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/audio-pro_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item3.png" alt="오디오프로 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
@@ -383,7 +495,21 @@
             <div class="work work7">
               <a href="https://jjub0217.github.io/music-tree.github.io/" class="link_work" target="_blank" aria-label="뮤직아일랜드 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">music island</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># vanilla JS</span>
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># AOS</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/music-tree.github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item7.jpg" alt="뮤직아일랜드 클론코딩 프로젝트 썸네일" loading="lazy">
+<div class="text_box">
                 <h3 class="title">music island</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># vanilla JS</span>
@@ -394,9 +520,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/music-tree.github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item7.jpg" alt="뮤직아일랜드 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
@@ -404,7 +527,23 @@
             <div class="work work8">
               <a href="https://jjub0217.github.io/clixr_github.io/"class="link_work" target="_blank" aria-label="clixr 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">clixr</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># GSAP</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/clixr_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <!-- <img src="./assets/images/img_work_item8.jpg" alt="clixr 클론코딩 프로젝트 썸네일" loading="lazy"> -->
+                 <img src="./assets/images/img_work_item5.webp" alt="삼성카드 클론코딩 프로젝트 썸네일" loading="lazy">
+                  <div class="text_box">
                 <h3 class="title">clixr</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># response</span>
@@ -416,9 +555,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/clixr_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item8.jpg" alt="clixr 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
@@ -426,7 +562,29 @@
             <div class="work work9">
               <a href="https://jjub0217.github.io/seoul-city-hall_github.io/" class="link_work" target="_blank" aria-label="서울시청 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">seoul city hall
+                </h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/seoul-city-hall_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <!-- <div class="bg">
+                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy" aria-hidden="true">
+                  
+                </div> -->
+                <!-- <img src="./assets/images/img_work_item9.png" alt="서울시청 클론코딩 프로젝트 썸네일" loading="lazy"> -->
+                  <!-- <img src="./assets/images/img_work_item10.jpg" alt="우리은행 클론코딩 프로젝트 썸네일" loading="lazy"> -->
+                  <video class="board-the-navership" autoplay playsinline loop muted aria-hidden="true">
+                  <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
+                </video>
+                   <div class="text_box">
                 <h3 class="title">seoul city hall
                 </h3>
                 <div class="hash_tag_box">
@@ -437,12 +595,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/seoul-city-hall_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <div class="bg">
-                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy" aria-hidden="true">
-                </div>
-                <img src="./assets/images/img_work_item9.png" alt="서울시청 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
@@ -450,7 +602,20 @@
             <div class="work work10">
               <a href="https://jjub0217.github.io/woori-bank_github.io/" class="link_work" target="_blank" aria-label="우리은행 프로젝트"></a>
 
-              <div class="text_box">
+              <!-- <div class="text_box">
+                <h3 class="title">woori bank</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/woori-bank_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                <img src="./assets/images/img_work_item10.jpg" alt="우리은행 클론코딩 프로젝트 썸네일" loading="lazy">
+                   <div class="text_box">
                 <h3 class="title">woori bank</h3>
                 <div class="hash_tag_box">
                   <span class="hash_tag"># Swiper</span>
@@ -460,15 +625,34 @@
                 </div>
                 <a href="https://github.com/jjub0217/woori-bank_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <img src="./assets/images/img_work_item10.jpg" alt="우리은행 클론코딩 프로젝트 썸네일" loading="lazy">
               </div>
 
             </div>
 
             <div class="work work11">
               <a href="https://jjub0217.github.io/naver-career_github.io/" class="link_work" target="_blank" aria-label="네이버 커리어 프로젝트"></a>
+
+              <!-- <div class="text_box">
+                <h3 class="title">NAVER CAREER</h3>
+                <div class="hash_tag_box">
+                  <span class="hash_tag"># response</span>
+                  <span class="hash_tag"># Swiper</span>
+                  <span class="hash_tag"># jquery</span>
+                  <span class="hash_tag"># ES6</span>
+                  <span class="hash_tag"># json fetch</span>
+                  <span class="hash_tag"># scss</span>
+                </div>
+                <a href="https://github.com/jjub0217/naver-career_github.io" class="link_code_review">code review</a>
+              </div> -->
+
+              <div class="thumb_box">
+                  <!-- <div class="bg">
+                  <img src="./assets/images/img_work_item9_bg.gif" alt="" loading="lazy" aria-hidden="true">
+                </div> -->
+                <img src="./assets/images/img_work_item9.png" alt="서울시청 클론코딩 프로젝트 썸네일" loading="lazy">
+                <!-- <video class="board-the-navership" autoplay playsinline loop muted aria-hidden="true">
+                  <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
+                </video> -->
 
               <div class="text_box">
                 <h3 class="title">NAVER CAREER</h3>
@@ -482,11 +666,6 @@
                 </div>
                 <a href="https://github.com/jjub0217/naver-career_github.io" class="link_code_review">code review</a>
               </div>
-
-              <div class="thumb_box">
-                <video class="board-the-navership" autoplay playsinline loop muted aria-hidden="true">
-                  <source src="https://recruit.pstatic.net/cdn-vod/naver/Joker.mp4" type="video/mp4">
-                </video>
               </div>
             </div>
 
@@ -850,14 +1029,7 @@
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://use.fontawesome.com/af4740a3a5.js"></script>
-  <script src="./assets/js/split.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+
 </body>
 
 </html>

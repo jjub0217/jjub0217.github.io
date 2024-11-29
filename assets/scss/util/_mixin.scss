@@ -1,3 +1,11 @@
+$desktop: 991px;
+
+@mixin desktop {
+  // 768 이하을 꾸미는거다.
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
 $tablet: 768px;
 
 @mixin tablet {
