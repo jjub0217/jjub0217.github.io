@@ -49,7 +49,8 @@ body {
   height: auto;
   font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
-
+  background: url("../images/img_footer_bg.jpg");
+  background-size: cover;
   @include tablet {
     padding-bottom: 0;
   }

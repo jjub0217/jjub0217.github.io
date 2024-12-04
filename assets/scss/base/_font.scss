@@ -1,48 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @font-face {
   font-family: "larken";
   src: url("../fonts/larken.woff") format("woff");
   font-weight: 400;
 }
-
 @font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
+  font-family: "NanumSquareNeo-Lt";
+  src: url("../fonts/NanumSquareNeoTTF-aLt.woff") format("woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "NanumSquareNeo-Rg";
+  src: url("../fonts/NanumSquareNeoTTF-bRg.woff") format("woff");
+  font-weight: 200;
 }
 
-@font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Regular.woff") format("woff");
-  font-weight: 400;
-}
+$fonts: (
+  "pretandard": (
+    300: "Pretendard-Light",
+    400: "Pretendard-Regular",
+    500: "Pretendard-Medium",
+    700: "Pretendard-Bold",
+  ),
+  "cinzel": (
+    400: "Cinzel-Regular",
+    500: "Cinzel-Medium",
+  ),
+  "Zephyr": (
+    normal: "ZephyrRegular",
+  ),
 
-@font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Medium.woff") format("woff");
-  font-weight: 500;
-}
+  "Figtree": (
+    normal: "Figtree-VariableFont_wght",
+    500: "Figtree-Medium",
+  ),
+);
 
-@font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Bold.woff") format("woff");
-  font-weight: 700;
+@each $font-family, $weights in $fonts {
+  @each $weight, $file in $weights {
+    @font-face {
+      font-family: $font-family;
+      src: url("../fonts/#{$file}.woff") format("woff");
+      font-weight: if(
+        $weight == italic,
+        normal,
+        $weight
+      ); /* italic에는 normal */
+      font-style: if($weight == italic, italic, normal); /* italic 처리 */
+    }
+  }
 }
-
-@font-face {
-  font-family: "cinzel";
-  src: url("../fonts/Cinzel-Regular.woff") format("woff");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "cinzel";
-  src: url("../fonts/Cinzel-Medium.woff") format("woff");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Zephyr";
-  src: url("../fonts/ZephyrRegular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "Figtree";
+//   src: url("../fonts/Figtree-VariableFont_wght.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }

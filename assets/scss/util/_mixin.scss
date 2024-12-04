@@ -1,25 +1,33 @@
-$desktop: 991px;
+$desktop: 1439px;
 
 @mixin desktop {
-  // 768 이하을 꾸미는거다.
   @media screen and (max-width: $desktop) {
     @content;
   }
 }
-$tablet: 768px;
+
+$tablet: 991px;
 
 @mixin tablet {
-  // 768 이하을 꾸미는거다.
   @media screen and (max-width: $tablet) {
     @content;
   }
 }
 
-$mobile: 425px; // 모바일로 고치기 (280 아래가 minDevice 임))
+$mobile: 768px;
 
 @mixin mobile {
-  // 320 이하을 꾸미는거다.
+  // 768 이하을 꾸미는거다.
   @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+$minDevice: 479px; // 모바일로 고치기 (280 아래가 minDevice 임))
+
+@mixin minDevice {
+  // 320 이하을 꾸미는거다.
+  @media screen and (max-width: $minDevice) {
     @content;
   }
 }

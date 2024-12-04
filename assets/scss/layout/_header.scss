@@ -1,137 +1,182 @@
 .header {
-  position: fixed;
+  z-index: 4;
+  width: 60px;
+  height: 100%;
+  opacity: 1;
   top: 0;
-  transform: translateY(0%);
-  display: flex;
-  z-index: 2;
-  width: 100%;
-  padding: 30px 2vw;
-  // background: url("../images/img_header_bg.webp") no-repeat;
-  // background-color: #e5e1da;
-  background-size: 100% 100%;
-  transition: 0.5s;
-
-  @include tablet {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: none;
-    align-items: center;
-    z-index: 3;
-    padding: 20px 8vw 40px;
-    background: none;
-    mix-blend-mode: difference;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+  position: fixed;
+  align-content: center;
+  @media screen and (min-width: 1920px) {
+    width: 100px;
   }
 
-  &.js_hidden {
-    transform: translateY(-150%);
+  @include tablet {
+    width: 100%;
+    height: auto;
+    transform: none;
+    // mix-blend-mode: difference;
+  }
+
+  .inner {
+    padding: 20px;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      height: auto;
+    }
+  }
+  // 수정 ⏌
+
+  &.js_show {
+    transform: none;
   }
 
   .logo {
-    width: 4%;
-    height: 4%;
-    transition: 0.7s linear;
+    // 수정 ⏋
+    width: 33px;
+    height: 33px;
 
-    @include mobile {
-      width: 10%;
-      height: 10%;
-      transform: translateY(0);
+    @media screen and (min-width: 1920px) {
+      width: 60px;
+      height: 60px;
     }
 
     svg {
       height: 100%;
       animation: rotate 10s linear infinite;
-      @include tablet {
+      @include mobile {
         fill: #fff;
       }
     }
   }
-  .gnb {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 20px;
+  .buttonBugger {
+    display: none;
+    @include tablet {
+      display: block;
+      position: relative;
+      width: 27px;
+      height: 20px;
+      transition: 0.2s;
 
-    @include mobile {
-      padding-bottom: 0;
-    }
-
-    .nav {
-      &_list {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 20px;
+      .line_top,
+      .line_middle,
+      .line_bottom {
+        position: absolute;
+        left: 0;
         width: 100%;
-        height: 100%;
+        height: 4px;
+        background-color: #000;
+        transition: all 0.2s ease-in-out;
       }
 
-      &_item {
-        width: 6em;
-        height: 6em;
-        color: #fff;
-        font-weight: 700;
-        font-size: 18px;
-        font-family: "Libre Baskerville", serif;
-        white-space: nowrap;
+      .line_top {
+        top: 0;
+      }
+      .line_middle {
+        top: 50%;
+        transform: translateY(-50%);
+      }
 
-        @include tablet {
-          display: none;
+      .line_bottom {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+      &[aria-pressed="true"] {
+        z-index: 9999;
+        .line_top {
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        .line_middle {
+          transform: scaleX(0);
+        }
+
+        .line_bottom {
+          top: 50%;
+          transform: translateY(-50%) rotate(-45deg);
         }
       }
+    }
+  }
 
-      &_link {
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        line-height: 6em;
-      }
-    }
-
-    .home {
-      background: url("../images/img_nav_item1.png") no-repeat;
-      background-size: 100% 100%;
-    }
-    .works {
-      background: url("../images/img_nav_item2.png") no-repeat;
-      background-size: 100% 100%;
-    }
-    .dev {
-      background: url("../images/img_nav_item3.png") no-repeat;
-      background-size: 100% 100%;
-    }
-    .about {
-      background: url("../images/img_nav_item4.png") no-repeat;
-      background-size: 100% 100%;
-    }
-
-    .home,
-    .works,
-    .dev,
-    .about {
-      @include tablet {
-        display: none;
-      }
-    }
-
-    .contact {
+  .gnb {
+    @include tablet {
       display: none;
-      @include tablet {
-        display: flex;
-        align-items: center;
-        width: auto;
-        height: auto;
-        padding: 10px;
-        border: 1px solid #fff;
-        border-radius: 20px;
-        font-size: 2vw;
+    }
+  }
+
+  .nav {
+    &_list {
+      // 수정 ⏋
+      gap: 100px;
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+      // 수정 ⏌
+    }
+
+    &_item {
+      // 수정 ⏋
+
+      transform: rotate(-90deg);
+      // 수정 ⏌
+    }
+
+    &_link {
+      // 수정 ⏋
+      color: #000;
+      font-weight: 700;
+      font-family: Libre Baskerville, sans-serif;
+      font-size: 15px;
+      @media screen and (min-width: 1920px) {
+        font-size: 22px;
       }
-      @include mobile {
-        padding: 5px;
-        font-size: 3vw;
+      // 수정 ⏌
+    }
+  }
+  .link_mail {
+    font-weight: bold;
+    font-size: 1vw;
+    @include tablet {
+      display: none;
+    }
+  }
+  .mo_gnb {
+    display: none;
+    @include tablet {
+      display: block;
+      transform: translateX(100%);
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      transition: all 0.4s;
+      background: #ccc;
+      &.is_active {
+        transform: none;
       }
+    }
+    .nav_list {
+      height: calc(100vh - 10vh);
+      align-items: center;
+      padding-left: 40px;
+    }
+    .nav_item {
+      transform: none;
+      width: 100%;
+    }
+    .nav_link {
+      font-size: 30px;
     }
   }
 }

@@ -13,74 +13,30 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-
-
-// /**
-//  * @split라이브러리
-//  * 
-//  */
-// const loadingText = new SplitType(".intro p", { types: "words, chars" });
-
-// gsap.to($(".intro .char"), {
-//   opacity: 1,
-//   stagger: 0.2,
-//   scale: 1,
-//   duration: 0.5,
-//   ease: "bounce.out", // 튀는 효과
-// });
-
-
-
 /**
-*  @이미지들이스크롤에의해커지는기능
-*
-*/
-// ScrollTrigger.matchMedia({
-//   "(min-width: 1024px)": function () {
-//     $("[data-scroll]").each(function (i, el) {
-//       gsap.to(el, {
-//         scrollTrigger: {
-//           trigger: el,
-//           start: "0% 100%",
-//           end: "100% 0%",
-//           markers: false,
-//           scrub: 1,
-//           onToggle: function () {
-//             $(el).toggleClass("js_show");
-//           },
-//         },
-//       });
-//     });
-//   }
-// })
-
-
-
-
-/**
- * @floatingbox나타나는기능
+ * @header나타나는기능
  * 
  */
-// const header = document.querySelector(".header");
-// const visualArea = document.querySelector(".visual_area");
-
-// gsap.to($(".header"), {
-//   scrollTrigger: {
-//     trigger: $(".visual_area"),
-//     start: "bottom top",
-//     end: "100% 0%",
-//     markers: false,
-//     onEnter: () => {
-//       document.querySelector(".header").classList.remove("js_hidden");
-//     },
-//     onLeaveBack: () => {
-//       document.querySelector(".header").classList.add("js_hidden");
-//     },
-//   },
-// });
+const header = document.querySelector(".header");
+const visualArea = document.querySelector(".section_works");
 
 
-
+ScrollTrigger.matchMedia({
+  "(min-width: 991px)": function () {
+    gsap.to(header, {
+      scrollTrigger: {
+        trigger: document.querySelector(".section_works"),
+        start: "0% 70%",
+        endTrigger: document.querySelector(".section_description"),
+        end: "100% 50%",
+        markers: false,
+        onToggle: () => {
+          header.classList.toggle("js_show");
+        },
+      },
+    });
+  },
+});
 
 
 
@@ -88,82 +44,150 @@ requestAnimationFrame(raf);
  * @커서
  * 
  */
-// $("body").mousemove(function (e) {
-//   xVal = e.clientX;
-//   yVal = e.clientY;
-//   gsap.to(".cursor_box", {
-//     x: xVal,
-//     y: yVal,
-//     duration: 0.3,
-//   });
-// });
-
-// $(".works-area .thumb-box").mouseover(function () {
-//   gsap.to(".cursor_box", { scale: 2 });
-//   gsap.to(".cursor_box .cursor_text", { visibility: "visible", opacity: 1 });
-// });
-// $(".works-area .thumb-box").mouseleave(function () {
-//   gsap.to(".cursor_box", { scale: 1 });
-//   gsap.to(".cursor_box .cursor_text", { visibility: "hidden", opacity: 0 });
-// });
+document.body.addEventListener("mousemove", (e) => {
+  const xVal = e.clientX;
+  const yVal = e.clientY;
+  gsap.to(".cursor_box", {
+    x: xVal,
+    y: yVal,
+    duration: 0.3,
+  });
+});
 
 
 
+ScrollTrigger.matchMedia({
+  "(min-width: 991px)": function () {
+    gsap.to(document.querySelector(".section_about"), {
+      scrollTrigger: {
+        trigger: document.querySelector(".section_about"),
+        start: "0 80%",
+        end: "100% 20%",
+        markers: false,
+        onToggle: function () {
+          document.querySelector(".container").classList.toggle("is_active");
+          document.querySelector(".section_log").classList.toggle("is_active");
+        },
+      },
+    });
+  },
+});
 
-/**
- * @스프라이트이미지프레임업데이트
- * 
- */
-// const loadingAni = gsap.timeline({
-//   paused: true, // 처음에는 멈춘 상태
-// });
-
-// loadingAni.to(".intro", { 
-//   yPercent: -100, 
-//   display: "none", 
-//   delay: 1
-// });
-
-
-// const bodyElement = document.body;
-
-// const flowerAnimation = document.getElementById("flower_animation");
-// const totalFrames = 25; // 스프라이트에 있는 총 프레임 수
-// let currentFrame = 0;
-// let repeatCount = 0; // 프레임 업데이트 횟수 카운트
-// const maxRepeats = 25; // 원하는 반복 횟수
-// // 디바이스의 너비에 따른 프레임 너비 설정
-// let frameWidth = window.innerWidth <= 768 ? 320 : 600; // 768px 이하에서는 200px, 그 이상은 600px
-
-// const frameInterval = setInterval(() => {
-//   const progress = 
-//     document.readyState === "complete"
-//     ? 1
-//     : document.readyState === "interactive"
-//     ? 0.5
-//     : 0;
-
-//   // 현재 프레임에 따라 background-position을 이동
-//   flowerAnimation.style.backgroundPosition = `-${
-//     currentFrame * frameWidth
-//   }px 0`;
-
-//   // 프레임을 증가시키고, 마지막 프레임 이후 처음으로 돌아감
-//   currentFrame = (currentFrame + 1) % totalFrames;
-//   repeatCount++;
-
-//   if (repeatCount >= maxRepeats) {
-//     clearInterval(frameInterval);
-//     console.log('여기1');
-//     if(progress === 1){
-//       console.log('여기2');
-//       loadingAni.play();
-//       console.log('여기3');
-//     }
-//     console.log('여기4');
-//   }
-//   console.log('여기5');
-// }, 100); // 100ms마다 프레임 업데이트
+  /**
+   * @태블릿과모바일버전의햄버거버튼열어서gnb열기
+   * 
+   */
+  const buttonBugger = document.querySelector(".buttonBugger");
 
 
+  buttonBugger.addEventListener("click", () => {
+    const moGnb = document.querySelector(".mo_gnb");
+    moGnb.classList.toggle("is_active");
+
+    if (buttonBugger.getAttribute("aria-expanded") === "false") {
+      buttonBugger.setAttribute("aria-expanded", "true");
+      buttonBugger.setAttribute("aria-label", "메뉴 닫기");
+      buttonBugger.setAttribute("aria-pressed", "true");
+    } else {
+      buttonBugger.setAttribute("aria-expanded", "false");
+      buttonBugger.setAttribute("aria-label", "메뉴 열기");
+      buttonBugger.setAttribute("aria-pressed", "false");
+    }
+  });
+
+
+  const toggleCardState = () => {
+    document.querySelector(".description_cards").classList.toggle("is_active");
+    document
+      .querySelector(".detail_cards_link_area")
+      .classList.toggle("is_active");
+    document.querySelector(".cyan").classList.toggle("is_active");
+    document.querySelector(".purple").classList.toggle("is_active");
+    document.querySelector(".yellow").classList.toggle("is_active");
+    document.querySelector(".green").classList.toggle("is_active");
+    document.querySelector(".pink").classList.toggle("is_active");
+};
+
+document.querySelector(".front_card").addEventListener("click", toggleCardState);
+document.querySelector(".detail_cards_btn").addEventListener("click", toggleCardState);
+
+
+const hoverTarget = document.querySelector(".intro-container");
+
+let intervalId; 
+
+function getRandomSkew() {
+  const skewX = Math.random() * 20 - 10; 
+  const skewY = Math.random() * 20 - 10; 
+  return `skew(${skewX}deg, ${skewY}deg)`;
+}
+
+function applySkewTransform() {
+  const baseTransform = 'scale3d(0.6, 0.6, 1) rotateX(30deg)'; 
+  const randomSkew = getRandomSkew();
+  return `${baseTransform} ${randomSkew}`; 
+}
+
+hoverTarget.addEventListener('mouseenter', () => {
+  intervalId = setInterval(() => {
+    hoverTarget.style.transform = applySkewTransform();
+  }, 500); 
+});
+
+hoverTarget.addEventListener('mouseleave', () => {
+  clearInterval(intervalId); 
+});
+
+
+
+
+const navContact = document.querySelectorAll(".contact");
+
+navContact.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  });
+});
+
+
+
+const NavGoal = document.querySelectorAll(".link_goal");
+const sectionGoal = document.querySelector(".section_goal");
+
+NavGoal.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: sectionGoal.offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
+
+const NavWork = document.querySelectorAll(".link_works");
+const sectionWorks = document.querySelector(".section_works");
+
+NavWork.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: sectionWorks.offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
+
+const NavHome = document.querySelectorAll(".link_home");
+const wrapper = document.querySelector(".wrapper");
+
+NavHome.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: wrapper.offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
 
