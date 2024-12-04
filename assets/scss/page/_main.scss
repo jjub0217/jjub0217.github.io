@@ -1114,6 +1114,9 @@ section {
       background-color: #222;
       transition: 0.2s;
 
+      @include tablet{
+        padding: 18px;
+      }
       @include minDevice {
         width: 100%;
       }

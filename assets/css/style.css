@@ -1650,6 +1650,11 @@ section .badge {
   background-color: #222;
   transition: 0.2s;
 }
+@media screen and (max-width: 991px) {
+  .section_log .log_article {
+    padding: 18px;
+  }
+}
 @media screen and (max-width: 479px) {
   .section_log .log_article {
     width: 100%;
