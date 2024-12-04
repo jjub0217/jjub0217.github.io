@@ -21,30 +21,6 @@
   font-weight: 200;
 }
 @font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Light.woff") format("woff");
-  font-weight: 300; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
-}
-@font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Regular.woff") format("woff");
-  font-weight: 400; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
-}
-@font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Medium.woff") format("woff");
-  font-weight: 500; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
-}
-@font-face {
-  font-family: "pretandard";
-  src: url("../fonts/Pretendard-Bold.woff") format("woff");
-  font-weight: 700; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
-}
-@font-face {
   font-family: "cinzel";
   src: url("../fonts/Cinzel-Regular.woff") format("woff");
   font-weight: 400; /* italic에는 normal */
@@ -123,7 +99,6 @@ ul {
 body {
   padding-bottom: 100vh;
   height: auto;
-  font-family: "pretandard", sans-serif;
   letter-spacing: 0em;
   background: url("../images/img_footer_bg.jpg");
   background-size: cover;
@@ -1876,7 +1851,7 @@ section .badge {
   padding: 25px;
   transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow: visible;
-  background: url("../images/right-arrow.png") no-repeat;
+  background: url("../images/ico_arrow_right.png") no-repeat;
   background-size: cover;
 }
 .section_goal .detail_cards_btn:hover:after {
@@ -2153,7 +2128,7 @@ section .badge {
   left: auto;
   right: -3vw;
   transform: none;
-  background: url("../images/1.png") no-repeat;
+  background: url("../images/img_card_background.png") no-repeat;
   border: 0.2px solid;
   transition: 0.5s all;
 }

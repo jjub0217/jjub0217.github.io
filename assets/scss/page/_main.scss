@@ -1304,7 +1304,7 @@ section {
       padding: 25px;
       transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
       overflow: visible;
-      background: url("../images/right-arrow.png") no-repeat;
+      background: url("../images/ico_arrow_right.png") no-repeat;
       background-size: cover;
     }
     &:hover {
@@ -1549,13 +1549,6 @@ section {
         font-size: 2vw;
       }
     }
-
-    // .image-9 {
-    //   width: 20%;
-    //   align-self: center;
-    //   margin-top: 20px;
-    //   margin-bottom: 20px;
-    // }
   }
 
   .other_card {
@@ -1570,7 +1563,7 @@ section {
     left: auto;
     right: -3vw;
     transform: none;
-    background: url("../images/1.png") no-repeat;
+    background: url("../images/img_card_background.png") no-repeat;
     border: 0.2px solid;
     transition: 0.5s all;
     @include tablet {
