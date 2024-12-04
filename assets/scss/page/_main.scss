@@ -1153,6 +1153,9 @@ section {
     @include mobile {
       font-size: 1.1em;
     }
+    @include minDevice {
+      font-size: 1rem;
+    }
   }
 
   .hash_tag_box {
@@ -1166,6 +1169,7 @@ section {
     color: #aaa;
     font-size: 14px;
     @include mobile {
+      font-size: 13px;
     }
   }
 
@@ -1178,6 +1182,9 @@ section {
     @include ellipse(2);
     @include mobile {
       font-size: 16px;
+    }
+    @include minDevice {
+      font-size: 13px;
     }
   }
 
@@ -1568,8 +1575,8 @@ section {
     border: 0.2px solid;
     transition: 0.5s all;
     @include tablet {
-      width: 18rem;
-      height: 24rem;
+      width: 16rem;
+      height: 22rem;
     }
     @include mobile {
       width: 15.2rem;
@@ -1752,11 +1759,10 @@ section {
         font-size: 2vw;
       }
       @include mobile {
-        // font-size: 1.7em;
         font-size: 3vw;
       }
       @include minDevice {
-        font-size: 1.8em;
+        font-size: 1.3rem;
         line-height: 120%;
       }
     }

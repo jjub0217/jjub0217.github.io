@@ -1690,6 +1690,11 @@ section .badge {
     font-size: 1.1em;
   }
 }
+@media screen and (max-width: 479px) {
+  .section_log .item_title {
+    font-size: 1rem;
+  }
+}
 .section_log .hash_tag_box {
   display: flex;
   flex-wrap: wrap;
@@ -1699,6 +1704,11 @@ section .badge {
 .section_log .hash_tag {
   color: #aaa;
   font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .section_log .hash_tag {
+    font-size: 13px;
+  }
 }
 .section_log .desc {
   width: 100%;
@@ -1715,6 +1725,11 @@ section .badge {
 @media screen and (max-width: 768px) {
   .section_log .desc {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .section_log .desc {
+    font-size: 13px;
   }
 }
 .section_log .more_link {
@@ -2135,8 +2150,8 @@ section .badge {
 }
 @media screen and (max-width: 991px) {
   .section_goal .other_card {
-    width: 18rem;
-    height: 24rem;
+    width: 16rem;
+    height: 22rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2353,7 +2368,7 @@ section .badge {
 }
 @media screen and (max-width: 479px) {
   .section_goal .other_card .title {
-    font-size: 1.8em;
+    font-size: 1.3rem;
     line-height: 120%;
   }
 }
