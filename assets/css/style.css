@@ -1128,6 +1128,11 @@ section .badge {
   height: 100%;
   pointer-events: none;
 }
+@media screen and (max-width: 991px) {
+  .section_works .work .link_work {
+    pointer-events: auto;
+  }
+}
 .section_works .work .thumb_box {
   overflow: hidden;
   position: relative;
