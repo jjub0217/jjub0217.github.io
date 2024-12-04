@@ -44,7 +44,16 @@ ScrollTrigger.matchMedia({
  * @커서
  * 
  */
-document.body.addEventListener("mousemove", (e) => {
+// document.body.addEventListener("mousemove", (e) => {
+//   const xVal = e.clientX;
+//   const yVal = e.clientY;
+//   gsap.to(".cursor_box", {
+//     x: xVal,
+//     y: yVal,
+//     duration: 0.3,
+//   });
+// });
+function handleMouseMove(e) {
   const xVal = e.clientX;
   const yVal = e.clientY;
   gsap.to(".cursor_box", {
@@ -52,7 +61,21 @@ document.body.addEventListener("mousemove", (e) => {
     y: yVal,
     duration: 0.3,
   });
-});
+}
+
+function checkViewport() {
+  if (window.innerWidth > 991) {
+    document.body.addEventListener("mousemove", handleMouseMove);
+  } else {
+    document.body.removeEventListener("mousemove", handleMouseMove);
+  }
+}
+
+// 초기 실행
+checkViewport();
+
+// 뷰포트 크기 변경 시 처리
+window.addEventListener("resize", checkViewport);
 
 
 
