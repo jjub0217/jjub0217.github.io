@@ -151,11 +151,6 @@ fieldset {
   mix-blend-mode: difference;
   pointer-events: none;
 }
-@media screen and (max-width: 991px) {
-  .cursor_box {
-    display: none;
-  }
-}
 .cursor_box .cursor_text {
   visibility: hidden;
   position: absolute;
@@ -164,6 +159,11 @@ fieldset {
   color: #000;
   font-size: 0.6vw;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 991px) {
+  .cursor_box {
+    display: none;
+  }
 }
 
 .blind {
@@ -598,8 +598,7 @@ section .badge {
   .visual_area .inner {
     grid-column-gap: 30px;
     grid-row-gap: 0px;
-    margin: 100px 0;
-    padding-top: 0;
+    padding-top: 100px;
   }
 }
 .visual_area .headline {

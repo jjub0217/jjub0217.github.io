@@ -11,10 +11,6 @@
   mix-blend-mode: difference;
   pointer-events: none;
 
-  @include tablet {
-    display: none;
-  }
-
   .cursor_text {
     visibility: hidden;
     position: absolute;
@@ -23,6 +19,9 @@
     color: #000;
     font-size: 0.6vw;
     transform: translate(-50%, -50%);
+  }
+  @include tablet {
+    display: none;
   }
 }
 

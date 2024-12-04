@@ -98,10 +98,7 @@ section {
     @include minDevice {
       grid-column-gap: 30px;
       grid-row-gap: 0px;
-      margin: 100px 0;
-      // margin-top: 100px;
-      // margin-bottom: 200px;
-      padding-top: 0;
+      padding-top: 100px;
     }
   }
   .headline {
