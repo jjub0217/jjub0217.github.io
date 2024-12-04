@@ -1049,6 +1049,7 @@ section .badge {
 @media screen and (max-width: 991px) {
   .section_works {
     padding-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .section_works .heading_area {
