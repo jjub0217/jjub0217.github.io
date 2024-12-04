@@ -35,18 +35,8 @@ $fonts: (
     @font-face {
       font-family: $font-family;
       src: url("../fonts/#{$file}.woff") format("woff");
-      font-weight: if(
-        $weight == italic,
-        normal,
-        $weight
-      ); /* italic에는 normal */
-      font-style: if($weight == italic, italic, normal); /* italic 처리 */
+      font-weight: if($weight == italic, normal, $weight);
+      font-style: if($weight == italic, italic, normal);
     }
   }
 }
-// @font-face {
-//   font-family: "Figtree";
-//   src: url("../fonts/Figtree-VariableFont_wght.woff") format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-// }

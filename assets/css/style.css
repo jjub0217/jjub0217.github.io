@@ -23,32 +23,32 @@
 @font-face {
   font-family: "cinzel";
   src: url("../fonts/Cinzel-Regular.woff") format("woff");
-  font-weight: 400; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: "cinzel";
   src: url("../fonts/Cinzel-Medium.woff") format("woff");
-  font-weight: 500; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
   font-family: "Zephyr";
   src: url("../fonts/ZephyrRegular.woff") format("woff");
-  font-weight: normal; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Figtree";
   src: url("../fonts/Figtree-VariableFont_wght.woff") format("woff");
-  font-weight: normal; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Figtree";
   src: url("../fonts/Figtree-Medium.woff") format("woff");
-  font-weight: 500; /* italic에는 normal */
-  font-style: normal; /* italic 처리 */
+  font-weight: 500;
+  font-style: normal;
 }
 * {
   margin: 0;
