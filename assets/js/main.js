@@ -53,6 +53,8 @@ ScrollTrigger.matchMedia({
 //     duration: 0.3,
 //   });
 // });
+
+
 function handleMouseMove(e) {
   const xVal = e.clientX;
   const yVal = e.clientY;
