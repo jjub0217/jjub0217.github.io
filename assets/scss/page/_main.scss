@@ -1168,6 +1168,7 @@ section {
   .hash_tag {
     color: #aaa;
     font-size: 14px;
+    line-height: 1;
     @include mobile {
       font-size: 13px;
     }

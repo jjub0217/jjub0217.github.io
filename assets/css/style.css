@@ -1704,6 +1704,7 @@ section .badge {
 .section_log .hash_tag {
   color: #aaa;
   font-size: 14px;
+  line-height: 1;
 }
 @media screen and (max-width: 768px) {
   .section_log .hash_tag {
