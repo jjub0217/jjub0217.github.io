@@ -69,6 +69,7 @@ function checkViewport() {
   if (window.innerWidth > 991) {
     document.body.addEventListener("mousemove", handleMouseMove);
   } else {
+    console.log('모바일입니다');
     document.body.removeEventListener("mousemove", handleMouseMove);
   }
 }
