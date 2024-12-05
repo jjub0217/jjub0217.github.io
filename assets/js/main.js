@@ -1,8 +1,4 @@
 
-/**
- * @스크롤부드럽게해주는lenis라이브러리
- * 
- */
 const lenis = new Lenis();
 
 function raf(time) {
@@ -13,10 +9,6 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-/**
- * @header나타나는기능
- * 
- */
 const header = document.querySelector(".header");
 const visualArea = document.querySelector(".section_works");
 
@@ -40,11 +32,7 @@ ScrollTrigger.matchMedia({
 
 
 
-/**
- * @커서
- * 
- */
-// document.body.addEventListener("mousemove", (e) => {
+// function handleMouseMove(e) {
 //   const xVal = e.clientX;
 //   const yVal = e.clientY;
 //   gsap.to(".cursor_box", {
@@ -52,34 +40,37 @@ ScrollTrigger.matchMedia({
 //     y: yVal,
 //     duration: 0.3,
 //   });
-// });
+// }
 
+
+// function checkViewport() {
+//   if (window.innerWidth > 991) {
+//     document.body.addEventListener("mousemove", handleMouseMove);
+//   } else {
+//     console.log('모바일입니다');
+//     document.body.removeEventListener("mousemove", handleMouseMove);
+//   }
+// }
+
+// checkViewport();
+
+// window.addEventListener("resize", checkViewport);
+
+let isRunning = false;
 
 function handleMouseMove(e) {
-  const xVal = e.clientX;
-  const yVal = e.clientY;
-  gsap.to(".cursor_box", {
-    x: xVal,
-    y: yVal,
-    duration: 0.3,
+  if (isRunning) return;
+  isRunning = true;
+
+  requestAnimationFrame(() => {
+    const xVal = e.clientX;
+    const yVal = e.clientY;
+    gsap.to(".cursor_box", { x: xVal, y: yVal, duration: 0.3 });
+    isRunning = false;
   });
 }
 
-function checkViewport() {
-  if (window.innerWidth > 991) {
-    document.body.addEventListener("mousemove", handleMouseMove);
-  } else {
-    console.log('모바일입니다');
-    document.body.removeEventListener("mousemove", handleMouseMove);
-  }
-}
-
-// 초기 실행
-checkViewport();
-
-// 뷰포트 크기 변경 시 처리
-window.addEventListener("resize", checkViewport);
-
+document.body.addEventListener("mousemove", handleMouseMove);
 
 
 ScrollTrigger.matchMedia({
@@ -99,12 +90,8 @@ ScrollTrigger.matchMedia({
   },
 });
 
-  /**
-   * @태블릿과모바일버전의햄버거버튼열어서gnb열기
-   * 
-   */
-  const buttonBugger = document.querySelector(".buttonBugger");
 
+  const buttonBugger = document.querySelector(".buttonBugger");
 
   buttonBugger.addEventListener("click", () => {
     const moGnb = document.querySelector(".mo_gnb");
