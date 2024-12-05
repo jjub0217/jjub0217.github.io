@@ -50,9 +50,6 @@
     svg {
       height: 100%;
       animation: rotate 10s linear infinite;
-      @include mobile {
-        fill: #fff;
-      }
     }
   }
   .buttonBugger {

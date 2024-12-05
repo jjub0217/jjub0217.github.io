@@ -237,11 +237,6 @@ fieldset {
   height: 100%;
   animation: rotate 10s linear infinite;
 }
-@media screen and (max-width: 768px) {
-  .header .logo svg {
-    fill: #fff;
-  }
-}
 .header .buttonBugger {
   display: none;
 }
