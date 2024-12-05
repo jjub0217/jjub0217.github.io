@@ -1,5 +1,7 @@
-
-if (window.innerWidth > 991) {
+if (
+  window.innerWidth > 991 &&
+  !document.querySelector('script[src*="lenis.min.js"]')
+) {
   const script = document.createElement("script");
   script.src =
     "https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js";
@@ -18,9 +20,9 @@ if (window.innerWidth > 991) {
   document.body.appendChild(script);
 }
 
-function handleMouseMove(e) {
-  let isRunning = false;
+let isRunning = false;
 
+function handleMouseMove(e) {
   if (isRunning) return;
   isRunning = true;
 
@@ -34,12 +36,12 @@ function handleMouseMove(e) {
 
 document.body.addEventListener("mousemove", handleMouseMove);
 
-
 const header = document.querySelector(".header");
 const visualArea = document.querySelector(".section_works");
 const descriptionSection = document.querySelector(".section_description");
 const container = document.querySelector(".container");
 const sectionLog = document.querySelector(".section_log");
+const sectionAbout = document.querySelector(".section_about");
 const moGnb = document.querySelector(".mo_gnb");
 const buttonBugger = document.querySelector(".buttonBugger");
 const detailCardsLinkArea = document.querySelector(".detail_cards_link_area");
@@ -67,7 +69,7 @@ ScrollTrigger.matchMedia({
 
     gsap.to(sectionAbout, {
       scrollTrigger: {
-        trigger: sectionAbout, 
+        trigger: sectionAbout,
         start: "0 80%",
         end: "100% 20%",
         markers: false,
@@ -79,7 +81,6 @@ ScrollTrigger.matchMedia({
     });
   },
 });
-
 
 buttonBugger.addEventListener("click", () => {
   moGnb.classList.toggle("is_active");
@@ -93,7 +94,6 @@ buttonBugger.addEventListener("click", () => {
   buttonBugger.setAttribute("aria-pressed", !isExpanded);
 });
 
-
 frontCard.addEventListener("click", toggleCardState);
 detailCardsBtn.addEventListener("click", toggleCardState);
 function toggleCardState() {
@@ -103,13 +103,14 @@ function toggleCardState() {
   });
 }
 
-
 const scrollToSection = (elements, target) => {
   elements.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
       const targetPosition =
-        target === "bottom" ? document.body.scrollHeight : target.offsetTop;
+        target === "bottom"
+          ? document.body.scrollHeight
+          : target?.offsetTop || 0; // 안전하게 처리
       window.scrollTo({
         top: targetPosition,
         behavior: "smooth",
@@ -118,13 +119,10 @@ const scrollToSection = (elements, target) => {
   });
 };
 
-
 scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
 scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
 scrollToSection(document.querySelectorAll(".link_home"), wrapper);
 scrollToSection(document.querySelectorAll(".contact"), "bottom");
-
-
 
 const hoverTarget = document.querySelector(".intro-container");
 let intervalId;
@@ -135,10 +133,9 @@ hoverTarget.addEventListener("mouseenter", () => {
   }, 500);
 });
 
-
 hoverTarget.addEventListener("mouseleave", () => {
   clearInterval(intervalId);
-  hoverTarget.style.transform = "scale3d(0.6, 0.6, 1) rotateX(30deg)"; 
+  hoverTarget.style.transform = "scale3d(0.6, 0.6, 1) rotateX(30deg)";
 });
 
 function applySkewTransform() {
@@ -148,4 +145,3 @@ function applySkewTransform() {
   }deg)`;
   return `${baseTransform} ${randomSkew}`;
 }
-
