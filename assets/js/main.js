@@ -18,9 +18,6 @@ if (window.innerWidth > 991) {
   document.body.appendChild(script);
 }
 
-
-
-
 let isRunning = false;
 
 function handleMouseMove(e) {
@@ -37,8 +34,6 @@ function handleMouseMove(e) {
 
 document.body.addEventListener("mousemove", handleMouseMove);
 
-
-
 const header = document.querySelector(".header");
 const visualArea = document.querySelector(".section_works");
 const descriptionSection = document.querySelector(".section_description");
@@ -51,10 +46,8 @@ const frontCard = document.querySelector(".front_card");
 const detailCardsBtn = document.querySelector(".detail_cards_btn");
 const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
+const sectionAbout = document.querySelector(".section_about");
 const wrapper = document.querySelector(".wrapper");
-
-
-
 
 
 ScrollTrigger.matchMedia({
@@ -72,7 +65,7 @@ ScrollTrigger.matchMedia({
 
     gsap.to(document.querySelector(".section_about"), {
       scrollTrigger: {
-        trigger: document.querySelector(".section_about"),
+        trigger: sectionAbout,
         start: "0 80%",
         end: "100% 20%",
         markers: false,
