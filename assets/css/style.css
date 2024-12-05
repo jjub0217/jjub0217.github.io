@@ -21,18 +21,6 @@
   font-weight: 200;
 }
 @font-face {
-  font-family: "cinzel";
-  src: url("../fonts/Cinzel-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "cinzel";
-  src: url("../fonts/Cinzel-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "Zephyr";
   src: url("../fonts/ZephyrRegular.woff") format("woff");
   font-weight: normal;
