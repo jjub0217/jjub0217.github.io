@@ -1,7 +1,5 @@
-if (
-  window.innerWidth > 991 &&
-  !document.querySelector('script[src*="lenis.min.js"]')
-) {
+
+if (window.innerWidth > 991) {
   const script = document.createElement("script");
   script.src =
     "https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js";
@@ -20,6 +18,7 @@ if (
   document.body.appendChild(script);
 }
 
+
 let isRunning = false;
 
 function handleMouseMove(e) {
@@ -36,12 +35,12 @@ function handleMouseMove(e) {
 
 document.body.addEventListener("mousemove", handleMouseMove);
 
+
 const header = document.querySelector(".header");
 const visualArea = document.querySelector(".section_works");
 const descriptionSection = document.querySelector(".section_description");
 const container = document.querySelector(".container");
 const sectionLog = document.querySelector(".section_log");
-const sectionAbout = document.querySelector(".section_about");
 const moGnb = document.querySelector(".mo_gnb");
 const buttonBugger = document.querySelector(".buttonBugger");
 const detailCardsLinkArea = document.querySelector(".detail_cards_link_area");
@@ -50,9 +49,8 @@ const detailCardsBtn = document.querySelector(".detail_cards_btn");
 const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
 const wrapper = document.querySelector(".wrapper");
-const cardElements = document.querySelectorAll(
-  ".cyan, .purple, .yellow, .green, .pink"
-);
+
+
 
 ScrollTrigger.matchMedia({
   "(min-width: 991px)": function () {
@@ -67,9 +65,9 @@ ScrollTrigger.matchMedia({
       },
     });
 
-    gsap.to(sectionAbout, {
+    gsap.to(document.querySelector(".section_about"), {
       scrollTrigger: {
-        trigger: sectionAbout,
+        trigger: document.querySelector(".section_about"),
         start: "0 80%",
         end: "100% 20%",
         markers: false,
@@ -96,33 +94,42 @@ buttonBugger.addEventListener("click", () => {
 
 frontCard.addEventListener("click", toggleCardState);
 detailCardsBtn.addEventListener("click", toggleCardState);
+
+scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
+scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
+scrollToSection(document.querySelectorAll(".link_home"), wrapper);
+
 function toggleCardState() {
   detailCardsLinkArea.classList.toggle("is_active");
-  cardElements.forEach((element) => {
-    element.classList.toggle("is_active");
-  });
+  document
+    .querySelectorAll(".cyan, .purple, .yellow, .green, .pink")
+    .forEach((element) => {
+      element.classList.toggle("is_active");
+    });
 }
 
-const scrollToSection = (elements, target) => {
-  elements.forEach((item) => {
+const scrollToSection = (navElements, targetSection) => {
+  navElements.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      const targetPosition =
-        target === "bottom"
-          ? document.body.scrollHeight
-          : target?.offsetTop || 0; // 안전하게 처리
       window.scrollTo({
-        top: targetPosition,
+        top: targetSection.offsetTop,
         behavior: "smooth",
       });
     });
   });
 };
 
-scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
-scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
-scrollToSection(document.querySelectorAll(".link_home"), wrapper);
-scrollToSection(document.querySelectorAll(".contact"), "bottom");
+const navContact = document.querySelectorAll(".contact");
+
+navContact.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  });
+});
+
+
 
 const hoverTarget = document.querySelector(".intro-container");
 let intervalId;
@@ -135,7 +142,7 @@ hoverTarget.addEventListener("mouseenter", () => {
 
 hoverTarget.addEventListener("mouseleave", () => {
   clearInterval(intervalId);
-  hoverTarget.style.transform = "scale3d(0.6, 0.6, 1) rotateX(30deg)";
+  hoverTarget.style.transform = ""; // 초기화
 });
 
 function applySkewTransform() {
@@ -145,3 +152,4 @@ function applySkewTransform() {
   }deg)`;
   return `${baseTransform} ${randomSkew}`;
 }
+
