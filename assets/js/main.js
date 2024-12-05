@@ -18,10 +18,9 @@ if (window.innerWidth > 991) {
   document.body.appendChild(script);
 }
 
-
-let isRunning = false;
-
 function handleMouseMove(e) {
+  let isRunning = false;
+
   if (isRunning) return;
   isRunning = true;
 
@@ -49,8 +48,9 @@ const detailCardsBtn = document.querySelector(".detail_cards_btn");
 const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
 const wrapper = document.querySelector(".wrapper");
-
-
+const cardElements = document.querySelectorAll(
+  ".cyan, .purple, .yellow, .green, .pink"
+);
 
 ScrollTrigger.matchMedia({
   "(min-width: 991px)": function () {
@@ -65,9 +65,9 @@ ScrollTrigger.matchMedia({
       },
     });
 
-    gsap.to(document.querySelector(".section_about"), {
+    gsap.to(sectionAbout, {
       scrollTrigger: {
-        trigger: document.querySelector(".section_about"),
+        trigger: sectionAbout, 
         start: "0 80%",
         end: "100% 20%",
         markers: false,
@@ -79,6 +79,7 @@ ScrollTrigger.matchMedia({
     });
   },
 });
+
 
 buttonBugger.addEventListener("click", () => {
   moGnb.classList.toggle("is_active");
@@ -92,44 +93,36 @@ buttonBugger.addEventListener("click", () => {
   buttonBugger.setAttribute("aria-pressed", !isExpanded);
 });
 
+
 frontCard.addEventListener("click", toggleCardState);
 detailCardsBtn.addEventListener("click", toggleCardState);
-
-
-
 function toggleCardState() {
   detailCardsLinkArea.classList.toggle("is_active");
-  document
-    .querySelectorAll(".cyan, .purple, .yellow, .green, .pink")
-    .forEach((element) => {
-      element.classList.toggle("is_active");
-    });
+  cardElements.forEach((element) => {
+    element.classList.toggle("is_active");
+  });
 }
 
-const scrollToSection = (navElements, targetSection) => {
-  navElements.forEach((item) => {
+
+const scrollToSection = (elements, target) => {
+  elements.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
+      const targetPosition =
+        target === "bottom" ? document.body.scrollHeight : target.offsetTop;
       window.scrollTo({
-        top: targetSection.offsetTop,
+        top: targetPosition,
         behavior: "smooth",
       });
     });
   });
 };
+
+
 scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
 scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
 scrollToSection(document.querySelectorAll(".link_home"), wrapper);
-
-
-const navContact = document.querySelectorAll(".contact");
-
-navContact.forEach((item) => {
-  item.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  });
-});
+scrollToSection(document.querySelectorAll(".contact"), "bottom");
 
 
 
@@ -142,9 +135,10 @@ hoverTarget.addEventListener("mouseenter", () => {
   }, 500);
 });
 
+
 hoverTarget.addEventListener("mouseleave", () => {
   clearInterval(intervalId);
-  hoverTarget.style.transform = ""; // 초기화
+  hoverTarget.style.transform = "scale3d(0.6, 0.6, 1) rotateX(30deg)"; 
 });
 
 function applySkewTransform() {
