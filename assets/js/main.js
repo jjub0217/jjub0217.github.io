@@ -19,6 +19,8 @@ if (window.innerWidth > 991) {
 }
 
 
+
+
 let isRunning = false;
 
 function handleMouseMove(e) {
@@ -36,6 +38,7 @@ function handleMouseMove(e) {
 document.body.addEventListener("mousemove", handleMouseMove);
 
 
+
 const header = document.querySelector(".header");
 const visualArea = document.querySelector(".section_works");
 const descriptionSection = document.querySelector(".section_description");
@@ -49,6 +52,8 @@ const detailCardsBtn = document.querySelector(".detail_cards_btn");
 const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
 const wrapper = document.querySelector(".wrapper");
+
+
 
 
 
@@ -95,6 +100,19 @@ buttonBugger.addEventListener("click", () => {
 frontCard.addEventListener("click", toggleCardState);
 detailCardsBtn.addEventListener("click", toggleCardState);
 
+
+const scrollToSection = (navElements, targetSection) => {
+  navElements.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth",
+      });
+    });
+  });
+};
+
 scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
 scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
 scrollToSection(document.querySelectorAll(".link_home"), wrapper);
@@ -108,17 +126,6 @@ function toggleCardState() {
     });
 }
 
-const scrollToSection = (navElements, targetSection) => {
-  navElements.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: "smooth",
-      });
-    });
-  });
-};
 
 const navContact = document.querySelectorAll(".contact");
 
@@ -142,7 +149,7 @@ hoverTarget.addEventListener("mouseenter", () => {
 
 hoverTarget.addEventListener("mouseleave", () => {
   clearInterval(intervalId);
-  hoverTarget.style.transform = ""; // 초기화
+  hoverTarget.style.transform = ""; 
 });
 
 function applySkewTransform() {
