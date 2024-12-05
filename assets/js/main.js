@@ -1,22 +1,11 @@
+const lenis = new Lenis();
 
-if (window.innerWidth > 991) {
-  const script = document.createElement("script");
-  script.src =
-    "https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js";
-
-  script.onload = () => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  };
-
-  document.body.appendChild(script);
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
+
+requestAnimationFrame(raf);
 
 let isRunning = false;
 
@@ -48,7 +37,6 @@ const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
 const sectionAbout = document.querySelector(".section_about");
 const wrapper = document.querySelector(".wrapper");
-
 
 ScrollTrigger.matchMedia({
   "(min-width: 991px)": function () {
@@ -93,7 +81,6 @@ buttonBugger.addEventListener("click", () => {
 frontCard.addEventListener("click", toggleCardState);
 detailCardsBtn.addEventListener("click", toggleCardState);
 
-
 const scrollToSection = (navElements, targetSection) => {
   navElements.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -119,7 +106,6 @@ function toggleCardState() {
     });
 }
 
-
 const navContact = document.querySelectorAll(".contact");
 
 navContact.forEach((item) => {
@@ -128,8 +114,6 @@ navContact.forEach((item) => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   });
 });
-
-
 
 const hoverTarget = document.querySelector(".intro-container");
 let intervalId;
@@ -142,7 +126,7 @@ hoverTarget.addEventListener("mouseenter", () => {
 
 hoverTarget.addEventListener("mouseleave", () => {
   clearInterval(intervalId);
-  hoverTarget.style.transform = ""; 
+  hoverTarget.style.transform = "";
 });
 
 function applySkewTransform() {
@@ -152,4 +136,3 @@ function applySkewTransform() {
   }deg)`;
   return `${baseTransform} ${randomSkew}`;
 }
-
