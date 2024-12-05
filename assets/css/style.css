@@ -749,7 +749,7 @@ section .badge {
 @media screen and (max-width: 768px) {
   .visual_area .link_home .link_text {
     font-size: 1.2rem;
-    width: 6.5rem;
+    width: 5.5rem;
     height: 8rem;
   }
 }
