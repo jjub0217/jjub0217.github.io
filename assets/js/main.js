@@ -95,9 +95,7 @@ buttonBugger.addEventListener("click", () => {
 frontCard.addEventListener("click", toggleCardState);
 detailCardsBtn.addEventListener("click", toggleCardState);
 
-scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
-scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
-scrollToSection(document.querySelectorAll(".link_home"), wrapper);
+
 
 function toggleCardState() {
   detailCardsLinkArea.classList.toggle("is_active");
@@ -119,6 +117,10 @@ const scrollToSection = (navElements, targetSection) => {
     });
   });
 };
+scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
+scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
+scrollToSection(document.querySelectorAll(".link_home"), wrapper);
+
 
 const navContact = document.querySelectorAll(".contact");
 
