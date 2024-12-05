@@ -1,13 +1,31 @@
 
-const lenis = new Lenis();
+// const lenis = new Lenis();
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
+
+// requestAnimationFrame(raf);
+if (window.innerWidth > 991) {
+  const script = document.createElement("script");
+  script.src =
+    "https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js";
+
+  script.onload = () => {
+    // lenis 로드 이후 실행
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  };
+
+  document.body.appendChild(script);
 }
-
-requestAnimationFrame(raf);
-
 
 const header = document.querySelector(".header");
 const visualArea = document.querySelector(".section_works");
