@@ -85,14 +85,13 @@ section {
       grid-row-gap: 70px;
       height: auto;
       margin-bottom: 100px;
-      padding-top: 80px;
+      padding-top: 120px;
       padding-bottom: 0;
     }
 
     @include mobile {
       flex-direction: column;
       grid-row-gap: 0px;
-      padding-top: 20px;
     }
 
     @include minDevice {
@@ -1114,7 +1113,7 @@ section {
       background-color: #222;
       transition: 0.2s;
 
-      @include tablet{
+      @include tablet {
         padding: 18px;
       }
       @include minDevice {

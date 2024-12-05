@@ -546,7 +546,7 @@ section .badge {
     grid-row-gap: 70px;
     height: auto;
     margin-bottom: 100px;
-    padding-top: 80px;
+    padding-top: 120px;
     padding-bottom: 0;
   }
 }
@@ -554,7 +554,6 @@ section .badge {
   .visual_area .inner {
     flex-direction: column;
     grid-row-gap: 0px;
-    padding-top: 20px;
   }
 }
 @media screen and (max-width: 479px) {
