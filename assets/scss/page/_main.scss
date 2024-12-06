@@ -100,35 +100,10 @@ section {
       padding-top: 100px;
     }
   }
-  .headline {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    font-size: 7vw;
-    line-height: 1;
-    font-size: 12vw;
-    line-height: 85%;
-    padding-top: 200px;
 
-    @include tablet {
-      width: 100%;
-      padding-top: 0;
-      font-size: 17vw;
-    }
-    @include mobile {
-      padding-top: 0;
-      font-size: 20vw;
-    }
-    @include minDevice {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .circle-badge {
-      background: url("../images/asterisk.svg") no-repeat;
-      background-size: cover;
-    }
+  .circle-badge {
+    background: url("../images/asterisk.svg") no-repeat;
+    background-size: cover;
   }
   .visual_link_area {
     display: flex;
@@ -638,9 +613,15 @@ section {
         object-fit: cover;
         transition: transform 0.5s ease;
       }
+      video {
+        transition: transform 0.5s ease;
+      }
 
       &:hover img {
         transform: scale(1.1);
+      }
+      &:hover video {
+        transform: scale(1.3);
       }
     }
 

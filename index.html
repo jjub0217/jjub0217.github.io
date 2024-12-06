@@ -5,19 +5,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="퍼블리셔에 지원하는 강주현입니다.">
+  <meta name="keywords" content="프론트엔드 개발자, 웹 퍼블리셔, 포트폴리오, 인터랙티브 디자인">
+  <meta property="og:title" content="프론트엔드 실무 경험이 있는 웹퍼블리셔 포트폴리오 | 강주현">
+  <meta name="description" content="프론트엔드 실무와 퍼블리싱 경험을 갖춘 강주현의 포트폴리오입니다.">
   <meta property="og:type" content="portfolio">
   <meta property="og:image" content="/assets/images/img_meta.png">
   <meta property="og:url" content="https://jjub0217.github.io/">
-  <meta property="og:description" content="프론트엔드 경력이 있는 퍼블리셔 강주현입니다.">
   <title>joo`s web site</title>  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "name": "강주현",
+    "jobTitle": "프론트엔드 개발자 및 웹 퍼블리셔",
+    "url": "https://jjub0217.github.io",
+    "image": "https://jjub0217.github.io/assets/images/img_meta.png",
+    "sameAs": [
+      "https://velog.io/@jjub0217/posts",
+      "https://github.com/jjub0217/jjub0217.github.io"
+    ],
+      "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jjub0217.github.io/"
+    }
+  ]
+  }
+  </script>
+  <link rel="canonical" href="https://jjub0217.github.io/">
   <link rel="icon" href="./assets/images/ico_favicon_black.png" type="image/x-icon" sizes="16x16">
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preload" href="assets/css/style.min.css" as="style">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+
+  <link rel="preload" href="assets/fonts/ZephyrRegular.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" async>
+
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js" defer></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+  
   <script src="./assets/js/main.js" defer></script>
+  <style>
+    body {
+  padding-bottom: 100vh;
+  height: auto;
+  letter-spacing: 0em;
+  background: url("./assets/images/img_footer_bg.jpg");
+  background-size: cover;
+  }
+  @media screen and (max-width: 991px) {
+    body {
+      padding-bottom: 0;
+    }
+  }
+  .visual_area .headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-size: 12vw;
+    line-height: 85%;
+    padding-top: 200px;
+  }
+  @media screen and (max-width: 991px) {
+    .visual_area .headline {
+      width: 100%;
+      padding-top: 0;
+      font-size: 17vw;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .visual_area .headline {
+      padding-top: 0;
+      font-size: 20vw;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .visual_area .headline {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  </style>
 </head>
 
 <body>
@@ -677,7 +754,7 @@
             </article>
           </div>
           <a href="https://velog.io/@jjub0217/posts" class="more_link">
-            <img src="./assets/images/btn_more.png" alt="더보기">
+            <img src="./assets/images/btn_more.png" alt="더보기" loading="lazy">
           </a>
         </div>
       </section>
@@ -698,31 +775,30 @@
             </div>
             <button class="cards_close_btn">
               <span class="card_title">Hide</span>
-              <!-- <img src="./assets/images/Button-close_1Button-close.png" loading="lazy" alt="Close button" class="image-9"> -->
             </button>
           </div>
           <div class="other_card cyan">
-            <img src="./assets/images/Icon-3.svg" loading="lazy" width="39" alt="" class="cards-icons">
+            <img src="./assets/images/Icon-3.svg"  alt="" class="cards-icons" width="39" loading="lazy" >
             <h3 class="title">웹 접근성과 문서 구조의 중요성</h3>
             <p class="description">웹 접근성을 준수하여 모든 사용자가 콘텐츠에 쉽게 접근할 수 있도록 구현하겠습니다. 정확한 HTML 구조와 시맨틱 마크업을 통해 정보 전달의 명확성과 검색 엔진 최적화를 동시에 달성하도록 노력하겠습니다. </p>
           </div>
           <div  class="other_card purple" >
-            <img src="./assets/images/Icon-2.svg" loading="lazy" width="39" alt="" class="cards-icons">
+            <img src="./assets/images/Icon-2.svg" alt="" class="cards-icons" width="39" loading="lazy" >
             <h3 class="title">사용자 중심의 웹 경험 구현에 중점을 두고 있습니다.</h3>
             <p class="description">웹사이트를 제작할 때 사용자 경험을 최우선으로 고려하며, 직관적인 디자인을 구현하는것에 집중합니다. 사용자가 정보를 쉽고 편리하게 탐색할 수 있도록 설계하는 데 중점을 둡니다.</p>
           </div>
           <div class="other_card yellow" >
-            <img src="./assets/images/Icon-4.svg" loading="lazy" width="39" alt="" class="cards-icons">
+            <img src="./assets/images/Icon-4.svg" alt="" class="cards-icons" width="39" loading="lazy" >
             <h3 class="title">다양한 기기에서의 일관된 사용자 경험 제공</h3>
             <p class="description">반응형 웹 디자인을 활용해 다양한 환경에서 최적화된 디자인을 구현하여 기기 간의 사용자 경험 차이를 최소화하겠습니다. 이를 통해 사용자에게 일관되고 편리한 웹 환경을 경험할 수 있도록 노력하겠습니다.<br></p>
           </div>
           <div class="other_card green">
-            <img src="./assets/images/Icon-5.svg" loading="lazy" width="39" alt="" class="cards-icons">
+            <img src="./assets/images/Icon-5.svg" alt="" class="cards-icons" width="39" loading="lazy">
             <h3 class="title">최신 웹 트렌드와 기술 연구를 통해 항상 발전을 추구합니다.</h3>
             <p class="description">새로운 디자인 패턴과 개발 도구를 지속적으로 탐구하여, 트렌드에 발맞추어, CSS Grid와 JavaScript ES6+, 그리고 React를 활용해 효율적인 클린코드를 작성하고 있습니다.</p>
           </div>
           <div class="other_card pink" >
-            <img src="./assets/images/Icon-6.svg" loading="lazy" width="39" alt="" class="cards-icons">
+            <img src="./assets/images/Icon-6.svg" alt="" class="cards-icons" width="39" loading="lazy">
             <h3 class="title">팀원들과의 원활한 소통과 협업<br></h3>
             <p class="description">디자이너, 개발자, 기획자와의 소통을 통해 프로젝트 목표와 요구사항을 명확히 파악하고, 협업을 통해 최상의 결과물을 도출하도록 하고 있습니다. 프로젝트의 성공은 커뮤니케이션 능력을 바탕으로 한 팀워크라고 생각합니다.</p>
           </div>
@@ -894,7 +970,7 @@
   <div class="scroll_top">
     <a href="#header">
       <span class="blind">페이지 위로 버튼</span>
-      <img src="./assets/images/ico_white_arrow_top.svg" alt="">
+      <img src="./assets/images/ico_white_arrow_top.svg" alt="" loading="lazy">
     </a>
   </div>
 

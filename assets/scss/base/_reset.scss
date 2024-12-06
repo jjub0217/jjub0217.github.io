@@ -43,18 +43,6 @@ ul {
   list-style: none;
 }
 
-/* 세팅 */
-body {
-  padding-bottom: 100vh;
-  height: auto;
-  letter-spacing: 0em;
-  background: url("../images/img_footer_bg.jpg");
-  background-size: cover;
-  @include tablet {
-    padding-bottom: 0;
-  }
-}
-
 fieldset {
   border: 0;
 }
