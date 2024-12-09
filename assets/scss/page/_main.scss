@@ -10,8 +10,6 @@
   position: relative;
   z-index: 1;
   min-width: 479px;
-  background: url("../images/img_background.jpg") no-repeat fixed;
-  background-size: cover;
   border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px;
   @include mobile {
