@@ -569,6 +569,15 @@ section {
     flex-direction: column;
     border-radius: 20px;
 
+    &:hover {
+      .link_work {
+        pointer-events: auto;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+
     @include tablet {
       flex-direction: column-reverse;
     }
@@ -615,9 +624,6 @@ section {
         transition: transform 0.5s ease;
       }
 
-      &:hover img {
-        transform: scale(1.1);
-      }
       &:hover video {
         transform: scale(1.3);
       }
