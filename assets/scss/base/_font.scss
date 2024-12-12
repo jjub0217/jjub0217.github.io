@@ -15,6 +15,10 @@
 }
 
 $fonts: (
+  "Zephyr": (
+    normal: "ZephyrRegular",
+  ),
+
   "Figtree": (
     normal: "Figtree-VariableFont_wght",
     500: "Figtree-Medium",
@@ -28,6 +32,7 @@ $fonts: (
       src: url("../fonts/#{$file}.woff") format("woff");
       font-weight: if($weight == italic, normal, $weight);
       font-style: if($weight == italic, italic, normal);
+      font-display: swap; /* 추가 */
     }
   }
 }

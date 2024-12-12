@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
@@ -19,16 +20,25 @@
   font-weight: 200;
 }
 @font-face {
+  font-family: "Zephyr";
+  src: url("../fonts/ZephyrRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* 추가 */
+}
+@font-face {
   font-family: "Figtree";
   src: url("../fonts/Figtree-VariableFont_wght.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* 추가 */
 }
 @font-face {
   font-family: "Figtree";
   src: url("../fonts/Figtree-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap; /* 추가 */
 }
 * {
   margin: 0;
