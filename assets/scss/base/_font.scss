@@ -23,6 +23,10 @@ $fonts: (
     normal: "Figtree-VariableFont_wght",
     500: "Figtree-Medium",
   ),
+
+  "libreItalic": (
+    normal: "LibreBaskerville-Italic",
+  ),
 );
 
 @each $font-family, $weights in $fonts {

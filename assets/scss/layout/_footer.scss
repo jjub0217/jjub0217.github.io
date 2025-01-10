@@ -6,9 +6,10 @@
   justify-content: flex-end;
   gap: 300px;
   height: 100vh;
-  // color: #000;
+  color: #fff;
   // background-color: #b3c8cf;
-  background: url("../images/img_footer_bg.jpg");
+  // background: url("../images/img_footer_bg.jpg");
+  background: #000;
   font-family: "Libre Baskerville";
   @include tablet {
     position: relative;
@@ -46,11 +47,11 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background-color: rgba($color: #000, $alpha: 0.1);
+    background-color: rgba($color: #fff, $alpha: 0.9);
     font-size: 20px;
     text-align: center;
     transition: 0.5s ease;
-
+    color: #000;
     @include tablet {
       width: 100px;
       height: 100px;
@@ -77,6 +78,7 @@
     &:hover {
       color: #fff;
       background-color: rgba(0, 0, 0, 0.5);
+
       &::after {
         display: block;
         transform: translateX(10px);

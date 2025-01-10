@@ -40,6 +40,13 @@
   font-style: normal;
   font-display: swap; /* 추가 */
 }
+@font-face {
+  font-family: "libreItalic";
+  src: url("../fonts/LibreBaskerville-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* 추가 */
+}
 * {
   margin: 0;
   padding: 0;
@@ -283,12 +290,14 @@ fieldset {
   }
 }
 .header .nav_list {
-  gap: 100px;
   flex-direction: column;
   justify-content: center;
   display: flex;
 }
 .header .nav_item {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 10px 10px 5px;
   transform: rotate(-90deg);
 }
 .header .nav_link {
@@ -303,8 +312,9 @@ fieldset {
   }
 }
 .header .link_mail {
+  font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 @media screen and (max-width: 991px) {
   .header .link_mail {
@@ -352,7 +362,8 @@ fieldset {
   justify-content: flex-end;
   gap: 300px;
   height: 100vh;
-  background: url("../images/img_footer_bg.jpg");
+  color: #fff;
+  background: #000;
   font-family: "Libre Baskerville";
 }
 @media screen and (max-width: 991px) {
@@ -391,10 +402,11 @@ fieldset {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   text-align: center;
   transition: 0.5s ease;
+  color: #000;
 }
 @media screen and (max-width: 991px) {
   .footer .link_mail {
@@ -475,6 +487,7 @@ section .inner {
   justify-content: center;
 }
 section .headline {
+  font-family: "Figtree";
   font-weight: 700;
   font-size: 5vw;
   text-transform: uppercase;
@@ -492,12 +505,13 @@ section .headline {
 }
 section .badge {
   position: absolute;
-  bottom: -50px;
+  bottom: -60px;
   right: 30%;
   transform: rotate(-10deg);
   padding: 24px 36px;
   border-radius: 36px;
   background-color: #f4c727;
+  font-family: "Figtree";
   font-size: 20px;
 }
 @media screen and (max-width: 768px) {
@@ -521,7 +535,6 @@ section .badge {
   grid-column-gap: 50px;
   grid-row-gap: 50px;
   height: 95vh;
-  padding-top: 100px;
   padding-bottom: 50px;
 }
 @media screen and (max-width: 991px) {
@@ -549,9 +562,11 @@ section .badge {
     padding-top: 100px;
   }
 }
-.visual_area .circle-badge {
-  background: url("../images/asterisk.svg") no-repeat;
-  background-size: cover;
+.visual_area .headline_text:last-of-type {
+  display: flex;
+}
+.visual_area .circle-badge img {
+  animation: rotate 10s linear infinite;
 }
 .visual_area .visual_link_area {
   display: flex;
@@ -660,6 +675,10 @@ section .badge {
   position: relative;
   transform: rotate(20deg);
   z-index: 1;
+  transition: 0.3s scale;
+}
+.visual_area .link_home:hover {
+  scale: 1.1;
 }
 @media screen and (max-width: 991px) {
   .visual_area .link_home {
@@ -757,6 +776,10 @@ section .badge {
   transform: rotate(5deg);
   overflow: hidden;
   border-radius: 13px;
+  transition: 0.3s scale;
+}
+.visual_area .profile_box:hover {
+  scale: 1.1;
 }
 .visual_area .profile_box img {
   -o-object-fit: cover;
@@ -790,18 +813,21 @@ section .badge {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
-  height: 70px;
+  order: -1;
+  width: 100px;
+  height: 90px;
   transform: rotate(-15deg);
   padding: 15px;
   background-color: #ff4081;
-  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-          clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   font-size: 1.3rem;
   color: #fff;
   text-align: center;
   line-height: 24px;
   font-weight: 900;
+  transition: 0.3s scale;
+}
+.visual_area .link_goal:hover {
+  scale: 1.1;
 }
 @media screen and (min-width: 1920) {
   .visual_area .link_goal {
@@ -844,8 +870,11 @@ section .badge {
   display: flex;
   transform: rotate(6deg);
   background-color: #ff5722;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  border-radius: 100px;
+  transition: 0.3s scale;
+}
+.visual_area .contact:hover {
+  scale: 1.1;
 }
 @media screen and (max-width: 991px) {
   .visual_area .contact {
@@ -899,6 +928,10 @@ section .badge {
   font-size: 1.5vw;
   line-height: 20px;
   display: flex;
+  transition: 0.3s scale;
+}
+.visual_area .link_mail:hover {
+  scale: 1.1;
 }
 @media screen and (max-width: 991px) {
   .visual_area .link_mail {
@@ -951,6 +984,10 @@ section .badge {
   padding: 9px 15px;
   transform: rotate(3deg);
   background-color: #ffc857;
+  transition: 0.3s scale;
+}
+.visual_area .link_works:hover {
+  scale: 1.1;
 }
 @media screen and (max-width: 991px) {
   .visual_area .link_works {
@@ -1161,7 +1198,6 @@ section .badge {
   gap: 0.2vw;
   font-weight: 400;
   font-size: 1vw;
-  font-family: "Figtree", sans-serif;
   font-size: 1.1rem;
 }
 @media screen and (max-width: 768px) {
@@ -1443,7 +1479,7 @@ section .badge {
   flex-flow: wrap;
   align-content: center;
   justify-content: center;
-  padding: 0vw 10vw 4vw;
+  padding: 0vw 9vw 4vw;
   display: flex;
   bottom: 500px;
   overflow: hidden;
@@ -1479,7 +1515,6 @@ section .badge {
     padding-bottom: 30vw;
   }
 }
-.section_about .anchor-work,
 .section_about .anchor-about {
   width: 0;
   height: 0;
@@ -1533,6 +1568,7 @@ section .badge {
   padding-right: 15px;
   font-size: 6.5vw;
   font-style: italic;
+  font-family: libreItalic, sans-serif;
 }
 @media screen and (min-width: 1920px) {
   .section_about .heading-4.italic {
@@ -1554,10 +1590,24 @@ section .badge {
     line-height: 110%;
   }
 }
+.section_about .heading-4.underline {
+  text-decoration: underline;
+}
+.section_about .intro-gif {
+  width: 26vw;
+  height: 7vw;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
+  display: block;
+}
 
 .section_log {
   position: relative;
   padding-top: 100px;
+  margin-bottom: 400px;
   background-color: transparent;
 }
 .section_log.is_active {
@@ -1633,7 +1683,7 @@ section .badge {
 }
 .section_log .item_title {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   font-family: "NanumSquareNeo-Rg", sans-serif;
   overflow: hidden;
@@ -1657,6 +1707,7 @@ section .badge {
   flex-wrap: wrap;
   gap: 5px;
   padding: 5px 0 20px;
+  font-family: Arial, sans-serif;
 }
 .section_log .hash_tag {
   color: #aaa;
@@ -1671,7 +1722,7 @@ section .badge {
 .section_log .desc {
   width: 100%;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   font-family: "NanumSquareNeo-Rg", sans-serif;
   overflow: hidden;
@@ -1724,13 +1775,10 @@ section .badge {
   margin-left: 0;
   padding-left: 0;
   padding-right: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 0 3rem 0 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10vw;
 }
 @media screen and (min-width: 1920px) {
   .section_goal {
@@ -1747,7 +1795,7 @@ section .badge {
 }
 .section_goal .detail_cards_link_area {
   height: 150px;
-  margin-top: 100px;
+  margin-top: -200px;
   padding-top: 0;
   position: relative;
   top: 0;
@@ -1761,6 +1809,7 @@ section .badge {
   }
 }
 .section_goal .link_title_box {
+  width: 60%;
   grid-column-gap: 50px;
   grid-row-gap: 100px;
   display: flex;
@@ -1773,6 +1822,7 @@ section .badge {
   }
 }
 .section_goal .link_title {
+  width: 45%;
   max-width: none;
   color: #000;
   letter-spacing: 0;
@@ -1832,7 +1882,6 @@ section .badge {
   transform: translateX(100px);
 }
 .section_goal .description_cards {
-  width: 100%;
   height: 50px;
   background-color: rgba(0, 0, 0, 0);
   flex-flow: column-reverse;
@@ -1851,9 +1900,6 @@ section .badge {
   left: auto;
   right: auto;
   overflow: visible;
-}
-.section_goal .description_cards.is_active {
-  height: 61vw;
 }
 .section_goal .description_cards.is_active .front_card {
   height: 10vw;
@@ -2102,8 +2148,8 @@ section .badge {
   left: auto;
   right: -3vw;
   transform: none;
-  background: url("../images/img_card_background.png") no-repeat;
-  border: 0.2px solid;
+  background-color: #fff;
+  box-shadow: 10px 0 37px -8px rgba(0, 0, 0, 0.1);
   transition: 0.5s all;
 }
 @media screen and (max-width: 991px) {

@@ -27,6 +27,7 @@ section {
   }
 
   .headline {
+    font-family: "Figtree";
     font-weight: 700;
     font-size: 5vw;
     text-transform: uppercase;
@@ -44,12 +45,13 @@ section {
 
   .badge {
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
     right: 30%;
     transform: rotate(-10deg);
     padding: 24px 36px;
     border-radius: 36px;
     background-color: #f4c727;
+    font-family: "Figtree";
     font-size: 20px;
 
     @include mobile {
@@ -73,7 +75,6 @@ section {
     grid-column-gap: 50px;
     grid-row-gap: 50px;
     height: 95vh;
-    padding-top: 100px;
     padding-bottom: 50px;
 
     @include tablet {
@@ -98,10 +99,13 @@ section {
       padding-top: 100px;
     }
   }
-
+  .headline_text:last-of-type {
+    display: flex;
+  }
   .circle-badge {
-    background: url("../images/asterisk.svg") no-repeat;
-    background-size: cover;
+    img {
+      animation: rotate 10s linear infinite;
+    }
   }
   .visual_link_area {
     display: flex;
@@ -207,6 +211,10 @@ section {
     position: relative;
     transform: rotate(20deg);
     z-index: 1;
+    transition: 0.3s scale;
+    &:hover {
+      scale: 1.1;
+    }
 
     @include tablet {
       width: 5.8rem;
@@ -300,6 +308,10 @@ section {
     transform: rotate(5deg);
     overflow: hidden;
     border-radius: 13px;
+    transition: 0.3s scale;
+    &:hover {
+      scale: 1.1;
+    }
     img {
       object-fit: cover;
       height: 100%;
@@ -330,17 +342,22 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    height: 70px;
+    order: -1;
+    width: 100px;
+    height: 90px;
     transform: rotate(-15deg);
     padding: 15px;
     background-color: #ff4081;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     font-size: 1.3rem;
     color: #fff;
     text-align: center;
     line-height: 24px;
     font-weight: 900;
+    transition: 0.3s scale;
+    &:hover {
+      scale: 1.1;
+    }
+
     @media screen and (min-width: 1920) {
       width: 170px;
     }
@@ -380,20 +397,11 @@ section {
     display: flex;
     transform: rotate(6deg);
     background-color: #ff5722;
-    clip-path: polygon(
-      0% 15%,
-      15% 15%,
-      15% 0%,
-      85% 0%,
-      85% 15%,
-      100% 15%,
-      100% 85%,
-      85% 85%,
-      85% 100%,
-      15% 100%,
-      15% 85%,
-      0% 85%
-    );
+    border-radius: 100px;
+    transition: 0.3s scale;
+    &:hover {
+      scale: 1.1;
+    }
 
     @include tablet {
       width: 9.9rem;
@@ -444,6 +452,10 @@ section {
     font-size: 1.5vw;
     line-height: 20px;
     display: flex;
+    transition: 0.3s scale;
+    &:hover {
+      scale: 1.1;
+    }
 
     @include tablet {
       width: 1.9rem;
@@ -477,7 +489,6 @@ section {
     font-size: 1.6vw;
     color: #000;
     cursor: pointer;
-
     border: 1px rgba(0, 0, 0, 0.34);
     margin-top: 0;
     text-align: center;
@@ -494,6 +505,11 @@ section {
     padding: 9px 15px;
     transform: rotate(3deg);
     background-color: #ffc857;
+    transition: 0.3s scale;
+    &:hover {
+      scale: 1.1;
+    }
+
     @include tablet {
       width: 8.2rem;
       height: 9.2rem;
@@ -686,7 +702,6 @@ section {
         gap: 0.2vw;
         font-weight: 400;
         font-size: 1vw;
-        font-family: "Figtree", sans-serif;
         font-size: 1.1rem;
 
         @include mobile {
@@ -701,6 +716,7 @@ section {
         font-weight: 500;
         border: 0.2px solid rgba(0, 0, 0, 0.56);
         border-radius: 20px;
+
         @media screen and (min-width: 1920px) {
           font-size: 1rem;
           padding: 6px 18px;
@@ -954,7 +970,7 @@ section {
     flex-flow: wrap;
     align-content: center;
     justify-content: center;
-    padding: 0vw 10vw 4vw;
+    padding: 0vw 9vw 4vw;
     display: flex;
     bottom: 500px;
     overflow: hidden;
@@ -986,7 +1002,6 @@ section {
       padding-bottom: 30vw;
     }
   }
-  .anchor-work,
   .anchor-about {
     width: 0;
     height: 0;
@@ -1032,6 +1047,7 @@ section {
     padding-right: 15px;
     font-size: 6.5vw;
     font-style: italic;
+    font-family: libreItalic, sans-serif;
     @media screen and (min-width: 1920px) {
       font-size: 4.5vw;
     }
@@ -1047,12 +1063,26 @@ section {
       line-height: 110%;
     }
   }
+  .heading-4.underline {
+    text-decoration: underline;
+  }
+  .intro-gif {
+    width: 26vw;
+    height: 7vw;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+    border-radius: 100px;
+    display: block;
+  }
 }
 
 .section_log {
   position: relative;
   padding-top: 100px;
+  margin-bottom: 400px;
   background-color: transparent;
+
   &.is_active {
     background-color: #000;
 
@@ -1133,7 +1163,7 @@ section {
 
   .item_title {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     font-family: "NanumSquareNeo-Rg", sans-serif;
     @include ellipse(2);
@@ -1150,6 +1180,7 @@ section {
     flex-wrap: wrap;
     gap: 5px;
     padding: 5px 0 20px;
+    font-family: Arial, sans-serif;
   }
 
   .hash_tag {
@@ -1164,7 +1195,7 @@ section {
   .desc {
     width: 100%;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     font-family: "NanumSquareNeo-Rg", sans-serif;
     @include ellipse(2);
@@ -1210,13 +1241,12 @@ section {
   margin-left: 0;
   padding-left: 0;
   padding-right: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 0 3rem 0 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10vw;
+  // margin-top: 10vw;
+  // padding-top: 10vw;
   @media screen and (min-width: 1920px) {
     padding-left: 8rem;
     padding-right: 7rem;
@@ -1228,7 +1258,8 @@ section {
   }
   .detail_cards_link_area {
     height: 150px;
-    margin-top: 100px;
+    // margin-bottom: 200px;
+    margin-top: -200px;
     padding-top: 0;
     position: relative;
     top: 0;
@@ -1242,6 +1273,7 @@ section {
   }
 
   .link_title_box {
+    width: 60%;
     grid-column-gap: 50px;
     grid-row-gap: 100px;
     display: flex;
@@ -1254,6 +1286,7 @@ section {
   }
 
   .link_title {
+    width: 45%;
     max-width: none;
     color: #000;
     letter-spacing: 0;
@@ -1311,7 +1344,6 @@ section {
   }
 
   .description_cards {
-    width: 100%;
     height: 50px;
     background-color: rgba(0, 0, 0, 0);
     flex-flow: column-reverse;
@@ -1330,10 +1362,7 @@ section {
     left: auto;
     right: auto;
     overflow: visible;
-
     &.is_active {
-      height: 61vw;
-
       .front_card {
         height: 10vw;
         width: 10vw;
@@ -1559,8 +1588,9 @@ section {
     left: auto;
     right: -3vw;
     transform: none;
-    background: url("../images/img_card_background.png") no-repeat;
-    border: 0.2px solid;
+    background-color: #fff;
+    box-shadow: 10px 0 37px -8px rgba(0, 0, 0, 0.1);
+    // background: url("../images/img_footer_bg.jpg") no-repeat;
     transition: 0.5s all;
     @include tablet {
       width: 16rem;

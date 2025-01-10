@@ -31,12 +31,39 @@ const sectionLog = document.querySelector(".section_log");
 const moGnb = document.querySelector(".mo_gnb");
 const buttonBugger = document.querySelector(".buttonBugger");
 const detailCardsLinkArea = document.querySelector(".detail_cards_link_area");
+const detailCards = document.querySelector(".description_cards");
 const frontCard = document.querySelector(".front_card");
 const detailCardsBtn = document.querySelector(".detail_cards_btn");
 const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
 const sectionAbout = document.querySelector(".section_about");
+
 const wrapper = document.querySelector(".wrapper");
+
+const hoverTarget = document.querySelector(".intro-container");
+let intervalId;
+function startSkewTransform() {
+  if (!intervalId) {
+    intervalId = setInterval(() => {
+      hoverTarget.style.transform = applySkewTransform();
+    }, 500);
+  }
+}
+
+function stopSkewTransform() {
+  clearInterval(intervalId);
+  intervalId = null;
+  hoverTarget.style.transform = "";
+}
+
+
+function applySkewTransform() {
+  const baseTransform = "scale3d(0.6, 0.6, 1) rotateX(30deg)";
+  const randomSkew = `skew(${Math.random() * 20 - 10}deg, ${
+    Math.random() * 20 - 10
+  }deg)`;
+  return `${baseTransform} ${randomSkew}`;
+}
 
 ScrollTrigger.matchMedia({
   "(min-width: 991px)": function () {
@@ -46,10 +73,26 @@ ScrollTrigger.matchMedia({
         start: "0% 70%",
         endTrigger: descriptionSection,
         end: "100% 50%",
-        markers: false,
+        markers: true,
         onToggle: () => header.classList.toggle("js_show"),
       },
     });
+
+  gsap.fromTo(
+    document.querySelector(".description_cards"),
+    { y: "-5rem" }, 
+    {
+      y: "-20rem", 
+      scrollTrigger: {
+        trigger: sectionLog,
+        start: "135% 100%",
+        end: "135% 0%",
+        scrub: true, 
+        markers: false,
+      },
+    }
+  );
+
 
     gsap.to(document.querySelector(".section_about"), {
       scrollTrigger: {
@@ -60,7 +103,16 @@ ScrollTrigger.matchMedia({
         onToggle: function () {
           container.classList.toggle("is_active");
           sectionLog.classList.toggle("is_active");
+          if (!sectionLog.classList.contains("is_active")) {
+            header.classList.add("js_show");
+          } else {
+            header.classList.remove("js_show");
+          }
         },
+        onEnter: () => startSkewTransform(), 
+        onLeave: () => stopSkewTransform(),
+        onEnterBack: () => startSkewTransform(), 
+        onLeaveBack: () => stopSkewTransform(),
       },
     });
   },
@@ -99,11 +151,14 @@ scrollToSection(document.querySelectorAll(".link_home"), wrapper);
 
 function toggleCardState() {
   detailCardsLinkArea.classList.toggle("is_active");
+  detailCards.classList.toggle("is_active");
   document
-    .querySelectorAll(".cyan, .purple, .yellow, .green, .pink")
-    .forEach((element) => {
-      element.classList.toggle("is_active");
-    });
+  .querySelectorAll(".cyan, .purple, .yellow, .green, .pink")
+  .forEach((element) => {
+    element.classList.toggle("is_active");
+  });
+  window.addEventListener("scroll", updateScroll, { once: true })
+
 }
 
 const navContact = document.querySelectorAll(".contact");
@@ -115,24 +170,3 @@ navContact.forEach((item) => {
   });
 });
 
-const hoverTarget = document.querySelector(".intro-container");
-let intervalId;
-
-hoverTarget.addEventListener("mouseenter", () => {
-  intervalId = setInterval(() => {
-    hoverTarget.style.transform = applySkewTransform();
-  }, 500);
-});
-
-hoverTarget.addEventListener("mouseleave", () => {
-  clearInterval(intervalId);
-  hoverTarget.style.transform = "";
-});
-
-function applySkewTransform() {
-  const baseTransform = "scale3d(0.6, 0.6, 1) rotateX(30deg)";
-  const randomSkew = `skew(${Math.random() * 20 - 10}deg, ${
-    Math.random() * 20 - 10
-  }deg)`;
-  return `${baseTransform} ${randomSkew}`;
-}

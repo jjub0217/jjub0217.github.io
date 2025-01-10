@@ -112,7 +112,6 @@
   .nav {
     &_list {
       // 수정 ⏋
-      gap: 100px;
       flex-direction: column;
       justify-content: center;
       display: flex;
@@ -121,7 +120,9 @@
 
     &_item {
       // 수정 ⏋
-
+      margin-top: 25px;
+      margin-bottom: 25px;
+      padding: 10px 10px 5px;
       transform: rotate(-90deg);
       // 수정 ⏌
     }
@@ -139,8 +140,9 @@
     }
   }
   .link_mail {
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1.2vw;
     @include tablet {
       display: none;
     }

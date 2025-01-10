@@ -49,9 +49,10 @@
   <style>
   body {padding-bottom: 100vh;height: auto;letter-spacing: 0em;font-family: Zephyr, sans-serif;}
   @media screen and (max-width: 991px){body {padding-bottom: 0;}}
-  .wrapper{background: url("./assets/images/img_background.jpg") no-repeat fixed;
+  .wrapper{background: url("./assets/images/img_footer_bg.jpg") no-repeat fixed;
   background-size: cover;}
-  .visual_area .headline {display: flex;flex-direction: column;justify-content: center;height: 100%;font-size: 12vw;line-height: 85%;padding-top: 200px;}
+  .visual_area .headline {display: flex;flex-direction: column;justify-content: center;height: 100%; padding-top: 200px;}
+  .visual_area .headline_text{     margin-bottom: 25px;font-size: 10.5vw;  font-weight: 400;line-height: 85%;font-family: Libre Baskerville, sans-serif;}
   @media screen and (max-width: 991px) {.visual_area .headline {width: 100%;padding-top: 0;font-size: 17vw;}}
   @media screen and (max-width: 768px) {.visual_area .headline {padding-top: 0;font-size: 20vw;}}
   @media screen and (max-width: 479px) {.visual_area .headline {margin-top: 0;margin-bottom: 0;}}
@@ -231,9 +232,6 @@
             <li class="nav_item goals link_goal">
               <a href="#about" class="nav_link">Goals</a>
             </li>
-            <li class="nav_item contact">
-              <button class="nav_link">Contact</button>
-            </li>
             <li class="nav_item dev">
               <a href="#log" class="nav_link">Devlog</a>
             </li>
@@ -263,9 +261,17 @@
     <main id="main" class="container">
       <div class="visual_area">
         <div class="inner">
-          <span class="headline">Web<br>Publisher<br>With<br>Intuitive
-            <span class="circle-badge" aria-hidden="true"></span>
-          </span>
+          <h1 class="headline">
+            <span class="headline_text">Web</span>
+            <span class="headline_text">Publisher</span>
+            <span class="headline_text">with</span>
+            <span class="headline_text">
+              intuitive
+              <span class="circle-badge" aria-hidden="true">
+                <img src="./assets/images/asterisk.svg" loading="lazy" alt="">
+              </span>
+            </span>
+          </h1>
           <div class="visual_link_area">
             <div class="link_box_home">
               <a href="#" class="link_home">
@@ -530,8 +536,10 @@
           <div class="heading-4">web publisher</div>
           <div class="heading-4">/ developer</div>
           <div class="heading-4">finding</div>
-          <div class="heading-4 italic underline">exceptional</div>
-          <div class="heading-4 italic underline">user experiences</div>
+          <div class="heading-4">my way</div>
+          <img src="https://ngan-nguyen.com/images/giphy-1.gif" loading="lazy" width="240" alt="A gif image of cat typing fast on a laptop" class="intro-gif">
+          <div class="heading-4">to be</div>
+          <div class="heading-4 italic underline">great</div>
         </div>
       </section>
       <section id="log" class="section_log">
@@ -780,7 +788,7 @@
       <span class="footer_logo" aria-hidden="true">
         <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px"
           y="0px" width="100%" viewBox="0 0 736 736" enable-background="new 0 0 736 736" xml:space="preserve">
-          <path fill="rgba(0,0,0,0.1)" opacity="1.000000" stroke="none" d="M239.191620,693.069580 
+          <path fill="#fff" opacity="1.000000" stroke="none" d="M239.191620,693.069580 
           C218.239182,682.811340 198.135727,671.785706 179.596298,658.226929 
           C160.782822,644.467773 143.643753,628.810242 128.058029,611.392273 
           C115.852295,597.751770 104.417564,583.527832 94.448929,568.238037 
@@ -825,7 +833,7 @@
           C329.035400,722.598816 307.520081,717.371460 286.513153,710.927063 
           C270.448303,705.998718 254.915848,699.873596 239.191620,693.069580 
           z" />
-          <path fill="rgba(0,0,0,0.1)" opacity="1.000000" stroke="none" d="M292.039917,119.601501 
+          <path fill="#fff" opacity="1.000000" stroke="none" d="M292.039917,119.601501 
           C267.330200,128.438095 244.754227,140.583405 223.612885,155.505966 
           C203.387894,169.781708 185.418472,186.645935 169.793335,205.642548 
           C154.955154,223.682358 142.333817,243.367432 132.814529,264.967407 
@@ -886,7 +894,7 @@
           C396.004303,103.760788 380.194366,103.932793 364.441376,104.697380 
           C339.631104,105.901566 315.739990,111.403587 292.039917,119.601501 
         z" />
-          <path fill="rgba(0,0,0,0.1)" opacity="1.000000" stroke="none" d="M396.662537,390.999939 
+          <path fill="#fff" opacity="1.000000" stroke="none" d="M396.662537,390.999939 
           C396.663513,349.336670 396.668518,308.173462 396.662598,267.010223 
           C396.661407,258.769501 391.903259,254.557297 383.824829,253.189011 
           C368.818359,250.647324 355.365997,243.539734 350.544586,228.750534 
@@ -929,7 +937,7 @@
     </div>
   </footer>
   <div class="scroll_top">
-    <a href="#header">
+    <a href="#main">
       <span class="blind">페이지 위로 버튼</span>
       <img src="./assets/images/ico_white_arrow_top.svg" alt="" loading="lazy">
     </a>
