@@ -73,7 +73,7 @@ ScrollTrigger.matchMedia({
         start: "0% 70%",
         endTrigger: descriptionSection,
         end: "100% 50%",
-        markers: true,
+        markers: false,
         onToggle: () => header.classList.toggle("js_show"),
       },
     });
