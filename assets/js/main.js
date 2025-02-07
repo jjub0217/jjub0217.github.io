@@ -68,7 +68,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: visualArea,
         start: "0% 10%",
-        markers: true,
+        markers: false,
         onToggle: () => header.classList.toggle("js_show"),
       },
     });
@@ -204,96 +204,20 @@ logLink.forEach((link) => {
 });
 
 
-// gsap.to(".headline_text", {
-//   opacity: 0,
-//   y: 10,
-//   duration: 1.5,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "power2.inOut",
-// });
-
-
-// gsap.to(".headline_text", {
-//   duration: 1.5,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "power2.inOut",
-//   text: { value: "Web Publisher Hyun", scrambleText: true },
-// });
-
-// gsap.to(".headline_text", {
-//   filter: "blur(5px)",
-//   scale: 1.2,
-//   duration: 1.5,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "power2.inOut",
-// });
-
-
 
 
 gsap.registerPlugin(TextPlugin);
 const value = document.querySelector(".visual_area .headline").textContent
-// // 랜덤 문자 목록 정의
 const randomChars = "!@#$%^&*()_+{}:<>?";
 gsap.to(".headline_text", {
   text: {
-    value: value, // 최종 변경될 텍스트
-    scrambleText: true, // 스크램블 효과 적용
-    revealDelay: 0.1, // 원래 문자로 바뀌는 속도
-    speed: 0.4, // 글자 변경 속도
+    value: value, 
+    scrambleText: true, 
+    revealDelay: 0.1, 
+    speed: 0.4, 
   },
   duration: 2,
   repeat: -1,
   yoyo: true,
   ease: "power2.inOut",
 });
-
-// gsap.to(".headline_text", { duration: 1, scrambleText: "THIS IS NEW TEXT" }); //or customize things:
-
-// gsap.to(".headline_text", {
-//   duration: 1,
-//   scrambleText: {
-//     text: "THIS IS NEW TEXT",
-//     chars: "XO",
-//     revealDelay: 0.5,
-//     speed: 0.3,
-//     newClass: "myClass",
-//   },
-// });
-// gsap.registerPlugin(TextPlugin);
-
-// 랜덤 문자 목록 정의
-// const randomChars = "!@#$%^&*()_+{}:<>?";
-
-// 스크램블 효과 적용할 대상
-// const elements = document.querySelectorAll(".text");
-
-// elements.forEach((el, index) => {
-//   let originalText = el.textContent; // 원래 텍스트 저장
-
-//   gsap.to(el, {
-//     // duration: 2, // 애니메이션 지속 시간
-//     repeat: -1, // 무한 반복
-//     yoyo: true, // 원래 텍스트로 돌아가기
-//     ease: "power2.inOut",
-//     delay: index * 0.5, // 각 단어가 순차적으로 실행되도록 딜레이 적용
-//     onUpdate: function () {
-//       let scrambledText = originalText
-//         .split("")
-//         .map((char) => {
-//           return Math.random() > 0.5
-//             ? randomChars[Math.floor(Math.random() * randomChars.length)] // 랜덤 문자 적용
-//             : char;
-//         })
-//         .join("");
-
-//       el.textContent = scrambledText; // 적용된 랜덤 문자 표시
-//     },
-//     onComplete: function () {
-//       el.textContent = originalText; // 원래 텍스트로 복구
-//     }
-//   });
-// });
