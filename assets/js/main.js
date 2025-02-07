@@ -29,11 +29,8 @@ const descriptionSection = document.querySelector(".section_description");
 const container = document.querySelector(".container");
 const sectionLog = document.querySelector(".section_log");
 const moGnb = document.querySelector(".mo_gnb");
+const moLogo = document.querySelector(".header .logo")
 const buttonBugger = document.querySelector(".buttonBugger");
-const detailCardsLinkArea = document.querySelector(".detail_cards_link_area");
-const detailCards = document.querySelector(".description_cards");
-const frontCard = document.querySelector(".front_card");
-const detailCardsBtn = document.querySelector(".detail_cards_btn");
 const sectionGoal = document.querySelector(".section_goal");
 const sectionWorks = document.querySelector(".section_works");
 const sectionAbout = document.querySelector(".section_about");
@@ -70,44 +67,21 @@ ScrollTrigger.matchMedia({
     gsap.to(header, {
       scrollTrigger: {
         trigger: visualArea,
-        start: "0% 70%",
-        endTrigger: descriptionSection,
-        end: "100% 50%",
-        markers: false,
+        start: "0% 10%",
+        markers: true,
         onToggle: () => header.classList.toggle("js_show"),
       },
     });
 
-  gsap.fromTo(
-    document.querySelector(".description_cards"),
-    { y: "-5rem" }, 
-    {
-      y: "-20rem", 
-      scrollTrigger: {
-        trigger: sectionLog,
-        start: "135% 100%",
-        end: "135% 0%",
-        scrub: true, 
-        markers: false,
-      },
-    }
-  );
-
-
     gsap.to(document.querySelector(".section_about"), {
       scrollTrigger: {
         trigger: sectionAbout,
-        start: "0 80%",
-        end: "100% 20%",
+        start: "0 70%",
+        end: "100% 0%",
         markers: false,
         onToggle: function () {
           container.classList.toggle("is_active");
-          sectionLog.classList.toggle("is_active");
-          if (!sectionLog.classList.contains("is_active")) {
-            header.classList.add("js_show");
-          } else {
-            header.classList.remove("js_show");
-          }
+          header.classList.toggle("is_active");
         },
         onEnter: () => startSkewTransform(), 
         onLeave: () => stopSkewTransform(),
@@ -117,9 +91,9 @@ ScrollTrigger.matchMedia({
     });
   },
 });
-
 buttonBugger.addEventListener("click", () => {
   moGnb.classList.toggle("is_active");
+  moLogo.classList.toggle("is_active");
 
   const isExpanded = buttonBugger.getAttribute("aria-expanded") === "true";
   buttonBugger.setAttribute("aria-expanded", !isExpanded);
@@ -129,9 +103,6 @@ buttonBugger.addEventListener("click", () => {
   );
   buttonBugger.setAttribute("aria-pressed", !isExpanded);
 });
-
-frontCard.addEventListener("click", toggleCardState);
-detailCardsBtn.addEventListener("click", toggleCardState);
 
 const scrollToSection = (navElements, targetSection) => {
   navElements.forEach((item) => {
@@ -149,18 +120,6 @@ scrollToSection(document.querySelectorAll(".link_goal"), sectionGoal);
 scrollToSection(document.querySelectorAll(".link_works"), sectionWorks);
 scrollToSection(document.querySelectorAll(".link_home"), wrapper);
 
-function toggleCardState() {
-  detailCardsLinkArea.classList.toggle("is_active");
-  detailCards.classList.toggle("is_active");
-  document
-  .querySelectorAll(".cyan, .purple, .yellow, .green, .pink")
-  .forEach((element) => {
-    element.classList.toggle("is_active");
-  });
-  window.addEventListener("scroll", updateScroll, { once: true })
-
-}
-
 const navContact = document.querySelectorAll(".contact");
 
 navContact.forEach((item) => {
@@ -170,3 +129,171 @@ navContact.forEach((item) => {
   });
 });
 
+
+let typeSplit = new SplitType("[text-split]", {
+  types: "words, chars, lines",
+  tagName: "span",
+});
+
+function createScrollTrigger(triggerElement, timeline) {
+  ScrollTrigger.create({
+    trigger: triggerElement,
+    start: "top bottom",
+    onLeaveBack: () => {
+      timeline.progress(0);
+      timeline.pause();
+    },
+  });
+
+  ScrollTrigger.create({
+    trigger: triggerElement,
+    start: "top 70%",
+    markers:false,
+    onEnter: () => timeline.play(),
+  });
+}
+
+document.querySelectorAll("[lines]").forEach((element) => {
+  let tl = gsap.timeline({ paused: true });
+  tl.from(element.querySelectorAll(".line"), {
+    opacity: 0,
+    yPercent: 100,
+    duration: 0.75,
+    ease: "power1",
+    stagger: { amount: 0.5 },
+    // markers: true,
+  });
+  createScrollTrigger(element, tl);
+});
+
+gsap.set("[text-split]", { opacity: 1 });
+
+
+const logArticle = document.querySelectorAll(".log_area .log_article");
+
+
+logArticle.forEach((article) => {
+  article.onclick = (e) => {
+    const targetDesc = e.currentTarget.querySelector(".text_box");
+    [...logArticle].filter(item => {
+      if (item === e.currentTarget) {
+        targetDesc.classList.add("is_show");
+        e.currentTarget.classList.add("is_active");
+      } else {
+        const desc = item.querySelector(".text_box");
+        desc.classList.remove("is_show");
+        item.classList.remove("is_active");
+      }
+    })
+  }
+});
+
+const logLink = document.querySelectorAll(".log_area .log_link");
+
+logLink.forEach((link) => {
+  link.onclick = (e) => {
+    const descElement = e.currentTarget.querySelector(".text_box");
+    descElement.classList.toggle("is_show");
+  };
+  link.addEventListener("mouseenter", function (e) {
+    gsap.to(".cursor_box", { scale: 0.5 });
+  });
+  link.addEventListener("mouseleave", function (e) {
+    gsap.to(".cursor_box", { scale: 1 });
+  });
+});
+
+
+// gsap.to(".headline_text", {
+//   opacity: 0,
+//   y: 10,
+//   duration: 1.5,
+//   repeat: -1,
+//   yoyo: true,
+//   ease: "power2.inOut",
+// });
+
+
+// gsap.to(".headline_text", {
+//   duration: 1.5,
+//   repeat: -1,
+//   yoyo: true,
+//   ease: "power2.inOut",
+//   text: { value: "Web Publisher Hyun", scrambleText: true },
+// });
+
+// gsap.to(".headline_text", {
+//   filter: "blur(5px)",
+//   scale: 1.2,
+//   duration: 1.5,
+//   repeat: -1,
+//   yoyo: true,
+//   ease: "power2.inOut",
+// });
+
+
+
+
+gsap.registerPlugin(TextPlugin);
+const value = document.querySelector(".visual_area .headline").textContent
+// // 랜덤 문자 목록 정의
+const randomChars = "!@#$%^&*()_+{}:<>?";
+gsap.to(".headline_text", {
+  text: {
+    value: value, // 최종 변경될 텍스트
+    scrambleText: true, // 스크램블 효과 적용
+    revealDelay: 0.1, // 원래 문자로 바뀌는 속도
+    speed: 0.4, // 글자 변경 속도
+  },
+  duration: 2,
+  repeat: -1,
+  yoyo: true,
+  ease: "power2.inOut",
+});
+
+// gsap.to(".headline_text", { duration: 1, scrambleText: "THIS IS NEW TEXT" }); //or customize things:
+
+// gsap.to(".headline_text", {
+//   duration: 1,
+//   scrambleText: {
+//     text: "THIS IS NEW TEXT",
+//     chars: "XO",
+//     revealDelay: 0.5,
+//     speed: 0.3,
+//     newClass: "myClass",
+//   },
+// });
+// gsap.registerPlugin(TextPlugin);
+
+// 랜덤 문자 목록 정의
+// const randomChars = "!@#$%^&*()_+{}:<>?";
+
+// 스크램블 효과 적용할 대상
+// const elements = document.querySelectorAll(".text");
+
+// elements.forEach((el, index) => {
+//   let originalText = el.textContent; // 원래 텍스트 저장
+
+//   gsap.to(el, {
+//     // duration: 2, // 애니메이션 지속 시간
+//     repeat: -1, // 무한 반복
+//     yoyo: true, // 원래 텍스트로 돌아가기
+//     ease: "power2.inOut",
+//     delay: index * 0.5, // 각 단어가 순차적으로 실행되도록 딜레이 적용
+//     onUpdate: function () {
+//       let scrambledText = originalText
+//         .split("")
+//         .map((char) => {
+//           return Math.random() > 0.5
+//             ? randomChars[Math.floor(Math.random() * randomChars.length)] // 랜덤 문자 적용
+//             : char;
+//         })
+//         .join("");
+
+//       el.textContent = scrambledText; // 적용된 랜덤 문자 표시
+//     },
+//     onComplete: function () {
+//       el.textContent = originalText; // 원래 텍스트로 복구
+//     }
+//   });
+// });

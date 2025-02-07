@@ -38,6 +38,21 @@ $minDevice: 479px; // 모바일로 고치기 (280 아래가 minDevice 임))
   }
 }
 
+@keyframes changeFont {
+  0% {
+    font-family: Libre Baskerville, sans-serif;
+    opacity: 1;
+  }
+  50% {
+    font-family: Libre Baskerville, sans-serif;
+    opacity: 0.9;
+  }
+  100% {
+    font-family: larken, sans-serif;
+    opacity: 1;
+  }
+}
+
 @mixin ellipse($line: 1) {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -46,6 +61,7 @@ $minDevice: 479px; // 모바일로 고치기 (280 아래가 minDevice 임))
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $line;
+    word-break: break-word;
   } @else {
     white-space: nowrap;
   }
