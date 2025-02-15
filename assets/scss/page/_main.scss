@@ -1195,6 +1195,11 @@ section {
       &.is_active {
         background-color: #fff;
       }
+      &.github_log {
+        .title_wrap::before {
+          background: url("../images/ico_github.png");
+        }
+      }
     }
 
     &_link {
@@ -1231,7 +1236,8 @@ section {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: url("../images/ico_velog.ico");
+        background: url("../images/ico_velog.ico") no-repeat;
+        background-size: cover;
       }
     }
     &_box {

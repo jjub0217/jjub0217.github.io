@@ -1749,6 +1749,9 @@ section .badge {
 .section_log .log_article:hover, .section_log .log_article.is_active {
   background-color: #fff;
 }
+.section_log .log_article.github_log .title_wrap::before {
+  background: url("../images/ico_github.png");
+}
 .section_log .log_link {
   position: absolute;
   top: 0;
@@ -1780,7 +1783,8 @@ section .badge {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: url("../images/ico_velog.ico");
+  background: url("../images/ico_velog.ico") no-repeat;
+  background-size: cover;
 }
 .section_log .title_box {
   width: 100%;
